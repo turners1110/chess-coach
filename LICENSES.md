@@ -51,7 +51,8 @@ Status: **Confirmed** = read from the project's LICENSE file or registry metadat
 | ts-fsrs | 6.0.x | MIT | Confirmed (npm) | |
 | Dexie | 4.4.x | Apache-2.0 | Confirmed (npm) | |
 | TypeScript (build) | 7.x | Apache-2.0 | Confirmed (npm) | Build only |
-| Phase P only: Stockfish WASM (`stockfish` npm, nmrugg/stockfish.js) | 18.0.x or 19.0.x | **GPL-3.0** | Confirmed (npm) | Loaded from a CDN in the artifact prototype; still distribution |
+| Phase P: Stockfish.js lite single-threaded WASM (`stockfish` npm, nmrugg/stockfish.js) | 18.0.8 (published as artifact files, not from a CDN) | **GPL-3.0** | Confirmed (npm) | Distribution to the browser. `web/prototype/vendor.sha256` pins the files |
+| Phase P: chess piece images, cburnett set (lichess `public/piece/cburnett`) | lila master, 2026-10-29 | **GPLv2+** (Colin M.L. Burnett) | Confirmed (lila `COPYING.md`) | Inlined as data URIs in the prototype page |
 | Phase 8: onnxruntime-web | 1.31.x | MIT | Confirmed (npm) | |
 | Phase 8: Stockfish lite WASM | TBD | **GPL-3.0** | Unverified | |
 | Phase 8: Maia3-5M weights in ONNX/int8 (`maia3-web`, `chessoracle-maia`, OpenChessCoach) | TBD | **AGPL-3.0** (repos); upstream weight license Unverified | Partly confirmed | Converted weights inherit the upstream weight license; verify before shipping |

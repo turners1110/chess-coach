@@ -349,3 +349,27 @@ accuracy_positions = 500        # positions vs the reference_nodes search
 maia_latency_trials = 200
 indexeddb_test_mb = 50
 etag_recheck_months = 3
+
+[prototype]                     # §27 Phase P artifact (web/prototype). The page embeds a copy of these values
+                                # in its CONFIG object; change both together.
+depth = 12                      # tunable: Stockfish 18 lite WASM, "depth 12–14"
+threat_depth = 10               # tunable: null-move threat probe
+hash_mb = 32                    # tunable
+flag_min = 10                   # tunable: own-game puzzles from mistakes and blunders (Win% points)
+hung_min = 1                    # §9.1 hanging piece, pawns
+hung_horizon = 2                # §9.1, plies
+tactic_min = 2                  # §9.1 fork / discovered attack, pawns
+tactic_horizon = 4              # §9.1, plies
+missed_mate_max = 5             # §10.1 rule 1
+conversion_win = 85             # §10.1 rule 9
+opening_plies = 20              # hypothesis: opening phase
+endgame_non_pawn = 14           # hypothesis: endgame when total non-pawn material (both sides) <= this
+near_miss = 3                   # tunable §17.2
+good_idea = 10                  # tunable §17.2
+max_wrong = 5                   # hypothesis §17.2
+guess_ms = 2000                 # hypothesis §17.2
+guess_cap = 2                   # hypothesis §17.2
+max_line_moves = 3              # §17.1
+budget_stage1 = 2               # hypothesis §17.2 (Phase P treats every card as "challenge")
+budget_other = 1                # hypothesis §17.2
+budget_fail_streak = 2          # hypothesis §17.2
