@@ -7,8 +7,9 @@ the spec wins; tell Sam about the conflict. Phase 0 findings and proposed spec e
 
 ## Current state
 
-- **Phase 0 (feasibility and verification): verdict NO-GO for now (blocked, not failed).** Session 2 found the
-  network still blocked; see `docs/phase0-report.md` §10 for what unblocks it. No product code exists yet.
+- **Phase 0: complete — conditional GO** (`docs/phase0-report.md` §10). Open: Sam's decisions D-A…D-D and the device test.
+- **Phase P prototype: published** (claude.ai artifact, source in `web/prototype/`). Sam is testing it; read its
+  `sessions` collection (ArtifactData) for ladder findings.
 - Do **not** start Phase 1 until Sam gives the go-ahead after reading `docs/phase0-report.md`.
 
 ## Rules that always apply

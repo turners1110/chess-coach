@@ -4,7 +4,7 @@ Date: 2026-10-29 · Spec: `docs/chess-coach-spec-v2.1.md` · Scope: §27 Phase 0
 Machine for all measurements unless stated: cloud container, Intel Xeon @ 2.10 GHz (AVX-512, BMI2),
 4 vCPU, 15 GB RAM, Linux x86-64. Raw outputs: `server/phase0/out/` (git-ignored; regenerate with the scripts).
 
-> **Status: COMPLETE, except the steps only Sam can do** (device tests, hosting decision, and the choices in §10).
+> **Status: COMPLETE (verdict in §10), except the steps only Sam can do** (device tests, hosting decision, and the choices in §10).
 > Session 1 did the source verification. Session 2 at first found every host blocked; after the network change
 > the hosts were reachable, and all of handoff §2 was run on Sam's real games. Two items stayed blocked by
 > the network and are marked **BLOCKED**: the Maia weight files (the Hugging Face CDN `us.aws.cdn.hf.co`)
@@ -63,8 +63,8 @@ blitz games** (mean 62.1 plies). Stockfish 18 (pinned build), Threads 1, Hash 25
 | --- | --- | --- | --- |
 | Engine pipeline, spec budgets (1M / 5M / 20M) | ≤ 60 s per average game | **Rapid: 107.7 s/game** throughput on 4 cores (single core: 344.8 s/game, 5.07 s/ply). **Blitz: 98.1 s/game** (single core 355.5 s) | **FAIL** |
 | — variant A: first + played at 300k | same | 78.8 s/game on 4 cores (single core 250.7 s) | FAIL |
-| — variant **Lite**: first + played 300k, deep 2M, boundary 5M | same | **31.1 s/game** on 4 cores (single core 106.6 s, 1.57 s/ply). **Projection** for 2 equal x86 cores: ≈ 53 s | **PASS on 4 cores** (see accuracy) |
-| Engine accuracy vs 50M reference (500 positions) | Class agreement ≥ 90 % after the boundary pass | See §3.2 | see §3.2 |
+| — variant **Lite**: first + played 300k, deep 2M, boundary 5M | same | **31.1 s/game** on 4 cores (single core 106.6 s, 1.57 s/ply). **Projection** for 2 equal x86 cores: ≈ 53 s | **PASS on 4 cores** (accuracy 93.2 %) |
+| Engine accuracy vs 50M reference (500 positions) | Class agreement ≥ 90 % after the boundary pass | Spec budgets **94.3 %**; Lite **93.2 %** (weighted to the real flagged share; §3.2) | **PASS** |
 | Maia3-23M throughput (analysis scope) | ≤ 30 s per game, else 5M | **5.8 s/game** (1 thread), 3.2 s (2 threads); 5M: 2.0 s. 245 forward passes per game. Random weights, same architecture: inference cost does not depend on weight values | **PASS** |
 | Server Maia move latency (sparring) | ≤ 1 s p95 | 23M **p95 43.8 ms** (1 thread); 5M p95 25.0 ms | **PASS** |
 | Full-history backfill | ≤ 72 h | 1,022 analyzable games (822 rapid, 171 blitz, 29 bullet), 69,090 plies. Spec budgets: 97.3 core-hours → **24.3 h on 4 cores**, 48.7 h on 2 x86 cores (**projection**). Lite: 30.1 core-hours → 7.5 h on 4 cores, 15 h on 2 | **PASS** (≥ 2 x86-equivalent cores) |
@@ -88,7 +88,23 @@ covers most of the Win% range where flagged moves live, so most deep moves get a
 
 ### 3.2 Engine accuracy vs the 50M reference
 
-ACCURACY_PLACEHOLDER
+500 of your own moves from the 20 rapid games: 133 flagged at first pass (first-pass win_loss ≥ 5) and 367 not,
+compared with a 50M-node reference: a full-width search for the best move, then one MultiPV search over the best move,
+the pipeline's top 3 and the played move. Class agreement is re-weighted to the real mix: 19.6 % of your moves are
+flagged. All three budget sets were scored against the same reference positions (`accuracy_compare.py`).
+
+| Budgets (first / played / deep / boundary) | Class agreement, weighted | Sample (500) | Flagged moves | Unflagged | Mean \|win_loss error\| | Boundary rechecks (of deep) | s/game on 4 cores |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Spec: 1M / 1M / 5M / 20M | **94.3 %** | 93.2 % | 82.0 % | 97.3 % | 0.68 | 64 % | 107.7 |
+| A: 300k / 300k / 5M / 20M | 93.0 % | 91.4 % | 74.4 % | 97.6 % | 0.78 | 62 % | 78.8 |
+| **Lite: 300k / 300k / 2M / 5M** | **93.2 %** | 91.6 % | 75.2 % | 97.6 % | 0.82 | 67 % | **31.1** |
+
+- **Gate (≥ 90 % after the boundary pass): PASS** for all three.
+- Disagreements are almost all one class apart: for the spec budgets, 14 good→inaccuracy, 5 blunder→mistake,
+  4 mistake→blunder, 4 mistake→inaccuracy. None is good↔blunder.
+- **Weak spot:** on flagged moves, agreement drops from 82 % to 75 % with the Lite budgets (10 of 133 positions).
+  These are near-boundary labels (for example mistake vs blunder), not missed errors. Every move still stores
+  `eval_delta`, and labels near a boundary should be shown as uncertain.
 
 ### 3.3 Opening-reference fallback (§16.2), measured on the 2026-09 Lichess dump
 
@@ -174,8 +190,8 @@ what you play, the coach should measure improvement where you play. Choose (D-A 
 
 | Threshold | Missed? | Decision |
 | --- | --- | --- |
-| Pipeline ≤ 60 s/game | **Yes** at spec budgets (107.7 s on 4 cores) | FALLBACK_PIPELINE_PLACEHOLDER |
-| Accuracy ≥ 90 % | ACC_MISSED_PLACEHOLDER | ACC_DECISION_PLACEHOLDER |
+| Pipeline ≤ 60 s/game | **Yes** at spec budgets (107.7 s on 4 cores) | **Adopt the Lite budgets** (first and played 300k, deep 2M, boundary 5M): 31.1 s/game on 4 cores with 93.2 % class agreement. On the 2-OCPU free VM the **projection** is ≈ 53 s/game on x86-equivalent cores; measure it on a real A1 VM at the start of Phase 1. If it misses, run workers on a home computer or pay for 4 cores (§6, your decision) |
+| Accuracy ≥ 90 % | No (94.3 % spec, 93.2 % Lite) | None needed. Phase 1 marks a class as uncertain when the move is within `boundary_margin` of a boundary and `eval_delta` is large |
 | Maia 23M ≤ 30 s/game | No | Keep `maia.server_model = "23M"` (re-check with real weights; timing is weight-independent) |
 | Explorer API | Needs a Lichess account | Use the local fallback reference (§3.3) unless you create a Lichess account and token (D-C) |
 | Tablebase | No | Use the Lichess tablebase API, serial, cached; Syzygy local files optional later |
@@ -212,8 +228,33 @@ needed: I generate one and put only the public key in `index.html` (the private 
 | E14 | §27 Phase 0 table | Define "per average game" as throughput: wall-clock for N games with all workers ÷ N, on the production host |
 | E15 | §16.2 / §20 | Lichess puzzle FEN is the position *before* the opponent's move; exercises start after applying `Moves[0]` |
 | E16 | §7.2 | "ETags are weak; `Last-Modified` is the response time and must not be used for caching" |
-| E17 | §8.1 / §30 | ENGINE_EDIT_PLACEHOLDER |
+| E17 | §8.1 / §30 | Set `engine.first_nodes` / `played_nodes` = 300k, `deep_nodes` = 2M, `boundary_nodes` = 5M (Phase 0 measured: 93.2 % agreement, 31.1 s/game on 4 cores). Not yet changed in `coach.toml`: waiting for your approval |
 
 ## 10. GO / NO-GO
 
-VERDICT_PLACEHOLDER
+**GO for Phase 1, with conditions.** Every engineering gate passes or has a measured fallback:
+
+| Gate | Result |
+| --- | --- |
+| Engine pipeline ≤ 60 s/game | PASS with the Lite budgets (31.1 s on 4 cores); spec budgets fail (107.7 s) |
+| Accuracy ≥ 90 % | PASS (93.2 % Lite, 94.3 % spec) |
+| Maia 23M ≤ 30 s/game; ≤ 1 s p95 | PASS (5.8 s; 44 ms). Real weights not downloaded yet (CDN host blocked) |
+| Backfill ≤ 72 h | PASS (1,022 games ≈ 7.5 h on 4 cores with Lite) |
+| Opening reference | PASS via the local fallback (§3.3), or the explorer with a Lichess token |
+| Tablebase | PASS via the Lichess API |
+| Hosting $0 | **Open:** the free 2-OCPU VM is a projection, not a measurement (§6) |
+| PWA on your devices | **Open:** needs the device test on your iPad Pro (§8) |
+
+The conditions are your decisions:
+
+- **D-A Primary time class:** rapid (spec default) or blitz, which is what you have played since August (§5).
+- **D-B Hosting:** free Oracle 2 OCPU (I'd benchmark it first in Phase 1), a ≈ €8–10/month 4-core VM, or home-computer workers.
+- **D-C Opening explorer:** create a Lichess account and token, or use the local fallback reference.
+- **D-D Approve the spec edits** in §9, especially E17 (engine budgets) and E3 (stay on Stockfish 18).
+- **Device test** on the iPad Pro: either the device-test page or the Phase P prototype, which measures the
+  same things in use.
+
+**Phase P prototype:** published as a claude.ai artifact on 2026-10-29 (`web/prototype/`). Its findings
+(ladder tuning, false positives in the error labels, session flow) feed Phase 1 tuning.
+
+Phase 1 does not start until you say go.
