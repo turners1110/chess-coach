@@ -1,0 +1,3 @@
+# Phase 1 placeholder (spec §29): Caddy, api, workers and Postgres 16 on the backend VM.
+# Services are defined in Phase 1; nothing runs yet.
+services: {}

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Coach Device Test</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Coach Test">
+<meta name="theme-color" content="#262421">
+<style>
+  :root { --bg: #fafaf9; --fg: #1c1917; --muted: #57534e; --card: #fff; --line: #e7e5e4; --ok: #15803d; --bad: #b91c1c; --warn: #a16207; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #1c1917; --fg: #f5f5f4; --muted: #a8a29e; --card: #292524; --line: #44403c; --ok: #4ade80; --bad: #f87171; --warn: #facc15; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.45 -apple-system, system-ui, sans-serif;
+         padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); }
+  main { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 1.4rem; margin: 0 0 4px; }
+  p.sub { color: var(--muted); margin: 0 0 16px; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; margin-bottom: 12px; }
+  h2 { font-size: 1.05rem; margin: 0 0 8px; }
+  button { font: inherit; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); min-height: 44px; margin: 4px 6px 4px 0; }
+  .ok { color: var(--ok); } .bad { color: var(--bad); } .warn { color: var(--warn); }
+  pre { white-space: pre-wrap; word-break: break-all; font-size: 12px; background: var(--bg); padding: 8px; border-radius: 8px; max-height: 220px; overflow: auto; }
+  textarea { width: 100%; font: 12px ui-monospace, monospace; min-height: 60px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Coach device test</h1>
+  <p class="sub">Phase 0 checks: home-screen install, IndexedDB quota, Web Push. Nothing leaves this device unless you copy it.</p>
+
+  <section>
+    <h2>1. Install</h2>
+    <div id="install">checking…</div>
+  </section>
+
+  <section>
+    <h2>2. Storage (IndexedDB)</h2>
+    <button id="btn-persist">Request persistent storage</button>
+    <button id="btn-write">Write <span id="mb">50</span> MB</button>
+    <button id="btn-verify">Re-read and verify</button>
+    <button id="btn-clear">Delete test data</button>
+    <div id="storage"></div>
+  </section>
+
+  <section>
+    <h2>3. Notifications and Web Push</h2>
+    <button id="btn-perm">Allow notifications</button>
+    <button id="btn-local">Show a local notification</button>
+    <button id="btn-sub">Create push subscription</button>
+    <div id="push"></div>
+    <label for="vapid">VAPID public key (leave as is unless told otherwise)</label>
+    <textarea id="vapid">BOnfzjlKZXPjCz_FWqPXlhLSC89DqDkkx1Igevku16bDNeErkyAE8dzA372z2TYU04ZT6ula2pHjcnY5ddKYK7o</textarea>
+    <pre id="sub" hidden></pre>
+    <button id="btn-copy" hidden>Copy subscription</button>
+  </section>
+
+  <section>
+    <h2>Results</h2>
+    <button id="btn-report">Copy full report</button>
+    <pre id="report"></pre>
+  </section>
+</main>
+<script>
+// The write size mirrors server/config/coach.toml [phase0] indexeddb_test_mb; override with ?mb=N.
+const MB = Number(new URLSearchParams(location.search).get('mb')) || 50;
+const CHUNK_MB = 1;
+const DB = 'coach-device-test', STORE = 'blobs';
+const results = { userAgent: navigator.userAgent, startedAt: new Date().toISOString() };
+const $ = id => document.getElementById(id);
+$('mb').textContent = MB;
+
+function line(el, text, cls) { const d = document.createElement('div'); d.textContent = text; if (cls) d.className = cls; $(el).appendChild(d); render(); }
+function render() { $('report').textContent = JSON.stringify(results, null, 2); }
+const fmt = b => (b / 1048576).toFixed(1) + ' MB';
+
+// 1. Install
+const standalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+results.standalone = standalone;
+$('install').textContent = '';
+line('install', standalone ? 'PASS: running from the Home Screen (standalone).' : 'Not installed yet. In Safari: Share → Add to Home Screen → Add, then open "Coach Test" from the Home Screen and run the checks there.', standalone ? 'ok' : 'warn');
+line('install', 'Service worker: ' + ('serviceWorker' in navigator ? 'supported' : 'NOT supported'), 'serviceWorker' in navigator ? 'ok' : 'bad');
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then(r => { results.serviceWorker = 'registered'; line('install', 'Service worker registered (scope ' + r.scope + ').', 'ok'); })
+    .catch(e => { results.serviceWorker = 'error: ' + e; line('install', 'Service worker failed: ' + e, 'bad'); });
+}
+
+// 2. Storage
+function openDb() {
+  return new Promise((res, rej) => { const r = indexedDB.open(DB, 1); r.onupgradeneeded = () => r.result.createObjectStore(STORE); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); });
+}
+function tx(db, mode, fn) {
+  return new Promise((res, rej) => { const t = db.transaction(STORE, mode); const out = fn(t.objectStore(STORE)); t.oncomplete = () => res(out); t.onerror = () => rej(t.error); t.onabort = () => rej(t.error || new Error('aborted')); });
+}
+function chunk(i) {
+  const a = new Uint8Array(CHUNK_MB * 1048576);
+  let x = (i + 1) * 2654435761 >>> 0;
+  for (let k = 0; k < a.length; k += 4) { x ^= x << 13; x ^= x >>> 17; x ^= x << 5; x >>>= 0; a[k] = x & 255; a[k + 1] = (x >> 8) & 255; a[k + 2] = (x >> 16) & 255; a[k + 3] = (x >> 24) & 255; }
+  return a;
+}
+async function estimate(label) {
+  if (!navigator.storage || !navigator.storage.estimate) { line('storage', label + ': storage.estimate() unavailable', 'warn'); return; }
+  const e = await navigator.storage.estimate();
+  results['estimate_' + label] = { usage: e.usage, quota: e.quota };
+  line('storage', `${label}: usage ${fmt(e.usage)} of quota ${fmt(e.quota)}`);
+}
+$('btn-persist').onclick = async () => {
+  if (!navigator.storage || !navigator.storage.persist) { results.persist = 'unsupported'; return line('storage', 'storage.persist() unsupported', 'warn'); }
+  const p = await navigator.storage.persist();
+  results.persist = p; line('storage', 'Persistent storage granted: ' + p, p ? 'ok' : 'warn');
+};
+$('btn-write').onclick = async () => {
+  try {
+    await estimate('before');
+    const db = await openDb(); const t0 = performance.now();
+    for (let i = 0; i < MB / CHUNK_MB; i++) { const c = chunk(i); await tx(db, 'readwrite', s => s.put(c, i)); }
+    const secs = ((performance.now() - t0) / 1000).toFixed(1);
+    results.write = { mb: MB, seconds: Number(secs), ok: true };
+    line('storage', `PASS: wrote ${MB} MB in ${secs} s.`, 'ok');
+    await estimate('after');
+    db.close();
+  } catch (e) { results.write = { mb: MB, ok: false, error: String(e && e.name) + ': ' + String(e && e.message) }; line('storage', 'FAIL writing: ' + results.write.error, 'bad'); }
+};
+$('btn-verify').onclick = async () => {
+  try {
+    const db = await openDb(); let bad = 0, n = 0;
+    for (let i = 0; i < MB / CHUNK_MB; i++) {
+      const got = await new Promise((res, rej) => { const r = db.transaction(STORE).objectStore(STORE).get(i); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); });
+      if (!got) { bad++; continue; }
+      const exp = chunk(i), g = new Uint8Array(got.buffer || got);
+      for (let k = 0; k < exp.length; k += 4096) if (g[k] !== exp[k]) { bad++; break; }
+      n++;
+    }
+    results.verify = { chunks_read: n, chunks_bad: bad, at: new Date().toISOString() };
+    line('storage', bad === 0 && n === MB / CHUNK_MB ? `PASS: all ${n} MB read back intact.` : `FAIL: ${bad} missing or corrupt chunks`, bad ? 'bad' : 'ok');
+    db.close();
+  } catch (e) { line('storage', 'FAIL reading: ' + e, 'bad'); }
+};
+$('btn-clear').onclick = () => { indexedDB.deleteDatabase(DB); results.cleared = true; line('storage', 'Test database deleted.'); estimate('cleared'); };
+
+// 3. Notifications / push
+results.notificationApi = 'Notification' in window; results.pushManager = 'PushManager' in window;
+line('push', `Notification API: ${results.notificationApi ? 'yes' : 'no'} · PushManager: ${results.pushManager ? 'yes' : 'no'}` + (standalone ? '' : ' (on iOS these appear only in the Home Screen app)'), results.pushManager ? 'ok' : 'warn');
+$('btn-perm').onclick = async () => {
+  if (!('Notification' in window)) return line('push', 'Notification API missing here.', 'bad');
+  const p = await Notification.requestPermission(); results.permission = p; line('push', 'Permission: ' + p, p === 'granted' ? 'ok' : 'bad');
+};
+$('btn-local').onclick = async () => {
+  const reg = await navigator.serviceWorker.ready;
+  await reg.showNotification('Coach test', { body: 'Local notification works.', icon: 'icon-192.png' });
+  results.localNotification = 'shown'; line('push', 'Local notification requested — did it appear?');
+};
+function b64ToBytes(s) { const p = '='.repeat((4 - s.length % 4) % 4); const b = atob((s + p).replace(/-/g, '+').replace(/_/g, '/')); return Uint8Array.from(b, c => c.charCodeAt(0)); }
+$('btn-sub').onclick = async () => {
+  try {
+    const reg = await navigator.serviceWorker.ready;
+    const old = await reg.pushManager.getSubscription(); if (old) await old.unsubscribe();
+    const sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64ToBytes($('vapid').value.trim()) });
+    const json = JSON.stringify(sub);
+    results.pushSubscription = { endpointHost: new URL(sub.endpoint).host, ok: true };
+    $('sub').hidden = false; $('sub').textContent = json; $('btn-copy').hidden = false;
+    line('push', 'PASS: subscription created (' + results.pushSubscription.endpointHost + '). Copy it and send it to Claude to receive a test push.', 'ok');
+  } catch (e) { results.pushSubscription = { ok: false, error: String(e) }; line('push', 'FAIL subscribing: ' + e, 'bad'); }
+};
+$('btn-copy').onclick = () => navigator.clipboard.writeText($('sub').textContent).then(() => line('push', 'Subscription copied.'));
+navigator.serviceWorker && navigator.serviceWorker.addEventListener('message', ev => { if (ev.data && ev.data.type === 'push') { results.pushReceived = ev.data.at; line('push', 'PASS: push received at ' + ev.data.at, 'ok'); } });
+$('btn-report').onclick = () => navigator.clipboard.writeText(JSON.stringify(results, null, 2)).then(() => line('storage', 'Report copied.'));
+render();
+</script>
+</body>
+</html>

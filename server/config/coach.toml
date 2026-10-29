@@ -1,0 +1,351 @@
+# Chess Coach configuration — every tunable number lives here (spec v2.1 §30, instruction 3).
+# Labels: tunable | hypothesis | fixed | sam (Sam's decision) | phase0 (set after the Phase 0 benchmark).
+# Code must read these values; it must never hard-code them.
+
+[player]
+chesscom_username = "turners1110"
+primary_time_class = "rapid"   # sam; confirmed against game history in Phase 0 (docs/phase0-report.md)
+timezone = "America/New_York"
+
+[sync]                          # §7.2
+poll_minutes = 30               # tunable
+backoff_initial_s = 1           # tunable
+backoff_max_s = 60              # tunable
+backoff_max_tries = 6           # tunable
+serial_requests = true          # fixed: never parallel requests to chess.com
+user_agent = "ChessCoach/0.1 (personal coach for chess.com user turners1110; contact: turners1110@gmail.com)"
+
+[import]                        # §7.3, §7.4
+initial_games_per_class = 100   # tunable
+min_plies = 6                   # tunable
+analyze_time_classes = ["bullet", "blitz", "rapid"]
+
+[engine]                        # §8.1 — budgets set after Phase 0
+first_nodes = 1_000_000         # phase0
+played_nodes = 1_000_000        # phase0 (same as first pass)
+deep_nodes = 5_000_000          # phase0
+boundary_nodes = 20_000_000     # phase0
+reference_nodes = 50_000_000    # Phase 0 accuracy reference
+first_multipv = 3
+deep_top_k = 3                  # top-3 moves + played move in one searchmoves search
+threads = 1
+hash_mb = 256
+deep_min_win_loss_me = 5        # Sam moves with first-pass win_loss >= this get a deep pass
+deep_min_win_loss_opp = 10      # opponent moves with first-pass win_loss >= this get a deep pass
+boundary_margin = 2             # tunable, Win% points
+cp_clamp = 1500                 # §8.3
+workers = 4                     # phase0: parallel games per host (one engine per core)
+
+[winpct]                        # §8.3 (Verified, Lichess)
+k = 0.00368208
+
+[tablebase]                     # §8.3
+max_pieces = 5
+
+[suppression]                   # §8.4
+decided_high = 95
+decided_low = 5
+
+[classes]                       # §8.3, tunable
+inaccuracy = 5
+mistake = 10
+blunder = 15
+
+[labels]                        # §8.3, tunable
+unique_gap = 10
+acceptable = 5
+missed_win_best_min = 80
+missed_win_played_max = 60
+
+# §9.1 motif table, tunable. horizon in plies; material threshold in pawns.
+[detectors.hanging_piece]
+consequences = ["material"]
+horizon = 2
+material = 1
+[detectors.fork]
+consequences = ["material", "mate", "swing"]
+horizon = 4
+material = 2
+[detectors.pin]
+consequences = ["material", "swing"]
+horizon = 6
+material = 2
+[detectors.skewer]
+consequences = ["material"]
+horizon = 4
+material = 2
+[detectors.discovered]
+consequences = ["material", "mate", "swing"]
+horizon = 4
+material = 2
+[detectors.back_rank_mate]
+consequences = ["mate", "material"]
+horizon = 9
+material = 3
+[detectors.mate_in_5]
+consequences = ["mate"]
+horizon = 9
+[detectors.removal_of_defender]
+consequences = ["material", "mate", "swing"]
+horizon = 6
+material = 2
+[detectors.trapped_piece]
+consequences = ["material"]
+horizon = 6
+material = 2
+[detectors.promotion]
+consequences = ["material", "swing"]
+horizon = 6
+material = 3
+[detectors.intermezzo]
+consequences = ["material", "swing"]
+horizon = 4
+material = 1
+[detectors.perpetual_stalemate]
+consequences = ["forced_draw"]
+horizon = 12
+[detectors.defensive_resource]
+consequences = ["successful_defense"]
+
+[detectors.validation]          # §9.1 consequence types
+swing_min = 15
+forced_draw_losing_max = 20
+
+[threats]                       # §9.2
+null_move_nodes = 200_000
+plausible_p = 0.05
+
+[classify]                      # §10.1
+missed_mate_max = 5
+conversion_win_min = 85
+conversion_loss_min = 10
+draw_trap_win_min = 70
+opening_loss_min = 10
+opening_left_theory_loss_min = 5
+positional_loss_min = 10
+calculation_refute_ply_min = 3
+
+[context]                       # §10.2, tunable
+time_pressure_pct = 0.10
+time_pressure_s = 15
+fast_s = 3
+fast_min_remaining_s = 60
+slow_mult = 3.0
+
+[maia]                          # §11
+server_model = "23M"            # phase0 (fallback "5M")
+sparring_offset = 100           # hypothesis
+temperature = 1.0
+top_p = 0.95
+top_moves_stored = 10
+unlock_min_offset = -200
+unlock_max_offset = 400
+unlock_step = 100
+unlock_uncertain_drop = 0.1
+
+[anchor]                        # §11.2, tunable
+min_ll_gain = 0.01
+weekly_cap = 50
+floor = -100
+search_min = 600
+search_max = 2400
+search_step = 50
+holdout_fraction = 0.20
+exclude_first_plies = 10
+exclude_unique_gap = 30
+
+[bands]                         # §11.3, tunable
+should_find = 0.5
+stretch = 0.2
+
+[proxy]                         # §11.3, hypothesis
+simple = 1.0
+other = 0.6
+
+[maia_prior]                    # §11.4
+start_attempts = 20
+full_attempts = 60
+
+[gri]                           # §12.1, tunable
+motif_mult = 1.2
+review_top_n = 2
+review_opp_n = 2
+
+[window]                        # §12.3, tunable
+games = 100
+max_days = 180
+min_games = 30
+
+[tentative]                     # §12.7, tunable
+min_occ = 8
+min_games = 5
+
+[bootstrap]                     # §12.7, fixed
+n = 1000
+ci = 0.90
+
+[improving]                     # §12.7
+baseline_days = 60
+followup_start_days = 14
+
+[opportunities]                 # §12.5
+offensive_gain_min = 10
+recapture_best_by = 5
+wilson_ci = 0.90
+
+[habits]                        # §12.6, tunable
+min_errors = 10
+min_ratio = 1.5
+fdr_q = 0.10
+
+[report]                        # §12.8
+weekday = "Sunday"
+time = "20:00"
+top_n = 3
+
+[recurrence]                    # §15.1
+saturation = 8
+
+# §15.1 responsiveness weights, hypothesis (not learned in the MVP).
+[responsiveness]
+opening_errors = 1.0
+safety_errors = 1.0             # hung material / ignored threat / missed recapture / missed defense
+motif_tactics = 0.8
+missed_mate = 0.8
+calculation = 0.6
+conversion_defense = 0.6
+endgame_knowledge = 0.7
+time_pressure_habits = 0.5
+positional = 0.3
+unclassified = 0.0
+
+[mix]                           # §15.2, hypothesis
+reinforce = 0.30
+challenge = 0.50
+stretch = 0.20
+success_reinforce_min = 0.75
+success_challenge = [0.55, 0.75]
+success_stretch = [0.35, 0.55]
+
+[ratchet]                       # §15.2, hypothesis
+window = 30
+success = 0.80
+min_unseen = 10
+
+[diversity]                     # §15.3
+max_consecutive_motif = 2
+min_unseen_share = 0.25
+unseen_after_mastered = 5
+fresh_after_failures = 2
+
+[rating]                        # §15.4 and §3, tunable
+half_life_days = 14
+sustain_days = 14
+ladder_step = 50
+
+[theory]                        # §16.2, tunable
+min_games = 50
+band_offset = 200
+fallback_rating_min = 1400
+fallback_rating_max = 2000
+
+[repertoire]                    # §16.6, hypothesis
+start_depth_min = 6
+start_depth_max = 8
+extend_by = 2
+extend_reach = 0.30
+mature_stability_days = 21
+soundness_max_loss = 3
+recurring_min_games = 2
+
+[ladder]                        # §17.2, hypothesis
+max_wrong = 5
+guess_s = 2
+guess_cap = 2
+near_miss = 3
+good_idea = [3, 10]
+# attempts per stage by situation
+attempts_easy = 1
+attempts_challenge_stage1 = 2
+attempts_challenge_later = 1
+attempts_stretch = 2
+attempts_recent_failures = 1
+easy_expected_min = 0.75
+
+[mastery]                       # §17.6, hypothesis
+intervals_days = [0, 1, 3, 7, 21]
+max_level = 5
+
+[glicko]                        # §20.2, tunable
+r0 = 1500
+rd0 = 350
+vol0 = 0.06
+tau = 0.5
+placement_count = 12
+placement_range = [1000, 2000]
+
+[puzzles]                       # §20.1, tunable
+pack_size = 500
+min_pop = 80
+min_plays = 500
+
+[fsrs]                          # §16.6, §21
+retention = 0.90
+hard_time_mult = 2.0
+refit_after_reviews = 1000
+
+[transfer]                      # §21
+share = 0.25
+after_mastered = 5
+
+[session]                       # §22, Sam / hypothesis
+modes_min = [10, 15, 30, 45, 60]
+opening_min = 0.25
+opening_max = 0.50
+max_weakness = 0.60
+first_day_openings = 0.35
+
+[sparring]                      # §19.2
+latency_p95_s = 1.0
+default_clock = "5+3"
+conversion_win = [70, 85]
+defense_win = [15, 35]
+defense_holdable_min = 15
+structure_plies = [12, 20]
+pre_mistake_plies = [2, 4]
+
+[steer]                         # §19.3, hypothesis
+min_p = 0.05
+max_win_gap = 5
+beta = 1.5
+realism_drop_max = 0.25
+relevance_plies = 2
+
+[timed]                         # §19.4
+budget_warn = 0.30
+
+[explainer]                     # §18
+max_line_plies = 6
+prob_tolerance = 0.05
+why_drop = 10
+deep_default_f = 0.3
+
+[llm]                           # §18.3, Sam (D3)
+budget_usd_month = 15
+warn_usd = 10
+
+[jobs]                          # §25
+lease_minutes = 10
+max_attempts = 3
+
+[privacy]                       # §29
+access_log_days = 30
+backup_days = 30
+
+# Phase 0 benchmark parameters (Appendix B). Not product behaviour.
+[phase0]
+sample_games = 20               # games for the seconds-per-game pipeline benchmark
+accuracy_positions = 500        # positions vs the reference_nodes search
+maia_latency_trials = 200
+indexeddb_test_mb = 50
+etag_recheck_months = 3
