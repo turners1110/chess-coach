@@ -7,7 +7,8 @@ the spec wins; tell Sam about the conflict. Phase 0 findings and proposed spec e
 
 ## Current state
 
-- **Phase 0 (feasibility and verification): in progress / awaiting Sam's GO.** No product code exists yet.
+- **Phase 0 (feasibility and verification): verdict NO-GO for now (blocked, not failed).** Session 2 found the
+  network still blocked; see `docs/phase0-report.md` §10 for what unblocks it. No product code exists yet.
 - Do **not** start Phase 1 until Sam gives the go-ahead after reading `docs/phase0-report.md`.
 
 ## Rules that always apply

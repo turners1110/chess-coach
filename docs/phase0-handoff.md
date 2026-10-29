@@ -5,6 +5,9 @@ sessions pick it up. Everything else is done and recorded in `docs/phase0-report
 
 ## 0. Check access first
 
+> Session 2 (2026-10-29) ran this check: **all hosts still blocked** (proxy 403 on CONNECT). Nothing in §2 was
+> done. Fix the environment's network settings first (report §10), then start a new session.
+
 ```bash
 for u in https://api.chess.com/pub/player/turners1110 https://huggingface.co/api/models/UofTCSSLab/Maia3-23M \
   https://database.lichess.org/ "https://tablebase.lichess.org/standard?fen=4k3/6KP/8/8/8/8/7p/8_w_-_-_0_1" \

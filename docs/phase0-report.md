@@ -4,6 +4,15 @@ Date: 2026-10-29 · Spec: `docs/chess-coach-spec-v2.1.md` · Scope: §27 Phase 0
 Machine for all measurements unless stated: cloud container, Intel Xeon @ 2.10 GHz (AVX-512, BMI2),
 4 vCPU, 15 GB RAM, Linux x86-64. Raw outputs: `server/phase0/out/` (when present).
 
+> **Session 2 (2026-10-29, later): still blocked.** The handoff host check (`docs/phase0-handoff.md` §0) returned
+> `000` for every host: the proxy answers **403 to CONNECT** for `api.chess.com`, `huggingface.co`,
+> `database.lichess.org`, `tablebase.lichess.org`, `explorer.lichess.org`, `docs.oracle.com`,
+> `tests.stockfishchess.org`, `glicko.net`, plus `lichess.org`, `syzygy-tables.info` and `tablebase.sesse.net`.
+> The server-side fetch tool cannot resolve them either. Only GitHub, `raw.githubusercontent.com` and PyPI are
+> reachable. The widened network policy has **not** reached this session's environment. No Appendix B task in
+> handoff §2 could be done, and none was replaced by mocked or proxy data. Google Drive has no PGN export either.
+> The verdict in §10 is updated.
+>
 > **Status of this report: PARTIAL.** This session's network policy blocks `api.chess.com`,
 > `huggingface.co`, `database.lichess.org`, `explorer.lichess.org`, `tablebase.lichess.org`,
 > `tests.stockfishchess.org`, `docs.oracle.com` and `glicko.net`. Every item that depends on them is marked
@@ -162,6 +171,35 @@ subscription (VAPID).
 
 ## 10. GO / NO-GO
 
-**Not decided yet: Phase 0 is incomplete.** Blockers: network access to `api.chess.com`, `huggingface.co`,
-`database.lichess.org`, `explorer.lichess.org`, `tablebase.lichess.org` (and optionally `docs.oracle.com`,
-`tests.stockfishchess.org`); the device test on your iPhone and iPad Pro; and a decision on hosting.
+**Verdict: NO-GO for Phase 1 — for now.** This is "not yet measured", not "infeasible": nothing measured so far
+fails a gate. Phase 1 cannot start because rule 1 of `CLAUDE.md` forbids code that depends on unverified facts,
+and Phase 1 depends on three of them (chess.com UA, finished-games-only, immutable archives). Its engine
+budgets also depend on the pipeline and accuracy benchmarks.
+
+| Gate (§27) | State |
+| --- | --- |
+| Engine pipeline ≤ 60 s/game | Unmeasured on real games. Per-search costs suggest it passes only as throughput on ≥ 4 cores (§3.1) |
+| Accuracy ≥ 90% vs 50M | Unmeasured (needs Sam's games) |
+| Maia 23M ≤ 30 s/game, ≤ 1 s p95 | Latency passes on x86 with random weights; real weights blocked |
+| Backfill ≤ 72 h | Unmeasured (needs game count) |
+| Hosting $0 | Frontend passes (Cloudflare Pages). Backend at risk on 2 OCPU; Sam's decision |
+| PWA | Passes in headless Chromium; needs Sam's iPhone and iPad Pro |
+| Opening reference | Needs a Lichess account and token, or the fallback sizing (blocked) |
+| Tablebase | API needs no auth per spec; live test blocked |
+
+**What turns this into GO:**
+
+1. **Network (Sam):** in the cloud environment's settings (environment menu in the session title bar → Edit →
+   Network access), add `api.chess.com`, `huggingface.co`, `cdn-lfs.huggingface.co`, `cas-bridge.xethub.hf.co`,
+   `database.lichess.org`, `explorer.lichess.org`, `tablebase.lichess.org`, `lichess.org`, `docs.oracle.com`
+   to Allowed domains (keep "Allow package managers" ticked), or choose a broader access level. Then start a
+   **new** session and rerun `docs/phase0-handoff.md` from §0. Steps:
+   https://code.claude.com/docs/en/cloud-environments#network-access
+   - Alternative if the network can't be widened: export Sam's games from chess.com (Archive → Download) and
+     commit them as `server/phase0/out/games.pgn`, and put the Maia3 checkpoints somewhere reachable. That
+     unblocks B5, B6 and the golden fixtures, but not B1/B2's [Verify] facts.
+2. **Device tests (Sam):** `web/device-test/` on the iPhone and the iPad Pro (§8).
+3. **Decisions (Sam):** hosting (§6), Stockfish 18 vs 19 (E3), Lichess account for the explorer (E11),
+   and the spec edits in §9.
+
+GO is declared only when every gate above has a measured result or an approved fallback (§7).
