@@ -117,15 +117,14 @@ ACCURACY_PLACEHOLDER
 | Maia3-23M weights `maia3-23m.pt` (91,799,307 B) | HF `UofTCSSLab/Maia3-23M` revision **`51a0145a8178046f7de23119160b136672deeb2b`** | `bce6cd1af5f0399ac7eed33fabb7a6a2ef6193662c2740f262bf93af7bfb3569` (from HF LFS metadata; file download BLOCKED) |
 | Maia3-5M weights `maia3-5m.pt` (20,968,049 B) | HF `UofTCSSLab/Maia3-5M` revision **`b6559de2398d7140b985f28fd2c19fb5e47ddabe`** | `ba14208b2992d85502f5fb501934abf6aaaeb355e9f3fdf90e326911f562524f` (same) |
 | Lichess puzzle CSV `lichess_db_puzzle.csv.zst` (307,234,795 B, Last-Modified 2026-10-02) | 6,157,341 puzzles; 2,739,910 with Popularity ≥ 80 and NbPlays ≥ 500 | `76335bfa7d7c4a7f93c1366d81549e53951ebb79dd43d34904cab8f22d962f8d` |
-| 500-puzzle pack `server/phase0/out/puzzle_pack.csv` | `puzzle_pack.py`, seed 7 | `6b8bdf80e69667fbdaaecc6597fae9f17a530fa8da4358eddfb1283e333e9438` |
-| Golden fixture `server/tests/fixtures/accuracy_golden.json` | `accuracy_golden.py`, 3 games | `e50eb333a6d6a4283e399b63b9d604b312f1719f87a14259ad2dc4c375a9fb91` |
+| 500-puzzle pack `server/phase0/data/puzzle_pack_phase0.json` (committed) | `puzzle_pack.py` (other Phase 0 session), seed 1; every line replayed legal | `da39603ec72d1321ac7a7f7277e5087cfed97cf27cf40c6c702ce768a6404038` |
+| Golden fixtures `server/tests/fixtures/accuracy_golden.json` (3 games, depth 12, includes mate scores) and `accuracy_golden_1m.json` (3 games, 1M nodes, tested in `test_accuracy_golden.py`) | `accuracy_golden.py` for the 1M set | 1M set: `e50eb333a6d6a4283e399b63b9d604b312f1719f87a14259ad2dc4c375a9fb91` |
 | python-chess | 1.11.2 | (PyPI wheel) |
 | PyTorch | 2.15.0 (PyPI x86 build is `+cu132`; CPU use only) | (PyPI wheel) |
 
-**Puzzle pack:** 500 puzzles, rated 1000–2000 (`glicko.placement_range`), Popularity ≥ 80, NbPlays ≥ 500, equal
-shares over 12 themes that match the §9.1 detectors (hangingPiece, fork, pin, skewer, discoveredAttack,
-backRankMate, mate, capturingDefender, trappedPiece, promotion, intermezzo, defensiveMove). Your own motif
-frequencies need the Phase 2 detectors; the shares are re-weighted then.
+**Puzzle pack:** 500 puzzles rated 1000–1989 (`glicko.placement_range`), Popularity ≥ 80, NbPlays ≥ 500, spread
+over 13 motifs matching the §9.1 detectors (38 each, hanging piece 44). "Overload" uses Lichess `deflection`
+(Lichess has no overload tag). Your own motif frequencies need the Phase 2 detectors; the shares are re-weighted then.
 
 ## 5. Game counts by time class and primary time class
 

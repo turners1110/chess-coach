@@ -12,7 +12,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "phase0"))
 from lila_accuracy import game_accuracy  # noqa: E402
 
-FIXTURE = json.loads((Path(__file__).parent / "fixtures" / "accuracy_golden.json").read_text())
+FIXTURE = json.loads((Path(__file__).parent / "fixtures" / "accuracy_golden_1m.json").read_text())
 
 
 @pytest.mark.parametrize("game", FIXTURE["games"], ids=lambda g: g["link"].rsplit("/", 1)[-1])

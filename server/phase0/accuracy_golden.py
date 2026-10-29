@@ -1,6 +1,6 @@
 """Phase 0 handoff task 5: golden accuracy fixtures from real games.
 
-Usage: python accuracy_golden.py --pgn games.pgn --pick N1,N2,N3 --out server/tests/fixtures/accuracy_golden.json
+Usage: python accuracy_golden.py --pgn games.pgn --pick N1,N2,N3 --out server/tests/fixtures/accuracy_golden_1m.json
 
 For each picked game: Stockfish (Threads 1, first_nodes, MultiPV 1, one hash state per game) evaluates the
 position before the first move and after every move. Evals are stored white-POV (cp, or mate distance),
