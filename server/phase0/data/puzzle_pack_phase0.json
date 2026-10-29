@@ -1,0 +1,12448 @@
+[
+{
+"puzzle_id": "0BZ8F",
+"fen": "5rk1/p5p1/1p4QN/3r4/P7/2p5/1qP3PP/5RK1 b - - 0 28",
+"moves": [
+"g8h8",
+"f1f8"
+],
+"rating": 1003,
+"rd": 87,
+"popularity": 94,
+"nb_plays": 942,
+"themes": [
+"endgame",
+"hangingPiece",
+"mate",
+"mateIn1",
+"oneMove"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "zO9ft",
+"fen": "r1bqr3/ppp2B1k/2n3Qb/4p3/4P3/3P4/PPP2PPP/R4RK1 b - - 2 16",
+"moves": [
+"h7h8",
+"g6h6"
+],
+"rating": 1036,
+"rd": 76,
+"popularity": 95,
+"nb_plays": 1455,
+"themes": [
+"hangingPiece",
+"kingsideAttack",
+"mate",
+"mateIn1",
+"middlegame",
+"oneMove"
+],
+"opening_tags": [
+"Italian_Game",
+"Italian_Game_Giuoco_Piano"
+],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "hRRys",
+"fen": "1r2k2r/1p1b1ppp/p1n1p3/2b1P3/8/P1PB1N2/5PPP/1RB2RK1 w k - 4 16",
+"moves": [
+"d3a6",
+"b7a6",
+"b1b8",
+"c6b8"
+],
+"rating": 1073,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 2099,
+"themes": [
+"advantage",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Old_Sicilian"
+],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0NqwM",
+"fen": "2k3rr/ppp2p2/3q4/4N1pp/5Bn1/P1QP4/1P3PPP/3R1RK1 w - - 0 19",
+"moves": [
+"e5f7",
+"d6f4",
+"g2g3",
+"f4f7"
+],
+"rating": 1101,
+"rd": 84,
+"popularity": 93,
+"nb_plays": 2030,
+"themes": [
+"advantage",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0QAiN",
+"fen": "r4rk1/pp1b1ppp/1qn1p3/2bpPn2/N7/5NP1/PPP1QPBP/R1B2RK1 b - - 6 11",
+"moves": [
+"b6c7",
+"a4c5",
+"c6d4",
+"f3d4"
+],
+"rating": 1124,
+"rd": 78,
+"popularity": 92,
+"nb_plays": 1998,
+"themes": [
+"advantage",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"French_Defense",
+"French_Defense_Advance_Variation"
+],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "07QKu",
+"fen": "8/8/1p1K4/pB1R4/P7/8/1k6/3r4 w - - 13 78",
+"moves": [
+"d6d7",
+"d1d5",
+"d7c6",
+"d5b5",
+"a4b5",
+"a5a4",
+"c6b6",
+"a4a3",
+"b6c7",
+"a3a2",
+"b5b6",
+"a2a1q"
+],
+"rating": 1153,
+"rd": 79,
+"popularity": 95,
+"nb_plays": 9531,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"hangingPiece",
+"master",
+"masterVsMaster",
+"promotion",
+"quietMove",
+"superGM",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "I0EzD",
+"fen": "2r1k2r/6pp/p3p1B1/3pP3/1q4P1/1P2K3/p1P1QP2/3R3R b k - 0 29",
+"moves": [
+"h7g6",
+"h1h8",
+"e8d7",
+"h8c8"
+],
+"rating": 1173,
+"rd": 76,
+"popularity": 95,
+"nb_plays": 7782,
+"themes": [
+"crushing",
+"endgame",
+"hangingPiece",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "fHPAs",
+"fen": "2r3k1/1p3ppp/1q2p3/pn1pN3/1b1P1BP1/1Q2P3/2b1BP1P/2R3K1 b - - 2 23",
+"moves": [
+"c2b3",
+"c1c8",
+"b4f8",
+"e5d7"
+],
+"rating": 1190,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 10138,
+"themes": [
+"crushing",
+"hangingPiece",
+"master",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "rEP3B",
+"fen": "r3kb1r/1pp1q1pp/p1np1n2/4p3/PP2p1b1/1QP5/1B1PNPPP/R3KBNR b KQkq - 2 10",
+"moves": [
+"f6d5",
+"b3d5",
+"g4e6",
+"d5e4"
+],
+"rating": 1219,
+"rd": 78,
+"popularity": 91,
+"nb_plays": 850,
+"themes": [
+"advantage",
+"hangingPiece",
+"opening",
+"short"
+],
+"opening_tags": [
+"Philidor_Defense",
+"Philidor_Defense_Other_variations"
+],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "htjgG",
+"fen": "8/P1n5/2K1k1Bp/5p1P/6p1/8/8/8 b - - 4 62",
+"moves": [
+"g4g3",
+"c6c7",
+"g3g2",
+"a7a8q"
+],
+"rating": 1246,
+"rd": 76,
+"popularity": 100,
+"nb_plays": 708,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"hangingPiece",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0FMl9",
+"fen": "2r3k1/1Q3pp1/3p1q1p/p3n3/Pp2P3/1P4PP/5PB1/2rR1RK1 b - - 6 28",
+"moves": [
+"c1d1",
+"b7c8",
+"g8h7",
+"f1d1"
+],
+"rating": 1275,
+"rd": 75,
+"popularity": 100,
+"nb_plays": 804,
+"themes": [
+"crushing",
+"hangingPiece",
+"intermezzo",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "Ts5Ng",
+"fen": "7r/1b1kq2r/p3pp2/2P2P1B/4p2Q/R7/1P4PP/5R1K w - - 1 36",
+"moves": [
+"h4f4",
+"h7h5",
+"c5c6",
+"b7c6"
+],
+"rating": 1302,
+"rd": 90,
+"popularity": 91,
+"nb_plays": 2028,
+"themes": [
+"crushing",
+"hangingPiece",
+"master",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "xpzZ2",
+"fen": "rn4k1/4q2r/b1pp2p1/pp3p2/5P1Q/1P1B4/PBP2KPP/4R3 w - - 0 20",
+"moves": [
+"e1e7",
+"h7h4",
+"e7g7",
+"g8f8"
+],
+"rating": 1334,
+"rd": 77,
+"popularity": 92,
+"nb_plays": 2124,
+"themes": [
+"advantage",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "000lC",
+"fen": "3r3r/pQNk1ppp/1qnb1n2/1B6/8/8/PPP3PP/3R1R1K w - - 5 19",
+"moves": [
+"d1d6",
+"d7d6",
+"b7b6",
+"a7b6"
+],
+"rating": 1356,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 4709,
+"themes": [
+"advantage",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0Y4bW",
+"fen": "8/3B1b2/2P1p2k/b2pPp1p/3P1P2/r1N3R1/8/5K2 w - - 0 41",
+"moves": [
+"c3b5",
+"a3g3",
+"c6c7",
+"a5c7"
+],
+"rating": 1384,
+"rd": 80,
+"popularity": 90,
+"nb_plays": 2600,
+"themes": [
+"crushing",
+"endgame",
+"hangingPiece",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "VdP5e",
+"fen": "r4rk1/pp1n1ppp/2pb1q2/3p1b2/3P4/2N5/PPP1BPPP/R2Q1RNK b - - 3 11",
+"moves": [
+"d6h2",
+"h1h2",
+"f6h4",
+"g1h3",
+"f5h3",
+"g2h3"
+],
+"rating": 1405,
+"rd": 75,
+"popularity": 99,
+"nb_plays": 3348,
+"themes": [
+"advantage",
+"hangingPiece",
+"long",
+"middlegame"
+],
+"opening_tags": [
+"French_Defense",
+"French_Defense_Exchange_Variation"
+],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0cbIu",
+"fen": "5rk1/1p1r4/p1bp2pp/3Nb3/4B1P1/2PP3P/PP6/1K1RR3 w - - 0 28",
+"moves": [
+"d5e7",
+"d7e7",
+"e4c6",
+"b7c6",
+"d3d4",
+"e5f6"
+],
+"rating": 1421,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 14243,
+"themes": [
+"advantage",
+"hangingPiece",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "dqRxi",
+"fen": "2r1r1k1/5p1p/p1N3p1/1p1P4/4b1q1/PQ6/1P1R2PP/2R4K w - - 4 29",
+"moves": [
+"c6e7",
+"e8e7",
+"c1c8",
+"g4c8"
+],
+"rating": 1450,
+"rd": 77,
+"popularity": 94,
+"nb_plays": 2318,
+"themes": [
+"crushing",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "YAc1M",
+"fen": "5k2/7p/3p2p1/3P4/Q1pq4/5B1P/1b4P1/7K b - - 0 34",
+"moves": [
+"c4c3",
+"a4d4",
+"c3c2",
+"d4b2"
+],
+"rating": 1460,
+"rd": 75,
+"popularity": 98,
+"nb_plays": 2154,
+"themes": [
+"crushing",
+"endgame",
+"hangingPiece",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "gtrEc",
+"fen": "2rr2kb/pp3p2/5PpQ/1b6/1q1B4/5N1P/PP4P1/R3R1K1 w - - 1 27",
+"moves": [
+"f3g5",
+"b4d4",
+"g1h1",
+"d4f6"
+],
+"rating": 1479,
+"rd": 75,
+"popularity": 88,
+"nb_plays": 1087,
+"themes": [
+"advantage",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "rfnPe",
+"fen": "8/3k4/8/4BP1n/6K1/7p/8/8 b - - 5 54",
+"moves": [
+"d7e7",
+"g4h5",
+"h3h2",
+"e5h2",
+"e7f6",
+"h5g4"
+],
+"rating": 1503,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 876,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"hangingPiece",
+"long"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0GpY2",
+"fen": "R3bk2/2B3pp/r2n4/2pBppbP/8/2N3P1/P2r1P2/R5K1 b - - 5 31",
+"moves": [
+"a6a8",
+"c7d6",
+"g5e7",
+"d6e7",
+"f8e7",
+"d5a8"
+],
+"rating": 1523,
+"rd": 77,
+"popularity": 94,
+"nb_plays": 8925,
+"themes": [
+"crushing",
+"hangingPiece",
+"long",
+"master",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0KEhN",
+"fen": "8/p2B4/1p6/2p5/1nPpP3/3P2k1/1PbK1N2/8 w - - 2 37",
+"moves": [
+"e4e5",
+"g3f2",
+"e5e6",
+"c2d3",
+"e6e7",
+"d3g6",
+"e7e8q",
+"g6e8"
+],
+"rating": 1544,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 701,
+"themes": [
+"advantage",
+"endgame",
+"hangingPiece",
+"quietMove",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0MEFV",
+"fen": "2r5/5p1k/5p1p/p2Rp3/Pr2P2P/1Np5/1bP5/1KBR4 b - - 4 34",
+"moves": [
+"b4b3",
+"c2b3",
+"c3c2",
+"b1b2",
+"c2d1n",
+"d5d1"
+],
+"rating": 1568,
+"rd": 77,
+"popularity": 98,
+"nb_plays": 2008,
+"themes": [
+"advantage",
+"endgame",
+"hangingPiece",
+"long"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0Jbwx",
+"fen": "r3r1k1/1pp2ppp/p1n5/q3P3/6b1/3BQN2/PP3PPP/R2R2K1 w - - 4 21",
+"moves": [
+"d3h7",
+"g8h7",
+"e3e4",
+"f7f5"
+],
+"rating": 1588,
+"rd": 78,
+"popularity": 94,
+"nb_plays": 1940,
+"themes": [
+"advantage",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "izmjC",
+"fen": "rn1q1rk1/4ppbp/p4np1/1p1b4/3P4/2PBBNNP/1P3PP1/R2QR1K1 w - - 0 15",
+"moves": [
+"d3b5",
+"a6b5",
+"a1a8",
+"d5a8"
+],
+"rating": 1609,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 1353,
+"themes": [
+"advantage",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Caro-Kann_Defense",
+"Caro-Kann_Defense_Two_Knights_Attack"
+],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "pksFk",
+"fen": "r4rk1/3bbppp/pqp1p3/4P3/2p1N3/1PP1PN1P/P5P1/R2QR1K1 b - - 1 16",
+"moves": [
+"c4b3",
+"d1d7",
+"b3b2",
+"a1b1"
+],
+"rating": 1634,
+"rd": 76,
+"popularity": 83,
+"nb_plays": 1985,
+"themes": [
+"crushing",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Old_Sicilian"
+],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "05jP1",
+"fen": "7k/6p1/3K2Bp/7P/5r2/8/8/8 b - - 3 69",
+"moves": [
+"f4e4",
+"g6e4",
+"g7g6",
+"h5g6"
+],
+"rating": 1663,
+"rd": 80,
+"popularity": 90,
+"nb_plays": 1340,
+"themes": [
+"crushing",
+"endgame",
+"hangingPiece",
+"master",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0dE1h",
+"fen": "4rr1k/1pp2pp1/p1nb1q1p/3p4/3P2b1/2P2N1P/PPQ1BPP1/RN2R1K1 b - - 0 15",
+"moves": [
+"e8e2",
+"c2e2",
+"g4f3",
+"e2f3",
+"f6f3",
+"g2f3"
+],
+"rating": 1699,
+"rd": 77,
+"popularity": 88,
+"nb_plays": 886,
+"themes": [
+"advantage",
+"hangingPiece",
+"long",
+"middlegame"
+],
+"opening_tags": [
+"French_Defense",
+"French_Defense_Exchange_Variation"
+],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "CSaV8",
+"fen": "rnb1k2r/ppp2p1p/4pQ2/1q6/4P3/2PP4/1p2NPPP/1R2KB1R b Kkq - 0 12",
+"moves": [
+"b5d3",
+"f6h8",
+"e8e7",
+"b1b2"
+],
+"rating": 1724,
+"rd": 76,
+"popularity": 91,
+"nb_plays": 3292,
+"themes": [
+"crushing",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"French_Defense",
+"French_Defense_Other_variations"
+],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0GjFW",
+"fen": "r1b1k1r1/p4pBp/1q6/2b1p3/2p5/1P3Q2/P1P2PPP/RN3RK1 b q - 2 13",
+"moves": [
+"g8g7",
+"f3a8",
+"b6b7",
+"a8b7",
+"c8b7",
+"g2g3"
+],
+"rating": 1753,
+"rd": 76,
+"popularity": 100,
+"nb_plays": 715,
+"themes": [
+"advantage",
+"defensiveMove",
+"hangingPiece",
+"long",
+"middlegame",
+"pin"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Lowenthal_Variation"
+],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "e5fmy",
+"fen": "1n1r3N/pkq5/1pb1Pn1b/1B1p4/3P4/7P/PP4P1/2RQR1K1 w - - 1 23",
+"moves": [
+"e6e7",
+"d8h8",
+"c1c6",
+"b8c6"
+],
+"rating": 1774,
+"rd": 75,
+"popularity": 93,
+"nb_plays": 6716,
+"themes": [
+"advantage",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "s0ffH",
+"fen": "1br1r1k1/pp3pp1/2bq2np/8/3p4/1B2BNP1/PP1Q1P1P/2R1R1K1 w - - 0 25",
+"moves": [
+"d2d4",
+"c6f3",
+"c1c8",
+"e8c8",
+"d4d6",
+"b8d6"
+],
+"rating": 1808,
+"rd": 78,
+"popularity": 93,
+"nb_plays": 629,
+"themes": [
+"advantage",
+"hangingPiece",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "ZQ9AO",
+"fen": "5r1k/2R3Rp/7q/2pN1b2/2P5/6P1/2Q2P1P/rN4K1 w - - 3 32",
+"moves": [
+"c2f5",
+"f8f5",
+"g7h7",
+"h6h7",
+"c7h7",
+"h8h7"
+],
+"rating": 1841,
+"rd": 75,
+"popularity": 94,
+"nb_plays": 4680,
+"themes": [
+"advantage",
+"hangingPiece",
+"long",
+"middlegame",
+"pin"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0CIIu",
+"fen": "8/k1KN1pp1/P7/1P3P2/2n4p/8/8/8 w - - 0 43",
+"moves": [
+"d7e5",
+"c4e5",
+"b5b6",
+"a7a6",
+"b6b7",
+"e5d7",
+"c7d7",
+"a6b7"
+],
+"rating": 1874,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 4684,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"hangingPiece",
+"knightEndgame",
+"quietMove",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "oxn0a",
+"fen": "3r1rk1/1p3pp1/pq1n3p/3pBP2/3P1R2/1P1Q4/P6P/R5K1 w - - 0 25",
+"moves": [
+"e5g7",
+"g8g7",
+"f5f6",
+"g7h8",
+"f4h4",
+"f8g8",
+"g1h1",
+"g8g6"
+],
+"rating": 1910,
+"rd": 78,
+"popularity": 92,
+"nb_plays": 1815,
+"themes": [
+"crushing",
+"hangingPiece",
+"middlegame",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "FlTTV",
+"fen": "4rr1k/2R4p/p1R2np1/q7/1p1Q4/5B1P/6PK/8 w - - 0 38",
+"moves": [
+"c6f6",
+"a5c7",
+"f6f4",
+"c7g7"
+],
+"rating": 1938,
+"rd": 82,
+"popularity": 91,
+"nb_plays": 633,
+"themes": [
+"crushing",
+"hangingPiece",
+"master",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "AsUZE",
+"fen": "1r4n1/ppNk2pr/2nB2qp/3Q1b2/3p4/8/PP3PPP/RN2R1K1 b - - 0 19",
+"moves": [
+"g6d6",
+"d5f5",
+"d7c7",
+"f5h7"
+],
+"rating": 1970,
+"rd": 80,
+"popularity": 92,
+"nb_plays": 2097,
+"themes": [
+"advantage",
+"fork",
+"hangingPiece",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "jueuX",
+"fen": "r2qk2r/pp2ppbp/2n3pn/3pP3/3P4/5N1P/PP3PP1/R1BQKB1R w KQkq - 1 11",
+"moves": [
+"f1b5",
+"d8a5",
+"c1d2",
+"a5b5"
+],
+"rating": 1000,
+"rd": 80,
+"popularity": 100,
+"nb_plays": 735,
+"themes": [
+"advantage",
+"fork",
+"master",
+"opening",
+"short"
+],
+"opening_tags": [
+"Caro-Kann_Defense",
+"Caro-Kann_Defense_Endgame_Offer"
+],
+"motif": "fork"
+},
+{
+"puzzle_id": "Nmuhi",
+"fen": "8/1pk3p1/1b2p3/1K1pPnNp/3P3P/8/1P3BP1/8 b - - 6 41",
+"moves": [
+"f5d4",
+"f2d4",
+"b6d4",
+"g5e6",
+"c7c8",
+"e6d4"
+],
+"rating": 1038,
+"rd": 76,
+"popularity": 97,
+"nb_plays": 1338,
+"themes": [
+"crushing",
+"endgame",
+"fork",
+"long"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "iQLry",
+"fen": "3Rn3/1p3pp1/p6p/2kN4/1P4PP/3p1K2/4rP2/8 b - - 0 41",
+"moves": [
+"c5b5",
+"d5c3",
+"b5b4",
+"c3e2"
+],
+"rating": 1064,
+"rd": 87,
+"popularity": 95,
+"nb_plays": 6543,
+"themes": [
+"crushing",
+"endgame",
+"fork",
+"short"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "y5ARW",
+"fen": "3r1rk1/6p1/p1npb1qp/1pp2p2/4PP2/1PPBQ2P/P5P1/R2RN1K1 b - - 1 22",
+"moves": [
+"f5e4",
+"d3e4",
+"g6f6",
+"e4c6"
+],
+"rating": 1096,
+"rd": 86,
+"popularity": 94,
+"nb_plays": 1018,
+"themes": [
+"advantage",
+"fork",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "vwA5F",
+"fen": "7k/p1r3b1/2q4p/1p3pp1/4p3/QRPp2P1/3B1P1P/6K1 b - - 3 41",
+"moves": [
+"g7e5",
+"a3f8",
+"h8h7",
+"f8f5",
+"h7g8",
+"f5e5"
+],
+"rating": 1121,
+"rd": 75,
+"popularity": 98,
+"nb_plays": 646,
+"themes": [
+"advantage",
+"endgame",
+"exposedKing",
+"fork",
+"long"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "mMNm8",
+"fen": "r4r2/ppq1p1kp/6p1/2p2pQ1/4NNP1/1PPP4/P5Pn/R5K1 b - - 1 19",
+"moves": [
+"h2g4",
+"f4e6",
+"g7h8",
+"e6c7"
+],
+"rating": 1136,
+"rd": 79,
+"popularity": 91,
+"nb_plays": 4091,
+"themes": [
+"crushing",
+"fork",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Snyder_Variation"
+],
+"motif": "fork"
+},
+{
+"puzzle_id": "yHL8L",
+"fen": "rn1qk2r/pp3pb1/4p1p1/2p5/2PpN3/3P4/PP3PPP/R2QKB1R w KQkq - 0 14",
+"moves": [
+"e4c5",
+"d8a5",
+"d1d2",
+"a5c5"
+],
+"rating": 1152,
+"rd": 74,
+"popularity": 98,
+"nb_plays": 4827,
+"themes": [
+"advantage",
+"fork",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Van_Geet_Opening",
+"Van_Geet_Opening_Other_variations"
+],
+"motif": "fork"
+},
+{
+"puzzle_id": "nXVkG",
+"fen": "5Q2/6pk/7p/3q4/4p3/7P/3r1PP1/2R3K1 w - - 1 34",
+"moves": [
+"c1c7",
+"d2d1",
+"g1h2",
+"d5e5",
+"g2g3",
+"e5c7"
+],
+"rating": 1172,
+"rd": 75,
+"popularity": 99,
+"nb_plays": 1360,
+"themes": [
+"crushing",
+"endgame",
+"fork",
+"long"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "w7hte",
+"fen": "r1b2k1r/pp2qppp/2p5/4n3/2BPpP2/4P3/PP4PP/R2QK2R w KQ - 0 13",
+"moves": [
+"f4e5",
+"e7b4",
+"d1d2",
+"b4c4"
+],
+"rating": 1192,
+"rd": 80,
+"popularity": 92,
+"nb_plays": 548,
+"themes": [
+"advantage",
+"fork",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Semi-Slav_Defense",
+"Semi-Slav_Defense_Other_variations"
+],
+"motif": "fork"
+},
+{
+"puzzle_id": "v0ysM",
+"fen": "3b1k2/3P3Q/2p2q2/2P3N1/7P/4n1P1/1r3P2/4R1K1 w - - 4 38",
+"moves": [
+"e1e3",
+"f6f2",
+"g1h1",
+"f2f1"
+],
+"rating": 1232,
+"rd": 78,
+"popularity": 89,
+"nb_plays": 1520,
+"themes": [
+"endgame",
+"fork",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "UbyF1",
+"fen": "r4qk1/pb4pp/1p2Qp2/8/8/5P1P/5BP1/3R2K1 b - - 2 29",
+"moves": [
+"f8f7",
+"e6f7",
+"g8f7",
+"d1d7",
+"f7g8",
+"d7b7"
+],
+"rating": 1252,
+"rd": 74,
+"popularity": 95,
+"nb_plays": 13749,
+"themes": [
+"advantage",
+"attraction",
+"endgame",
+"fork",
+"long"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "PZdFi",
+"fen": "2rr2k1/p3qppp/1p6/1Bn1P3/3Q1P2/4B3/PP4RP/R3K3 w Q - 1 19",
+"moves": [
+"d4b4",
+"c5d3",
+"b5d3",
+"e7b4"
+],
+"rating": 1284,
+"rd": 83,
+"popularity": 91,
+"nb_plays": 713,
+"themes": [
+"advantage",
+"discoveredAttack",
+"fork",
+"master",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "WUURY",
+"fen": "3r3k/ppp2pp1/7p/4PB2/7q/P1P1P3/1PQ2K1b/R6R w - - 5 23",
+"moves": [
+"f2g2",
+"h4g3",
+"g2f1",
+"g3f3",
+"c2f2",
+"f3h1"
+],
+"rating": 1310,
+"rd": 79,
+"popularity": 93,
+"nb_plays": 1465,
+"themes": [
+"crushing",
+"exposedKing",
+"fork",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "dhjK5",
+"fen": "r3qkr1/1Q6/p4p1R/1p1p4/2nP1p2/2PB1P2/PP2K1PP/R7 w - - 1 32",
+"moves": [
+"e2f2",
+"e8e3",
+"f2f1",
+"c4d2"
+],
+"rating": 1324,
+"rd": 80,
+"popularity": 93,
+"nb_plays": 1624,
+"themes": [
+"cornerMate",
+"fork",
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "b75Bd",
+"fen": "8/p7/kp1r4/7p/1PP2r2/6RK/7P/2R5 b - - 0 37",
+"moves": [
+"d6c6",
+"b4b5",
+"a6b7",
+"b5c6"
+],
+"rating": 1349,
+"rd": 80,
+"popularity": 92,
+"nb_plays": 10099,
+"themes": [
+"crushing",
+"endgame",
+"fork",
+"rookEndgame",
+"short"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "rw1mj",
+"fen": "r4rk1/p1qn2pp/bn1p1p2/2p1p3/2P1P2N/2PBB1P1/P4P1P/R2QR1K1 b - - 1 17",
+"moves": [
+"a6c4",
+"d3c4",
+"b6c4",
+"d1d5",
+"g8h8",
+"d5c4"
+],
+"rating": 1372,
+"rd": 77,
+"popularity": 94,
+"nb_plays": 4682,
+"themes": [
+"advantage",
+"clearance",
+"fork",
+"long",
+"middlegame"
+],
+"opening_tags": [
+"Queens_Indian_Defense",
+"Queens_Indian_Defense_Spassky_System"
+],
+"motif": "fork"
+},
+{
+"puzzle_id": "znYRJ",
+"fen": "r2r2k1/pp3ppb/2n4p/3B4/8/P1P1B1P1/5P1P/3RR1K1 w - - 1 23",
+"moves": [
+"g1g2",
+"d8d5",
+"d1d5",
+"h7e4",
+"f2f3",
+"e4d5"
+],
+"rating": 1391,
+"rd": 74,
+"popularity": 97,
+"nb_plays": 25607,
+"themes": [
+"attraction",
+"crushing",
+"fork",
+"long",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "w0SYC",
+"fen": "2b3k1/p4p1p/2p2n2/2p2P2/2P3P1/2N2R1P/P7/2r2BK1 w - - 1 33",
+"moves": [
+"g1f2",
+"c1c3",
+"f3c3",
+"f6e4",
+"f2e3",
+"e4c3"
+],
+"rating": 1415,
+"rd": 73,
+"popularity": 96,
+"nb_plays": 26499,
+"themes": [
+"attraction",
+"crushing",
+"endgame",
+"exposedKing",
+"fork",
+"long",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "4xoQd",
+"fen": "rnb2kn1/ppp3q1/3p2pB/8/4P2Q/5N2/PbP3PP/RN3K1R b - - 1 13",
+"moves": [
+"g8h6",
+"h4d8",
+"f8f7",
+"f3g5"
+],
+"rating": 1437,
+"rd": 75,
+"popularity": 98,
+"nb_plays": 9786,
+"themes": [
+"fork",
+"mate",
+"mateIn2",
+"opening",
+"short"
+],
+"opening_tags": [
+"Bishops_Opening",
+"Bishops_Opening_Boi_Variation"
+],
+"motif": "fork"
+},
+{
+"puzzle_id": "vPM29",
+"fen": "6k1/p2b2pp/1p3b2/P1p2p2/5Bq1/2PP2P1/4r1BP/R2Q2K1 b - - 2 27",
+"moves": [
+"f6c3",
+"d1b3",
+"g8h8",
+"b3c3"
+],
+"rating": 1457,
+"rd": 75,
+"popularity": 91,
+"nb_plays": 1735,
+"themes": [
+"advantage",
+"fork",
+"master",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "xBpYg",
+"fen": "8/5pkp/r2R2p1/3K4/3P4/2P1nN2/6PP/8 w - - 0 39",
+"moves": [
+"d5e5",
+"e3c4",
+"e5d5",
+"c4d6"
+],
+"rating": 1482,
+"rd": 77,
+"popularity": 95,
+"nb_plays": 29727,
+"themes": [
+"advantage",
+"endgame",
+"fork",
+"short"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "1SUuy",
+"fen": "8/8/p7/1pn1Q3/1k6/8/7P/2r2K2 w - - 1 52",
+"moves": [
+"f1e2",
+"c1e1",
+"e2e1",
+"c5d3",
+"e1e2",
+"d3e5"
+],
+"rating": 1509,
+"rd": 78,
+"popularity": 94,
+"nb_plays": 1088,
+"themes": [
+"attraction",
+"crushing",
+"endgame",
+"exposedKing",
+"fork",
+"long",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "un36v",
+"fen": "4rrk1/2p3b1/1pq3p1/4pnBp/P1P1N3/1PQ4P/5RP1/5R1K w - - 2 31",
+"moves": [
+"c3c2",
+"c6e4",
+"c2e4",
+"f5g3",
+"h1h2",
+"g3e4"
+],
+"rating": 1526,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 8717,
+"themes": [
+"advantage",
+"attraction",
+"fork",
+"long",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "cDx0s",
+"fen": "5q1k/p6r/1pb1Q3/5p2/2B1p3/P1P4P/1P3PP1/6K1 b - - 6 43",
+"moves": [
+"f8g7",
+"e6c8",
+"c6e8",
+"c8e8",
+"g7f8",
+"e8f8"
+],
+"rating": 1550,
+"rd": 78,
+"popularity": 97,
+"nb_plays": 12953,
+"themes": [
+"endgame",
+"exposedKing",
+"fork",
+"long",
+"mate",
+"mateIn3"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "djUFB",
+"fen": "3r1r1k/4n1p1/p3N2N/1p2q3/5p1P/2P5/PPQ1B3/2K3R1 w - - 3 28",
+"moves": [
+"e6f8",
+"e5e3",
+"c1b1",
+"e3g1",
+"c2c1",
+"g1c1"
+],
+"rating": 1571,
+"rd": 77,
+"popularity": 91,
+"nb_plays": 1279,
+"themes": [
+"advantage",
+"fork",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "fngot",
+"fen": "r7/ppqkn3/3P2pr/7p/8/2N5/PPP3PP/2K1RR2 b - - 0 19",
+"moves": [
+"d7d6",
+"c3b5",
+"d6d7",
+"b5c7"
+],
+"rating": 1596,
+"rd": 78,
+"popularity": 89,
+"nb_plays": 1431,
+"themes": [
+"crushing",
+"fork",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Kings_Gambit_Accepted",
+"Kings_Gambit_Accepted_Fischer_Defense"
+],
+"motif": "fork"
+},
+{
+"puzzle_id": "eTNm3",
+"fen": "1r4r1/8/2pk3p/2NpbR2/1P6/8/P5PP/2R3K1 b - - 0 32",
+"moves": [
+"b8b4",
+"f5e5",
+"d6e5",
+"c5d3",
+"e5d6",
+"d3b4"
+],
+"rating": 1616,
+"rd": 75,
+"popularity": 96,
+"nb_plays": 11279,
+"themes": [
+"advantage",
+"attraction",
+"endgame",
+"fork",
+"long",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "wZbdy",
+"fen": "r5k1/pb6/3bpqp1/1p1p1p2/2pP1P2/2P1P2Q/PPB3P1/2K4R b - - 2 24",
+"moves": [
+"a8c8",
+"h3h7",
+"g8f8",
+"h7b7"
+],
+"rating": 1631,
+"rd": 81,
+"popularity": 94,
+"nb_plays": 34056,
+"themes": [
+"advantage",
+"fork",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "z3AaR",
+"fen": "r3r1k1/1p3pbp/p5p1/3Nq3/5p2/P4Q2/1PR2PPP/3R1K2 b - - 4 22",
+"moves": [
+"a8c8",
+"c2c8",
+"e8c8",
+"d1e1",
+"e5b8",
+"d5e7",
+"g8f8",
+"e7c8"
+],
+"rating": 1659,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 18107,
+"themes": [
+"advantage",
+"fork",
+"middlegame",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "srmYB",
+"fen": "3r1b1r/k1N1qpp1/bpQB3p/p7/8/3P2P1/PPP3BP/2KR3n b - - 4 22",
+"moves": [
+"e7d6",
+"c7b5",
+"a6b5",
+"c6b7"
+],
+"rating": 1683,
+"rd": 80,
+"popularity": 92,
+"nb_plays": 2174,
+"themes": [
+"fork",
+"mate",
+"mateIn2",
+"middlegame",
+"sacrifice",
+"short"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "vKnzE",
+"fen": "5r1k/2n4p/6p1/3Pp3/2B1q3/4Q3/4KP2/1R6 b - - 1 36",
+"moves": [
+"e4b1",
+"e3e5",
+"h8g8",
+"d5d6",
+"f8f7",
+"c4f7"
+],
+"rating": 1720,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 3131,
+"themes": [
+"crushing",
+"discoveredAttack",
+"discoveredCheck",
+"endgame",
+"fork",
+"long"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "dsn4L",
+"fen": "q4b1r/3pkppp/4p3/8/1pQ1n3/1P2BN2/5PPP/2R3K1 b - - 1 22",
+"moves": [
+"e4c3",
+"c4b4",
+"e7e8",
+"b4c3"
+],
+"rating": 1750,
+"rd": 75,
+"popularity": 96,
+"nb_plays": 3977,
+"themes": [
+"advantage",
+"fork",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "m7vSD",
+"fen": "r1bq1r2/1p2npk1/5n1p/p2p2p1/3P4/P1P2QNP/BP3PP1/4RRK1 b - - 2 21",
+"moves": [
+"e7g6",
+"f3f6",
+"d8f6",
+"g3h5",
+"g7h8",
+"h5f6"
+],
+"rating": 1782,
+"rd": 74,
+"popularity": 94,
+"nb_plays": 3005,
+"themes": [
+"advantage",
+"attraction",
+"fork",
+"long",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "sBY7w",
+"fen": "2rq3k/p4Bbp/4Q1p1/8/3PP3/2P5/6P1/5RK1 w - - 1 25",
+"moves": [
+"e6b3",
+"c8c3",
+"b3c3",
+"g7d4",
+"c3d4",
+"d8d4"
+],
+"rating": 1816,
+"rd": 79,
+"popularity": 91,
+"nb_plays": 548,
+"themes": [
+"advantage",
+"endgame",
+"fork",
+"long",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "xkRSl",
+"fen": "2k5/1pp2p2/p1p5/8/2P1Pq2/1P3P2/KPPr4/5Q1R b - - 2 30",
+"moves": [
+"d2c2",
+"h1h8",
+"c8d7",
+"f1d3",
+"f4d6",
+"d3c2"
+],
+"rating": 1857,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 15817,
+"themes": [
+"crushing",
+"endgame",
+"fork",
+"long"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "sk6tP",
+"fen": "3r2k1/pp2rppp/8/3qP3/2RP1P2/1Q6/PP4PP/2R3K1 w - - 3 27",
+"moves": [
+"b3a4",
+"b7b5",
+"c4c5",
+"d5c5",
+"d4c5",
+"b5a4"
+],
+"rating": 1898,
+"rd": 74,
+"popularity": 96,
+"nb_plays": 6339,
+"themes": [
+"crushing",
+"endgame",
+"fork",
+"long"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "YuzSG",
+"fen": "6k1/7p/1R6/5p2/1n1K3P/4P1P1/1r1r4/2RN4 w - - 2 43",
+"moves": [
+"d4e5",
+"b4d3",
+"e5f5",
+"b2b6"
+],
+"rating": 1927,
+"rd": 79,
+"popularity": 94,
+"nb_plays": 15146,
+"themes": [
+"advantage",
+"discoveredAttack",
+"endgame",
+"fork",
+"short"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "rwR2U",
+"fen": "2k5/2P5/6R1/2B4p/5p2/5PnK/8/2r5 b - - 4 58",
+"moves": [
+"c8c7",
+"c5d6",
+"c7d7",
+"d6f4",
+"c1h1",
+"h3g2"
+],
+"rating": 1962,
+"rd": 74,
+"popularity": 93,
+"nb_plays": 4800,
+"themes": [
+"crushing",
+"endgame",
+"fork",
+"long"
+],
+"opening_tags": [],
+"motif": "fork"
+},
+{
+"puzzle_id": "mc6LX",
+"fen": "2r3k1/5pp1/2r1p2p/3pP3/QP6/P3qN1P/5RP1/R5K1 w - - 2 26",
+"moves": [
+"a4d1",
+"c6c1",
+"a1c1",
+"c8c1",
+"d1c1",
+"e3c1"
+],
+"rating": 1000,
+"rd": 95,
+"popularity": 92,
+"nb_plays": 1307,
+"themes": [
+"advantage",
+"long",
+"middlegame",
+"pin"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "id7YQ",
+"fen": "5rk1/r1p2p1p/1p4np/p3N1q1/2PP4/P4QP1/1P3PKP/3RR3 w - - 6 22",
+"moves": [
+"e5d7",
+"g6h4",
+"g2h1",
+"h4f3"
+],
+"rating": 1063,
+"rd": 100,
+"popularity": 92,
+"nb_plays": 2216,
+"themes": [
+"crushing",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "tOJ9Q",
+"fen": "r7/p2b1k2/4p3/1p3pB1/7P/1P1B1p2/5P2/6KR w - - 1 36",
+"moves": [
+"h4h5",
+"a8g8",
+"g1f1",
+"g8g5"
+],
+"rating": 1101,
+"rd": 85,
+"popularity": 95,
+"nb_plays": 18131,
+"themes": [
+"advantage",
+"endgame",
+"master",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "gmDjP",
+"fen": "r2q1r2/ppp1npbk/3p2p1/3Pp2p/4P2P/2N1Q1NB/PPP5/2KR3R w - - 1 16",
+"moves": [
+"d1f1",
+"g7h6",
+"e3h6",
+"h7h6"
+],
+"rating": 1146,
+"rd": 78,
+"popularity": 88,
+"nb_plays": 607,
+"themes": [
+"advantage",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [
+"Paleface_Attack",
+"Paleface_Attack_Other_variations"
+],
+"motif": "pin"
+},
+{
+"puzzle_id": "08Zja",
+"fen": "6rk/1b3p1Q/p1q2Pp1/1p1r4/3p1R2/P2B4/1PPR2PP/7K b - - 0 31",
+"moves": [
+"h8h7",
+"f4h4",
+"d5h5",
+"h4h5"
+],
+"rating": 1166,
+"rd": 82,
+"popularity": 94,
+"nb_plays": 1712,
+"themes": [
+"mate",
+"mateIn2",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "JiTcU",
+"fen": "2r3k1/1RP2ppp/4p3/3pP3/8/6P1/1p3P1P/6K1 b - - 1 32",
+"moves": [
+"b2b1q",
+"b7b1",
+"g8f8",
+"b1b8",
+"f8e8",
+"b8c8"
+],
+"rating": 1182,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 671,
+"themes": [
+"crushing",
+"endgame",
+"hangingPiece",
+"long",
+"pin"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "iGCER",
+"fen": "rn3rk1/2q1bppp/p3b3/1p1pp3/4PP2/2NBQ3/PPPN2PP/R4RK1 w - - 0 15",
+"moves": [
+"e4d5",
+"e7c5",
+"e3c5",
+"c7c5"
+],
+"rating": 1207,
+"rd": 76,
+"popularity": 92,
+"nb_plays": 1911,
+"themes": [
+"crushing",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Najdorf_Variation"
+],
+"motif": "pin"
+},
+{
+"puzzle_id": "Qujhy",
+"fen": "rnbqkbnr/pppp2pp/5p2/4N3/3pP3/8/PPP2PPP/RNBQKB1R b KQkq - 1 4",
+"moves": [
+"f8d6",
+"d1h5",
+"g7g6",
+"e5g6",
+"h7g6",
+"h5h8"
+],
+"rating": 1241,
+"rd": 75,
+"popularity": 93,
+"nb_plays": 5318,
+"themes": [
+"crushing",
+"long",
+"opening",
+"pin",
+"trappedPiece"
+],
+"opening_tags": [
+"Kings_Pawn_Game",
+"Kings_Pawn_Game_Damiano_Defense"
+],
+"motif": "pin"
+},
+{
+"puzzle_id": "jvZUX",
+"fen": "2r3k1/1p6/1B4q1/4pR2/p3Pb2/8/PP4KP/3Q4 w - - 3 38",
+"moves": [
+"g2h1",
+"c8c1",
+"d1c1",
+"f4c1"
+],
+"rating": 1271,
+"rd": 78,
+"popularity": 93,
+"nb_plays": 815,
+"themes": [
+"crushing",
+"endgame",
+"master",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "n8idZ",
+"fen": "3R4/k3Q1p1/pp6/8/5b2/1KP5/PP4q1/5r2 b - - 1 35",
+"moves": [
+"g2b7",
+"d8d7",
+"b7d7",
+"e7d7"
+],
+"rating": 1300,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 5094,
+"themes": [
+"advantage",
+"endgame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "cwEQY",
+"fen": "r1bN4/pp4k1/4p1P1/3pP3/2pn2r1/2N5/PPP2PP1/R4RK1 w - - 0 23",
+"moves": [
+"a1d1",
+"d4f3",
+"g1h1",
+"g4h4"
+],
+"rating": 1325,
+"rd": 78,
+"popularity": 92,
+"nb_plays": 753,
+"themes": [
+"kingsideAttack",
+"mate",
+"mateIn2",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "0KjnW",
+"fen": "1r2kb1r/p1Qbqppp/2n5/1B6/5P2/8/PPP2KPP/RNB4R b k - 0 12",
+"moves": [
+"b8b5",
+"h1e1",
+"d7e6",
+"c7c6"
+],
+"rating": 1345,
+"rd": 74,
+"popularity": 98,
+"nb_plays": 4254,
+"themes": [
+"advantage",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [
+"Petrovs_Defense",
+"Petrovs_Defense_Damiano_Variation"
+],
+"motif": "pin"
+},
+{
+"puzzle_id": "IQU4I",
+"fen": "r1b5/2R5/PP3k1p/K2r1Pp1/3p4/3B2P1/7P/R7 w - - 1 48",
+"moves": [
+"d3b5",
+"a8a6",
+"a5b4",
+"a6a1"
+],
+"rating": 1372,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 1001,
+"themes": [
+"advantage",
+"endgame",
+"pin",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "bg4CC",
+"fen": "2r5/ppn3pp/4k3/4p3/1PP2nP1/P1K1R2P/8/RN6 w - - 5 27",
+"moves": [
+"b1d2",
+"c7d5",
+"c3b3",
+"d5e3"
+],
+"rating": 1394,
+"rd": 75,
+"popularity": 80,
+"nb_plays": 695,
+"themes": [
+"crushing",
+"endgame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "YUdk5",
+"fen": "6k1/pp4p1/3p4/1PqPprb1/R1P3p1/6P1/1Q3P1P/R5K1 w - - 0 31",
+"moves": [
+"b2c2",
+"f5f2",
+"c2f2",
+"g5e3",
+"f2e3",
+"c5e3"
+],
+"rating": 1414,
+"rd": 75,
+"popularity": 88,
+"nb_plays": 738,
+"themes": [
+"advantage",
+"endgame",
+"kingsideAttack",
+"long",
+"pin",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "UGxXv",
+"fen": "8/4k1pp/p3p3/1p1b1q2/2p5/7P/PP4P1/4Q1RK w - - 18 57",
+"moves": [
+"g1f1",
+"f5h3",
+"h1g1",
+"h3g2"
+],
+"rating": 1442,
+"rd": 80,
+"popularity": 89,
+"nb_plays": 1268,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "y9lky",
+"fen": "r3k3/1p1nppb1/p1p3p1/4r3/7q/2N1BQ1P/PPP5/R4BKR w q - 0 17",
+"moves": [
+"f1g2",
+"e5e3",
+"f3e3",
+"g7d4"
+],
+"rating": 1458,
+"rd": 76,
+"popularity": 93,
+"nb_plays": 743,
+"themes": [
+"clearance",
+"crushing",
+"middlegame",
+"pin",
+"sacrifice",
+"short"
+],
+"opening_tags": [
+"Blackmar-Diemer_Gambit",
+"Blackmar-Diemer_Gambit_Teichmann_Variation"
+],
+"motif": "pin"
+},
+{
+"puzzle_id": "uDm4h",
+"fen": "1k1r3r/ppq2p2/2b2n1p/2Np1B2/3p2p1/P3P1P1/3N1PP1/1R1QK2R b K - 3 20",
+"moves": [
+"d4e3",
+"c5a6",
+"b8a8",
+"a6c7"
+],
+"rating": 1478,
+"rd": 75,
+"popularity": 100,
+"nb_plays": 1940,
+"themes": [
+"crushing",
+"middlegame",
+"pin",
+"queensideAttack",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "zdouP",
+"fen": "6k1/2R5/5r1p/3P2p1/8/4K3/8/8 b - - 2 63",
+"moves": [
+"f6f7",
+"d5d6",
+"f7f8",
+"d6d7",
+"f8d8",
+"c7c8",
+"g8f7",
+"c8d8"
+],
+"rating": 1507,
+"rd": 77,
+"popularity": 92,
+"nb_plays": 3027,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"pin",
+"rookEndgame",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "gfWTz",
+"fen": "6k1/4b1p1/2q1Pn1p/1p3P2/2p1p3/3r3P/1P2QBP1/2R2RK1 w - - 0 29",
+"moves": [
+"f2e3",
+"d3e3",
+"e2e3",
+"e7c5",
+"e3c5",
+"c6c5"
+],
+"rating": 1528,
+"rd": 75,
+"popularity": 90,
+"nb_plays": 2374,
+"themes": [
+"advantage",
+"long",
+"middlegame",
+"pin",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "tR96Q",
+"fen": "rnbqk1nr/pp3ppp/3bp3/2ppN3/3P1B2/4P3/PPP2PPP/RN1QKB1R b KQkq - 2 5",
+"moves": [
+"f7f6",
+"d1h5",
+"g7g6",
+"e5g6",
+"h7g6",
+"h5h8"
+],
+"rating": 1551,
+"rd": 80,
+"popularity": 94,
+"nb_plays": 15458,
+"themes": [
+"crushing",
+"long",
+"opening",
+"pin",
+"trappedPiece"
+],
+"opening_tags": [
+"Queens_Pawn_Game",
+"Queens_Pawn_Game_Accelerated_London_System"
+],
+"motif": "pin"
+},
+{
+"puzzle_id": "0B7vX",
+"fen": "r1q2rk1/2p2pp1/p1bb3p/1p2n3/3Q1P2/1BN4P/PPP3P1/3R1RBK w - - 1 18",
+"moves": [
+"f4e5",
+"c8h3",
+"g1h2",
+"h3g2"
+],
+"rating": 1569,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 1340,
+"themes": [
+"kingsideAttack",
+"mate",
+"mateIn2",
+"opening",
+"pin",
+"short"
+],
+"opening_tags": [
+"Kings_Gambit_Declined",
+"Kings_Gambit_Declined_Queens_Knight_Defense"
+],
+"motif": "pin"
+},
+{
+"puzzle_id": "RoEfT",
+"fen": "8/5kp1/3P4/p1p2r1p/PpPbR2P/1P3P2/6K1/8 b - - 0 46",
+"moves": [
+"f7g6",
+"d6d7",
+"d4f6",
+"e4e6",
+"g6f7",
+"e6f6",
+"f7f6",
+"d7d8q"
+],
+"rating": 1589,
+"rd": 77,
+"popularity": 95,
+"nb_plays": 5245,
+"themes": [
+"advancedPawn",
+"attraction",
+"crushing",
+"endgame",
+"pin",
+"promotion",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "KRdL4",
+"fen": "2rr4/p4pk1/2n5/8/5Pqp/2Q2N2/1P6/1KN4R b - - 5 32",
+"moves": [
+"f7f6",
+"h1g1",
+"g4g1",
+"f3g1"
+],
+"rating": 1605,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 5285,
+"themes": [
+"advantage",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "lTPNN",
+"fen": "r3r2k/1p4bp/p1nNbpp1/8/8/1QP1q3/PP1N2PP/2KR1B1R w - - 5 21",
+"moves": [
+"f1c4",
+"c6a5",
+"c4e6",
+"a5b3"
+],
+"rating": 1622,
+"rd": 76,
+"popularity": 89,
+"nb_plays": 1928,
+"themes": [
+"advantage",
+"master",
+"middlegame",
+"pin",
+"queensideAttack",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "Zf29j",
+"fen": "4q2k/ppp3p1/3b2p1/3p2Q1/3B4/P1P4P/1P3PP1/5K2 b - - 1 29",
+"moves": [
+"c7c6",
+"g5h6",
+"h8g8",
+"h6g7"
+],
+"rating": 1644,
+"rd": 79,
+"popularity": 94,
+"nb_plays": 610,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "iZDxB",
+"fen": "r3kb1r/2p1qppp/p1bp1n2/2p5/P3P3/2NQ1N2/1PP2PPP/R1B2RK1 b kq - 4 13",
+"moves": [
+"c6e4",
+"c3e4",
+"e7e4",
+"f1e1",
+"e4e1",
+"f3e1"
+],
+"rating": 1661,
+"rd": 76,
+"popularity": 95,
+"nb_plays": 16795,
+"themes": [
+"crushing",
+"long",
+"middlegame",
+"pin"
+],
+"opening_tags": [
+"Ruy_Lopez",
+"Ruy_Lopez_Steinitz_Defense"
+],
+"motif": "pin"
+},
+{
+"puzzle_id": "XBpiS",
+"fen": "6k1/p5pp/2pb4/3p4/1P1Pp3/P5qr/1B2QRB1/6K1 w - - 0 27",
+"moves": [
+"b2c1",
+"h3h1",
+"g1h1",
+"g3h2"
+],
+"rating": 1687,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 656,
+"themes": [
+"attraction",
+"mate",
+"mateIn2",
+"middlegame",
+"pin",
+"sacrifice",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "tM6Yo",
+"fen": "3r1rk1/6p1/p3R2p/1p5q/4P3/2PQ3P/PP4P1/5RK1 w - - 1 29",
+"moves": [
+"d3b1",
+"f8f1",
+"b1f1",
+"d8d1",
+"e6e8",
+"g8h7"
+],
+"rating": 1709,
+"rd": 75,
+"popularity": 93,
+"nb_plays": 1804,
+"themes": [
+"advantage",
+"endgame",
+"long",
+"pin"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "00XXM",
+"fen": "3r1br1/Qpqk1p2/p1p1p2p/3nP3/8/2P1NP1N/PP6/1K1R3R b - - 3 25",
+"moves": [
+"f8e7",
+"c3c4",
+"b7b6",
+"a7c7",
+"d7c7",
+"c4d5"
+],
+"rating": 1735,
+"rd": 73,
+"popularity": 95,
+"nb_plays": 14752,
+"themes": [
+"advantage",
+"long",
+"middlegame",
+"pin"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "02sJP",
+"fen": "3rr1k1/4ppbp/pp1p4/3P2R1/P1P3b1/1PN3P1/1B1R2K1/8 b - - 1 32",
+"moves": [
+"g4d7",
+"c3e4",
+"f7f6",
+"e4f6",
+"e7f6",
+"b2f6"
+],
+"rating": 1760,
+"rd": 75,
+"popularity": 93,
+"nb_plays": 621,
+"themes": [
+"advantage",
+"kingsideAttack",
+"long",
+"middlegame",
+"pin"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "uKqVf",
+"fen": "r5k1/6q1/4pbQ1/p2p3B/n1pP1P1P/2P1P3/1r1N1P2/2K3R1 b - - 6 26",
+"moves": [
+"a8b8",
+"g6f7",
+"g8h8",
+"g1g7"
+],
+"rating": 1794,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 2797,
+"themes": [
+"advantage",
+"discoveredAttack",
+"kingsideAttack",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "mCD6s",
+"fen": "2kr1r2/1pp2Bpb/p1n2n1p/7P/3PP3/1PP2P2/3BNK2/R5R1 w - - 1 23",
+"moves": [
+"f7g6",
+"h7g6",
+"g1g6",
+"f6e4"
+],
+"rating": 1818,
+"rd": 75,
+"popularity": 93,
+"nb_plays": 3844,
+"themes": [
+"advantage",
+"master",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "kFfPx",
+"fen": "b3r1k1/q4pbp/p1p1p1p1/P3P1P1/2PrNP2/1P2Q2P/6K1/3RB3 w - - 0 35",
+"moves": [
+"e3d4",
+"a7d4",
+"d1d4",
+"c6c5"
+],
+"rating": 1842,
+"rd": 74,
+"popularity": 96,
+"nb_plays": 17636,
+"themes": [
+"advantage",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "08gCM",
+"fen": "r4rk1/pp2p1b1/2np2p1/3Q2B1/4P3/1N6/PPP1Bq2/2K4R b - - 0 19",
+"moves": [
+"f8f7",
+"h1f1",
+"f2f1",
+"e2f1"
+],
+"rating": 1876,
+"rd": 74,
+"popularity": 95,
+"nb_plays": 16266,
+"themes": [
+"advantage",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Classical_Variation"
+],
+"motif": "pin"
+},
+{
+"puzzle_id": "azXAu",
+"fen": "7r/ppp5/3rpk2/5p2/6p1/P2PNnP1/1PP1R2P/2K2R2 b - - 5 30",
+"moves": [
+"h8h2",
+"e3g4",
+"f5g4",
+"e2h2"
+],
+"rating": 1910,
+"rd": 76,
+"popularity": 95,
+"nb_plays": 17734,
+"themes": [
+"advantage",
+"endgame",
+"intermezzo",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "zRM4z",
+"fen": "8/1Q2bk1r/2ppp2r/4p3/P3P1R1/2NP3P/1PP2qPK/R7 w - - 0 30",
+"moves": [
+"g4g3",
+"h6h3",
+"g3h3",
+"h7h3",
+"h2h3",
+"f2h4"
+],
+"rating": 1936,
+"rd": 79,
+"popularity": 92,
+"nb_plays": 1203,
+"themes": [
+"attraction",
+"long",
+"mate",
+"mateIn3",
+"middlegame",
+"pin",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "WifZX",
+"fen": "1k1q4/pp6/2n5/3b4/3p4/1P1Q1NP1/P3N1KP/8 w - - 10 35",
+"moves": [
+"e2f4",
+"c6e5",
+"d3f5",
+"d5f3"
+],
+"rating": 1965,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 3904,
+"themes": [
+"advantage",
+"endgame",
+"master",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "pin"
+},
+{
+"puzzle_id": "JPWiB",
+"fen": "1K6/2Q5/4p3/4k3/8/8/8/5q2 b - - 5 61",
+"moves": [
+"e5f5",
+"c7f7",
+"f5e4",
+"f7f1"
+],
+"rating": 1007,
+"rd": 77,
+"popularity": 97,
+"nb_plays": 1160,
+"themes": [
+"crushing",
+"endgame",
+"queenEndgame",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "Y2hgP",
+"fen": "8/8/8/4R3/b2p3p/3K3k/8/8 w - - 0 61",
+"moves": [
+"e5e2",
+"a4b5",
+"d3d2",
+"b5e2"
+],
+"rating": 1053,
+"rd": 78,
+"popularity": 90,
+"nb_plays": 553,
+"themes": [
+"crushing",
+"endgame",
+"master",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "lnFff",
+"fen": "8/pN5R/8/k2p4/P1pP3p/2P1n2P/1r6/7K b - - 0 59",
+"moves": [
+"a5a4",
+"b7c5",
+"a4b5",
+"h7b7",
+"b5c6",
+"b7b2"
+],
+"rating": 1076,
+"rd": 83,
+"popularity": 93,
+"nb_plays": 727,
+"themes": [
+"crushing",
+"endgame",
+"long",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "0ti22",
+"fen": "7r/2n3R1/k7/1pP1pP2/4BK2/8/7p/8 w - - 0 52",
+"moves": [
+"f4e5",
+"h8e8",
+"e5d6",
+"e8e4"
+],
+"rating": 1096,
+"rd": 93,
+"popularity": 93,
+"nb_plays": 1077,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"master",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "HkWhY",
+"fen": "r7/p2bB1k1/1p2p1p1/3pP1pr/3P4/2P5/PP1K4/5RR1 b - - 6 27",
+"moves": [
+"a8h8",
+"e7f6",
+"g7g8",
+"f6h8"
+],
+"rating": 1110,
+"rd": 106,
+"popularity": 92,
+"nb_plays": 781,
+"themes": [
+"advantage",
+"endgame",
+"master",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "0GdgI",
+"fen": "r1b3nr/ppq2kpp/4p3/5p1Q/5P2/1K1B4/PPP5/R6R b - - 1 20",
+"moves": [
+"g7g6",
+"h5h7",
+"h8h7",
+"h1h7",
+"f7f6",
+"h7c7"
+],
+"rating": 1131,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 1055,
+"themes": [
+"advantage",
+"long",
+"middlegame",
+"sacrifice",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "0Q92G",
+"fen": "2k5/p6p/1b1pPq2/1bpQ3p/2P5/5P2/P4P2/R4K2 b - - 0 32",
+"moves": [
+"b5e8",
+"d5a8",
+"c8c7",
+"a8e8",
+"f6a1",
+"f1g2"
+],
+"rating": 1148,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 3218,
+"themes": [
+"advantage",
+"endgame",
+"long",
+"sacrifice",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "KqRhD",
+"fen": "8/2r2ppp/5n2/8/1k5P/4RK2/1P3P2/8 b - - 0 38",
+"moves": [
+"b4c4",
+"e3c3",
+"c4d5",
+"c3c7"
+],
+"rating": 1162,
+"rd": 99,
+"popularity": 94,
+"nb_plays": 529,
+"themes": [
+"advantage",
+"endgame",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "ErvOi",
+"fen": "8/6R1/8/6p1/4K3/5P2/2k5/5q2 b - - 1 59",
+"moves": [
+"f1c1",
+"g7c7",
+"c2b1",
+"c7c1",
+"b1c1",
+"e4f5"
+],
+"rating": 1183,
+"rd": 75,
+"popularity": 98,
+"nb_plays": 4961,
+"themes": [
+"crushing",
+"endgame",
+"long",
+"queenRookEndgame",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "xROog",
+"fen": "1n6/8/1k3p2/p1p1b1p1/6P1/3P4/P3K1B1/2R5 w - - 2 34",
+"moves": [
+"e2e3",
+"e5f4",
+"e3e2",
+"f4c1"
+],
+"rating": 1197,
+"rd": 92,
+"popularity": 94,
+"nb_plays": 9870,
+"themes": [
+"crushing",
+"endgame",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "ekFam",
+"fen": "8/8/8/6kP/2p3P1/6r1/p2K4/R7 w - - 4 56",
+"moves": [
+"a1a2",
+"g3g2",
+"d2c3",
+"g2a2"
+],
+"rating": 1216,
+"rd": 80,
+"popularity": 94,
+"nb_plays": 1426,
+"themes": [
+"crushing",
+"endgame",
+"rookEndgame",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "0TwxL",
+"fen": "rn2k2r/pp3ppp/4B3/q2np3/1b6/1Q3N2/PB3PPP/2R2K1R b kq - 2 14",
+"moves": [
+"f7e6",
+"c1c8",
+"e8e7",
+"c8h8",
+"a5b5",
+"f1g1"
+],
+"rating": 1239,
+"rd": 76,
+"popularity": 92,
+"nb_plays": 5234,
+"themes": [
+"advantage",
+"defensiveMove",
+"long",
+"master",
+"middlegame",
+"skewer"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Wing_Gambit"
+],
+"motif": "skewer"
+},
+{
+"puzzle_id": "BQ0zh",
+"fen": "8/6P1/3kpn2/8/8/rp4P1/2BK2R1/8 w - - 0 52",
+"moves": [
+"c2h7",
+"a3a2",
+"d2c3",
+"a2g2",
+"g7g8q",
+"f6g8"
+],
+"rating": 1267,
+"rd": 76,
+"popularity": 95,
+"nb_plays": 1798,
+"themes": [
+"crushing",
+"endgame",
+"long",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "02MlO",
+"fen": "r1b5/1pp4p/p2p2pk/3Pr3/1PP5/4q1P1/PQ1N2P1/R4R1K w - - 1 23",
+"moves": [
+"d2f3",
+"e5h5",
+"f3h4",
+"e3g3"
+],
+"rating": 1295,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 5860,
+"themes": [
+"advantage",
+"kingsideAttack",
+"middlegame",
+"pin",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "qzyRO",
+"fen": "4r1k1/2p2pp1/2qp1b1p/8/8/1P2B3/2PQ1PPP/4R1K1 w - - 2 22",
+"moves": [
+"h2h3",
+"f6c3",
+"d2d1",
+"c3e1"
+],
+"rating": 1317,
+"rd": 77,
+"popularity": 91,
+"nb_plays": 1413,
+"themes": [
+"crushing",
+"endgame",
+"master",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "Fx0zr",
+"fen": "r3r1k1/pp3p2/2p2qp1/3PB3/1P2p3/P3P2Q/3N1PP1/2K4R b - - 0 22",
+"moves": [
+"e8e5",
+"h3h7",
+"g8f8",
+"h7h8",
+"f6h8",
+"h1h8",
+"f8g7",
+"h8a8"
+],
+"rating": 1347,
+"rd": 86,
+"popularity": 94,
+"nb_plays": 1034,
+"themes": [
+"advantage",
+"endgame",
+"kingsideAttack",
+"skewer",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "0Ku2k",
+"fen": "r7/8/8/6P1/p6K/5P2/1k6/R7 w - - 1 44",
+"moves": [
+"a1h1",
+"a8h8",
+"h4g3",
+"h8h1"
+],
+"rating": 1371,
+"rd": 79,
+"popularity": 94,
+"nb_plays": 1109,
+"themes": [
+"crushing",
+"endgame",
+"rookEndgame",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "dQ4tX",
+"fen": "8/pp2k1Q1/1p2p1p1/8/4P3/q4PK1/3r2P1/8 b - - 3 43",
+"moves": [
+"e7d6",
+"g7f8",
+"d6d7",
+"f8a3"
+],
+"rating": 1387,
+"rd": 76,
+"popularity": 95,
+"nb_plays": 6406,
+"themes": [
+"crushing",
+"endgame",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "wa6Hp",
+"fen": "r2qk2r/p2p1ppp/2n1p1b1/2p5/2P3Q1/P3B1P1/1P3PP1/R3KB1R b KQkq - 0 13",
+"moves": [
+"f7f5",
+"g4g6",
+"h7g6",
+"h1h8",
+"e8f7",
+"h8d8"
+],
+"rating": 1411,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 5242,
+"themes": [
+"crushing",
+"long",
+"middlegame",
+"skewer"
+],
+"opening_tags": [
+"Vant_Kruijs_Opening",
+"Vant_Kruijs_Opening_Other_variations"
+],
+"motif": "skewer"
+},
+{
+"puzzle_id": "0pF6n",
+"fen": "7Q/5p2/b2kp3/p2p1p2/P3q1P1/1PP5/8/2K5 b - - 13 51",
+"moves": [
+"e4e5",
+"h8b8",
+"d6c6",
+"b8e5"
+],
+"rating": 1427,
+"rd": 78,
+"popularity": 90,
+"nb_plays": 895,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"master",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "gnSJ3",
+"fen": "6k1/pp3ppp/2p1r1r1/8/3P3q/5P2/PP1QRbB1/R4K2 w - - 0 27",
+"moves": [
+"e2f2",
+"g6g2",
+"f2g2",
+"h4h1",
+"f1f2",
+"h1a1"
+],
+"rating": 1452,
+"rd": 74,
+"popularity": 94,
+"nb_plays": 1494,
+"themes": [
+"advantage",
+"exposedKing",
+"long",
+"middlegame",
+"sacrifice",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "0u7WV",
+"fen": "5r1k/6p1/5qBp/3Q3P/2P1pp2/2K5/1p3PP1/3R4 w - - 0 36",
+"moves": [
+"d5d4",
+"f6d4",
+"c3d4",
+"f8d8",
+"d4e4",
+"d8d1"
+],
+"rating": 1470,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 2520,
+"themes": [
+"advantage",
+"attraction",
+"endgame",
+"long",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "VduPe",
+"fen": "r3k2r/pppb1p1p/3p2p1/3PP3/2B1n2q/8/PP4PP/RNBQ1K1R w kq - 1 13",
+"moves": [
+"d1e2",
+"e4g3",
+"h2g3",
+"h4h1",
+"f1f2",
+"h1c1"
+],
+"rating": 1499,
+"rd": 76,
+"popularity": 97,
+"nb_plays": 15351,
+"themes": [
+"advantage",
+"long",
+"middlegame",
+"skewer"
+],
+"opening_tags": [
+"Ruy_Lopez",
+"Ruy_Lopez_Steinitz_Defense"
+],
+"motif": "skewer"
+},
+{
+"puzzle_id": "wFkKV",
+"fen": "6r1/2pq3k/2ppb1pp/4P3/pP2Q3/P1P2R1P/6PK/6N1 w - - 0 29",
+"moves": [
+"f3d3",
+"e6f5",
+"e4e3",
+"f5d3"
+],
+"rating": 1523,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 15797,
+"themes": [
+"crushing",
+"endgame",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "lPM1t",
+"fen": "8/8/5p2/1r3kp1/4RP2/4K1P1/1P3P2/8 w - - 0 54",
+"moves": [
+"f4g5",
+"b5b3",
+"e3d4",
+"b3b4",
+"d4c3",
+"b4e4"
+],
+"rating": 1548,
+"rd": 77,
+"popularity": 94,
+"nb_plays": 1629,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"exposedKing",
+"long",
+"master",
+"rookEndgame",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "0qC49",
+"fen": "4r2k/p4q1p/1p1n1b1B/3P1p2/1P5Q/P5RP/4B1P1/7K w - - 3 33",
+"moves": [
+"h4f4",
+"f6e5",
+"f4h4",
+"e5g3"
+],
+"rating": 1566,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 13719,
+"themes": [
+"advantage",
+"master",
+"middlegame",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "0HxVS",
+"fen": "r4k1r/p1q2p2/4pQpP/8/1p1P4/2P5/PP6/2KB3R b - - 2 28",
+"moves": [
+"b4c3",
+"f6h8",
+"f8e7",
+"h8a8",
+"c3b2",
+"c1b2"
+],
+"rating": 1596,
+"rd": 80,
+"popularity": 90,
+"nb_plays": 1068,
+"themes": [
+"crushing",
+"endgame",
+"hangingPiece",
+"long",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "11eVa",
+"fen": "8/r7/P4k2/2p2r2/7R/4PB1p/5K2/8 b - - 5 48",
+"moves": [
+"a7a6",
+"h4h6",
+"f6g5",
+"h6a6",
+"h3h2",
+"a6a1"
+],
+"rating": 1619,
+"rd": 78,
+"popularity": 96,
+"nb_plays": 17351,
+"themes": [
+"advantage",
+"defensiveMove",
+"endgame",
+"long",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "VmwC1",
+"fen": "r1b2rk1/ppb4p/2pq2p1/3p1p2/3Pn3/1NP2QP1/PPB2P1P/R1B2RK1 b - - 0 17",
+"moves": [
+"c8d7",
+"c1f4",
+"d6e7",
+"f4c7"
+],
+"rating": 1654,
+"rd": 74,
+"popularity": 88,
+"nb_plays": 2183,
+"themes": [
+"advantage",
+"middlegame",
+"short",
+"skewer"
+],
+"opening_tags": [
+"Kings_Pawn_Game",
+"Kings_Pawn_Game_Busch-Gass_Gambit"
+],
+"motif": "skewer"
+},
+{
+"puzzle_id": "0QEcu",
+"fen": "Q7/2K1p1k1/5p2/8/3B4/5P2/2P4q/8 w - - 2 44",
+"moves": [
+"c7d8",
+"h2h8",
+"d8c7",
+"h8a8"
+],
+"rating": 1684,
+"rd": 77,
+"popularity": 94,
+"nb_plays": 6212,
+"themes": [
+"crushing",
+"endgame",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "cKyHd",
+"fen": "1r5k/7p/p5q1/2pB1p2/2Pb1P2/7P/P3Q3/4R2K b - - 0 45",
+"moves": [
+"g6g3",
+"e2e8",
+"b8e8",
+"e1e8",
+"h8g7",
+"e8g8",
+"g7h6",
+"g8g3"
+],
+"rating": 1718,
+"rd": 75,
+"popularity": 87,
+"nb_plays": 1276,
+"themes": [
+"crushing",
+"endgame",
+"master",
+"sacrifice",
+"skewer",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "YO6Da",
+"fen": "r3k2r/8/2pp1p1p/1P2p1p1/1p1nP3/1B1P4/R1P2P1P/R6K b kq - 0 26",
+"moves": [
+"a8a2",
+"a1a2",
+"d4b3",
+"a2a8",
+"e8d7",
+"a8h8"
+],
+"rating": 1746,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 808,
+"themes": [
+"advantage",
+"endgame",
+"exposedKing",
+"long",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "0L3JK",
+"fen": "7R/8/8/8/5krP/4p2K/8/8 b - - 2 62",
+"moves": [
+"e3e2",
+"h8f8",
+"f4e3",
+"h3g4",
+"e2e1q",
+"f8e8",
+"e3d2",
+"e8e1"
+],
+"rating": 1788,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 5167,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"rookEndgame",
+"skewer",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "uP9Rv",
+"fen": "8/5p2/4bk2/1Q6/1P3p2/r2p4/3K2P1/8 w - - 2 44",
+"moves": [
+"b5c5",
+"a3a2",
+"d2d3",
+"e6f5",
+"d3d4",
+"a2d2",
+"d4c4",
+"d2c2",
+"c4b3",
+"c2c5"
+],
+"rating": 1817,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 615,
+"themes": [
+"crushing",
+"endgame",
+"exposedKing",
+"skewer",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "06f2z",
+"fen": "r1b2rk1/p1pp2pp/1p1b4/2q2p2/5P2/4P3/PPPBB1PP/R2Q1RK1 b - - 1 14",
+"moves": [
+"c8b7",
+"b2b4",
+"c5c6",
+"e2f3",
+"c6c4",
+"f3b7",
+"a8b8",
+"b7f3"
+],
+"rating": 1848,
+"rd": 75,
+"popularity": 87,
+"nb_plays": 1232,
+"themes": [
+"advantage",
+"defensiveMove",
+"middlegame",
+"skewer",
+"veryLong"
+],
+"opening_tags": [
+"Englund_Gambit_Complex",
+"Englund_Gambit_Complex_Englund_Gambit"
+],
+"motif": "skewer"
+},
+{
+"puzzle_id": "znGs9",
+"fen": "8/p2P4/6k1/2RKP1p1/6P1/4r3/5p2/8 w - - 0 47",
+"moves": [
+"d7d8q",
+"e3d3",
+"d5e4",
+"d3d8",
+"c5c6",
+"g6g7"
+],
+"rating": 1879,
+"rd": 76,
+"popularity": 95,
+"nb_plays": 5149,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"long",
+"queenRookEndgame",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "03zfX",
+"fen": "1rb2rk1/p1q2pnp/2pp1Q2/1p4P1/4P3/1P3NNP/P7/1K1R3R w - - 5 27",
+"moves": [
+"d1d6",
+"g7e8",
+"d6c6",
+"c7g3"
+],
+"rating": 1927,
+"rd": 78,
+"popularity": 93,
+"nb_plays": 2890,
+"themes": [
+"crushing",
+"fork",
+"middlegame",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "13sop",
+"fen": "6r1/1p6/3q1kn1/p4pQ1/2P5/5P1P/PP6/6RK b - - 4 32",
+"moves": [
+"f6e6",
+"g5g6",
+"g8g6",
+"g1g6",
+"e6e7",
+"g6d6"
+],
+"rating": 1965,
+"rd": 77,
+"popularity": 91,
+"nb_plays": 762,
+"themes": [
+"crushing",
+"endgame",
+"long",
+"skewer"
+],
+"opening_tags": [],
+"motif": "skewer"
+},
+{
+"puzzle_id": "uk1iq",
+"fen": "rnb1k2r/ppp2ppp/8/4q3/3pB3/6P1/PPPKQP1P/R5NR b kq - 0 12",
+"moves": [
+"e8g8",
+"e4h7",
+"g8h7",
+"e2e5"
+],
+"rating": 1001,
+"rd": 79,
+"popularity": 88,
+"nb_plays": 884,
+"themes": [
+"crushing",
+"discoveredAttack",
+"kingsideAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Center_Game",
+"Center_Game_von_der_Lasa_Gambit"
+],
+"motif": "discovered"
+},
+{
+"puzzle_id": "0NHyW",
+"fen": "2krb2r/ppp1qp2/1b1p1n2/1P4pp/2N1P3/2PB3P/P3QPP1/R1B2RK1 b - - 1 15",
+"moves": [
+"e8b5",
+"c4b6",
+"a7b6",
+"d3b5"
+],
+"rating": 1050,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 1174,
+"themes": [
+"advantage",
+"discoveredAttack",
+"middlegame",
+"queensideAttack",
+"short"
+],
+"opening_tags": [
+"Italian_Game",
+"Italian_Game_Classical_Variation"
+],
+"motif": "discovered"
+},
+{
+"puzzle_id": "p2DH5",
+"fen": "r2q1rk1/5ppp/p2b4/3p4/Pp1n4/1P1B1Q1P/2PB1PP1/R4RK1 w - - 1 18",
+"moves": [
+"f3d5",
+"d6h2",
+"g1h2",
+"d8d5"
+],
+"rating": 1079,
+"rd": 85,
+"popularity": 82,
+"nb_plays": 661,
+"themes": [
+"advantage",
+"discoveredAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Smith-Morra_Gambit"
+],
+"motif": "discovered"
+},
+{
+"puzzle_id": "0DGl1",
+"fen": "1r3rk1/1bp1bpp1/p6p/2p2q2/4N3/2PQ2P1/PPB2P1P/2RR2K1 b - - 4 23",
+"moves": [
+"b8d8",
+"e4f6",
+"e7f6",
+"d3f5"
+],
+"rating": 1102,
+"rd": 101,
+"popularity": 94,
+"nb_plays": 1211,
+"themes": [
+"crushing",
+"discoveredAttack",
+"kingsideAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "OrpFZ",
+"fen": "4r3/1Qb1q1k1/p1p1npp1/7p/2NP4/P4N1n/1P1B1PP1/4R1K1 w - - 0 31",
+"moves": [
+"g2h3",
+"c7h2",
+"g1h2",
+"e7b7"
+],
+"rating": 1122,
+"rd": 75,
+"popularity": 87,
+"nb_plays": 547,
+"themes": [
+"advantage",
+"discoveredAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "yunwu",
+"fen": "3Q4/1ppk4/4b2p/4r3/4p1pq/8/P2N1PPP/3R1RK1 b - - 0 25",
+"moves": [
+"d7d8",
+"d2f3",
+"d8c8",
+"f3h4"
+],
+"rating": 1135,
+"rd": 75,
+"popularity": 96,
+"nb_plays": 9668,
+"themes": [
+"advantage",
+"discoveredAttack",
+"discoveredCheck",
+"endgame",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "xRak1",
+"fen": "2rq1rk1/1b3p1p/4p1p1/3p4/p2Q4/2P2B2/PP3PPP/R2R2K1 b - - 0 19",
+"moves": [
+"c8c4",
+"d4c4",
+"d5c4",
+"d1d8",
+"f8d8",
+"f3b7"
+],
+"rating": 1160,
+"rd": 76,
+"popularity": 100,
+"nb_plays": 905,
+"themes": [
+"advantage",
+"discoveredAttack",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "7rNEj",
+"fen": "r3q1rk/2p2p1p/2b1pN2/pp2n2P/4Q3/PB1P4/1PP2PP1/R4RK1 w - - 1 21",
+"moves": [
+"e4e5",
+"g8g2",
+"g1h1",
+"g2g5",
+"f2f3",
+"g5e5"
+],
+"rating": 1183,
+"rd": 79,
+"popularity": 91,
+"nb_plays": 667,
+"themes": [
+"advantage",
+"discoveredAttack",
+"discoveredCheck",
+"kingsideAttack",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "9hykU",
+"fen": "r6b/5p1k/pp1p3p/2pPn3/2P1PN2/8/PPB3R1/6K1 b - - 0 30",
+"moves": [
+"e5c4",
+"e4e5",
+"f7f5",
+"e5f6"
+],
+"rating": 1196,
+"rd": 82,
+"popularity": 86,
+"nb_plays": 644,
+"themes": [
+"discoveredAttack",
+"discoveredCheck",
+"enPassant",
+"endgame",
+"mate",
+"mateIn2",
+"morphysMate",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "mWXZb",
+"fen": "2rq4/5pNk/p4b1p/1p3P2/3p2Q1/P2Br2P/1PP3P1/5RK1 b - - 0 26",
+"moves": [
+"f6g7",
+"f5f6",
+"e3d3",
+"g4g7"
+],
+"rating": 1219,
+"rd": 83,
+"popularity": 94,
+"nb_plays": 2065,
+"themes": [
+"discoveredAttack",
+"discoveredCheck",
+"intermezzo",
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "yi8vc",
+"fen": "2r4r/1p1b1kp1/p6p/3Qb3/8/6PP/PP3P1K/R1B1q3 b - - 1 22",
+"moves": [
+"f7e7",
+"c1g5",
+"h6g5",
+"a1e1"
+],
+"rating": 1244,
+"rd": 76,
+"popularity": 91,
+"nb_plays": 2321,
+"themes": [
+"advantage",
+"discoveredAttack",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "rVU5O",
+"fen": "3r2k1/6b1/4Q3/p1p5/P1Pqp1P1/5P2/1PP2RK1/8 b - - 1 35",
+"moves": [
+"g8f8",
+"f3e4",
+"d4f2",
+"g2f2"
+],
+"rating": 1262,
+"rd": 76,
+"popularity": 83,
+"nb_plays": 672,
+"themes": [
+"crushing",
+"discoveredAttack",
+"discoveredCheck",
+"endgame",
+"master",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "muT6q",
+"fen": "4r1k1/pp3pp1/7p/2q1n3/8/2P3Q1/PB1r1PPP/1R2R1K1 w - - 4 24",
+"moves": [
+"b2c1",
+"e5f3",
+"g2f3",
+"e8e1"
+],
+"rating": 1279,
+"rd": 80,
+"popularity": 93,
+"nb_plays": 638,
+"themes": [
+"crushing",
+"discoveredAttack",
+"kingsideAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "MXNPf",
+"fen": "r1bq4/pp2bkpp/1np2n2/6P1/3p1B2/5Q2/PPP2P1P/RN3RK1 b - - 0 13",
+"moves": [
+"f6d5",
+"f4c7",
+"f7g8",
+"c7d8"
+],
+"rating": 1301,
+"rd": 75,
+"popularity": 99,
+"nb_plays": 4482,
+"themes": [
+"advantage",
+"discoveredAttack",
+"discoveredCheck",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Philidor_Defense",
+"Philidor_Defense_Morphy_Gambit"
+],
+"motif": "discovered"
+},
+{
+"puzzle_id": "NstvG",
+"fen": "rq4k1/p5bp/1p1r2p1/1P2p3/1pP1Pp2/1Q4P1/5PBP/R4RK1 b - - 1 22",
+"moves": [
+"b8c7",
+"c4c5",
+"c7f7",
+"b3f7",
+"g8f7",
+"c5d6"
+],
+"rating": 1335,
+"rd": 78,
+"popularity": 90,
+"nb_plays": 1139,
+"themes": [
+"crushing",
+"discoveredAttack",
+"discoveredCheck",
+"kingsideAttack",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "qf5MT",
+"fen": "3r2k1/1b3ppp/p1qr1b2/1ppNp3/4P2P/2P3P1/PP1R1PB1/2QR2K1 b - - 2 22",
+"moves": [
+"c6c8",
+"d5f6",
+"g7f6",
+"d2d6",
+"d8d6",
+"d1d6"
+],
+"rating": 1359,
+"rd": 74,
+"popularity": 97,
+"nb_plays": 3977,
+"themes": [
+"crushing",
+"discoveredAttack",
+"kingsideAttack",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "QL6Aa",
+"fen": "2k1r2r/pp6/2p2b2/2P1np2/1P1p2p1/P2P2P1/1B2B2P/4RRK1 w - - 0 24",
+"moves": [
+"b2d4",
+"e5f3",
+"e2f3",
+"f6d4"
+],
+"rating": 1380,
+"rd": 77,
+"popularity": 97,
+"nb_plays": 3980,
+"themes": [
+"advantage",
+"discoveredAttack",
+"fork",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "Ryerl",
+"fen": "r3r2k/pp1q1ppB/5p1p/4n3/5N2/2P3Pb/PPQ2P1P/3RR1K1 w - - 12 21",
+"moves": [
+"d1d7",
+"e5f3",
+"g1h1",
+"e8e1"
+],
+"rating": 1397,
+"rd": 75,
+"popularity": 85,
+"nb_plays": 787,
+"themes": [
+"discoveredAttack",
+"fork",
+"mate",
+"mateIn2",
+"middlegame",
+"pillsburysMate",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "8yHQC",
+"fen": "1r3k2/p4pp1/1pp1p3/2P3R1/3P3R/2P3P1/P1Q1Knq1/8 w - - 2 34",
+"moves": [
+"e2e3",
+"f2g4",
+"g5g4",
+"g2c2"
+],
+"rating": 1416,
+"rd": 79,
+"popularity": 94,
+"nb_plays": 1178,
+"themes": [
+"advantage",
+"discoveredAttack",
+"endgame",
+"master",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "0IFtC",
+"fen": "r1b1kbnr/ppp1p1p1/n6p/3q1p2/3N1P2/3B2N1/PPP3PP/R1BQK2R b KQkq - 6 11",
+"moves": [
+"d5d4",
+"d3b5",
+"c8d7",
+"d1d4"
+],
+"rating": 1439,
+"rd": 78,
+"popularity": 94,
+"nb_plays": 16400,
+"themes": [
+"crushing",
+"discoveredAttack",
+"opening",
+"short"
+],
+"opening_tags": [
+"Zukertort_Opening",
+"Zukertort_Opening_Tennison_Gambit"
+],
+"motif": "discovered"
+},
+{
+"puzzle_id": "nJO4i",
+"fen": "8/5p2/5p2/3KbB1p/r3Pk2/5P1P/2R3P1/8 w - - 6 43",
+"moves": [
+"f5d7",
+"a4d4",
+"d5c6",
+"d4d6",
+"c6c7",
+"d6d2",
+"c7d8",
+"d2c2"
+],
+"rating": 1456,
+"rd": 80,
+"popularity": 93,
+"nb_plays": 3405,
+"themes": [
+"advantage",
+"discoveredAttack",
+"discoveredCheck",
+"endgame",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "lr0PR",
+"fen": "r1b2rk1/1pp2ppp/1p1p1qn1/1P6/3nP3/P1NPB3/2P2PPP/R2QKB1R w KQ - 0 13",
+"moves": [
+"c3d5",
+"d4c2",
+"d1c2",
+"f6a1"
+],
+"rating": 1474,
+"rd": 75,
+"popularity": 86,
+"nb_plays": 1183,
+"themes": [
+"crushing",
+"deflection",
+"discoveredAttack",
+"opening",
+"short"
+],
+"opening_tags": [
+"Three_Knights_Opening",
+"Three_Knights_Opening_Other_variations"
+],
+"motif": "discovered"
+},
+{
+"puzzle_id": "Y0yJ6",
+"fen": "r1b1r1k1/ppp2pbp/5q2/3pn2Q/5B1P/2N1P3/PPPN1PP1/2KR3R w - - 2 13",
+"moves": [
+"c3d5",
+"e5d3",
+"c2d3",
+"f6b2"
+],
+"rating": 1494,
+"rd": 78,
+"popularity": 98,
+"nb_plays": 6585,
+"themes": [
+"discoveredAttack",
+"mate",
+"mateIn2",
+"middlegame",
+"queensideAttack",
+"sacrifice",
+"short"
+],
+"opening_tags": [
+"London_System",
+"London_System_Other_variations"
+],
+"motif": "discovered"
+},
+{
+"puzzle_id": "rTsuL",
+"fen": "5r1k/ppQr2p1/7p/P3n1qb/3NPp2/2P3P1/R3PPBP/5RK1 w - - 3 23",
+"moves": [
+"c7c5",
+"e5f3",
+"g2f3",
+"g5c5"
+],
+"rating": 1522,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 12045,
+"themes": [
+"advantage",
+"discoveredAttack",
+"master",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "jsAR4",
+"fen": "7r/5p2/p3p2k/1p1p4/3P3K/2P1PP2/PP2n3/R5R1 w - - 0 30",
+"moves": [
+"g1h1",
+"h6g6",
+"h4g4",
+"f7f5"
+],
+"rating": 1538,
+"rd": 74,
+"popularity": 91,
+"nb_plays": 3465,
+"themes": [
+"discoveredAttack",
+"discoveredCheck",
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "4qvxJ",
+"fen": "1Q4k1/p5pp/2q1p3/2b1P3/8/2B5/P3r1PP/2R4K b - - 3 31",
+"moves": [
+"c5f8",
+"b8f8",
+"g8f8",
+"c3b4",
+"f8f7",
+"c1c6"
+],
+"rating": 1565,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 2808,
+"themes": [
+"advantage",
+"attraction",
+"discoveredAttack",
+"endgame",
+"long",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "Yv5zE",
+"fen": "r1bq2nr/pp2p1k1/4n1p1/2pQp1Np/4P3/4B3/PPP3PP/R4RK1 b - - 1 14",
+"moves": [
+"d8d5",
+"f1f7",
+"g7h6",
+"g5e6",
+"g6g5",
+"e3g5",
+"h6g6",
+"f7g7"
+],
+"rating": 1587,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 25993,
+"themes": [
+"discoveredAttack",
+"discoveredCheck",
+"mate",
+"mateIn4",
+"middlegame",
+"pillsburysMate",
+"veryLong"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_McDonnell_Attack"
+],
+"motif": "discovered"
+},
+{
+"puzzle_id": "qiLjP",
+"fen": "2k5/pppbb3/4p3/4n1P1/1PP1N1p1/P3P1Kr/4B2P/R6R w - - 3 26",
+"moves": [
+"g3f4",
+"e5g6",
+"f4g4",
+"e6e5"
+],
+"rating": 1613,
+"rd": 76,
+"popularity": 97,
+"nb_plays": 5567,
+"themes": [
+"discoveredAttack",
+"discoveredCheck",
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "dBsFM",
+"fen": "r2q1r2/pp2npp1/1n4k1/3p2N1/2pP1BQ1/2P4P/PP3P2/RN4K1 b - - 0 18",
+"moves": [
+"d8d7",
+"g5e6",
+"g6h7",
+"g4g7"
+],
+"rating": 1635,
+"rd": 75,
+"popularity": 100,
+"nb_plays": 524,
+"themes": [
+"discoveredAttack",
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Alapin_Variation"
+],
+"motif": "discovered"
+},
+{
+"puzzle_id": "Rltzp",
+"fen": "7k/6p1/p2q1nQ1/1p4P1/8/P4BK1/6P1/8 w - - 14 55",
+"moves": [
+"g3f2",
+"f6g4",
+"f3g4",
+"d6g6"
+],
+"rating": 1653,
+"rd": 74,
+"popularity": 94,
+"nb_plays": 2955,
+"themes": [
+"crushing",
+"discoveredAttack",
+"endgame",
+"master",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "03uPF",
+"fen": "r1bqk2r/1p3ppp/p1p1p3/4b2Q/1P6/P1NB4/5PPP/2R2RK1 b kq - 1 17",
+"moves": [
+"d8f6",
+"c3e4",
+"f6f4",
+"g2g3",
+"f4f5",
+"e4d6",
+"e5d6",
+"d3f5"
+],
+"rating": 1683,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 10488,
+"themes": [
+"crushing",
+"discoveredAttack",
+"middlegame",
+"veryLong"
+],
+"opening_tags": [
+"Queens_Pawn_Game",
+"Queens_Pawn_Game_Chigorin_Variation"
+],
+"motif": "discovered"
+},
+{
+"puzzle_id": "w70Xi",
+"fen": "r1bq1rk1/ppp1bppp/2n2n2/3Np1B1/2B1P3/5N2/PPP2PPP/R2QK2R b KQ - 3 8",
+"moves": [
+"f6e4",
+"d5e7",
+"c6e7",
+"d1d8",
+"f8d8",
+"g5e7"
+],
+"rating": 1707,
+"rd": 77,
+"popularity": 95,
+"nb_plays": 22509,
+"themes": [
+"advantage",
+"capturingDefender",
+"discoveredAttack",
+"intermezzo",
+"kingsideAttack",
+"long",
+"opening"
+],
+"opening_tags": [
+"Philidor_Defense",
+"Philidor_Defense_Other_variations"
+],
+"motif": "discovered"
+},
+{
+"puzzle_id": "miy2z",
+"fen": "r2qkbnr/pp2pppp/2n5/2pp4/4P1b1/5NP1/PPPP1PBP/RNBQK2R w KQkq - 2 5",
+"moves": [
+"d2d3",
+"d5e4",
+"d3e4",
+"d8d1"
+],
+"rating": 1750,
+"rd": 75,
+"popularity": 94,
+"nb_plays": 3851,
+"themes": [
+"crushing",
+"discoveredAttack",
+"opening",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Old_Sicilian"
+],
+"motif": "discovered"
+},
+{
+"puzzle_id": "0191t",
+"fen": "6k1/1p3r2/p1p1p3/4Pqpp/3P4/1P4QP/P4PP1/4R1K1 w - - 0 33",
+"moves": [
+"e1e3",
+"h5h4",
+"g3f3",
+"f5b1",
+"g1h2",
+"f7f3"
+],
+"rating": 1783,
+"rd": 74,
+"popularity": 97,
+"nb_plays": 3090,
+"themes": [
+"crushing",
+"discoveredAttack",
+"endgame",
+"long"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "zESHN",
+"fen": "1r1r2k1/1b3ppp/1q2p1PP/2p1P3/3p1P2/1P6/P2Q2B1/2KR3R b - - 0 23",
+"moves": [
+"c5c4",
+"g6h7",
+"g8h7",
+"h6g7"
+],
+"rating": 1830,
+"rd": 76,
+"popularity": 81,
+"nb_plays": 619,
+"themes": [
+"advancedPawn",
+"crushing",
+"discoveredAttack",
+"discoveredCheck",
+"kingsideAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "vBPK9",
+"fen": "r3rk2/1p3ppQ/pqp5/5NN1/2P1n3/7P/PPb2bP1/R1B2RK1 w - - 0 25",
+"moves": [
+"g1h1",
+"e4g3",
+"f5g3",
+"c2h7",
+"g5h7",
+"f8g8"
+],
+"rating": 1858,
+"rd": 76,
+"popularity": 91,
+"nb_plays": 1812,
+"themes": [
+"crushing",
+"discoveredAttack",
+"fork",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "xFnKo",
+"fen": "rnbq1r2/pp2n1p1/4pPk1/2bp2N1/6Q1/8/PPP2PPP/RNB2RK1 b - - 0 11",
+"moves": [
+"e6e5",
+"g5e6",
+"g6f6",
+"c1g5",
+"f6f7",
+"e6d8"
+],
+"rating": 1911,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 12176,
+"themes": [
+"crushing",
+"discoveredAttack",
+"discoveredCheck",
+"exposedKing",
+"fork",
+"long",
+"master",
+"opening"
+],
+"opening_tags": [
+"Caro-Kann_Defense",
+"Caro-Kann_Defense_Advance_Variation"
+],
+"motif": "discovered"
+},
+{
+"puzzle_id": "0HWxV",
+"fen": "5rk1/5p1p/1q2p1pB/3pP3/1Pr1n1Q1/4P3/1P4PP/3R1RK1 w - - 0 24",
+"moves": [
+"h6f8",
+"b6e3",
+"g1h1",
+"e4f2",
+"f1f2",
+"c4g4"
+],
+"rating": 1964,
+"rd": 75,
+"popularity": 98,
+"nb_plays": 1906,
+"themes": [
+"advantage",
+"discoveredAttack",
+"fork",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "discovered"
+},
+{
+"puzzle_id": "1O5Rh",
+"fen": "1k2rb2/ppp3p1/7r/5Q1p/2P5/1P3p1P/2PP1K2/q3R1R1 b - - 1 26",
+"moves": [
+"e8e1",
+"f5f8",
+"e1e8",
+"f8e8"
+],
+"rating": 1000,
+"rd": 79,
+"popularity": 100,
+"nb_plays": 663,
+"themes": [
+"backRankMate",
+"endgame",
+"hangingPiece",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "03R4H",
+"fen": "3r2k1/5ppp/1Q1B1b2/1p6/2p5/8/1Pq2PPP/4R1K1 b - - 1 22",
+"moves": [
+"c2d2",
+"b6d8",
+"f6d8",
+"e1e8"
+],
+"rating": 1017,
+"rd": 87,
+"popularity": 85,
+"nb_plays": 619,
+"themes": [
+"backRankMate",
+"endgame",
+"mate",
+"mateIn2",
+"sacrifice",
+"short"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "1Uxar",
+"fen": "4kb1r/ppp2pp1/5n1p/4NR2/2P5/8/PPP3PP/RNBr2K1 w k - 1 13",
+"moves": [
+"f5f1",
+"f8c5",
+"c1e3",
+"c5e3",
+"g1h1",
+"d1f1"
+],
+"rating": 1030,
+"rd": 93,
+"popularity": 94,
+"nb_plays": 1181,
+"themes": [
+"backRankMate",
+"long",
+"mate",
+"mateIn3",
+"middlegame"
+],
+"opening_tags": [
+"Kings_Gambit",
+"Kings_Gambit_Other_variations"
+],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "1OuXt",
+"fen": "5rk1/Qpp3pp/5q2/8/2P5/P1N1P3/1P4PP/R2n2K1 w - - 2 18",
+"moves": [
+"a1d1",
+"f6f2",
+"g1h1",
+"f2f1",
+"d1f1",
+"f8f1"
+],
+"rating": 1044,
+"rd": 80,
+"popularity": 90,
+"nb_plays": 1140,
+"themes": [
+"backRankMate",
+"endgame",
+"long",
+"mate",
+"mateIn3",
+"sacrifice"
+],
+"opening_tags": [
+"Queens_Gambit_Declined",
+"Queens_Gambit_Declined_Albin_Countergambit"
+],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "1XaKi",
+"fen": "8/pp2krQp/4p3/2P5/1P2p3/P7/2q2PPP/3R2K1 w - - 1 25",
+"moves": [
+"g7g4",
+"c2f2",
+"g1h1",
+"f2f1",
+"d1f1",
+"f7f1"
+],
+"rating": 1060,
+"rd": 82,
+"popularity": 95,
+"nb_plays": 717,
+"themes": [
+"backRankMate",
+"endgame",
+"long",
+"mate",
+"mateIn3",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "12O0M",
+"fen": "2b2k2/p5p1/1pR2nQp/3p4/5n2/P5N1/1P3PPP/1B2r1K1 w - - 1 26",
+"moves": [
+"g3f1",
+"f4e2",
+"g1h1",
+"e1f1"
+],
+"rating": 1075,
+"rd": 82,
+"popularity": 82,
+"nb_plays": 933,
+"themes": [
+"backRankMate",
+"deflection",
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0FUGP",
+"fen": "r4rk1/1pp1b1pp/p4q2/8/4Q3/8/PPP2PPP/R1B1R1K1 w - - 3 16",
+"moves": [
+"e4e7",
+"f6f2",
+"g1h1",
+"f2f1",
+"e1f1",
+"f8f1"
+],
+"rating": 1090,
+"rd": 79,
+"popularity": 94,
+"nb_plays": 1366,
+"themes": [
+"backRankMate",
+"long",
+"mate",
+"mateIn3",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [
+"Ruy_Lopez",
+"Ruy_Lopez_Berlin_Defense"
+],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0gUGh",
+"fen": "5k2/1p6/p2r3b/5q2/8/3B1P2/PPP2RPP/3R2K1 w - - 0 25",
+"moves": [
+"d3f5",
+"d6d1",
+"f2f1",
+"h6e3",
+"g1h1",
+"d1f1"
+],
+"rating": 1100,
+"rd": 75,
+"popularity": 97,
+"nb_plays": 4384,
+"themes": [
+"backRankMate",
+"deflection",
+"endgame",
+"hangingPiece",
+"long",
+"mate",
+"mateIn3"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0ClEz",
+"fen": "RB3bk1/p2r1ppp/1p6/8/1P6/6P1/5P1P/6K1 b - - 5 30",
+"moves": [
+"f8b4",
+"b8d6",
+"d7d8",
+"a8d8"
+],
+"rating": 1109,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 5440,
+"themes": [
+"backRankMate",
+"discoveredAttack",
+"discoveredCheck",
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "1lEg7",
+"fen": "2b3k1/p4ppp/8/Qr2p1q1/3r4/P7/1PP1NPPP/1R2K2R w K - 7 18",
+"moves": [
+"a5b5",
+"g5d2",
+"e1f1",
+"d2d1",
+"b1d1",
+"d4d1"
+],
+"rating": 1117,
+"rd": 76,
+"popularity": 91,
+"nb_plays": 549,
+"themes": [
+"backRankMate",
+"long",
+"mate",
+"mateIn3",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Open"
+],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0Ia2B",
+"fen": "6k1/ppN3pp/3p4/3Ppbb1/8/Q5B1/PPP2q1P/2KR1B2 w - - 2 22",
+"moves": [
+"c1b1",
+"f2c2",
+"b1a1",
+"c2d1"
+],
+"rating": 1128,
+"rd": 80,
+"popularity": 95,
+"nb_plays": 1398,
+"themes": [
+"backRankMate",
+"fork",
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "05UHr",
+"fen": "5rbk/p5b1/1p3NQp/4p3/2PnP3/3P4/PP4PP/5RK1 w - - 1 26",
+"moves": [
+"f6g8",
+"d4e2",
+"g1h1",
+"f8f1"
+],
+"rating": 1134,
+"rd": 74,
+"popularity": 96,
+"nb_plays": 15902,
+"themes": [
+"backRankMate",
+"deflection",
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "1WLJ2",
+"fen": "r1b2rk1/p1p1b1pp/2p5/5q2/4n3/1N6/PPP1QPPP/R1B1R1K1 w - - 0 15",
+"moves": [
+"e2e4",
+"f5f2",
+"g1h1",
+"f2f1",
+"e1f1",
+"f8f1"
+],
+"rating": 1144,
+"rd": 77,
+"popularity": 94,
+"nb_plays": 1118,
+"themes": [
+"backRankMate",
+"long",
+"mate",
+"mateIn3",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [
+"Ruy_Lopez",
+"Ruy_Lopez_Schliemann_Defense"
+],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0JCfS",
+"fen": "r4r1k/4nq1p/bp4p1/p1ppR3/3P4/2P4Q/PPB2PPP/4R1K1 w - - 1 23",
+"moves": [
+"e5e7",
+"f7f2",
+"g1h1",
+"f2f1",
+"e1f1",
+"f8f1"
+],
+"rating": 1157,
+"rd": 77,
+"popularity": 95,
+"nb_plays": 3560,
+"themes": [
+"backRankMate",
+"fork",
+"long",
+"mate",
+"mateIn3",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "1CgJ2",
+"fen": "r1b1Qbk1/pp3ppp/2p3rq/4p3/2P3B1/1P2P1PP/PB5K/RN3R2 b - - 4 20",
+"moves": [
+"c8g4",
+"e8f7",
+"g8h8",
+"f7f8",
+"a8f8",
+"f1f8"
+],
+"rating": 1161,
+"rd": 75,
+"popularity": 100,
+"nb_plays": 657,
+"themes": [
+"backRankMate",
+"deflection",
+"long",
+"mate",
+"mateIn3",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "R4DyL",
+"fen": "5rk1/pp5p/6p1/3R4/8/5Q2/Pbq3PP/3R2K1 w - - 0 22",
+"moves": [
+"f3g4",
+"c2f2",
+"g1h1",
+"f2f1",
+"d1f1",
+"f8f1"
+],
+"rating": 1168,
+"rd": 94,
+"popularity": 92,
+"nb_plays": 1131,
+"themes": [
+"backRankMate",
+"endgame",
+"long",
+"mate",
+"mateIn3",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0jeje",
+"fen": "5nk1/p5pp/1p1bp3/8/1PrPq3/P5P1/1B3Q1P/5RK1 b - - 1 25",
+"moves": [
+"c4c2",
+"f2f7",
+"g8h8",
+"f7f8",
+"d6f8",
+"f1f8"
+],
+"rating": 1176,
+"rd": 80,
+"popularity": 89,
+"nb_plays": 1482,
+"themes": [
+"backRankMate",
+"deflection",
+"long",
+"mate",
+"mateIn3",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0WfZF",
+"fen": "2r2rk1/1p4pp/p4q2/4p3/3n4/P7/1P2QPPP/RB1R2K1 w - - 0 23",
+"moves": [
+"e2e4",
+"f6f2",
+"g1h1",
+"f2f1",
+"d1f1",
+"f8f1"
+],
+"rating": 1187,
+"rd": 79,
+"popularity": 95,
+"nb_plays": 3626,
+"themes": [
+"backRankMate",
+"long",
+"mate",
+"mateIn3",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0Ge46",
+"fen": "3r2k1/p4ppp/1p6/2pq4/3pQ3/3P2P1/PPP2P1P/4RK2 b - - 2 24",
+"moves": [
+"g8f8",
+"e4e7",
+"f8g8",
+"e7e8",
+"d8e8",
+"e1e8"
+],
+"rating": 1196,
+"rd": 75,
+"popularity": 99,
+"nb_plays": 949,
+"themes": [
+"backRankMate",
+"endgame",
+"long",
+"mate",
+"mateIn3",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0YL3w",
+"fen": "r1k4r/ppp1Q1pp/8/4P3/2B1p3/2N5/PPP2P1q/2KR1b2 b - - 0 17",
+"moves": [
+"f1c4",
+"e7d7",
+"c8b8",
+"d7d8",
+"h8d8",
+"d1d8"
+],
+"rating": 1209,
+"rd": 78,
+"popularity": 95,
+"nb_plays": 16526,
+"themes": [
+"backRankMate",
+"long",
+"mate",
+"mateIn3",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [
+"Elephant_Gambit",
+"Elephant_Gambit_Wasp_Variation"
+],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0wOfL",
+"fen": "5k2/p7/6Q1/5Pp1/8/1P6/3p1qPP/1R5K w - - 3 40",
+"moves": [
+"f5f6",
+"f2e1",
+"b1e1",
+"d2e1q"
+],
+"rating": 1224,
+"rd": 77,
+"popularity": 80,
+"nb_plays": 534,
+"themes": [
+"advancedPawn",
+"backRankMate",
+"endgame",
+"mate",
+"mateIn2",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "6F2CZ",
+"fen": "2r2rk1/7p/4p1pb/pb6/1p1PqP2/1Q2NNP1/PP3R1P/K3R3 w - - 0 28",
+"moves": [
+"e3g4",
+"e4e1",
+"f3e1",
+"c8c1"
+],
+"rating": 1249,
+"rd": 78,
+"popularity": 96,
+"nb_plays": 22249,
+"themes": [
+"backRankMate",
+"mate",
+"mateIn2",
+"middlegame",
+"sacrifice",
+"short"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "1NbfC",
+"fen": "5k2/6bQ/p7/1p6/2pq1r2/8/PPB3PP/3R3K w - - 0 37",
+"moves": [
+"d1g1",
+"d4g1",
+"h1g1",
+"g7d4",
+"g1h1",
+"f4f1"
+],
+"rating": 1266,
+"rd": 79,
+"popularity": 93,
+"nb_plays": 3944,
+"themes": [
+"attraction",
+"backRankMate",
+"endgame",
+"long",
+"mate",
+"mateIn3",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "1C2NQ",
+"fen": "4r1k1/4rppp/5q2/8/Q2Np3/2PR4/PP3PPP/4R1K1 b - - 0 25",
+"moves": [
+"e4d3",
+"a4e8",
+"e7e8",
+"e1e8"
+],
+"rating": 1292,
+"rd": 80,
+"popularity": 83,
+"nb_plays": 1365,
+"themes": [
+"backRankMate",
+"endgame",
+"mate",
+"mateIn2",
+"short",
+"xRayAttack"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "KvHbl",
+"fen": "4k3/pp3p1Q/8/4p3/1bP5/1P6/P2r1qPP/5RK1 w - - 0 23",
+"moves": [
+"f1f2",
+"d2d1",
+"f2f1",
+"b4c5",
+"g1h1",
+"d1f1"
+],
+"rating": 1317,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 5143,
+"themes": [
+"backRankMate",
+"deflection",
+"endgame",
+"long",
+"mate",
+"mateIn3"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0MrSh",
+"fen": "5rk1/4b3/p2p3Q/1p2n3/4R3/P7/1Pq2PPP/3R2K1 w - - 0 22",
+"moves": [
+"d1e1",
+"c2f2",
+"g1h1",
+"f2f1",
+"e1f1",
+"f8f1"
+],
+"rating": 1336,
+"rd": 75,
+"popularity": 100,
+"nb_plays": 946,
+"themes": [
+"backRankMate",
+"long",
+"mate",
+"mateIn3",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "qYCf1",
+"fen": "rn1r2k1/1p3ppp/pq2p3/4N3/2P5/3R1Q1P/1P3PPB/6K1 b - - 6 23",
+"moves": [
+"d8d3",
+"f3f7",
+"g8h8",
+"f7e8"
+],
+"rating": 1367,
+"rd": 79,
+"popularity": 88,
+"nb_plays": 1027,
+"themes": [
+"backRankMate",
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0v28O",
+"fen": "6k1/pp4pp/4q3/2pP4/3n4/8/PPbP1PPP/R1B1rQK1 w - - 0 22",
+"moves": [
+"d5e6",
+"d4e2",
+"g1h1",
+"e1f1"
+],
+"rating": 1388,
+"rd": 82,
+"popularity": 92,
+"nb_plays": 951,
+"themes": [
+"backRankMate",
+"endgame",
+"mate",
+"mateIn2",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0NYWd",
+"fen": "2r3k1/1p1Q1ppp/p5n1/8/P2Pq3/1P5P/1B4P1/5R1K b - - 1 25",
+"moves": [
+"c8c2",
+"d7f7",
+"g8h8",
+"f7f8",
+"g6f8",
+"f1f8"
+],
+"rating": 1408,
+"rd": 77,
+"popularity": 100,
+"nb_plays": 1714,
+"themes": [
+"backRankMate",
+"endgame",
+"long",
+"mate",
+"mateIn3",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "yWt0i",
+"fen": "r4r1k/p5pp/2p1Q3/8/1b1P4/8/PPq2PPP/RNB1R1K1 w - - 1 17",
+"moves": [
+"b1c3",
+"c2f2",
+"g1h1",
+"f2f1",
+"e1f1",
+"f8f1"
+],
+"rating": 1423,
+"rd": 80,
+"popularity": 92,
+"nb_plays": 2210,
+"themes": [
+"backRankMate",
+"long",
+"mate",
+"mateIn3",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [
+"Russian_Game",
+"Russian_Game_Italian_Variation"
+],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0fn0y",
+"fen": "1r5k/1P4pp/2p1Q1b1/2qp4/6P1/P7/7K/5R2 b - - 0 35",
+"moves": [
+"b8b7",
+"e6c8",
+"g6e8",
+"c8e8",
+"c5f8",
+"f1f8"
+],
+"rating": 1457,
+"rd": 75,
+"popularity": 100,
+"nb_plays": 2263,
+"themes": [
+"backRankMate",
+"endgame",
+"fork",
+"long",
+"mate",
+"mateIn3"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "17Oig",
+"fen": "4r1k1/5bp1/7p/1P3p2/3Q4/3P1N2/P4NPP/2r4K w - - 0 39",
+"moves": [
+"f3g1",
+"c1g1",
+"h1g1",
+"e8e1"
+],
+"rating": 1492,
+"rd": 79,
+"popularity": 94,
+"nb_plays": 3877,
+"themes": [
+"attraction",
+"backRankMate",
+"endgame",
+"mate",
+"mateIn2",
+"sacrifice",
+"short"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0bXUT",
+"fen": "3r2k1/1p3p2/2p4p/1Pq3p1/3r4/7Q/5PPP/1RR3K1 w - - 0 26",
+"moves": [
+"b5c6",
+"c5c1",
+"b1c1",
+"d4d1",
+"c1d1",
+"d8d1"
+],
+"rating": 1522,
+"rd": 84,
+"popularity": 87,
+"nb_plays": 1303,
+"themes": [
+"backRankMate",
+"endgame",
+"long",
+"master",
+"mate",
+"mateIn3",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0zcap",
+"fen": "1k3r2/pp1q2p1/5r2/3p4/3Q4/7P/PP3P2/2R1R1K1 b - - 0 33",
+"moves": [
+"d7h3",
+"d4e5",
+"b8a8",
+"e5e8",
+"f8e8",
+"e1e8",
+"h3c8",
+"c1c8"
+],
+"rating": 1573,
+"rd": 82,
+"popularity": 88,
+"nb_plays": 2788,
+"themes": [
+"backRankMate",
+"endgame",
+"mate",
+"mateIn4",
+"sacrifice",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "ZE6BY",
+"fen": "1k3Q1r/ppp3p1/2np3p/3qN2n/3P4/7P/PPP4K/5R2 b - - 1 21",
+"moves": [
+"h8f8",
+"f1f8",
+"c6d8",
+"f8d8"
+],
+"rating": 1619,
+"rd": 83,
+"popularity": 92,
+"nb_plays": 4931,
+"themes": [
+"backRankMate",
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "0h9Vj",
+"fen": "5Q2/6pk/4bp1p/8/8/P1Bq1P2/1P4PP/6K1 w - - 3 35",
+"moves": [
+"f8e7",
+"d3e3",
+"g1h1",
+"e3c1",
+"c3e1",
+"c1e1"
+],
+"rating": 1693,
+"rd": 82,
+"popularity": 94,
+"nb_plays": 2152,
+"themes": [
+"backRankMate",
+"endgame",
+"long",
+"mate",
+"mateIn3"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "09J8i",
+"fen": "r2r2k1/pp3pp1/5q1p/2P5/1Pbn4/2P1RQ2/P4PPP/RN4K1 w - - 0 19",
+"moves": [
+"f3f6",
+"d4e2",
+"e3e2",
+"d8d1",
+"e2e1",
+"d1e1"
+],
+"rating": 1752,
+"rd": 76,
+"popularity": 87,
+"nb_plays": 805,
+"themes": [
+"backRankMate",
+"clearance",
+"long",
+"mate",
+"mateIn3",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "TRava",
+"fen": "r2qr1k1/pp3ppp/8/3PQb2/5P2/3p2P1/PP5P/2KR2NR w - - 2 20",
+"moves": [
+"e5f5",
+"d8c7",
+"c1b1",
+"c7c2",
+"b1a1",
+"c2d1"
+],
+"rating": 1818,
+"rd": 75,
+"popularity": 96,
+"nb_plays": 9591,
+"themes": [
+"backRankMate",
+"fork",
+"long",
+"mate",
+"mateIn3",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "back_rank_mate"
+},
+{
+"puzzle_id": "OBQLj",
+"fen": "1r3qk1/3npr1p/p1ppp1p1/2p4P/3bPP2/PPNP4/2PB2P1/1R1Q1R1K w - - 3 20",
+"moves": [
+"h5g6",
+"f8h6",
+"d1h5",
+"h6h5"
+],
+"rating": 1000,
+"rd": 77,
+"popularity": 90,
+"nb_plays": 1243,
+"themes": [
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "Vx2es",
+"fen": "r3r3/4kp2/pp6/n1pR2Q1/P7/2P4P/1P3PPK/4q3 b - - 5 30",
+"moves": [
+"f7f6",
+"g5g7",
+"e7e6",
+"g7d7"
+],
+"rating": 1021,
+"rd": 75,
+"popularity": 98,
+"nb_plays": 2291,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"short",
+"triangleMate"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "W4mgF",
+"fen": "5rk1/7p/5ppb/Qp1p1q2/3Pn3/P6P/1P4PN/1R2R1K1 w - - 3 37",
+"moves": [
+"a5b5",
+"f5f2",
+"g1h1",
+"e4g3"
+],
+"rating": 1039,
+"rd": 83,
+"popularity": 97,
+"nb_plays": 731,
+"themes": [
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "aFDeZ",
+"fen": "1Q6/6pk/P1p1p3/2P4p/8/8/4pqPP/4R2K w - - 5 39",
+"moves": [
+"b8g3",
+"f2f1",
+"e1f1",
+"e2f1q"
+],
+"rating": 1062,
+"rd": 91,
+"popularity": 93,
+"nb_plays": 705,
+"themes": [
+"advancedPawn",
+"endgame",
+"mate",
+"mateIn2",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "ugJgM",
+"fen": "1R6/5pp1/1P2b1k1/1r4P1/5K1P/8/8/8 b - - 2 44",
+"moves": [
+"g6h5",
+"b8h8",
+"h5g6",
+"h4h5"
+],
+"rating": 1078,
+"rd": 81,
+"popularity": 100,
+"nb_plays": 550,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "0AkKN",
+"fen": "r3r1k1/1p3pp1/2p4p/4p3/P1P1P1nq/3P4/PB2NRB1/R3Q2K w - - 1 23",
+"moves": [
+"h1g1",
+"h4h2",
+"g1f1",
+"g4e3"
+],
+"rating": 1097,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 3496,
+"themes": [
+"kingsideAttack",
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "R2qzZ",
+"fen": "1q5k/5prP/3p3R/4pBpQ/p1pnP3/P1N5/1K3P2/3R4 w - - 1 31",
+"moves": [
+"b2a1",
+"d4c2",
+"a1a2",
+"b8b3"
+],
+"rating": 1114,
+"rd": 93,
+"popularity": 94,
+"nb_plays": 640,
+"themes": [
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "NnOa4",
+"fen": "2r3kr/1Q3R1p/3p2p1/3p2q1/8/2b1P3/P1P1K1PP/5R2 b - - 4 23",
+"moves": [
+"c8e8",
+"f7g7",
+"c3g7",
+"b7f7"
+],
+"rating": 1128,
+"rd": 79,
+"popularity": 90,
+"nb_plays": 605,
+"themes": [
+"clearance",
+"mate",
+"mateIn2",
+"middlegame",
+"sacrifice",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "xLvNi",
+"fen": "3r1k2/1p3ppp/2n5/1p1pNP2/8/1Br5/P5K1/4R3 b - - 0 32",
+"moves": [
+"d8e8",
+"e5d7",
+"f8g8",
+"e1e8"
+],
+"rating": 1138,
+"rd": 79,
+"popularity": 95,
+"nb_plays": 2588,
+"themes": [
+"backRankMate",
+"deflection",
+"discoveredAttack",
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "ybM4B",
+"fen": "8/3Q1k2/2p2p2/4b3/q5P1/1p6/1P6/1KB5 b - - 4 51",
+"moves": [
+"f7f8",
+"c1h6",
+"f8g8",
+"d7g7"
+],
+"rating": 1151,
+"rd": 79,
+"popularity": 95,
+"nb_plays": 4108,
+"themes": [
+"endgame",
+"master",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "vpyEf",
+"fen": "2kr2r1/p1ppb3/1p2p3/4q1p1/8/P1NQ1B2/1PP3bP/1K1R3R b - - 1 21",
+"moves": [
+"g2h1",
+"d3a6",
+"c8b8",
+"a6b7"
+],
+"rating": 1167,
+"rd": 75,
+"popularity": 98,
+"nb_plays": 13788,
+"themes": [
+"mate",
+"mateIn2",
+"middlegame",
+"queensideAttack",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "oC7ca",
+"fen": "4r1k1/2R3pp/8/p7/4pQ2/7P/1q4P1/6K1 b - - 1 40",
+"moves": [
+"e4e3",
+"f4f7",
+"g8h8",
+"f7e8"
+],
+"rating": 1180,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 13597,
+"themes": [
+"endgame",
+"fork",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "xowt5",
+"fen": "rnbq1r1k/pppp1Bp1/6p1/8/7b/2N3Q1/PPPP2PP/R1B1K2R b KQ - 1 10",
+"moves": [
+"h4g3",
+"h2g3",
+"d8h4",
+"h1h4"
+],
+"rating": 1187,
+"rd": 79,
+"popularity": 95,
+"nb_plays": 983,
+"themes": [
+"discoveredAttack",
+"discoveredCheck",
+"mate",
+"mateIn2",
+"opening",
+"pillsburysMate",
+"short"
+],
+"opening_tags": [
+"Petrovs_Defense",
+"Petrovs_Defense_Italian_Variation"
+],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "tNVqm",
+"fen": "1k1r4/ppp3pp/5n2/8/6Q1/1Nq5/P1P2PPP/R5K1 w - - 4 20",
+"moves": [
+"g4g7",
+"c3a1",
+"b3a1",
+"d8d1"
+],
+"rating": 1198,
+"rd": 75,
+"popularity": 98,
+"nb_plays": 1674,
+"themes": [
+"backRankMate",
+"endgame",
+"mate",
+"mateIn2",
+"sacrifice",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "z54CO",
+"fen": "8/kpp2p2/p4p1p/8/QPP3B1/P2RPP2/2K1nP1R/q7 w - - 1 26",
+"moves": [
+"b4b5",
+"a1c1",
+"c2b3",
+"c1b1"
+],
+"rating": 1217,
+"rd": 75,
+"popularity": 100,
+"nb_plays": 563,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "vQLQx",
+"fen": "5kr1/ppq1p3/4p3/4n2p/4Q3/2PB3P/PP3PP1/R4RK1 w - - 0 23",
+"moves": [
+"e4h7",
+"e5f3",
+"g1h1",
+"c7h2"
+],
+"rating": 1236,
+"rd": 78,
+"popularity": 90,
+"nb_plays": 1189,
+"themes": [
+"kingsideAttack",
+"mate",
+"mateIn2",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "rz8aS",
+"fen": "r1q1bkn1/4p1r1/6B1/p2p4/1p1n1Q2/5P2/PPP5/1NKR2NR b - - 2 28",
+"moves": [
+"g8f6",
+"h1h8",
+"g7g8",
+"f4h6"
+],
+"rating": 1252,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 1615,
+"themes": [
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "eFkB4",
+"fen": "5b2/5k2/bq1p1Q2/2p1pp2/7B/7P/5PP1/6K1 b - - 5 49",
+"moves": [
+"f7e8",
+"f6e6",
+"f8e7",
+"e6e7"
+],
+"rating": 1273,
+"rd": 75,
+"popularity": 99,
+"nb_plays": 2680,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "xvB7V",
+"fen": "2r5/5pk1/p3p1p1/1pPn4/1P4q1/P3P3/2Q2PBr/6RK w - - 0 29",
+"moves": [
+"h1h2",
+"c8h8",
+"g2h3",
+"g4h3"
+],
+"rating": 1300,
+"rd": 79,
+"popularity": 93,
+"nb_plays": 4243,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "gaYwJ",
+"fen": "rn1qk1nr/pp3ppp/2p3b1/2b1N3/4P1P1/2NP3P/PP1P1P2/R1BQKB1R w KQkq - 1 10",
+"moves": [
+"f2f4",
+"d8h4",
+"e1e2",
+"h4f2"
+],
+"rating": 1325,
+"rd": 78,
+"popularity": 93,
+"nb_plays": 2305,
+"themes": [
+"mate",
+"mateIn2",
+"opening",
+"short"
+],
+"opening_tags": [
+"Caro-Kann_Defense",
+"Caro-Kann_Defense_Two_Knights_Attack"
+],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "t0Db1",
+"fen": "r1b3k1/pp1p1r2/4pNp1/4Pn2/2P2B2/3K4/P4P2/7R b - - 3 27",
+"moves": [
+"g8f8",
+"h1h8",
+"f8e7",
+"h8e8"
+],
+"rating": 1348,
+"rd": 75,
+"popularity": 94,
+"nb_plays": 26872,
+"themes": [
+"epauletteMate",
+"hookMate",
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "YW9yq",
+"fen": "8/p6R/2p2pp1/3k4/3p1K2/1P1N1P2/4r1r1/8 b - - 9 50",
+"moves": [
+"e2e3",
+"h7d7",
+"d5e6",
+"d3c5"
+],
+"rating": 1373,
+"rd": 79,
+"popularity": 94,
+"nb_plays": 1022,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "wz0Lw",
+"fen": "5rk1/3qp1bp/1N1p2p1/p7/1p2b3/1P2B3/PPrQN1P1/K2R3R w - - 2 22",
+"moves": [
+"b6d7",
+"g7b2",
+"a1b1",
+"c2d2"
+],
+"rating": 1388,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 31209,
+"themes": [
+"discoveredAttack",
+"discoveredCheck",
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "prpS6",
+"fen": "4k3/1pp2p2/p3pQN1/3pP3/n2P4/2P3N1/PqK2PP1/8 w - - 1 30",
+"moves": [
+"c2d1",
+"a4c3",
+"d1e1",
+"b2c1"
+],
+"rating": 1410,
+"rd": 75,
+"popularity": 100,
+"nb_plays": 1795,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "XcGku",
+"fen": "6k1/3R2p1/p5Np/5K2/r2b2P1/7P/3p4/8 b - - 5 47",
+"moves": [
+"d2d1q",
+"d7d8",
+"g8f7",
+"d8f8"
+],
+"rating": 1443,
+"rd": 75,
+"popularity": 97,
+"nb_plays": 6610,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "vSooq",
+"fen": "3r2k1/p1rPQppp/1p2p3/8/P4P2/4q3/1P4PP/3R3K b - - 2 31",
+"moves": [
+"c7d7",
+"e7d8",
+"d7d8",
+"d1d8"
+],
+"rating": 1462,
+"rd": 79,
+"popularity": 93,
+"nb_plays": 658,
+"themes": [
+"backRankMate",
+"endgame",
+"mate",
+"mateIn2",
+"short",
+"xRayAttack"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "rYnLx",
+"fen": "r1b1n2k/qp2nQ1p/6p1/p1b1P3/8/PB5P/1P3PP1/4RRK1 b - - 4 28",
+"moves": [
+"c8f5",
+"f7f8",
+"e7g8",
+"f8g8"
+],
+"rating": 1493,
+"rd": 79,
+"popularity": 95,
+"nb_plays": 28170,
+"themes": [
+"kingsideAttack",
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "TGSNU",
+"fen": "3Rr1k1/2Q3pp/1p3p2/3p4/3Pq2n/4PN1P/PP3PK1/5R2 w - - 1 27",
+"moves": [
+"g2g3",
+"e4f3",
+"g3h4",
+"g7g5"
+],
+"rating": 1511,
+"rd": 77,
+"popularity": 97,
+"nb_plays": 27534,
+"themes": [
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "D6pA8",
+"fen": "8/4R3/pkb5/1p6/5B2/3p4/5PPK/3r4 b - - 1 48",
+"moves": [
+"a6a5",
+"f4e3",
+"b6a6",
+"e7a7"
+],
+"rating": 1541,
+"rd": 74,
+"popularity": 95,
+"nb_plays": 15141,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"operaMate",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "uBn33",
+"fen": "r2q1rk1/2pb2b1/p3p1Q1/1p6/P3B3/2P1P1P1/1P3PP1/2K4R b - - 0 25",
+"moves": [
+"f8f6",
+"h1h8",
+"g8h8",
+"g6h7"
+],
+"rating": 1565,
+"rd": 73,
+"popularity": 97,
+"nb_plays": 7546,
+"themes": [
+"attraction",
+"kingsideAttack",
+"mate",
+"mateIn2",
+"middlegame",
+"pin",
+"sacrifice",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "02GG8",
+"fen": "4r3/K1B4R/2kP2p1/P7/8/r5P1/7P/8 w - - 3 41",
+"moves": [
+"a5a6",
+"a3a6",
+"a7a6",
+"e8a8"
+],
+"rating": 1587,
+"rd": 80,
+"popularity": 92,
+"nb_plays": 4995,
+"themes": [
+"attraction",
+"endgame",
+"master",
+"mate",
+"mateIn2",
+"sacrifice",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "baSu7",
+"fen": "rn3rk1/3qp1P1/p2p1p1b/2pP4/1pP2n1B/1P3P2/P1QN3P/R5RK b - - 0 25",
+"moves": [
+"f8f7",
+"c2h7",
+"g8h7",
+"g7g8q"
+],
+"rating": 1617,
+"rd": 74,
+"popularity": 88,
+"nb_plays": 1283,
+"themes": [
+"advancedPawn",
+"attraction",
+"kingsideAttack",
+"mate",
+"mateIn2",
+"middlegame",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "XYkrT",
+"fen": "2k3r1/Qpp5/p1p2p1p/2N2R2/4P3/P2P3P/1PP3K1/4q3 w - - 1 30",
+"moves": [
+"g2f3",
+"g8g3",
+"f3f4",
+"e1f2"
+],
+"rating": 1650,
+"rd": 73,
+"popularity": 96,
+"nb_plays": 19686,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "njz8l",
+"fen": "1r6/3R2p1/pkpNp2p/bpN1P3/3P4/8/P1K3PP/1r5n b - - 8 34",
+"moves": [
+"b1g1",
+"d6c8",
+"b8c8",
+"d7b7"
+],
+"rating": 1672,
+"rd": 74,
+"popularity": 95,
+"nb_plays": 19993,
+"themes": [
+"epauletteMate",
+"hookMate",
+"mate",
+"mateIn2",
+"middlegame",
+"sacrifice",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "foUV1",
+"fen": "k7/1pQ2pr1/p1p1p3/4Pp2/3P4/P1P3rP/1PR2RPK/4q3 w - - 16 33",
+"moves": [
+"c2e2",
+"g3h3",
+"g2h3",
+"e1g1"
+],
+"rating": 1697,
+"rd": 75,
+"popularity": 100,
+"nb_plays": 1063,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"sacrifice",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "exXXe",
+"fen": "r3kb1r/ppp2pp1/3p3p/3P2B1/2n1N3/5P2/PP3P1P/R3R1K1 b kq - 1 16",
+"moves": [
+"h6g5",
+"e4f6",
+"e8d8",
+"e1e8"
+],
+"rating": 1742,
+"rd": 79,
+"popularity": 95,
+"nb_plays": 17335,
+"themes": [
+"discoveredCheck",
+"doubleCheck",
+"mate",
+"mateIn2",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Kings_Pawn_Game",
+"Kings_Pawn_Game_Macleod_Attack"
+],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "GvaIc",
+"fen": "8/1p3pk1/p3p3/3pPp2/3P2rq/P1P2R2/4Q3/1R1B2K1 w - - 0 36",
+"moves": [
+"g1f1",
+"h4h1",
+"f1f2",
+"h1g1"
+],
+"rating": 1800,
+"rd": 80,
+"popularity": 91,
+"nb_plays": 3081,
+"themes": [
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "rPtkr",
+"fen": "rq1r1k2/5p1Q/p1n2b2/1p1p4/8/1NP1B3/1P4P1/1K2RB2 b - - 0 27",
+"moves": [
+"b8g3",
+"e3h6",
+"f6g7",
+"h7h8"
+],
+"rating": 1884,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 2844,
+"themes": [
+"mate",
+"mateIn2",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "mate_in_5"
+},
+{
+"puzzle_id": "Dqs3U",
+"fen": "1n3rk1/1q3pp1/6bp/bB1Pp3/2p1P1P1/2N4P/3NQP2/4R1K1 w - - 1 32",
+"moves": [
+"e1c1",
+"a5c3",
+"c1c3",
+"b7b5"
+],
+"rating": 1001,
+"rd": 82,
+"popularity": 83,
+"nb_plays": 530,
+"themes": [
+"advantage",
+"capturingDefender",
+"master",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "L75iP",
+"fen": "5rk1/7p/2pP4/p1P5/Pp6/1P1R2P1/4q1N1/2R3K1 w - - 3 36",
+"moves": [
+"g2f4",
+"f8f4",
+"g3f4",
+"e2d3"
+],
+"rating": 1047,
+"rd": 77,
+"popularity": 95,
+"nb_plays": 6895,
+"themes": [
+"capturingDefender",
+"crushing",
+"endgame",
+"master",
+"short"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "2CNr1",
+"fen": "1r2r1k1/5pp1/b1p4p/p2n4/1qPPp3/1P2B2P/3NQPP1/2R2RK1 w - - 2 21",
+"moves": [
+"e2h5",
+"d5e3",
+"f2e3",
+"b4d2"
+],
+"rating": 1101,
+"rd": 82,
+"popularity": 94,
+"nb_plays": 2450,
+"themes": [
+"capturingDefender",
+"crushing",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "YwveW",
+"fen": "r1b2rk1/pp3p1p/3q1p2/3pp3/3b4/1BNP4/PPP2PPP/R2Q1RK1 w - - 0 13",
+"moves": [
+"b3d5",
+"d4c3",
+"b2c3",
+"d6d5"
+],
+"rating": 1155,
+"rd": 77,
+"popularity": 95,
+"nb_plays": 3948,
+"themes": [
+"advantage",
+"capturingDefender",
+"intermezzo",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Four_Knights_Game",
+"Four_Knights_Game_Spanish_Variation"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "0wuEc",
+"fen": "1k1r4/p5p1/2prp1pb/1p3p2/2RP1P1P/P5P1/1PK3B1/3R4 w - - 0 30",
+"moves": [
+"c4c6",
+"d6c6",
+"g2c6",
+"d8c8",
+"d4d5",
+"e6d5",
+"d1d5",
+"c8c6"
+],
+"rating": 1179,
+"rd": 78,
+"popularity": 88,
+"nb_plays": 582,
+"themes": [
+"advantage",
+"capturingDefender",
+"endgame",
+"pin",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "1HlB4",
+"fen": "rn2k2r/pp1q1ppp/2b2n2/b7/3p4/P4NP1/1B1PPPBP/RN1Q1RK1 w kq - 0 12",
+"moves": [
+"b2d4",
+"c6f3",
+"g2f3",
+"d7d4"
+],
+"rating": 1198,
+"rd": 84,
+"popularity": 93,
+"nb_plays": 1168,
+"themes": [
+"advantage",
+"capturingDefender",
+"intermezzo",
+"opening",
+"short"
+],
+"opening_tags": [
+"Polish_Opening",
+"Polish_Opening_Other_variations"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "TdFgO",
+"fen": "rn3rk1/ppp1ppbp/5np1/q5B1/3P2b1/2NBPN2/PP3PPP/R2QK2R w KQ - 4 9",
+"moves": [
+"e1g1",
+"g4f3",
+"d1f3",
+"a5g5",
+"f3b7",
+"b8d7"
+],
+"rating": 1226,
+"rd": 75,
+"popularity": 86,
+"nb_plays": 1320,
+"themes": [
+"advantage",
+"capturingDefender",
+"defensiveMove",
+"long",
+"middlegame"
+],
+"opening_tags": [
+"Modern_Defense",
+"Modern_Defense_Other_variations"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "1agSC",
+"fen": "2r2rk1/ppq2ppp/2n2n2/2Qp4/8/PP1PP3/1B1N1PPN/3R2K1 b - - 0 16",
+"moves": [
+"c6e5",
+"c5c7",
+"c8c7",
+"b2e5"
+],
+"rating": 1246,
+"rd": 81,
+"popularity": 93,
+"nb_plays": 2984,
+"themes": [
+"advantage",
+"capturingDefender",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"English_Opening",
+"English_Opening_Symmetrical_Variation"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "0mwPX",
+"fen": "r4rk1/pppb2pp/2nb4/1B1P1p2/2P1p3/6Pq/PBPNQP1P/R4RK1 b - - 0 15",
+"moves": [
+"c6e5",
+"b2e5",
+"d6e5",
+"b5d7"
+],
+"rating": 1282,
+"rd": 75,
+"popularity": 94,
+"nb_plays": 9983,
+"themes": [
+"capturingDefender",
+"crushing",
+"master",
+"masterVsMaster",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Four_Knights_Game",
+"Four_Knights_Game_Other_variations"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "t5JkB",
+"fen": "r4rk1/2q1bppp/p4n2/4pPB1/Np1pb2Q/1B5P/PPP3P1/3R1RK1 b - - 1 20",
+"moves": [
+"f8e8",
+"g5f6",
+"e7f6",
+"h4e4"
+],
+"rating": 1314,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 661,
+"themes": [
+"advantage",
+"capturingDefender",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "2LRex",
+"fen": "rn3rk1/pp2bppp/1q3n2/2ppN3/5B2/1PPP4/P4PPP/RN1QR1K1 b - - 0 13",
+"moves": [
+"b8c6",
+"e5c6",
+"b6c6",
+"e1e7"
+],
+"rating": 1339,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 5611,
+"themes": [
+"capturingDefender",
+"crushing",
+"discoveredAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Modern_Variations"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "ZcH9I",
+"fen": "r1b2rk1/1pqn1ppp/p3pn2/P2P4/1b1B4/1NN2P2/2PQB1PP/R4RK1 b - - 1 16",
+"moves": [
+"f6d5",
+"c3d5",
+"e6d5",
+"d2b4"
+],
+"rating": 1357,
+"rd": 76,
+"popularity": 88,
+"nb_plays": 500,
+"themes": [
+"advantage",
+"capturingDefender",
+"discoveredAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Scheveningen_Variation"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "1hYu7",
+"fen": "1r1qk2r/p1p2pbp/3p2p1/2n4n/2P1p3/2N1PPPP/PP1PQ1B1/R1B2RK1 w k - 1 13",
+"moves": [
+"c3e4",
+"c5e4",
+"f3e4",
+"h5g3",
+"e2f2",
+"g3f1"
+],
+"rating": 1376,
+"rd": 77,
+"popularity": 90,
+"nb_plays": 5438,
+"themes": [
+"advantage",
+"capturingDefender",
+"fork",
+"long",
+"opening"
+],
+"opening_tags": [
+"English_Opening",
+"English_Opening_Kings_English_Variation"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "166OW",
+"fen": "rn1qkb1r/ppp2ppp/4pn2/3pN1B1/3P2b1/8/PPP1PPPP/RN1QKB1R b KQkq - 1 5",
+"moves": [
+"f8e7",
+"g5f6",
+"g7f6",
+"e5g4"
+],
+"rating": 1391,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 3621,
+"themes": [
+"advantage",
+"capturingDefender",
+"opening",
+"short"
+],
+"opening_tags": [
+"Queens_Pawn_Game",
+"Queens_Pawn_Game_London_System"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "qbo3D",
+"fen": "r1bq1rk1/pp3pp1/3p1b1p/6n1/4P3/P1N3PP/1P3PB1/R1BQ1RK1 b - - 4 15",
+"moves": [
+"c8h3",
+"c1g5",
+"h6g5",
+"g2h3",
+"f6c3",
+"b2c3"
+],
+"rating": 1409,
+"rd": 76,
+"popularity": 88,
+"nb_plays": 775,
+"themes": [
+"advantage",
+"capturingDefender",
+"intermezzo",
+"long",
+"middlegame"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Modern_Variations"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "d08Vy",
+"fen": "r1b2rk1/1pp1b1p1/p1n1p2p/4Nq2/3PN3/3Q4/PPP1BPPP/R4RK1 w - - 14 21",
+"moves": [
+"e2g4",
+"c6e5",
+"d4e5",
+"f5g4"
+],
+"rating": 1423,
+"rd": 78,
+"popularity": 93,
+"nb_plays": 1648,
+"themes": [
+"capturingDefender",
+"crushing",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "0XKzp",
+"fen": "6rk/pp3p1p/5p2/4n1q1/2rQB3/6P1/PPP2P1P/3R1RK1 w - - 9 26",
+"moves": [
+"d4e3",
+"g5e3",
+"f2e3",
+"c4e4"
+],
+"rating": 1440,
+"rd": 76,
+"popularity": 95,
+"nb_plays": 30053,
+"themes": [
+"capturingDefender",
+"crushing",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "KQW2z",
+"fen": "r1b1k2r/2p3pp/p4n2/1NpNq3/4p3/4P3/PPP2PPP/R2QK2R b KQkq - 0 14",
+"moves": [
+"f6d5",
+"d1d5",
+"e5d5",
+"b5c7",
+"e8f7",
+"c7d5"
+],
+"rating": 1457,
+"rd": 77,
+"popularity": 94,
+"nb_plays": 2085,
+"themes": [
+"advantage",
+"attraction",
+"capturingDefender",
+"deflection",
+"exposedKing",
+"fork",
+"long",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [
+"Englund_Gambit",
+"Englund_Gambit_Other_variations"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "0Xyeq",
+"fen": "r6r/pp4p1/2np2k1/qN1Q1b1p/3Nn2P/8/PPP1PPP1/R3KB1R w KQ - 2 13",
+"moves": [
+"c2c3",
+"c6d4",
+"d5d4",
+"a5b5"
+],
+"rating": 1481,
+"rd": 78,
+"popularity": 96,
+"nb_plays": 6868,
+"themes": [
+"advantage",
+"capturingDefender",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [
+"Queens_Pawn_Game",
+"Queens_Pawn_Game_Chigorin_Variation"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "1x9K1",
+"fen": "8/p3k2p/4pp2/2pr4/5PP1/P2R4/1PK4P/8 b - - 0 27",
+"moves": [
+"h7h5",
+"d3d5",
+"e6d5",
+"g4h5"
+],
+"rating": 1508,
+"rd": 77,
+"popularity": 90,
+"nb_plays": 834,
+"themes": [
+"capturingDefender",
+"crushing",
+"endgame",
+"rookEndgame",
+"short"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "1pEjj",
+"fen": "5k2/7p/p3BPp1/1p1Pp3/1P1bP2P/3N2K1/P2n4/8 w - - 1 45",
+"moves": [
+"d3c5",
+"d4c5",
+"b4c5",
+"d2e4"
+],
+"rating": 1532,
+"rd": 78,
+"popularity": 94,
+"nb_plays": 3787,
+"themes": [
+"advantage",
+"capturingDefender",
+"endgame",
+"short"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "1DHWA",
+"fen": "8/1pr3kp/p7/2N2R2/P2p4/1P1P2P1/7P/4n1K1 w - - 3 36",
+"moves": [
+"g1f2",
+"c7c5",
+"f5c5",
+"e1d3",
+"f2e2",
+"d3c5"
+],
+"rating": 1548,
+"rd": 73,
+"popularity": 95,
+"nb_plays": 35529,
+"themes": [
+"attraction",
+"capturingDefender",
+"crushing",
+"endgame",
+"fork",
+"long"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "DlIyd",
+"fen": "4r1k1/pbqnbp1p/1p2pNp1/8/2P2P2/1P4N1/PBB1Q1PP/3R3K b - - 0 21",
+"moves": [
+"e7f6",
+"d1d7",
+"c7d7",
+"b2f6"
+],
+"rating": 1566,
+"rd": 75,
+"popularity": 89,
+"nb_plays": 2051,
+"themes": [
+"capturingDefender",
+"crushing",
+"intermezzo",
+"master",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "otaWM",
+"fen": "r2q1rk1/4n1bp/p2pp1p1/1p2P1B1/8/2N2P2/PP3P1P/R2QR1K1 b - - 0 17",
+"moves": [
+"g7e5",
+"e1e5",
+"d6e5",
+"d1d8",
+"f8d8",
+"g5e7"
+],
+"rating": 1582,
+"rd": 75,
+"popularity": 87,
+"nb_plays": 1361,
+"themes": [
+"advantage",
+"capturingDefender",
+"long",
+"middlegame",
+"pin"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Alapin_Variation"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "0Zaza",
+"fen": "r3k2r/ppqnbppp/2b1p3/4P3/8/2PB1N2/P2B1PPP/R2QR1K1 w kq - 1 14",
+"moves": [
+"d2g5",
+"c6f3",
+"d1f3",
+"e7g5"
+],
+"rating": 1600,
+"rd": 76,
+"popularity": 93,
+"nb_plays": 15780,
+"themes": [
+"capturingDefender",
+"crushing",
+"master",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Alapin_Variation"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "13NgQ",
+"fen": "r4rk1/pp3ppp/4p3/n2P4/5B2/3R3P/P4PP1/4R1K1 b - - 0 23",
+"moves": [
+"f8d8",
+"f4c7",
+"d8d5",
+"d3d5",
+"e6d5",
+"c7a5"
+],
+"rating": 1619,
+"rd": 77,
+"popularity": 94,
+"nb_plays": 7420,
+"themes": [
+"advantage",
+"capturingDefender",
+"endgame",
+"fork",
+"long"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "1AhFU",
+"fen": "rn2k2r/pp2bppp/1qp1pn2/6B1/4P3/1PN2Q1P/P1P2PP1/3RKB1R b Kkq - 0 10",
+"moves": [
+"e8g8",
+"e4e5",
+"f6d5",
+"c3d5",
+"e6d5",
+"g5e7"
+],
+"rating": 1640,
+"rd": 73,
+"popularity": 96,
+"nb_plays": 16604,
+"themes": [
+"capturingDefender",
+"crushing",
+"long",
+"opening"
+],
+"opening_tags": [
+"Caro-Kann_Defense",
+"Caro-Kann_Defense_Two_Knights_Attack"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "2N0Ar",
+"fen": "5r1k/pp4q1/5rp1/3pR3/5P2/1P4KP/P1Q5/4R3 w - - 0 28",
+"moves": [
+"e1f1",
+"f6f4",
+"f1f4",
+"g7e5",
+"c2b2",
+"e5b2"
+],
+"rating": 1665,
+"rd": 79,
+"popularity": 94,
+"nb_plays": 10719,
+"themes": [
+"capturingDefender",
+"crushing",
+"discoveredAttack",
+"endgame",
+"long",
+"pin"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "vqXPc",
+"fen": "2r2k2/3n1ppp/2qP4/2P5/8/7P/5PP1/2R1Q1K1 b - - 10 32",
+"moves": [
+"d7c5",
+"e1e7",
+"f8g8",
+"d6d7",
+"c6d7",
+"e7d7",
+"c5d7",
+"c1c8"
+],
+"rating": 1695,
+"rd": 79,
+"popularity": 95,
+"nb_plays": 13772,
+"themes": [
+"advancedPawn",
+"advantage",
+"capturingDefender",
+"endgame",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "2Apvv",
+"fen": "1k1r3q/pp4p1/5p2/PPN1nR2/2P1Nr2/7Q/5KP1/R7 w - - 3 30",
+"moves": [
+"f2e2",
+"h8h3",
+"g2h3",
+"f4f5"
+],
+"rating": 1730,
+"rd": 80,
+"popularity": 93,
+"nb_plays": 939,
+"themes": [
+"advantage",
+"capturingDefender",
+"master",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "0JTrY",
+"fen": "2rq1rk1/3bbpp1/3ppn1p/np6/4P3/PPN1BN1P/4BPP1/2RQ1RK1 w - - 0 16",
+"moves": [
+"e2b5",
+"c8c3",
+"c1c3",
+"d7b5"
+],
+"rating": 1760,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 2238,
+"themes": [
+"advantage",
+"capturingDefender",
+"intermezzo",
+"master",
+"opening",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Smith-Morra_Gambit"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "1Af0o",
+"fen": "1k2r3/pp4pp/q4p2/3p4/P3r3/N1P3P1/3Q1PP1/R4K1R w - - 5 24",
+"moves": [
+"a3b5",
+"e4a4",
+"a1a4",
+"a6b5",
+"f1g1",
+"b5a4"
+],
+"rating": 1782,
+"rd": 75,
+"popularity": 96,
+"nb_plays": 14727,
+"themes": [
+"advantage",
+"attraction",
+"capturingDefender",
+"fork",
+"long",
+"middlegame",
+"pin"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "07k0u",
+"fen": "r5k1/r2bppbp/B4np1/2p1B3/2P5/1PN3P1/1P2PP1P/R2R2K1 b - - 2 18",
+"moves": [
+"a7a6",
+"a1a6",
+"a8a6",
+"e5f6",
+"g7f6",
+"d1d7"
+],
+"rating": 1808,
+"rd": 74,
+"popularity": 94,
+"nb_plays": 15692,
+"themes": [
+"advantage",
+"capturingDefender",
+"long",
+"master",
+"middlegame"
+],
+"opening_tags": [
+"Kings_Indian_Defense",
+"Kings_Indian_Defense_Fianchetto_Variation"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "1GgQ2",
+"fen": "4r3/1p2r1k1/p1p2qb1/P2pN1p1/1P1P1pQp/5P1P/4R1P1/4R1K1 b - - 14 42",
+"moves": [
+"f6f5",
+"e5g6",
+"e7e2",
+"g4f5",
+"e2e1",
+"g1h2"
+],
+"rating": 1825,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 2620,
+"themes": [
+"capturingDefender",
+"crushing",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "vFwrf",
+"fen": "3rqk2/2Q1np1p/p5p1/3p4/8/5B1P/P4PP1/4R1K1 b - - 11 33",
+"moves": [
+"d5d4",
+"f3c6",
+"d8c8",
+"e1e7",
+"e8e7",
+"c7c8"
+],
+"rating": 1868,
+"rd": 76,
+"popularity": 93,
+"nb_plays": 1429,
+"themes": [
+"capturingDefender",
+"crushing",
+"deflection",
+"endgame",
+"long",
+"master"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "1tME3",
+"fen": "4r3/2q1rpk1/Q2R3p/2np2p1/8/PN2BPPb/5K1P/4R3 w - - 0 29",
+"moves": [
+"b3c5",
+"e7e3",
+"e1e3",
+"c7c5",
+"a6d3",
+"e8e3"
+],
+"rating": 1902,
+"rd": 75,
+"popularity": 100,
+"nb_plays": 926,
+"themes": [
+"advantage",
+"attraction",
+"capturingDefender",
+"intermezzo",
+"long",
+"middlegame",
+"pin"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "1cAoY",
+"fen": "6kr/p2q2n1/2p1R1Q1/3p2N1/8/5P2/PPP5/2K3Rr w - - 1 38",
+"moves": [
+"g1e1",
+"d7e6",
+"g5e6",
+"h1e1",
+"c1d2",
+"e1e6"
+],
+"rating": 1933,
+"rd": 80,
+"popularity": 95,
+"nb_plays": 17597,
+"themes": [
+"advantage",
+"capturingDefender",
+"long",
+"master",
+"middlegame",
+"pin"
+],
+"opening_tags": [],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "0a3m8",
+"fen": "r1bqr1k1/pp1p1ppp/2n2n2/8/1bPN4/2N5/PP2BPPP/R1BQ1RK1 w - - 5 10",
+"moves": [
+"c1g5",
+"c6d4",
+"d1d4",
+"b4c3",
+"d4c3",
+"e8e2"
+],
+"rating": 1966,
+"rd": 78,
+"popularity": 91,
+"nb_plays": 2441,
+"themes": [
+"advantage",
+"capturingDefender",
+"long",
+"master",
+"opening"
+],
+"opening_tags": [
+"English_Opening",
+"English_Opening_Symmetrical_Variation"
+],
+"motif": "removal_of_defender"
+},
+{
+"puzzle_id": "0hhta",
+"fen": "r3k3/pppq1pb1/2p1b2p/6pQ/4P3/2NP4/PPP2PPP/2KR3R w q - 6 15",
+"moves": [
+"h1f1",
+"e6g4",
+"h5g4",
+"d7g4"
+],
+"rating": 1004,
+"rd": 79,
+"popularity": 90,
+"nb_plays": 4290,
+"themes": [
+"crushing",
+"fork",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Ruy_Lopez",
+"Ruy_Lopez_Berlin_Defense"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0hIjR",
+"fen": "rn4k1/pp3ppp/5b2/3r4/4p1B1/4P3/PP3PPP/RN3RK1 w - - 0 16",
+"moves": [
+"f1d1",
+"d5d1",
+"g4d1",
+"f6b2",
+"b1d2",
+"b2a1"
+],
+"rating": 1114,
+"rd": 88,
+"popularity": 93,
+"nb_plays": 708,
+"themes": [
+"advantage",
+"long",
+"middlegame",
+"trappedPiece"
+],
+"opening_tags": [
+"Queens_Gambit_Declined",
+"Queens_Gambit_Declined_Traditional_Variation"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0ge7X",
+"fen": "r6r/p1p1qpk1/1p1p4/3P1pPn/2P2P1R/4PP2/PP3K1Q/2R5 w - - 0 31",
+"moves": [
+"h4h5",
+"h8h5",
+"h2h5",
+"a8h8",
+"h5h8",
+"g7h8"
+],
+"rating": 1180,
+"rd": 80,
+"popularity": 93,
+"nb_plays": 3013,
+"themes": [
+"clearance",
+"crushing",
+"endgame",
+"long",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0ganK",
+"fen": "2r5/p4kpp/2q2p2/3N4/1Qp5/5P2/P5PP/5RK1 w - - 0 29",
+"moves": [
+"d5e7",
+"c6c5",
+"b4c5",
+"c8c5",
+"e7c8",
+"c5c8"
+],
+"rating": 1219,
+"rd": 75,
+"popularity": 89,
+"nb_plays": 711,
+"themes": [
+"advantage",
+"endgame",
+"long",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0otf1",
+"fen": "r3nrk1/pbpp1ppp/1p4q1/4P3/1P1Q1P2/P3BPN1/2P4P/R4RK1 b - - 0 18",
+"moves": [
+"b7c6",
+"f4f5",
+"g6g3",
+"h2g3"
+],
+"rating": 1268,
+"rd": 80,
+"popularity": 90,
+"nb_plays": 3612,
+"themes": [
+"crushing",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Scotch_Game",
+"Scotch_Game_Other_variations"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0ETU4",
+"fen": "2r2rk1/Qpqbbpp1/4p2p/3pP3/8/P1N2N2/1PP2PPP/R4RK1 w - - 1 15",
+"moves": [
+"a1c1",
+"e7c5",
+"a7c5",
+"c7c5"
+],
+"rating": 1303,
+"rd": 77,
+"popularity": 87,
+"nb_plays": 848,
+"themes": [
+"crushing",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"French_Defense",
+"French_Defense_Advance_Variation"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0bX47",
+"fen": "r1bqk2r/ppp2p2/3p1n1p/2b1p1p1/2B1P2B/2NP1Q2/PPP2PPP/R3K2R w KQkq - 0 10",
+"moves": [
+"h4g3",
+"c8g4",
+"f3f6",
+"d8f6"
+],
+"rating": 1338,
+"rd": 76,
+"popularity": 93,
+"nb_plays": 5207,
+"themes": [
+"crushing",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Ruy_Lopez",
+"Ruy_Lopez_Berlin_Defense"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0qAPg",
+"fen": "2r1k3/2pRp3/p5p1/1p5p/5r1P/PP3P2/2P3P1/3R2K1 b - - 0 31",
+"moves": [
+"f4h4",
+"g2g3",
+"h4h3",
+"g1g2",
+"h3g3",
+"g2g3"
+],
+"rating": 1367,
+"rd": 80,
+"popularity": 91,
+"nb_plays": 2243,
+"themes": [
+"advantage",
+"endgame",
+"long",
+"rookEndgame",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0tRtc",
+"fen": "r4rk1/ppp3p1/3p1p1p/3P4/1PPp1P1q/P2P3P/6PK/R2Q1R2 b - - 1 18",
+"moves": [
+"f8e8",
+"g2g3",
+"h4g3",
+"h2g3"
+],
+"rating": 1384,
+"rd": 76,
+"popularity": 92,
+"nb_plays": 1512,
+"themes": [
+"crushing",
+"endgame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Italian_Game",
+"Italian_Game_Giuoco_Pianissimo"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "1JVWs",
+"fen": "rnb1k2r/1pp2pp1/p3pn1p/3p4/1q1P4/P1N1PN1P/1PP1BPP1/R2QK2R b KQkq - 0 9",
+"moves": [
+"b4b2",
+"c3a4",
+"b2a1",
+"d1a1"
+],
+"rating": 1406,
+"rd": 74,
+"popularity": 89,
+"nb_plays": 645,
+"themes": [
+"advantage",
+"opening",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Queens_Pawn_Game",
+"Queens_Pawn_Game_London_System"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "05nKb",
+"fen": "r3r2k/6pp/p1n2p2/1pp2b2/2B2P2/2P2N1P/PP3PP1/3R1K1R w - - 0 18",
+"moves": [
+"c4b3",
+"c5c4",
+"b3c4",
+"b5c4"
+],
+"rating": 1426,
+"rd": 77,
+"popularity": 92,
+"nb_plays": 5768,
+"themes": [
+"crushing",
+"master",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Englund_Gambit",
+"Englund_Gambit_Other_variations"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0pm3g",
+"fen": "8/8/1pbkppp1/p6p/2BP1P2/1PK3P1/P6P/8 w - - 0 37",
+"moves": [
+"c3d3",
+"b6b5",
+"d3c3",
+"b5c4"
+],
+"rating": 1449,
+"rd": 79,
+"popularity": 93,
+"nb_plays": 1382,
+"themes": [
+"advantage",
+"bishopEndgame",
+"endgame",
+"master",
+"short",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "STaAJ",
+"fen": "3r1rk1/pp4pp/2n1pb2/4p3/8/3P1N2/PPP2PPP/RN2K2R w KQ - 2 13",
+"moves": [
+"e1g1",
+"e5e4",
+"d3e4",
+"f6b2",
+"b1d2",
+"b2a1"
+],
+"rating": 1473,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 20447,
+"themes": [
+"advantage",
+"discoveredAttack",
+"long",
+"middlegame",
+"trappedPiece"
+],
+"opening_tags": [
+"Caro-Kann_Defense",
+"Caro-Kann_Defense_Hillbilly_Attack"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "vG6UC",
+"fen": "rn2k2r/1p3ppp/1pp1p3/5b2/1P1P3q/P1n1BB1P/2PQ1PP1/R4RK1 b kq - 3 16",
+"moves": [
+"c3d5",
+"e3g5",
+"h4g5",
+"d2g5"
+],
+"rating": 1495,
+"rd": 76,
+"popularity": 91,
+"nb_plays": 4269,
+"themes": [
+"advantage",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Scandinavian_Defense",
+"Scandinavian_Defense_Mieses-Kotroc_Variation"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0sUjb",
+"fen": "8/8/5p2/p5p1/4PkB1/rPK2P2/8/8 b - - 3 50",
+"moves": [
+"f4e5",
+"c3b2",
+"a3a4",
+"b3a4"
+],
+"rating": 1512,
+"rd": 76,
+"popularity": 88,
+"nb_plays": 1384,
+"themes": [
+"crushing",
+"endgame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "1Q54C",
+"fen": "2Q5/5p1k/n2p2pp/2pP4/3b1qP1/P3N2P/1P1r1PB1/5RK1 b - - 0 33",
+"moves": [
+"d4e3",
+"f2e3",
+"f4e3",
+"g1h1",
+"e3e7",
+"c8a6"
+],
+"rating": 1531,
+"rd": 77,
+"popularity": 94,
+"nb_plays": 5417,
+"themes": [
+"advantage",
+"long",
+"middlegame",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "wm2WB",
+"fen": "Q3r2r/2kq2pp/p2bp3/1pp5/3p1P2/3P4/PPPN1P1P/R3R1K1 w - - 4 22",
+"moves": [
+"a8a6",
+"e8a8",
+"a6a8",
+"h8a8"
+],
+"rating": 1545,
+"rd": 74,
+"popularity": 86,
+"nb_plays": 1560,
+"themes": [
+"crushing",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "zWdIr",
+"fen": "2k4r/pp3ppp/2p3r1/3p3q/3Rn3/4PN2/PPP1QPPP/4R2K b - - 5 18",
+"moves": [
+"e4g5",
+"d4h4",
+"h5h4",
+"f3h4"
+],
+"rating": 1557,
+"rd": 77,
+"popularity": 94,
+"nb_plays": 3617,
+"themes": [
+"advantage",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Zukertort_Opening",
+"Zukertort_Opening_Other_variations"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0I0zn",
+"fen": "8/p7/P7/2k4p/1p2Kp1r/5P1P/8/7R b - - 2 50",
+"moves": [
+"c5b5",
+"e4f5",
+"b4b3",
+"f5g5",
+"h4h3",
+"h1h3"
+],
+"rating": 1575,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 1678,
+"themes": [
+"crushing",
+"endgame",
+"long",
+"rookEndgame",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "PWoIC",
+"fen": "3r2k1/pq2b1p1/1rp3p1/2pp2P1/Q3PB2/1PPP2K1/P7/R4R2 w - - 0 27",
+"moves": [
+"a1e1",
+"b6a6",
+"a4a6",
+"b7a6"
+],
+"rating": 1590,
+"rd": 78,
+"popularity": 86,
+"nb_plays": 733,
+"themes": [
+"advantage",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "18SWx",
+"fen": "r1b1k1nr/p2p1p1p/1p2pq2/5n2/1bP5/2N1P1Q1/PP1B1PPP/2R1KBNR w Kkq - 1 10",
+"moves": [
+"g3c7",
+"b4d6",
+"c3e4",
+"d6c7",
+"e4f6",
+"g8f6"
+],
+"rating": 1606,
+"rd": 74,
+"popularity": 95,
+"nb_plays": 13638,
+"themes": [
+"crushing",
+"long",
+"opening",
+"trappedPiece"
+],
+"opening_tags": [
+"Horwitz_Defense",
+"Horwitz_Defense_Other_variations"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "16KAp",
+"fen": "r2qr3/1b3pk1/p2p3p/1p1pnQp1/P2N4/1BP1R3/2P2PPP/4R1K1 w - - 1 22",
+"moves": [
+"a4b5",
+"b7c8",
+"b3d5",
+"c8f5"
+],
+"rating": 1621,
+"rd": 74,
+"popularity": 88,
+"nb_plays": 1481,
+"themes": [
+"advantage",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "1K4FL",
+"fen": "r2qk1nr/1p3p1p/p1n1p1p1/2b1P3/Q2p1P2/3P1N2/PP1N2PP/R1B1K2R w KQkq - 0 12",
+"moves": [
+"d2b3",
+"b7b5",
+"b3c5",
+"b5a4"
+],
+"rating": 1632,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 15780,
+"themes": [
+"crushing",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Alapin_Variation"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "Lml7n",
+"fen": "8/5p2/p3pkpp/1b1p4/1r1P4/1BR1PP1P/P4KP1/8 b - - 4 35",
+"moves": [
+"a6a5",
+"a2a3",
+"b4c4",
+"b3c4"
+],
+"rating": 1649,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 4031,
+"themes": [
+"crushing",
+"endgame",
+"master",
+"short",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0Pgue",
+"fen": "r4rk1/3bppbp/pq1p1np1/1p6/3NPP2/P1NB4/1PP3PP/R1BQR2K b - - 0 14",
+"moves": [
+"b6d4",
+"c1e3",
+"d4c3",
+"b2c3"
+],
+"rating": 1663,
+"rd": 75,
+"popularity": 94,
+"nb_plays": 3289,
+"themes": [
+"advantage",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Modern_Variations"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "9Nw7q",
+"fen": "r1b2rk1/1p2nNpp/1bp1P3/pB1p1p2/P2P3q/6PP/1P2NP2/R2QR1K1 b - - 0 19",
+"moves": [
+"h4h3",
+"e2f4",
+"h3g4",
+"b5e2",
+"g4f4",
+"g3f4"
+],
+"rating": 1680,
+"rd": 75,
+"popularity": 96,
+"nb_plays": 3064,
+"themes": [
+"clearance",
+"crushing",
+"long",
+"middlegame",
+"trappedPiece"
+],
+"opening_tags": [
+"Ruy_Lopez",
+"Ruy_Lopez_Classical_Variation"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "JzjcC",
+"fen": "r3r1k1/ppp2ppp/8/3bP3/3P4/2PKQ3/q2N1P1P/3R2R1 b - - 1 20",
+"moves": [
+"g7g6",
+"d1a1",
+"a2b2",
+"g1b1",
+"b2a1",
+"b1a1"
+],
+"rating": 1696,
+"rd": 75,
+"popularity": 89,
+"nb_plays": 658,
+"themes": [
+"advantage",
+"clearance",
+"long",
+"middlegame",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0PBwv",
+"fen": "r3r1k1/pp3pbp/2ppbnp1/4q3/4P3/P1N1BB1P/1PP2PP1/R1QR2K1 b - - 3 14",
+"moves": [
+"d6d5",
+"e3f4",
+"e5c3",
+"b2c3"
+],
+"rating": 1710,
+"rd": 76,
+"popularity": 95,
+"nb_plays": 8482,
+"themes": [
+"crushing",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Pirc_Defense",
+"Pirc_Defense_Other_variations"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0IX7R",
+"fen": "r5k1/p2p1r1p/1pb1p1p1/2p3B1/2q5/1P2QP2/P5PP/3R1RK1 b - - 0 22",
+"moves": [
+"c4c2",
+"d1d2",
+"c2f5",
+"g2g4",
+"f5f3",
+"f1f3"
+],
+"rating": 1733,
+"rd": 75,
+"popularity": 93,
+"nb_plays": 2066,
+"themes": [
+"advantage",
+"long",
+"middlegame",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "zP3S4",
+"fen": "r4rk1/pQp1ppbp/1n1q1np1/8/3P2bP/2N1PN2/PP2BPP1/R1B1K2R w KQ - 3 11",
+"moves": [
+"e1g1",
+"g4c8",
+"b7a8",
+"b6a8"
+],
+"rating": 1755,
+"rd": 75,
+"popularity": 93,
+"nb_plays": 6364,
+"themes": [
+"crushing",
+"master",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Grunfeld_Defense",
+"Grunfeld_Defense_Three_Knights_Variation"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "12ETG",
+"fen": "r1r3k1/pp5p/1qb1pbp1/3p1p2/2nP1Q2/2N2PP1/PP2PBBP/2R2RK1 w - - 13 19",
+"moves": [
+"b2b3",
+"g6g5",
+"f4f5",
+"e6f5"
+],
+"rating": 1786,
+"rd": 75,
+"popularity": 93,
+"nb_plays": 4584,
+"themes": [
+"crushing",
+"master",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Dutch_Defense",
+"Dutch_Defense_Semi-Leningrad_Variation"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "LoyVB",
+"fen": "r5k1/1p2qp2/2p1pn2/r5pp/PpRP3P/1Q3BP1/1P2PPK1/R7 w - - 0 23",
+"moves": [
+"b3b4",
+"e7b4",
+"c4b4",
+"g5g4",
+"f3c6",
+"b7c6"
+],
+"rating": 1801,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 545,
+"themes": [
+"advantage",
+"long",
+"master",
+"middlegame",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0LSaC",
+"fen": "1rr5/k4p1p/B1Qp3q/1PnPp1p1/8/8/P4P1N/R1R3K1 w - - 3 29",
+"moves": [
+"b5b6",
+"a7a6",
+"c1c5",
+"c8c6"
+],
+"rating": 1821,
+"rd": 77,
+"popularity": 88,
+"nb_plays": 1104,
+"themes": [
+"advantage",
+"hangingPiece",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "FuJlk",
+"fen": "r3kb1r/1b1n1ppp/p3pnq1/1p6/7N/2P1N3/PP2BPPP/R1BQ1RK1 b kq - 10 15",
+"moves": [
+"g6g5",
+"e3f5",
+"g5f5",
+"h4f5"
+],
+"rating": 1846,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 2303,
+"themes": [
+"crushing",
+"opening",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Alapin_Variation"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "Gxv3L",
+"fen": "rnb1k2r/pp1p1p1p/4pp2/8/2Pp4/2q1PK2/P3NPPP/R2Q1B1R b kq - 1 10",
+"moves": [
+"c3c4",
+"a1c1",
+"c4d5",
+"e3e4",
+"d5h5",
+"g2g4",
+"h5h4",
+"c1c8"
+],
+"rating": 1873,
+"rd": 75,
+"popularity": 94,
+"nb_plays": 12058,
+"themes": [
+"advantage",
+"defensiveMove",
+"middlegame",
+"trappedPiece",
+"veryLong"
+],
+"opening_tags": [
+"Nimzo-Indian_Defense",
+"Nimzo-Indian_Defense_Leningrad_Variation"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0MeVD",
+"fen": "r3k2r/pp1b1ppp/nq1p4/4p3/1PPNB3/P6P/2Q2PP1/2B2RK1 b kq - 0 15",
+"moves": [
+"b6d4",
+"c1e3",
+"d4e4",
+"c2e4"
+],
+"rating": 1906,
+"rd": 76,
+"popularity": 93,
+"nb_plays": 2702,
+"themes": [
+"advantage",
+"middlegame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [
+"Englund_Gambit_Complex_Declined",
+"Englund_Gambit_Complex_Declined_Other_variations"
+],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "0TWy6",
+"fen": "1r4r1/Q2nk1p1/p2qp3/3p3b/3P3p/2PB1N1P/PP4P1/R4RK1 w - - 5 23",
+"moves": [
+"f3g5",
+"b8a8",
+"a7b7",
+"g8b8",
+"b7a8",
+"b8a8"
+],
+"rating": 1939,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 3231,
+"themes": [
+"advantage",
+"clearance",
+"long",
+"middlegame",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "15OfV",
+"fen": "4r1k1/1p3pbp/p2p1np1/2pP4/q1P2PP1/2BB3P/1P6/1R3QK1 b - - 1 22",
+"moves": [
+"b7b5",
+"b1a1",
+"a4b3",
+"a1a3",
+"b5c4",
+"a3b3"
+],
+"rating": 1965,
+"rd": 78,
+"popularity": 93,
+"nb_plays": 10044,
+"themes": [
+"advantage",
+"long",
+"middlegame",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "trapped_piece"
+},
+{
+"puzzle_id": "w4ddU",
+"fen": "8/5p2/p4k1p/1p1Pp3/1P2B3/P7/2P2r1r/2KR4 b - - 1 33",
+"moves": [
+"f2f4",
+"d5d6",
+"f4e4",
+"d6d7",
+"e4e2",
+"d7d8q"
+],
+"rating": 1001,
+"rd": 89,
+"popularity": 92,
+"nb_plays": 581,
+"themes": [
+"advancedPawn",
+"advantage",
+"endgame",
+"long",
+"promotion",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "KXCOc",
+"fen": "8/p7/1p6/4K3/1P6/k7/5P2/8 b - - 1 46",
+"moves": [
+"a3b4",
+"f2f4",
+"b4b3",
+"f4f5",
+"a7a5",
+"f5f6",
+"a5a4",
+"f6f7",
+"a4a3",
+"f7f8q"
+],
+"rating": 1042,
+"rd": 88,
+"popularity": 89,
+"nb_plays": 1389,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"pawnEndgame",
+"promotion",
+"quietMove",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "wjrU7",
+"fen": "8/1R4P1/6rN/4p3/4P3/2p1PK2/p7/k7 w - - 0 47",
+"moves": [
+"g7g8q",
+"g6g8",
+"h6g8",
+"c3c2",
+"g8h6",
+"c2c1q"
+],
+"rating": 1074,
+"rd": 92,
+"popularity": 89,
+"nb_plays": 943,
+"themes": [
+"advancedPawn",
+"advantage",
+"endgame",
+"long",
+"master",
+"promotion"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "08hQ1",
+"fen": "1q5k/3P1Qpp/8/5p2/5P2/5B1P/6PK/2q2b2 b - - 0 39",
+"moves": [
+"c1d2",
+"f7e8",
+"b8e8",
+"d7e8q"
+],
+"rating": 1099,
+"rd": 84,
+"popularity": 94,
+"nb_plays": 1006,
+"themes": [
+"advancedPawn",
+"backRankMate",
+"endgame",
+"mate",
+"mateIn2",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0TCVu",
+"fen": "8/pp6/6kN/1PP5/8/P2K1p1P/6p1/2R5 w - - 0 41",
+"moves": [
+"c1d1",
+"f3f2",
+"d3e2",
+"g2g1q"
+],
+"rating": 1126,
+"rd": 81,
+"popularity": 93,
+"nb_plays": 1772,
+"themes": [
+"advancedPawn",
+"advantage",
+"endgame",
+"master",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "2Af5T",
+"fen": "8/8/P2R4/3K2kp/3P4/8/8/r7 w - - 1 46",
+"moves": [
+"d5c6",
+"a1a6",
+"c6c5",
+"a6d6",
+"c5d6",
+"h5h4",
+"d4d5",
+"h4h3",
+"d6c7",
+"h3h2",
+"d5d6",
+"h2h1q"
+],
+"rating": 1144,
+"rd": 77,
+"popularity": 95,
+"nb_plays": 1342,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"promotion",
+"quietMove",
+"rookEndgame",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "xkm1o",
+"fen": "7k/1p4P1/3q4/p1p2PK1/7r/PQ1p4/1P3P2/8 b - - 0 35",
+"moves": [
+"h8h7",
+"g7g8q"
+],
+"rating": 1159,
+"rd": 77,
+"popularity": 95,
+"nb_plays": 14731,
+"themes": [
+"advancedPawn",
+"endgame",
+"mate",
+"mateIn1",
+"oneMove",
+"promotion"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "083g4",
+"fen": "R7/8/8/3n1Bp1/3k2P1/1p2p3/pK6/8 w - - 0 70",
+"moves": [
+"b2b3",
+"e3e2",
+"a8a2",
+"e2e1q"
+],
+"rating": 1179,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 6434,
+"themes": [
+"advancedPawn",
+"advantage",
+"endgame",
+"master",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0isS2",
+"fen": "8/8/p7/5kpp/2KP4/7P/P7/8 w - - 0 46",
+"moves": [
+"c4c5",
+"g5g4",
+"h3g4",
+"h5g4",
+"d4d5",
+"g4g3",
+"d5d6",
+"g3g2",
+"d6d7",
+"g2g1q"
+],
+"rating": 1197,
+"rd": 77,
+"popularity": 95,
+"nb_plays": 4486,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"pawnEndgame",
+"promotion",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "09tJM",
+"fen": "3r2k1/p4pp1/7p/7n/7B/P4P2/1PQpq1PP/3R2K1 w - - 4 30",
+"moves": [
+"h4d8",
+"e2e1",
+"d1e1",
+"d2e1q"
+],
+"rating": 1223,
+"rd": 75,
+"popularity": 98,
+"nb_plays": 2724,
+"themes": [
+"advancedPawn",
+"endgame",
+"mate",
+"mateIn2",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "ZebOZ",
+"fen": "8/8/6pk/8/5P2/2p2KP1/3p4/4R3 w - - 0 47",
+"moves": [
+"e1f1",
+"c3c2",
+"f1h1",
+"h6g7",
+"f3e2",
+"c2c1q"
+],
+"rating": 1252,
+"rd": 76,
+"popularity": 92,
+"nb_plays": 717,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"long",
+"promotion",
+"rookEndgame"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "EZZaD",
+"fen": "8/8/5K2/p6p/4P2P/k7/8/8 b - - 0 64",
+"moves": [
+"a3b2",
+"e4e5",
+"a5a4",
+"e5e6",
+"a4a3",
+"e6e7",
+"a3a2",
+"e7e8q",
+"a2a1q",
+"e8e5",
+"b2a2",
+"e5a1"
+],
+"rating": 1275,
+"rd": 78,
+"popularity": 93,
+"nb_plays": 598,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"master",
+"pawnEndgame",
+"promotion",
+"quietMove",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0CBpH",
+"fen": "5r1k/p3b1pp/2Q2n2/8/8/2N2BB1/P1pq1PPP/2R3K1 w - - 2 23",
+"moves": [
+"c3e2",
+"d2d1",
+"c1d1",
+"c2d1q"
+],
+"rating": 1291,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 1005,
+"themes": [
+"advancedPawn",
+"backRankMate",
+"mate",
+"mateIn2",
+"middlegame",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "018Iz",
+"fen": "8/3P4/8/1kP2pbP/8/5K2/8/8 b - - 0 51",
+"moves": [
+"b5c5",
+"h5h6",
+"c5c6",
+"h6h7",
+"c6d7",
+"h7h8q"
+],
+"rating": 1310,
+"rd": 75,
+"popularity": 100,
+"nb_plays": 3065,
+"themes": [
+"advancedPawn",
+"bishopEndgame",
+"crushing",
+"endgame",
+"long",
+"promotion"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0VDaC",
+"fen": "3r3k/p4rpP/1b3p1B/1p2qP2/3p4/P7/1PP3QP/R5RK b - - 3 30",
+"moves": [
+"g7h6",
+"g2g8",
+"d8g8",
+"h7g8q"
+],
+"rating": 1335,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 19071,
+"themes": [
+"advancedPawn",
+"kingsideAttack",
+"mate",
+"mateIn2",
+"middlegame",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "4m4gq",
+"fen": "5rk1/8/R3P2p/2p3q1/2Pbb3/PQ4pP/5PB1/5RK1 w - - 0 37",
+"moves": [
+"g2e4",
+"g3f2",
+"g1h1",
+"g5g1",
+"f1g1",
+"f2g1q"
+],
+"rating": 1353,
+"rd": 78,
+"popularity": 85,
+"nb_plays": 5337,
+"themes": [
+"advancedPawn",
+"discoveredCheck",
+"doubleCheck",
+"long",
+"mate",
+"mateIn3",
+"middlegame",
+"promotion"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0O9QB",
+"fen": "8/8/8/3p4/P3p3/2K1P2k/7p/7N w - - 5 52",
+"moves": [
+"c3d4",
+"h3g2",
+"a4a5",
+"g2h1",
+"a5a6",
+"h1g2",
+"a6a7",
+"h2h1q",
+"a7a8q",
+"h1d1"
+],
+"rating": 1372,
+"rd": 78,
+"popularity": 96,
+"nb_plays": 4318,
+"themes": [
+"advancedPawn",
+"advantage",
+"clearance",
+"endgame",
+"knightEndgame",
+"promotion",
+"trappedPiece",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "yum5N",
+"fen": "8/1K6/6p1/P7/7p/8/6kP/8 b - - 0 47",
+"moves": [
+"h4h3",
+"a5a6",
+"g6g5",
+"a6a7",
+"g2h2",
+"a7a8q",
+"g5g4",
+"a8a2"
+],
+"rating": 1389,
+"rd": 81,
+"popularity": 98,
+"nb_plays": 1486,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"pawnEndgame",
+"promotion",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0bzkR",
+"fen": "5k2/3P1pp1/4p2p/4P3/3N1P2/7q/3Q1Kb1/8 b - - 4 37",
+"moves": [
+"f8e7",
+"d4c6",
+"g2c6",
+"d7d8q"
+],
+"rating": 1406,
+"rd": 78,
+"popularity": 94,
+"nb_plays": 34695,
+"themes": [
+"advancedPawn",
+"endgame",
+"mate",
+"mateIn2",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "3WBBy",
+"fen": "4k3/8/4pQ2/p2qP2P/8/5P2/1p3PK1/8 w - - 0 40",
+"moves": [
+"h5h6",
+"b2b1q",
+"f6h8",
+"e8d7",
+"h8g7",
+"d7c6"
+],
+"rating": 1428,
+"rd": 75,
+"popularity": 96,
+"nb_plays": 9176,
+"themes": [
+"advancedPawn",
+"crushing",
+"defensiveMove",
+"endgame",
+"long",
+"promotion",
+"queenEndgame"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "R0t92",
+"fen": "2r4k/5Qp1/2q3Pp/p3p3/Nr1pPb1R/1P6/1P3P2/1K5R b - - 2 31",
+"moves": [
+"b4b7",
+"h4h6",
+"f4h6",
+"h1h6",
+"g7h6",
+"g6g7",
+"h8h7",
+"g7g8q"
+],
+"rating": 1467,
+"rd": 79,
+"popularity": 89,
+"nb_plays": 3963,
+"themes": [
+"advancedPawn",
+"discoveredCheck",
+"doubleCheck",
+"kingsideAttack",
+"mate",
+"mateIn4",
+"middlegame",
+"promotion",
+"sacrifice",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0ivu9",
+"fen": "8/6pk/5p1p/p4P2/1B1p1K2/Pr2p2P/4R1P1/8 w - - 0 36",
+"moves": [
+"b4f8",
+"d4d3",
+"e2e3",
+"d3d2",
+"e3b3",
+"d2d1q"
+],
+"rating": 1489,
+"rd": 76,
+"popularity": 98,
+"nb_plays": 5428,
+"themes": [
+"advancedPawn",
+"advantage",
+"endgame",
+"long",
+"promotion"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "08j9i",
+"fen": "2r5/5P1k/p3p3/1p1n3K/4r1P1/1P6/PB3P1P/8 b - - 6 35",
+"moves": [
+"c8c2",
+"f7f8q",
+"d5f4",
+"h5g5"
+],
+"rating": 1513,
+"rd": 79,
+"popularity": 93,
+"nb_plays": 1801,
+"themes": [
+"advancedPawn",
+"crushing",
+"defensiveMove",
+"endgame",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "FIUS0",
+"fen": "1r5k/1P4pp/P1qp4/2b1pQ2/8/6PK/7P/5R2 b - - 3 35",
+"moves": [
+"h7h6",
+"f5f8",
+"b8f8",
+"f1f8",
+"h8h7",
+"b7b8q"
+],
+"rating": 1535,
+"rd": 80,
+"popularity": 95,
+"nb_plays": 12897,
+"themes": [
+"advancedPawn",
+"advantage",
+"endgame",
+"long",
+"promotion",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "sySYe",
+"fen": "5Rrk/4P1p1/7p/2p2Qp1/1p4P1/p1q5/8/5K2 b - - 3 40",
+"moves": [
+"a3a2",
+"f8g8",
+"h8g8",
+"e7e8q"
+],
+"rating": 1565,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 32102,
+"themes": [
+"advancedPawn",
+"attraction",
+"endgame",
+"mate",
+"mateIn2",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "chV17",
+"fen": "6k1/6bp/P1n1N3/1p3p2/4p3/1P4P1/5P1P/5K2 b - - 2 34",
+"moves": [
+"g8f7",
+"e6d8",
+"c6d8",
+"a6a7",
+"d8e6",
+"a7a8q"
+],
+"rating": 1593,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 10885,
+"themes": [
+"advancedPawn",
+"advantage",
+"endgame",
+"long",
+"promotion",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0m6eg",
+"fen": "8/4kn2/1P6/2p1Pp2/5K2/3b1B2/8/8 b - - 0 53",
+"moves": [
+"e7d7",
+"e5e6",
+"d7e6",
+"b6b7",
+"f7e5",
+"b7b8q"
+],
+"rating": 1615,
+"rd": 75,
+"popularity": 98,
+"nb_plays": 1192,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"long",
+"promotion"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "vkb5r",
+"fen": "8/b3k3/P2p4/1p1Pp1p1/4P1Pp/5P2/1P4K1/4B3 w - - 7 40",
+"moves": [
+"e1f2",
+"h4h3",
+"g2g3",
+"h3h2",
+"f2a7",
+"h2h1q"
+],
+"rating": 1649,
+"rd": 76,
+"popularity": 91,
+"nb_plays": 863,
+"themes": [
+"advancedPawn",
+"bishopEndgame",
+"crushing",
+"endgame",
+"long",
+"promotion"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "I9Erm",
+"fen": "8/6K1/7P/p1pP4/2k5/P2b3B/5p2/8 w - - 0 45",
+"moves": [
+"h6h7",
+"d3h7",
+"d5d6",
+"h7f5",
+"h3f5",
+"f2f1q"
+],
+"rating": 1684,
+"rd": 77,
+"popularity": 94,
+"nb_plays": 5184,
+"themes": [
+"advancedPawn",
+"bishopEndgame",
+"crushing",
+"deflection",
+"endgame",
+"long",
+"master",
+"promotion"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0e3fW",
+"fen": "8/Rp6/3p1kp1/2q2p2/8/1P1p2P1/P2Q3P/6K1 w - - 1 34",
+"moves": [
+"g1g2",
+"c5c2",
+"d2c2",
+"d3c2",
+"a7a8",
+"c2c1q"
+],
+"rating": 1720,
+"rd": 78,
+"popularity": 94,
+"nb_plays": 684,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"long",
+"promotion"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0CjSM",
+"fen": "8/8/8/p1K5/1pP5/k7/P7/8 w - - 1 48",
+"moves": [
+"c5b5",
+"a3a2",
+"b5a6",
+"b4b3",
+"c4c5",
+"b3b2",
+"c5c6",
+"b2b1q"
+],
+"rating": 1749,
+"rd": 79,
+"popularity": 92,
+"nb_plays": 1519,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"pawnEndgame",
+"promotion",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0EpLr",
+"fen": "8/8/2P4R/1p6/1P6/2r5/4K1pk/8 b - - 7 48",
+"moves": [
+"c3h3",
+"h6h3",
+"h2h3",
+"c6c7",
+"g2g1q",
+"c7c8q"
+],
+"rating": 1780,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 2751,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"long",
+"promotion",
+"rookEndgame"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0SAu9",
+"fen": "4R3/5K2/6P1/3p1k2/8/8/P3p2r/8 b - - 3 49",
+"moves": [
+"d5d4",
+"g6g7",
+"h2g2",
+"e8e2",
+"g2e2",
+"g7g8q"
+],
+"rating": 1819,
+"rd": 76,
+"popularity": 95,
+"nb_plays": 12168,
+"themes": [
+"advancedPawn",
+"crushing",
+"deflection",
+"endgame",
+"long",
+"promotion",
+"rookEndgame"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "cgF7V",
+"fen": "2r3k1/3r1pp1/3B3p/3BPR2/1p1p2P1/p2P3P/1PP5/2K5 w - - 0 36",
+"moves": [
+"b2b3",
+"a3a2",
+"c1b2",
+"c8c2",
+"b2c2",
+"a2a1q"
+],
+"rating": 1846,
+"rd": 76,
+"popularity": 100,
+"nb_plays": 851,
+"themes": [
+"advancedPawn",
+"crushing",
+"deflection",
+"endgame",
+"long",
+"promotion",
+"queensideAttack"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "gbMc1",
+"fen": "1r6/1PR5/5k2/2K1p3/8/P2P2p1/8/8 w - - 0 55",
+"moves": [
+"c5c6",
+"g3g2",
+"c7c8",
+"b8b7",
+"c6b7",
+"g2g1q"
+],
+"rating": 1883,
+"rd": 77,
+"popularity": 92,
+"nb_plays": 1084,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"long",
+"promotion",
+"rookEndgame"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0JU7g",
+"fen": "2R5/5P2/4K2p/8/8/8/1p3r2/2k5 b - - 6 70",
+"moves": [
+"f2c2",
+"f7f8q",
+"c2c8",
+"f8c8"
+],
+"rating": 1913,
+"rd": 76,
+"popularity": 88,
+"nb_plays": 1478,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"master",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0cojs",
+"fen": "7K/6P1/7P/1pp5/3p4/3P4/6r1/k7 b - - 2 55",
+"moves": [
+"b5b4",
+"h6h7",
+"b4b3",
+"g7g8q",
+"g2g8",
+"h7g8q",
+"b3b2",
+"g8a8"
+],
+"rating": 1942,
+"rd": 77,
+"popularity": 94,
+"nb_plays": 6643,
+"themes": [
+"advancedPawn",
+"crushing",
+"endgame",
+"promotion",
+"rookEndgame",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0BW44",
+"fen": "5r1k/2PR3p/8/4Q3/5p1b/4p1qP/P5P1/5K2 b - - 3 35",
+"moves": [
+"h4f6",
+"e5f6",
+"f8f6",
+"c7c8q",
+"g3g8",
+"d7d8",
+"g8d8",
+"c8d8"
+],
+"rating": 1971,
+"rd": 77,
+"popularity": 92,
+"nb_plays": 1820,
+"themes": [
+"advancedPawn",
+"crushing",
+"deflection",
+"endgame",
+"pin",
+"promotion",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "promotion"
+},
+{
+"puzzle_id": "0ft0j",
+"fen": "r2qkb1r/pp2pppp/2b2n2/8/3p4/1P3N2/PBPP1PPP/RN1Q1RK1 w kq - 0 9",
+"moves": [
+"b2d4",
+"c6f3",
+"d1f3",
+"d8d4"
+],
+"rating": 1000,
+"rd": 82,
+"popularity": 88,
+"nb_plays": 1321,
+"themes": [
+"advantage",
+"capturingDefender",
+"intermezzo",
+"opening",
+"short"
+],
+"opening_tags": [
+"Nimzo-Larsen_Attack",
+"Nimzo-Larsen_Attack_Classical_Variation"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "Vb8qP",
+"fen": "r1bq1rk1/pp3ppp/5b2/2np4/8/2N1PN2/PP2BPPP/R2QK2R w KQ - 0 11",
+"moves": [
+"d1d5",
+"f6c3",
+"b2c3",
+"d8d5"
+],
+"rating": 1114,
+"rd": 87,
+"popularity": 94,
+"nb_plays": 3106,
+"themes": [
+"crushing",
+"intermezzo",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Queens_Gambit_Declined",
+"Queens_Gambit_Declined_Orthodox_Defense"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "1ZC0z",
+"fen": "r2qr1k1/1pp2ppp/5n2/1p1P4/4PQN1/8/PPP3PP/R4RK1 b - - 0 16",
+"moves": [
+"e8e4",
+"g4f6",
+"d8f6",
+"f4e4"
+],
+"rating": 1141,
+"rd": 76,
+"popularity": 95,
+"nb_plays": 1124,
+"themes": [
+"crushing",
+"intermezzo",
+"kingsideAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Kings_Gambit_Declined",
+"Kings_Gambit_Declined_Queens_Knight_Defense"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "1EEGe",
+"fen": "2kr4/1ppnQ3/5qp1/pP3p1p/P7/6P1/5PBP/3R2K1 w - - 6 36",
+"moves": [
+"d1d7",
+"f6a1",
+"g2f1",
+"d8d7"
+],
+"rating": 1183,
+"rd": 76,
+"popularity": 99,
+"nb_plays": 3239,
+"themes": [
+"advantage",
+"endgame",
+"intermezzo",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "06sek",
+"fen": "3rr1k1/pppb1ppp/8/8/4p2N/2BP3P/PPP2PP1/R4KR1 w - - 0 19",
+"moves": [
+"d3e4",
+"d7b5",
+"f1e1",
+"e8e4"
+],
+"rating": 1213,
+"rd": 84,
+"popularity": 94,
+"nb_plays": 3889,
+"themes": [
+"intermezzo",
+"mate",
+"mateIn2",
+"middlegame",
+"pillsburysMate",
+"short"
+],
+"opening_tags": [
+"Russian_Game",
+"Russian_Game_Other_variations"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "1d5If",
+"fen": "3q1rk1/5p2/2p2Qpp/ppPp4/8/P1PB3P/1P3PP1/4rRK1 w - - 0 20",
+"moves": [
+"f6d8",
+"e1f1",
+"g1f1",
+"f8d8"
+],
+"rating": 1248,
+"rd": 90,
+"popularity": 93,
+"nb_plays": 3042,
+"themes": [
+"crushing",
+"endgame",
+"intermezzo",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0SjJQ",
+"fen": "6k1/1p3p1p/p5p1/3p2Pn/1P1P3n/6rP/4rP2/2Q2RK1 w - - 10 30",
+"moves": [
+"f2g3",
+"e2g2",
+"g1h1",
+"h5g3"
+],
+"rating": 1285,
+"rd": 75,
+"popularity": 83,
+"nb_plays": 554,
+"themes": [
+"endgame",
+"intermezzo",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0VsMi",
+"fen": "rnbq1rk1/pp3pbp/2p3pB/5p2/3P3Q/3B4/PPP2PPP/2KR2NR w - - 0 12",
+"moves": [
+"h4d8",
+"g7h6",
+"c1b1",
+"f8d8"
+],
+"rating": 1313,
+"rd": 75,
+"popularity": 94,
+"nb_plays": 13290,
+"themes": [
+"crushing",
+"hangingPiece",
+"intermezzo",
+"master",
+"opening",
+"short"
+],
+"opening_tags": [
+"Caro-Kann_Defense",
+"Caro-Kann_Defense_Tartakower_Variation"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "xOizn",
+"fen": "2r1r1k1/5ppp/4n3/p5q1/P1PP4/5BP1/2Q3PK/3RR3 b - - 4 31",
+"moves": [
+"e6d4",
+"e1e8",
+"c8e8",
+"d1d4"
+],
+"rating": 1344,
+"rd": 76,
+"popularity": 80,
+"nb_plays": 848,
+"themes": [
+"crushing",
+"intermezzo",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0YpvD",
+"fen": "8/pp3rk1/5n2/3P2r1/2Q1b3/8/PP4PP/5RK1 w - - 1 30",
+"moves": [
+"f1f6",
+"g5g2",
+"g1f1",
+"f7f6"
+],
+"rating": 1369,
+"rd": 78,
+"popularity": 92,
+"nb_plays": 6253,
+"themes": [
+"crushing",
+"endgame",
+"intermezzo",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "1ClRW",
+"fen": "2k1r3/ppp3p1/2nbpnNp/8/4p3/2PrB1NP/PP3PP1/3R1RK1 w - - 4 18",
+"moves": [
+"g3e4",
+"d3d1",
+"f1d1",
+"f6e4"
+],
+"rating": 1388,
+"rd": 75,
+"popularity": 91,
+"nb_plays": 1111,
+"themes": [
+"advantage",
+"intermezzo",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Italian_Game",
+"Italian_Game_Anti-Fried_Liver_Defense"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0PXsL",
+"fen": "r3rk2/5p1Q/p1p1q1p1/1p1n4/6P1/P6P/1PP2P2/4RRK1 b - - 1 28",
+"moves": [
+"e6e1",
+"h7h8",
+"f8e7",
+"f1e1",
+"e7d7",
+"e1e8"
+],
+"rating": 1409,
+"rd": 76,
+"popularity": 93,
+"nb_plays": 2867,
+"themes": [
+"advantage",
+"endgame",
+"interference",
+"intermezzo",
+"long"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "2HUnm",
+"fen": "4r1k1/pp1n1pp1/2p3p1/8/3P1q2/2P2N1P/PP1Q2P1/4R1K1 b - - 0 23",
+"moves": [
+"f4d2",
+"e1e8",
+"g8h7",
+"f3d2"
+],
+"rating": 1428,
+"rd": 75,
+"popularity": 96,
+"nb_plays": 2845,
+"themes": [
+"crushing",
+"endgame",
+"hangingPiece",
+"intermezzo",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0SKaG",
+"fen": "5rk1/pp4pp/2pqp3/2b5/8/2N2QP1/PPP3KP/R1B5 w - - 2 19",
+"moves": [
+"c3e4",
+"f8f3",
+"e4d6",
+"f3f2",
+"g2h3",
+"c5d6"
+],
+"rating": 1450,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 656,
+"themes": [
+"advantage",
+"intermezzo",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0KFK0",
+"fen": "1rr3k1/3N1pb1/5qp1/p2p1n1p/3N2bP/1BP5/P2Q1PP1/KR2R3 b - - 11 27",
+"moves": [
+"f5d4",
+"d7f6",
+"g7f6",
+"c3d4"
+],
+"rating": 1466,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 14250,
+"themes": [
+"advantage",
+"intermezzo",
+"kingsideAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "169di",
+"fen": "1r3r2/p6k/1p1pN2p/3Pn3/2P3B1/P1P1P3/5P1P/6RK b - - 2 25",
+"moves": [
+"e5g4",
+"e6f8",
+"b8f8",
+"g1g4"
+],
+"rating": 1480,
+"rd": 76,
+"popularity": 87,
+"nb_plays": 642,
+"themes": [
+"advantage",
+"endgame",
+"intermezzo",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0i0Hw",
+"fen": "4r1r1/2p1k3/1P1p1p1q/pQpP1P2/8/8/1PP2N2/R4K2 b - - 6 27",
+"moves": [
+"c7b6",
+"a1e1",
+"e7d8",
+"b5b6"
+],
+"rating": 1504,
+"rd": 76,
+"popularity": 92,
+"nb_plays": 530,
+"themes": [
+"crushing",
+"endgame",
+"intermezzo",
+"master",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "00qIK",
+"fen": "r4rk1/p3b1pp/1qB1bp2/1p2p3/2p2P2/3PR1P1/PPPN3P/R1BQ2K1 w - - 1 16",
+"moves": [
+"c6a8",
+"b6e3",
+"g1g2",
+"f8a8"
+],
+"rating": 1526,
+"rd": 78,
+"popularity": 86,
+"nb_plays": 1039,
+"themes": [
+"advantage",
+"hangingPiece",
+"intermezzo",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Kings_Indian_Attack",
+"Kings_Indian_Attack_Sicilian_Variation"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0bSHa",
+"fen": "r1bq1rk1/2p1ppbp/p1np2pB/3N4/1p1Pn3/4QN1P/PPP2PP1/2KR1B1R b - - 1 11",
+"moves": [
+"e4f2",
+"h6g7",
+"g8g7",
+"e3f2"
+],
+"rating": 1543,
+"rd": 75,
+"popularity": 94,
+"nb_plays": 2415,
+"themes": [
+"advantage",
+"intermezzo",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Pirc_Defense",
+"Pirc_Defense_Classical_Variation"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0nfur",
+"fen": "2R2rk1/1p1bbpp1/p3p1p1/P2qP3/1P1N1BP1/1Q5P/5P2/2R3K1 b - - 0 27",
+"moves": [
+"d5b3",
+"c8f8",
+"e7f8",
+"d4b3"
+],
+"rating": 1555,
+"rd": 76,
+"popularity": 93,
+"nb_plays": 2910,
+"themes": [
+"crushing",
+"intermezzo",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "XUsrR",
+"fen": "r4r1k/p4Qpp/2p5/8/3q2Rn/5P1P/PP2B3/R1B2K2 b - - 7 21",
+"moves": [
+"d4g4",
+"f7f8",
+"a8f8",
+"h3g4"
+],
+"rating": 1569,
+"rd": 74,
+"popularity": 93,
+"nb_plays": 4920,
+"themes": [
+"advantage",
+"intermezzo",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "1Adbs",
+"fen": "r2qk2r/pp1bbpp1/2P1pn1p/8/2P5/2pB1N2/PP3PPP/R1BQR1K1 b kq - 0 11",
+"moves": [
+"c3b2",
+"c6d7",
+"f6d7",
+"c1b2"
+],
+"rating": 1585,
+"rd": 76,
+"popularity": 92,
+"nb_plays": 1828,
+"themes": [
+"advancedPawn",
+"advantage",
+"intermezzo",
+"opening",
+"short"
+],
+"opening_tags": [
+"Queens_Gambit_Declined",
+"Queens_Gambit_Declined_Other_variations"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0VETh",
+"fen": "r4rk1/p5pp/2p1p2Q/1p1pp2P/4P2q/6R1/PPP1KPP1/R7 b - - 0 17",
+"moves": [
+"h4g3",
+"h6e6",
+"g8h8",
+"f2g3"
+],
+"rating": 1601,
+"rd": 76,
+"popularity": 100,
+"nb_plays": 886,
+"themes": [
+"crushing",
+"endgame",
+"intermezzo",
+"short"
+],
+"opening_tags": [
+"Italian_Game",
+"Italian_Game_Hungarian_Defense"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0B4Lr",
+"fen": "4qrk1/pb2RNbp/1p2Q1p1/7n/1Pr2P2/2P5/P5PP/2B2RK1 b - - 2 25",
+"moves": [
+"e8e7",
+"f7h6",
+"g8h8",
+"e6e7"
+],
+"rating": 1619,
+"rd": 83,
+"popularity": 94,
+"nb_plays": 26837,
+"themes": [
+"advantage",
+"discoveredCheck",
+"doubleCheck",
+"intermezzo",
+"kingsideAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0VXVI",
+"fen": "2r2r2/ppbbk1pp/4N3/8/8/8/PP3PPP/2RR1K2 w - - 2 21",
+"moves": [
+"e6f8",
+"d7b5",
+"f1g1",
+"e7f8"
+],
+"rating": 1636,
+"rd": 78,
+"popularity": 90,
+"nb_plays": 577,
+"themes": [
+"advantage",
+"endgame",
+"intermezzo",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "1JzPO",
+"fen": "3rk1nr/pp4pp/2n5/4N3/1b4b1/2N1B3/PPP1BPPP/R3K2R b KQk - 0 11",
+"moves": [
+"g4e2",
+"e5c6",
+"b7c6",
+"e1e2",
+"b4c3",
+"b2c3"
+],
+"rating": 1660,
+"rd": 75,
+"popularity": 88,
+"nb_plays": 665,
+"themes": [
+"advantage",
+"intermezzo",
+"long",
+"middlegame"
+],
+"opening_tags": [
+"Caro-Kann_Defense",
+"Caro-Kann_Defense_Exchange_Variation"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "1BffY",
+"fen": "2r2rk1/pp3ppp/4p1b1/3pP3/P2P3N/4K3/5PPP/2R4R b - - 6 20",
+"moves": [
+"c8c2",
+"h4g6",
+"c2c1",
+"g6e7",
+"g8h8",
+"h1c1"
+],
+"rating": 1682,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 5947,
+"themes": [
+"crushing",
+"endgame",
+"intermezzo",
+"long",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "1KUq4",
+"fen": "4rr2/1ppq2bk/2np2p1/p4b1p/2PP1P2/1P2N2P/P2Q2BK/4RRB1 b - - 1 23",
+"moves": [
+"g7d4",
+"g2c6",
+"b7c6",
+"d2d4"
+],
+"rating": 1707,
+"rd": 75,
+"popularity": 94,
+"nb_plays": 2845,
+"themes": [
+"advantage",
+"capturingDefender",
+"intermezzo",
+"master",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "HflYL",
+"fen": "2brr1k1/1p3p2/p1pp2p1/Q7/2n1Pq1p/5P2/PP1RN1PP/3R1BK1 w - - 0 22",
+"moves": [
+"a5d8",
+"f4e3",
+"g1h1",
+"e8d8"
+],
+"rating": 1725,
+"rd": 75,
+"popularity": 88,
+"nb_plays": 559,
+"themes": [
+"crushing",
+"intermezzo",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0XYAF",
+"fen": "8/1B5K/5k2/pp4p1/2p4n/2P5/P4P1P/8 w - - 0 40",
+"moves": [
+"b7a6",
+"b5b4",
+"c3b4",
+"c4c3",
+"a6d3",
+"a5b4"
+],
+"rating": 1751,
+"rd": 74,
+"popularity": 95,
+"nb_plays": 14932,
+"themes": [
+"crushing",
+"endgame",
+"intermezzo",
+"long"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "14vBe",
+"fen": "5rk1/2R2pbp/p2p2p1/3qn3/5Q2/1P3N1P/P4PP1/1B4K1 w - - 0 28",
+"moves": [
+"f3e5",
+"d5d1",
+"g1h2",
+"g7e5",
+"f4e5",
+"d6e5"
+],
+"rating": 1771,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 5162,
+"themes": [
+"crushing",
+"fork",
+"intermezzo",
+"long",
+"middlegame",
+"pin"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "r7dK6",
+"fen": "4r2k/p1p1r1p1/1p5p/2b5/3qB1R1/6P1/PPQ1RP1P/6K1 w - - 6 25",
+"moves": [
+"e4f3",
+"e7e2",
+"c2e2",
+"e8e2",
+"g4d4",
+"e2e1",
+"g1g2",
+"c5d4"
+],
+"rating": 1795,
+"rd": 75,
+"popularity": 98,
+"nb_plays": 2146,
+"themes": [
+"crushing",
+"intermezzo",
+"kingsideAttack",
+"middlegame",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0pgxt",
+"fen": "r2b1r1k/3n3p/2pp2pn/4pP1q/2P1P3/3PNN1P/5P1K/1RBQ2R1 w - - 0 26",
+"moves": [
+"f3g5",
+"d8g5",
+"d1h5",
+"g5f4",
+"h2g2",
+"g6h5"
+],
+"rating": 1819,
+"rd": 76,
+"popularity": 93,
+"nb_plays": 985,
+"themes": [
+"advantage",
+"intermezzo",
+"long",
+"middlegame",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "keAnB",
+"fen": "r3r1k1/p4pp1/1p2R3/2p3NP/3p1QP1/1q6/1Pb2P2/2BR2K1 b - - 2 26",
+"moves": [
+"e8e6",
+"f4f7",
+"g8h8",
+"g5e6",
+"b3e6",
+"f7e6"
+],
+"rating": 1855,
+"rd": 75,
+"popularity": 88,
+"nb_plays": 1151,
+"themes": [
+"crushing",
+"intermezzo",
+"kingsideAttack",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "MHpP0",
+"fen": "rnb3k1/pp3ppp/3q4/2Nnr3/3P4/2P5/PP2BPPP/R2QK2R w KQ - 0 14",
+"moves": [
+"c5b7",
+"e5e2",
+"d1e2",
+"c8b7"
+],
+"rating": 1903,
+"rd": 79,
+"popularity": 92,
+"nb_plays": 1141,
+"themes": [
+"advantage",
+"intermezzo",
+"opening",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Alapin_Variation"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "1GfTs",
+"fen": "r1b2rk1/pp1nbppp/3p1n2/q2Np3/4PB2/3B1N2/PP1Q1PPP/R3R1K1 b - - 1 12",
+"moves": [
+"a5d2",
+"d5e7",
+"g8h8",
+"f4d2"
+],
+"rating": 1930,
+"rd": 77,
+"popularity": 90,
+"nb_plays": 1931,
+"themes": [
+"advantage",
+"hangingPiece",
+"intermezzo",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Sicilian_Defense",
+"Sicilian_Defense_Smith-Morra_Gambit"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0XkqV",
+"fen": "rn2k1nr/3b1ppp/1q2p3/1p2N3/p2P4/1Q2P3/3B1PPP/R3KB1R w KQkq - 0 14",
+"moves": [
+"e5d7",
+"a4b3",
+"a1a8",
+"e8d7"
+],
+"rating": 1956,
+"rd": 75,
+"popularity": 93,
+"nb_plays": 4763,
+"themes": [
+"advantage",
+"intermezzo",
+"master",
+"opening",
+"short"
+],
+"opening_tags": [
+"Queens_Gambit_Declined",
+"Queens_Gambit_Declined_Semi-Slav"
+],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "0Uq8t",
+"fen": "3r1k2/6p1/p7/5bq1/6p1/2P5/PPBR1Q2/2K5 b - - 3 30",
+"moves": [
+"g4g3",
+"f2f5",
+"g5f5",
+"d2d8",
+"f8e7",
+"c2f5"
+],
+"rating": 1973,
+"rd": 75,
+"popularity": 92,
+"nb_plays": 2179,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"intermezzo",
+"long",
+"master"
+],
+"opening_tags": [],
+"motif": "intermezzo"
+},
+{
+"puzzle_id": "TVbMT",
+"fen": "8/8/8/1N1pk1pp/P2n4/3P2P1/3K4/8 w - - 5 51",
+"moves": [
+"b5d4",
+"e5d4",
+"a4a5",
+"d4c5"
+],
+"rating": 1004,
+"rd": 78,
+"popularity": 99,
+"nb_plays": 1519,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "AMQav",
+"fen": "4K3/4Q3/p7/1p4q1/1P2k3/P7/8/8 b - - 3 62",
+"moves": [
+"g5e5",
+"e7e5",
+"e4e5",
+"e8d7",
+"e5d5",
+"d7c7"
+],
+"rating": 1117,
+"rd": 77,
+"popularity": 95,
+"nb_plays": 2612,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"long",
+"queenEndgame"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "0VlMt",
+"fen": "3R4/4k1p1/2b2pB1/2P2P2/1Bq5/P5P1/7P/4K3 w - - 2 41",
+"moves": [
+"d8e8",
+"c6e8",
+"c5c6",
+"e7d8"
+],
+"rating": 1161,
+"rd": 84,
+"popularity": 94,
+"nb_plays": 7672,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "Qxdbu",
+"fen": "5rk1/1Q3p2/Pp3R2/2p5/3p4/1P1P3P/2P3P1/4q1K1 w - - 0 32",
+"moves": [
+"g1h2",
+"e1e5",
+"h2g1",
+"e5f6",
+"a6a7",
+"f6d8"
+],
+"rating": 1188,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 6387,
+"themes": [
+"advantage",
+"defensiveMove",
+"endgame",
+"fork",
+"long",
+"master"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "0Pm2W",
+"fen": "5k2/6p1/4B3/5p1b/3K1P2/3P4/8/8 b - - 0 45",
+"moves": [
+"g7g6",
+"d4e5",
+"h5e2",
+"d3d4"
+],
+"rating": 1230,
+"rd": 74,
+"popularity": 88,
+"nb_plays": 1761,
+"themes": [
+"bishopEndgame",
+"crushing",
+"defensiveMove",
+"endgame",
+"master",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "03Qyl",
+"fen": "8/5pk1/p2r2p1/1p6/1P2p1Pp/P1R1P2P/5PK1/8 b - - 0 38",
+"moves": [
+"d6d3",
+"c3d3",
+"e4d3",
+"g2f1"
+],
+"rating": 1275,
+"rd": 79,
+"popularity": 94,
+"nb_plays": 2545,
+"themes": [
+"advantage",
+"defensiveMove",
+"endgame",
+"rookEndgame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "kfq1y",
+"fen": "8/R4pk1/8/1p1pK1P1/1Pb5/6p1/8/8 w - - 0 48",
+"moves": [
+"e5f4",
+"g3g2",
+"a7a1",
+"c4f1"
+],
+"rating": 1299,
+"rd": 77,
+"popularity": 89,
+"nb_plays": 1827,
+"themes": [
+"advancedPawn",
+"crushing",
+"defensiveMove",
+"endgame",
+"master",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "02F5u",
+"fen": "8/5k2/4p3/6Kp/3P4/5P2/8/8 b - - 0 44",
+"moves": [
+"f7g7",
+"g5h5",
+"g7f6",
+"h5g4"
+],
+"rating": 1347,
+"rd": 78,
+"popularity": 93,
+"nb_plays": 2972,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"pawnEndgame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "0PGzo",
+"fen": "6kr/3q1pbp/4pBp1/3p4/8/Q7/PPr2PPP/R4RK1 w - - 1 24",
+"moves": [
+"a3a8",
+"c2c8",
+"a8a5",
+"g7f6"
+],
+"rating": 1380,
+"rd": 76,
+"popularity": 97,
+"nb_plays": 14718,
+"themes": [
+"crushing",
+"defensiveMove",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "g7rHO",
+"fen": "7k/1p4p1/2p4p/4PQ2/3P4/8/Pr1r1BK1/8 w - - 10 53",
+"moves": [
+"e5e6",
+"d2f2",
+"f5f2",
+"b2f2",
+"g2f2",
+"h8g8"
+],
+"rating": 1413,
+"rd": 76,
+"popularity": 92,
+"nb_plays": 1007,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"exposedKing",
+"fork",
+"long"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "0QDe2",
+"fen": "r2q1r2/1pp1bppk/3p3B/p3nP1Q/4P3/1B5R/PPP1n1PP/R5K1 w - - 1 18",
+"moves": [
+"h5e2",
+"g7h6",
+"e2h5",
+"e7g5"
+],
+"rating": 1435,
+"rd": 77,
+"popularity": 88,
+"nb_plays": 506,
+"themes": [
+"advantage",
+"defensiveMove",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"Nimzowitsch_Defense",
+"Nimzowitsch_Defense_Mikenas_Variation"
+],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "svckW",
+"fen": "3Rr1k1/5pp1/2p4p/Q7/8/6q1/PPK5/8 b - - 4 32",
+"moves": [
+"e8d8",
+"a5d8",
+"g8h7",
+"d8d3",
+"g3g6",
+"d3g6",
+"h7g6",
+"a2a4"
+],
+"rating": 1464,
+"rd": 74,
+"popularity": 89,
+"nb_plays": 1561,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "uaazk",
+"fen": "5rk1/7p/p3p1pQ/1prqPp2/8/P1P2P1P/6K1/3R2R1 b - - 1 26",
+"moves": [
+"d5a2",
+"d1d2",
+"a2d2",
+"h6d2"
+],
+"rating": 1494,
+"rd": 75,
+"popularity": 93,
+"nb_plays": 2915,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "t6GHO",
+"fen": "8/8/7p/5k2/2K1pp2/1P3P2/1P5P/8 w - - 0 48",
+"moves": [
+"f3e4",
+"f5e4",
+"c4c3",
+"e4e3"
+],
+"rating": 1517,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 18464,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"pawnEndgame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "H0Pgk",
+"fen": "6k1/5pp1/4p2p/4P3/1q1P2P1/1p2P1K1/1Pr2Q1P/R7 w - - 3 34",
+"moves": [
+"a1a8",
+"g8h7",
+"f2f1",
+"b4d2"
+],
+"rating": 1538,
+"rd": 78,
+"popularity": 94,
+"nb_plays": 7190,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "yYhKI",
+"fen": "5Q2/7k/p1q5/1p6/8/2P3P1/6KP/8 w - - 3 43",
+"moves": [
+"g2h3",
+"c6h6",
+"f8h6",
+"h7h6",
+"h3g2",
+"a6a5",
+"g2f3",
+"a5a4"
+],
+"rating": 1553,
+"rd": 75,
+"popularity": 96,
+"nb_plays": 2340,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"queenEndgame",
+"quietMove",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "jCemN",
+"fen": "8/5K2/2p5/3kP3/1P1P4/3n1p2/5B2/8 w - - 4 63",
+"moves": [
+"e5e6",
+"d3f2",
+"e6e7",
+"f2e4"
+],
+"rating": 1573,
+"rd": 76,
+"popularity": 92,
+"nb_plays": 854,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"hangingPiece",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "06cAQ",
+"fen": "r7/4R3/1pkp4/p1pn4/5B2/2Nb4/P5PP/2R3K1 w - - 2 28",
+"moves": [
+"f4g3",
+"d5e7",
+"c1d1",
+"c5c4"
+],
+"rating": 1602,
+"rd": 78,
+"popularity": 93,
+"nb_plays": 3402,
+"themes": [
+"advantage",
+"defensiveMove",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "TVSMW",
+"fen": "3r4/2k3p1/5p1p/2P5/p5PP/K2R1P2/2P5/8 b - - 0 37",
+"moves": [
+"d8d3",
+"c2d3",
+"c7c6",
+"d3d4"
+],
+"rating": 1620,
+"rd": 78,
+"popularity": 96,
+"nb_plays": 16349,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "0Ts3B",
+"fen": "3q1k1r/pbN2p1p/1p1p1np1/3p4/4P3/2Q5/P3KPPP/6NR b - - 2 17",
+"moves": [
+"f6e4",
+"c3h8",
+"f8e7",
+"h8d8",
+"e7d8",
+"c7b5",
+"b7a6",
+"a2a4"
+],
+"rating": 1643,
+"rd": 75,
+"popularity": 94,
+"nb_plays": 8484,
+"themes": [
+"crushing",
+"defensiveMove",
+"hangingPiece",
+"middlegame",
+"veryLong"
+],
+"opening_tags": [
+"Horwitz_Defense",
+"Horwitz_Defense_Other_variations"
+],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "OxysO",
+"fen": "r2q1rk1/1pp2pB1/1pn2n2/8/6bN/3p2P1/PPPQ2BP/R4RK1 b - - 0 15",
+"moves": [
+"g8g7",
+"d2g5",
+"g7h7",
+"f1f6",
+"d8d4",
+"g1h1"
+],
+"rating": 1668,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 6982,
+"themes": [
+"crushing",
+"defensiveMove",
+"deflection",
+"long",
+"middlegame"
+],
+"opening_tags": [
+"Vienna_Game",
+"Vienna_Game_Max_Lange_Defense"
+],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "043If",
+"fen": "r2k1b1r/pppq1B1p/2n1p1p1/4B3/3Pb3/4PN1P/PP3PP1/R2QK2R b KQ - 1 12",
+"moves": [
+"c6e5",
+"f3e5",
+"f8b4",
+"e1f1",
+"d7b5",
+"f1g1"
+],
+"rating": 1685,
+"rd": 75,
+"popularity": 96,
+"nb_plays": 1981,
+"themes": [
+"advantage",
+"defensiveMove",
+"long",
+"opening"
+],
+"opening_tags": [
+"Indian_Defense",
+"Indian_Defense_Other_variations"
+],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "XYidS",
+"fen": "8/p7/1p1Q1ppk/3P3p/8/5PPK/PP1q4/8 w - - 2 40",
+"moves": [
+"d6f4",
+"d2f4",
+"g3f4",
+"h6g7"
+],
+"rating": 1713,
+"rd": 75,
+"popularity": 94,
+"nb_plays": 937,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"queenEndgame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "eM3Ln",
+"fen": "5r1k/pp1b2pp/2p2r2/3q3P/3P1B2/P4QP1/1P4K1/R4R2 b - - 1 31",
+"moves": [
+"d5d4",
+"a1d1",
+"d4b2",
+"f1f2"
+],
+"rating": 1731,
+"rd": 75,
+"popularity": 92,
+"nb_plays": 1704,
+"themes": [
+"advantage",
+"defensiveMove",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "gxPuR",
+"fen": "7k/2R2q2/b3pP1p/1p1p2P1/p2P1Q2/Pr6/7P/7K b - - 1 42",
+"moves": [
+"f7g6",
+"f6f7",
+"b3b1",
+"h1g2"
+],
+"rating": 1747,
+"rd": 75,
+"popularity": 100,
+"nb_plays": 937,
+"themes": [
+"advancedPawn",
+"crushing",
+"defensiveMove",
+"endgame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "yGBAS",
+"fen": "1r6/2pqkp2/1r5p/p2Pp1p1/3Q4/7P/PP2RPP1/1K1R4 w - - 0 26",
+"moves": [
+"d4e5",
+"b6e6",
+"e5e6",
+"f7e6"
+],
+"rating": 1767,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 649,
+"themes": [
+"advantage",
+"defensiveMove",
+"endgame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "08uVJ",
+"fen": "8/p2K4/2P5/1P3k2/4n3/8/8/8 b - - 4 55",
+"moves": [
+"e4f6",
+"d7d8",
+"f6d5",
+"c6c7",
+"f5e4",
+"c7c8q"
+],
+"rating": 1792,
+"rd": 74,
+"popularity": 96,
+"nb_plays": 1224,
+"themes": [
+"advancedPawn",
+"crushing",
+"defensiveMove",
+"endgame",
+"knightEndgame",
+"long",
+"promotion"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "oj9Q7",
+"fen": "8/7p/5p2/3p4/3P1K1P/5P2/4k3/8 w - - 0 44",
+"moves": [
+"h4h5",
+"e2d3",
+"f4f5",
+"d3d4",
+"f5f6",
+"d4e3",
+"h5h6",
+"d5d4"
+],
+"rating": 1815,
+"rd": 78,
+"popularity": 91,
+"nb_plays": 1545,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"pawnEndgame",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "0TCVX",
+"fen": "1r6/p3p1k1/6p1/2p2b2/7Q/1Pq2N2/K1p3PP/4R2R w - - 4 31",
+"moves": [
+"h4e7",
+"g7g8",
+"e7e8",
+"b8e8"
+],
+"rating": 1826,
+"rd": 77,
+"popularity": 92,
+"nb_plays": 1690,
+"themes": [
+"crushing",
+"defensiveMove",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "kKnlV",
+"fen": "1r3k1r/2R2pbp/p3p3/3p1p1Q/B2q1P2/1P4P1/P6P/5K1R b - - 3 21",
+"moves": [
+"d4d3",
+"f1g2",
+"d3e2",
+"h5e2"
+],
+"rating": 1857,
+"rd": 75,
+"popularity": 93,
+"nb_plays": 979,
+"themes": [
+"crushing",
+"defensiveMove",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "03oay",
+"fen": "2b2r2/5p1k/1q5p/1p5R/2p2QpP/3p2P1/PP4PK/3R4 w - - 4 27",
+"moves": [
+"f4e4",
+"f7f5",
+"e4e7",
+"h7g8"
+],
+"rating": 1871,
+"rd": 76,
+"popularity": 91,
+"nb_plays": 2105,
+"themes": [
+"advantage",
+"defensiveMove",
+"endgame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "SXgbh",
+"fen": "6k1/p7/b3p1N1/3n2Rp/3r3P/8/PrB2PP1/4K2R w K - 11 29",
+"moves": [
+"h1h3",
+"b2c2",
+"g6f4",
+"g8f7"
+],
+"rating": 1899,
+"rd": 80,
+"popularity": 93,
+"nb_plays": 821,
+"themes": [
+"crushing",
+"defensiveMove",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "qJWku",
+"fen": "8/8/1B1b2k1/pp1P2p1/2p1KpP1/2P2P2/P7/8 b - - 4 37",
+"moves": [
+"b5b4",
+"b6a5",
+"b4b3",
+"a2b3",
+"c4b3",
+"e4d3"
+],
+"rating": 1910,
+"rd": 78,
+"popularity": 95,
+"nb_plays": 11698,
+"themes": [
+"bishopEndgame",
+"crushing",
+"defensiveMove",
+"endgame",
+"long"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "0VEZG",
+"fen": "2Q3k1/6p1/7q/5r2/2p3n1/P1Pp2P1/1P6/5BK1 b - - 8 47",
+"moves": [
+"g8h7",
+"c8f5",
+"h6g6",
+"f5g6",
+"h7g6",
+"a3a4"
+],
+"rating": 1926,
+"rd": 76,
+"popularity": 100,
+"nb_plays": 1024,
+"themes": [
+"advantage",
+"defensiveMove",
+"endgame",
+"fork",
+"hangingPiece",
+"long"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "xLw6F",
+"fen": "8/6p1/7p/4k3/1p4P1/1P2K2P/8/8 w - - 1 46",
+"moves": [
+"h3h4",
+"g7g6",
+"e3f3",
+"e5d4"
+],
+"rating": 1942,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 1027,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"pawnEndgame",
+"quietMove",
+"short",
+"zugzwang"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "fqbDP",
+"fen": "8/ppb1kpp1/4p1p1/2P1P3/PP3P1r/3rB3/4R1K1/5R2 b - - 2 27",
+"moves": [
+"h4g4",
+"g2h3",
+"g4f4",
+"f1f4"
+],
+"rating": 1955,
+"rd": 75,
+"popularity": 92,
+"nb_plays": 677,
+"themes": [
+"advantage",
+"defensiveMove",
+"endgame",
+"short",
+"trappedPiece"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "ZVpZJ",
+"fen": "3rr1k1/1p3p1p/2p2p2/p1bp1P2/P3P1P1/1P2P2q/2P1Q1R1/4RNK1 b - - 5 24",
+"moves": [
+"e8e4",
+"g2h2",
+"h3g4",
+"h2g2"
+],
+"rating": 1969,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 4525,
+"themes": [
+"advantage",
+"defensiveMove",
+"master",
+"middlegame",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "0IjVP",
+"fen": "8/5KP1/R7/2p5/8/2k5/8/6r1 b - - 1 54",
+"moves": [
+"g1f1",
+"a6f6",
+"f1g1",
+"f6g6"
+],
+"rating": 1989,
+"rd": 75,
+"popularity": 92,
+"nb_plays": 903,
+"themes": [
+"crushing",
+"defensiveMove",
+"endgame",
+"master",
+"rookEndgame",
+"short"
+],
+"opening_tags": [],
+"motif": "defensive_resource"
+},
+{
+"puzzle_id": "z5rS5",
+"fen": "8/6pk/3pQb1p/5p2/4p3/1P6/5RPP/2q3K1 w - - 1 39",
+"moves": [
+"f2f1",
+"f6d4",
+"g1h1",
+"c1f1"
+],
+"rating": 1001,
+"rd": 85,
+"popularity": 90,
+"nb_plays": 727,
+"themes": [
+"deflection",
+"endgame",
+"master",
+"mate",
+"mateIn2",
+"pin",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "icHS4",
+"fen": "8/8/5kp1/7p/1R6/4r1KP/P7/8 w - - 1 44",
+"moves": [
+"g3h4",
+"g6g5",
+"h4h5",
+"e3h3",
+"h5g4",
+"h3h4",
+"g4g3",
+"h4b4"
+],
+"rating": 1055,
+"rd": 78,
+"popularity": 97,
+"nb_plays": 1768,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"rookEndgame",
+"skewer",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "N88sw",
+"fen": "8/1B6/p5k1/P4Rpp/8/6PK/3r3P/8 w - - 2 38",
+"moves": [
+"f5d5",
+"g5g4",
+"h3h4",
+"d2h2"
+],
+"rating": 1084,
+"rd": 89,
+"popularity": 92,
+"nb_plays": 514,
+"themes": [
+"deflection",
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "UaGLC",
+"fen": "5rk1/p3qpp1/1p2p3/3rP3/P2nNQP1/8/1P1R2P1/R5K1 w - - 3 36",
+"moves": [
+"a1d1",
+"d4e2",
+"d2e2",
+"d5d1"
+],
+"rating": 1110,
+"rd": 75,
+"popularity": 98,
+"nb_plays": 974,
+"themes": [
+"advantage",
+"deflection",
+"discoveredAttack",
+"kingsideAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "0J8Py",
+"fen": "3r4/R5pk/4pp1p/1Pp4P/2P2P2/4PP2/R1Kr4/8 w - - 3 39",
+"moves": [
+"c2b3",
+"d8d3",
+"b3a4",
+"d2a2"
+],
+"rating": 1133,
+"rd": 78,
+"popularity": 95,
+"nb_plays": 561,
+"themes": [
+"deflection",
+"endgame",
+"mate",
+"mateIn2",
+"rookEndgame",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "05dbs",
+"fen": "8/8/2R3kp/6n1/3b3B/7P/3r1PP1/6K1 b - - 5 57",
+"moves": [
+"g6h5",
+"g2g4",
+"h5h4",
+"c6h6"
+],
+"rating": 1153,
+"rd": 86,
+"popularity": 94,
+"nb_plays": 2740,
+"themes": [
+"deflection",
+"endgame",
+"mate",
+"mateIn2",
+"sacrifice",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "57MF7",
+"fen": "6k1/5ppp/2p1qb1P/4p3/1p2P3/5PQ1/4r1PK/3R4 b - - 0 33",
+"moves": [
+"b4b3",
+"d1d8",
+"f6d8",
+"g3g7"
+],
+"rating": 1168,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 1304,
+"themes": [
+"deflection",
+"endgame",
+"mate",
+"mateIn2",
+"pin",
+"sacrifice",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "hvgWo",
+"fen": "r4k1r/ppp2ppp/8/3PN3/2P2p2/3R4/P3RKPP/1q6 b - - 7 23",
+"moves": [
+"a8e8",
+"e5d7",
+"f8g8",
+"e2e8"
+],
+"rating": 1183,
+"rd": 76,
+"popularity": 97,
+"nb_plays": 5307,
+"themes": [
+"backRankMate",
+"deflection",
+"discoveredAttack",
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "02vTI",
+"fen": "2k3r1/2p2pq1/p3p3/3p4/1PnP1P2/P1N1P3/4QKP1/R4R2 w - - 7 32",
+"moves": [
+"f1g1",
+"g7g3",
+"f2f1",
+"c4e3",
+"e2e3",
+"g3e3"
+],
+"rating": 1200,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 1308,
+"themes": [
+"advantage",
+"deflection",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "0N8Nd",
+"fen": "2r3r1/4k1b1/p2n1p2/1p1P1P2/5P1p/P7/1PB1Q2P/7K b - - 2 34",
+"moves": [
+"e7d7",
+"e2e6",
+"d7c7",
+"e6e7",
+"c7b8",
+"e7d6"
+],
+"rating": 1219,
+"rd": 85,
+"popularity": 93,
+"nb_plays": 3379,
+"themes": [
+"advantage",
+"deflection",
+"endgame",
+"exposedKing",
+"long"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "XHmwU",
+"fen": "8/8/8/2p2kp1/1p4n1/pP4Kp/P1P5/6R1 b - - 5 48",
+"moves": [
+"h3h2",
+"g1f1",
+"f5e4",
+"g3g4"
+],
+"rating": 1236,
+"rd": 76,
+"popularity": 97,
+"nb_plays": 13460,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "jwCWz",
+"fen": "4Q1k1/1p3p2/p1p3pp/2b2P1b/1q2P3/6P1/5R1P/6K1 b - - 1 36",
+"moves": [
+"g8g7",
+"f5f6",
+"g7h7",
+"e8f7",
+"h7h8",
+"f7g7"
+],
+"rating": 1271,
+"rd": 76,
+"popularity": 97,
+"nb_plays": 4963,
+"themes": [
+"deflection",
+"endgame",
+"long",
+"mate",
+"mateIn3"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "ZzHsS",
+"fen": "r7/5p2/5Pk1/3b3p/p2P3P/1p2K3/8/Q7 b - - 1 42",
+"moves": [
+"a4a3",
+"a1g1",
+"g6f6",
+"g1g5",
+"f6e6",
+"g5e5",
+"e6d7",
+"e5d5"
+],
+"rating": 1297,
+"rd": 77,
+"popularity": 90,
+"nb_plays": 897,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"fork",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "SKQLj",
+"fen": "r3k1r1/1bqp1p2/4pp1p/2P5/1B6/4PN1P/P1Q1BPPb/RR4K1 w q - 1 20",
+"moves": [
+"f3h2",
+"g8g2",
+"g1f1",
+"c7h2"
+],
+"rating": 1325,
+"rd": 75,
+"popularity": 96,
+"nb_plays": 11722,
+"themes": [
+"advantage",
+"deflection",
+"kingsideAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "0D4Bz",
+"fen": "7k/3P4/5b1p/8/2P5/8/5KP1/rB2B3 b - - 0 45",
+"moves": [
+"a1b1",
+"e1c3",
+"f6c3",
+"d7d8q"
+],
+"rating": 1344,
+"rd": 77,
+"popularity": 92,
+"nb_plays": 1007,
+"themes": [
+"advancedPawn",
+"advantage",
+"deflection",
+"endgame",
+"promotion",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "00g5H",
+"fen": "2r3k1/p4pp1/1p5p/1Q6/8/5P2/qP4PP/3R2K1 b - - 3 30",
+"moves": [
+"a2c4",
+"d1d8",
+"c8d8",
+"b5c4",
+"d8d1",
+"g1f2"
+],
+"rating": 1374,
+"rd": 74,
+"popularity": 97,
+"nb_plays": 3509,
+"themes": [
+"advantage",
+"deflection",
+"endgame",
+"long"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "dhTDi",
+"fen": "2r5/pp1rnpk1/4p1np/3p2p1/3P2P1/1PPB1RB1/P6P/5RK1 b - - 7 32",
+"moves": [
+"c8c3",
+"f3f7",
+"g7g8",
+"d3g6",
+"e7g6",
+"f7d7"
+],
+"rating": 1396,
+"rd": 76,
+"popularity": 93,
+"nb_plays": 1324,
+"themes": [
+"advantage",
+"deflection",
+"long",
+"middlegame"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "c6jN2",
+"fen": "3r2k1/3q1pp1/1p5p/p1p1R3/4Q3/1P1P2P1/5P1P/6K1 b - - 0 30",
+"moves": [
+"d7d3",
+"e5e8",
+"d8e8",
+"e4d3"
+],
+"rating": 1429,
+"rd": 76,
+"popularity": 92,
+"nb_plays": 1906,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "zct1b",
+"fen": "r1b5/2B1kppp/1pp1pn2/8/8/P7/1P2BPPP/3R2K1 b - - 0 19",
+"moves": [
+"g7g6",
+"c7d8",
+"e7e8",
+"d8f6"
+],
+"rating": 1446,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 14430,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "jNPug",
+"fen": "7r/1R5P/p7/8/6P1/k7/1p4K1/8 w - - 0 68",
+"moves": [
+"g4g5",
+"h8h7",
+"b7h7",
+"b2b1q"
+],
+"rating": 1461,
+"rd": 77,
+"popularity": 91,
+"nb_plays": 1414,
+"themes": [
+"advancedPawn",
+"crushing",
+"deflection",
+"endgame",
+"promotion",
+"rookEndgame",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "o1rsH",
+"fen": "5r2/2N1p1k1/3p2p1/p1p1p2p/PnP2n2/7P/5RPK/3R4 b - - 4 39",
+"moves": [
+"f4d3",
+"c7e6",
+"g7h6",
+"f2f8"
+],
+"rating": 1489,
+"rd": 74,
+"popularity": 97,
+"nb_plays": 2497,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"fork",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "o3qZk",
+"fen": "3r2k1/1p4p1/p1b4p/3Np1b1/2P1B3/8/PP4PP/5RK1 b - - 0 21",
+"moves": [
+"d8f8",
+"e4h7",
+"g8h7",
+"f1f8"
+],
+"rating": 1508,
+"rd": 75,
+"popularity": 95,
+"nb_plays": 9449,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"master",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "gzN9y",
+"fen": "5r1k/1R6/6R1/6Kp/8/5Pr1/8/8 w - - 0 53",
+"moves": [
+"g5h5",
+"f8f5",
+"h5h4",
+"g3g6"
+],
+"rating": 1532,
+"rd": 75,
+"popularity": 86,
+"nb_plays": 615,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"master",
+"rookEndgame",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "eGQck",
+"fen": "1r4k1/5pp1/1p2p2p/p2n4/Pb1PqP2/1Q4PP/1PR1NK2/2R5 w - - 3 26",
+"moves": [
+"b3f3",
+"b4e1",
+"c1e1",
+"e4c2"
+],
+"rating": 1556,
+"rd": 76,
+"popularity": 94,
+"nb_plays": 3452,
+"themes": [
+"advantage",
+"deflection",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "om315",
+"fen": "8/8/pk1Q2p1/1p6/4P2p/2P4P/PP4PK/r3q3 b - - 22 45",
+"moves": [
+"b6a5",
+"b2b4",
+"a5a4",
+"d6a6"
+],
+"rating": 1579,
+"rd": 77,
+"popularity": 94,
+"nb_plays": 5750,
+"themes": [
+"deflection",
+"endgame",
+"mate",
+"mateIn2",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "09uZ7",
+"fen": "4r1rk/ppp2qp1/3p1pRp/4p2P/4P2P/P3Q3/1PP5/2K3R1 b - - 4 28",
+"moves": [
+"c7c6",
+"g6h6",
+"g7h6",
+"e3h6",
+"f7h7",
+"h6f6",
+"h7g7",
+"g1g7"
+],
+"rating": 1599,
+"rd": 78,
+"popularity": 94,
+"nb_plays": 1074,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"kingsideAttack",
+"sacrifice",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "kPT4F",
+"fen": "8/6pp/3kpp2/Nrn5/5P2/RP2P3/4K1PP/8 w - - 4 36",
+"moves": [
+"e2d2",
+"b5a5",
+"a3a5",
+"c5b3",
+"d2c3",
+"b3a5"
+],
+"rating": 1622,
+"rd": 74,
+"popularity": 96,
+"nb_plays": 5303,
+"themes": [
+"attraction",
+"capturingDefender",
+"crushing",
+"deflection",
+"endgame",
+"fork",
+"long",
+"master"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "DVsZk",
+"fen": "2b5/2pkp2R/3p3R/5q2/1pQP4/8/1KP2r2/8 b - - 9 38",
+"moves": [
+"c8a6",
+"h7e7",
+"d7e7",
+"c4c7",
+"e7e8",
+"h6h8"
+],
+"rating": 1649,
+"rd": 75,
+"popularity": 96,
+"nb_plays": 8491,
+"themes": [
+"attraction",
+"crushing",
+"deflection",
+"endgame",
+"long",
+"sacrifice"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "Z7DNB",
+"fen": "r1bq1rk1/1p3ppp/p1nnp3/2Qp4/5B2/3B1N2/PPP2PPP/2KR3R b - - 1 14",
+"moves": [
+"d6e8",
+"d3h7",
+"g8h7",
+"c5f8"
+],
+"rating": 1670,
+"rd": 77,
+"popularity": 96,
+"nb_plays": 22463,
+"themes": [
+"crushing",
+"deflection",
+"kingsideAttack",
+"middlegame",
+"short"
+],
+"opening_tags": [
+"French_Defense",
+"French_Defense_Classical_Variation"
+],
+"motif": "overload"
+},
+{
+"puzzle_id": "CacNi",
+"fen": "2B4k/pp4pp/8/1Pb1p3/P2pn3/1Q1Kq3/1B4PP/RN6 w - - 0 26",
+"moves": [
+"d3c4",
+"e4d6",
+"c4c5",
+"e3b3"
+],
+"rating": 1687,
+"rd": 77,
+"popularity": 95,
+"nb_plays": 7418,
+"themes": [
+"advantage",
+"deflection",
+"fork",
+"master",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "toKEV",
+"fen": "R7/5pp1/3kp2p/p3r3/2PKn3/PP6/5PPP/8 b - - 6 34",
+"moves": [
+"e4f2",
+"a8a6",
+"d6c7",
+"d4e5",
+"f2d3",
+"e5d4"
+],
+"rating": 1729,
+"rd": 75,
+"popularity": 86,
+"nb_plays": 894,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"long"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "NwIvf",
+"fen": "8/1ppkb1p1/3p2pp/2rP4/3n1rP1/2N4P/PB6/R2BK2R w KQ - 0 25",
+"moves": [
+"h1f1",
+"e7h4",
+"e1d2",
+"f4f1",
+"d1a4",
+"b7b5",
+"a1f1",
+"b5a4"
+],
+"rating": 1750,
+"rd": 75,
+"popularity": 92,
+"nb_plays": 1132,
+"themes": [
+"advantage",
+"deflection",
+"middlegame",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "cGgSh",
+"fen": "r4rk1/1pqnbpp1/2p1pN2/7B/2P5/p3P3/PBQP1PP1/R3K2R b KQ - 0 17",
+"moves": [
+"e7f6",
+"c2h7",
+"g8h7",
+"h5f7",
+"c7h2",
+"h1h2",
+"f6h4",
+"h2h4"
+],
+"rating": 1776,
+"rd": 74,
+"popularity": 95,
+"nb_plays": 4593,
+"themes": [
+"deflection",
+"discoveredAttack",
+"discoveredCheck",
+"kingsideAttack",
+"mate",
+"mateIn4",
+"middlegame",
+"pillsburysMate",
+"sacrifice",
+"veryLong"
+],
+"opening_tags": [
+"Nimzo-Larsen_Attack",
+"Nimzo-Larsen_Attack_Classical_Variation"
+],
+"motif": "overload"
+},
+{
+"puzzle_id": "aPiVO",
+"fen": "rnbq4/3p1kp1/2p2n1p/1p6/p2P3B/2P2Q2/P1P2PPP/R3R1K1 b - - 0 16",
+"moves": [
+"d7d5",
+"h4f6",
+"d8f6",
+"f3h5",
+"g7g6",
+"h5h6"
+],
+"rating": 1813,
+"rd": 77,
+"popularity": 93,
+"nb_plays": 1074,
+"themes": [
+"crushing",
+"deflection",
+"interference",
+"long",
+"middlegame"
+],
+"opening_tags": [
+"Russian_Game",
+"Russian_Game_Other_variations"
+],
+"motif": "overload"
+},
+{
+"puzzle_id": "0Gq07",
+"fen": "8/p1p2kp1/B7/3nP2P/3P4/P1pK2Bb/8/8 w - - 0 39",
+"moves": [
+"a6c4",
+"h3f1",
+"d3c2",
+"f1c4"
+],
+"rating": 1866,
+"rd": 76,
+"popularity": 96,
+"nb_plays": 3844,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"master",
+"short",
+"skewer"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "wAejt",
+"fen": "6k1/5p2/5K1P/4P3/1P6/3b4/8/8 b - - 2 55",
+"moves": [
+"g8f8",
+"b4b5",
+"f8g8",
+"b5b6",
+"d3e4",
+"h6h7",
+"g8h7",
+"f6f7"
+],
+"rating": 1897,
+"rd": 75,
+"popularity": 94,
+"nb_plays": 2095,
+"themes": [
+"advancedPawn",
+"bishopEndgame",
+"crushing",
+"deflection",
+"endgame",
+"quietMove",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "oTw3X",
+"fen": "5rk1/7p/5qpQ/pp2p3/4B3/PP4P1/5b1P/5R1K b - - 0 37",
+"moves": [
+"f2e3",
+"e4d5",
+"g8h8",
+"h6f8",
+"f6f8",
+"f1f8"
+],
+"rating": 1936,
+"rd": 76,
+"popularity": 90,
+"nb_plays": 692,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"long",
+"master",
+"xRayAttack"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "0Okpm",
+"fen": "r1b3k1/p3q2p/1p3ppB/2p5/8/7P/P4PP1/Q3R1K1 b - - 1 23",
+"moves": [
+"e7f7",
+"e1e8",
+"f7e8",
+"a1f6",
+"e8e1",
+"g1h2",
+"e1e5",
+"f6e5"
+],
+"rating": 1964,
+"rd": 79,
+"popularity": 93,
+"nb_plays": 1312,
+"themes": [
+"crushing",
+"deflection",
+"endgame",
+"sacrifice",
+"veryLong"
+],
+"opening_tags": [],
+"motif": "overload"
+},
+{
+"puzzle_id": "3LGLb",
+"fen": "8/2k3p1/2B4p/bK2pP1P/3p4/8/8/8 w - - 0 47",
+"moves": [
+"b5a5",
+"c7c6",
+"f5f6",
+"g7f6"
+],
+"rating": 1003,
+"rd": 81,
+"popularity": 90,
+"nb_plays": 1004,
+"themes": [
+"crushing",
+"endgame",
+"hangingPiece",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "S0R5F",
+"fen": "2b3k1/p5pp/2PN2N1/3p4/P7/7P/1b3qPK/2Q5 w - - 0 32",
+"moves": [
+"c1b2",
+"f2b2",
+"g6e7",
+"g8f8"
+],
+"rating": 1004,
+"rd": 81,
+"popularity": 95,
+"nb_plays": 1244,
+"themes": [
+"crushing",
+"endgame",
+"hangingPiece",
+"master",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "lClmY",
+"fen": "r3r1k1/pp3pbp/5pp1/3q2B1/8/5Q1P/PPP2PP1/4R1K1 w - - 0 19",
+"moves": [
+"f3d5",
+"e8e1",
+"g1h2",
+"f6g5"
+],
+"rating": 1005,
+"rd": 101,
+"popularity": 94,
+"nb_plays": 1156,
+"themes": [
+"crushing",
+"endgame",
+"hangingPiece",
+"kingsideAttack",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0ZJy8",
+"fen": "5r1k/1pp2R1p/p1n5/3n1b2/8/P1B2P1P/1PP2P2/2KB4 b - - 0 19",
+"moves": [
+"d5c3",
+"f7f8",
+"h8g7",
+"f8f5"
+],
+"rating": 1005,
+"rd": 82,
+"popularity": 94,
+"nb_plays": 719,
+"themes": [
+"crushing",
+"endgame",
+"fork",
+"hangingPiece",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "gcdja",
+"fen": "3r3k/5Q1P/2p2Np1/1p2rq2/8/6P1/P4P2/5NKR b - - 0 45",
+"moves": [
+"f5f6",
+"f7f6"
+],
+"rating": 1007,
+"rd": 85,
+"popularity": 99,
+"nb_plays": 1106,
+"themes": [
+"endgame",
+"hangingPiece",
+"mate",
+"mateIn1",
+"oneMove"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+},
+{
+"puzzle_id": "0X0u2",
+"fen": "2kr3r/p1p2p1p/4pb2/1b3P2/1P6/3B2B1/2P1RP1K/3R4 b - - 0 31",
+"moves": [
+"h8e8",
+"d3b5",
+"d8d1",
+"b5e8"
+],
+"rating": 1008,
+"rd": 94,
+"popularity": 94,
+"nb_plays": 718,
+"themes": [
+"advantage",
+"hangingPiece",
+"middlegame",
+"short"
+],
+"opening_tags": [],
+"motif": "hanging_piece"
+}
+]
