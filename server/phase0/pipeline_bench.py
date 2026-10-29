@@ -29,7 +29,13 @@ CONFIG = Path(__file__).resolve().parents[1] / "config" / "coach.toml"
 
 def load_cfg():
     with open(CONFIG, "rb") as f:
-        return tomllib.load(f)
+        cfg = tomllib.load(f)
+    # Benchmark-only overrides, e.g. PHASE0_SET="engine.first_nodes=300000,engine.boundary_nodes=5000000"
+    for item in filter(None, os.environ.get("PHASE0_SET", "").split(",")):
+        key, val = item.split("=")
+        sec, name = key.split(".")
+        cfg[sec][name] = type(cfg[sec][name])(float(val))
+    return cfg
 
 
 def win_pct(score: chess.engine.PovScore, turn: chess.Color, cfg) -> float:
@@ -180,7 +186,7 @@ def main():
             out.write(json.dumps(res) + "\n")
             print(f"{res['link']}: {res['plies']} plies, {res['seconds']} s {res['timings']}", flush=True)
     wall = time.perf_counter() - t0
-    print(json.dumps({"games": len(texts), "workers": workers, "wall_s": round(wall, 1),
+    print(json.dumps({"games": len(texts), "workers": workers, "overrides": os.environ.get("PHASE0_SET", ""), "wall_s": round(wall, 1),
                       "wall_s_per_game": round(wall / max(1, len(texts)), 1),
                       "cpu": platform.processor() or platform.machine()}))
 

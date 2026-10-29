@@ -17,7 +17,7 @@ Status: **Confirmed** = read from the project's LICENSE file or registry metadat
 | Stockfish | 18, tag `sf_18` (`cb3d4ee9`) | GPL-3.0 | Confirmed (`Copying.txt`) | Native binary built from source. Running it on our server is not distribution |
 | Stockfish NNUE nets `nn-c288c895ea92`, `nn-37f18f62d772` | — | CC0-1.0 | Confirmed (`official-stockfish/networks` README) | Embedded in the binary by the build |
 | Maia-3 inference code (`CSSLab/maia3`) | commit `1e13597c` | AGPL-3.0 | Confirmed (`LICENSE`) | Network service → AGPL §13: our server source must be offered to users |
-| Maia-3 weights 23M / 5M (`UofTCSSLab/Maia3-23M`, `-5M`) | HF revision TBD | **Unverified** | huggingface.co blocked in Phase 0 | Read the model-card license before downloading. Ports state AGPL-3.0 |
+| Maia-3 weights 23M / 5M (`UofTCSSLab/Maia3-23M`, `-5M`) | HF revisions `51a0145a` (23M), `b6559de2` (5M) | **AGPL-3.0 (by reference)** | Confirmed 2026-10-29 (session 2): the model cards set no license tag and say "License: CC BY 4.0 (paper); see repo for code/weights license"; the repo license is AGPL-3.0 | Treat the weights as AGPL-3.0. Weight files themselves not downloaded (CDN host blocked) |
 | python-chess (`chess`) | 1.11.2 | GPL-3.0-or-later | Confirmed (PyPI) | |
 | PyTorch (`torch`) | 2.15.0 | BSD-3-Clause (plus bundled permissive licenses) | Confirmed (PyPI `license_expression`) | CPU wheels exist for x86-64 and aarch64 |
 | NumPy | 2.5.x | BSD-3-Clause and others (permissive) | Confirmed (PyPI) | |
@@ -33,7 +33,7 @@ Status: **Confirmed** = read from the project's LICENSE file or registry metadat
 | Caddy | 2.x | Apache-2.0 | Unverified (not yet chosen version) | |
 | Syzygy 3-4-5 tablebase files | — | Unverified | tablebase hosts blocked | Freely redistributed by Lichess and others; confirm terms before mirroring |
 | Lichess tablebase API | — | Service (no license); no auth | Confirmed (lichess-org/api spec) | |
-| Lichess puzzle database (`lichess_db_puzzle.csv`) | monthly export | CC0-1.0 | Confirmed (lichess-org/database `web/index.html.tpl`) | Puzzle subset also ships to the browser as data (CC0 allows it) |
+| Lichess puzzle database (`lichess_db_puzzle.csv`) | export of 2026-10-02 (SHA-256 `76335bfa…`, see report §4) | CC0-1.0 | Confirmed (lichess-org/database `web/index.html.tpl`) | Puzzle subset also ships to the browser as data (CC0 allows it) |
 | Lichess open database (games) | monthly export | CC0-1.0 | Confirmed (same page) | Only for the fallback theory reference |
 | Lichess opening explorer API | — | Service; OAuth2 token required | Confirmed (lichess-org/api spec) | Needs a Lichess account (Sam's decision) |
 | `lila` accuracy algorithm (ported, not copied verbatim) | `898ad2cd` | AGPL-3.0 | Confirmed | A port of AGPL code is a derivative; compatible with our AGPL default. Cite the source in code |
