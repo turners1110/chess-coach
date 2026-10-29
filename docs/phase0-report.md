@@ -2,21 +2,14 @@
 
 Date: 2026-10-29 · Spec: `docs/chess-coach-spec-v2.1.md` · Scope: §27 Phase 0 and Appendix B only.
 Machine for all measurements unless stated: cloud container, Intel Xeon @ 2.10 GHz (AVX-512, BMI2),
-4 vCPU, 15 GB RAM, Linux x86-64. Raw outputs: `server/phase0/out/` (when present).
+4 vCPU, 15 GB RAM, Linux x86-64. Raw outputs: `server/phase0/out/` (git-ignored; regenerate with the scripts).
 
-> **Session 2 (2026-10-29, later): still blocked.** The handoff host check (`docs/phase0-handoff.md` §0) returned
-> `000` for every host: the proxy answers **403 to CONNECT** for `api.chess.com`, `huggingface.co`,
-> `database.lichess.org`, `tablebase.lichess.org`, `explorer.lichess.org`, `docs.oracle.com`,
-> `tests.stockfishchess.org`, `glicko.net`, plus `lichess.org`, `syzygy-tables.info` and `tablebase.sesse.net`.
-> The server-side fetch tool cannot resolve them either. Only GitHub, `raw.githubusercontent.com` and PyPI are
-> reachable. The widened network policy has **not** reached this session's environment. No Appendix B task in
-> handoff §2 could be done, and none was replaced by mocked or proxy data. Google Drive has no PGN export either.
-> The verdict in §10 is updated.
->
-> **Status of this report: PARTIAL.** This session's network policy blocks `api.chess.com`,
-> `huggingface.co`, `database.lichess.org`, `explorer.lichess.org`, `tablebase.lichess.org`,
-> `tests.stockfishchess.org`, `docs.oracle.com` and `glicko.net`. Every item that depends on them is marked
-> **BLOCKED** below, with what is needed to finish it. Nothing below is estimated or mocked unless it says so.
+> **Status: COMPLETE, except the steps only Sam can do** (device tests, hosting decision, and the choices in §10).
+> Session 1 did the source verification. Session 2 at first found every host blocked; after the network change
+> the hosts were reachable, and all of handoff §2 was run on Sam's real games. Two items stayed blocked by
+> the network and are marked **BLOCKED**: the Maia weight files (the Hugging Face CDN `us.aws.cdn.hf.co`)
+> and the Syzygy file hosts. Neither blocks a gate. Nothing below is estimated or mocked unless it says
+> **projection**.
 
 ---
 
@@ -24,10 +17,10 @@ Machine for all measurements unless stated: cloud container, Intel Xeon @ 2.10 G
 
 | # | Conflict | Resolution |
 | --- | --- | --- |
-| C1 | You asked me to use "your existing chess.com connection" (spec §6, Appendix B1). There is no chess.com connector in this session, and `api.chess.com` is blocked by the network policy | Use the public API (spec §7.1) once the host is allowed. Spec §6/B1 should drop "existing connection" (proposed edit E1) |
-| C2 | Spec §27 orders **Phase P (artifact prototype) before Phase 0** ("test first"; "findings feed Phase 0"). You asked for Phase 0 only | Followed your instruction. Phase P's findings (ladder tuning, detector false positives) are therefore not available to this report. Proposed edit E2 |
-| C3 | You asked for Phase 0 tasks, which include "SHA-256 for … the puzzle data". The puzzle CSV host is blocked | BLOCKED (§5) |
-| C4 | Spec §29 puts `/web`, `/server`, `/shared` at a repo root; this session only had `family-playbook` | You chose a new repo `turners1110/chess-coach`. It does not exist yet, so the work is committed in a local repo and will be pushed once you create it |
+| C1 | Spec §6 / Appendix B1 say to use "Claude Code's existing chess.com connection". There is no such connector | Used the public Published-Data API (§7.1). It works without any account. Proposed edit E1 |
+| C2 | Spec §27 orders **Phase P (artifact prototype) before Phase 0**. You asked for Phase 0 only | Followed your instruction. Phase P findings are not available to this report. Proposed edit E2 |
+| C3 | Spec §0 / `coach.toml` set **rapid as the primary time class**. Your recent play is almost all **blitz**: 161 rated blitz vs 13 rated rapid games in the last 90 days (all time: 822 rapid vs 171 blitz). See §5 | **Your decision (§10, D-A).** The spec's default stands until you choose |
+| C4 | Spec §29 repo layout assumed a fresh repo | Done: `turners1110/chess-coach` |
 
 ## 2. Fact register (spec §6), every [Verify] resolved
 
@@ -36,170 +29,192 @@ checked in Phase 0; code must not depend on it yet).
 
 | Fact | Spec status | Phase 0 result | Source / experiment |
 | --- | --- | --- | --- |
-| chess.com Published-Data API: read-only JSON, monthly archives; serial unlimited, parallel may 429 | Verified | Unchanged (not re-tested: host blocked) | spec §31 |
-| Archive API returns only finished games | [Verify] | **Unavailable — BLOCKED** (`api.chess.com`) | Test: fetch the current month during a live game, check it is absent |
-| chess.com requires a descriptive User-Agent | [Verify] | **Unavailable — BLOCKED**. No chess.com connector exists in this session (C1) | Test: request with and without UA, compare status |
-| Past monthly archives never change | [Verify] | **Unavailable — BLOCKED** | Test: re-fetch 3 old months, compare ETag and body hash |
+| chess.com Published-Data API: read-only JSON, monthly archives; serial unlimited, parallel may 429 | Verified | **Confirmed** for serial use: 32 serial requests, no 429 and no retries | `server/phase0/chesscom_check.py`, 2026-10-29 15:00 UTC |
+| Archive API returns only finished games | [Verify] | **Confirmed (observational).** 0 unfinished games among all 1,115 archived games (every game has `end_time`, both results, and a Result tag other than `*`). The current month was fetched 3 min after your latest game ended. You had no ongoing daily games (`/games` empty). A live game in progress during the fetch could not be arranged; keep a cheap `Result != "*"` guard in the importer | same script, `checks.json` |
+| chess.com requires a descriptive User-Agent | [Verify] | **Confirmed, with detail:** with no User-Agent header → **403**; empty UA → 403; `python-requests/2.32` → 403; `curl/8.5.0`, `Mozilla/5.0` and our descriptive UA → 200. So a UA is required, and some library defaults are refused. Use the descriptive UA from `coach.toml` | experiment (curl + urllib) |
+| Past monthly archives never change | [Verify] | **Confirmed for the test window.** The 3 oldest months (2025-01…03) re-fetched: same ETag and same body SHA-256, and `If-None-Match` returns **304**. ETags are weak (`W/"…"`); `Last-Modified` is the fetch time, so it is useless for caching. "Never" cannot be proven; keep the Resync action (§7.2) | same script |
 | Lichess Win% = 50 + 50·(2/(1+e^(−0.00368208·cp)) − 1) | Verified | **Confirmed**, with a **correction to §8.3**: Lichess clamps cp to **±1000**, not ±1500 | `scalachess` `core/src/main/scala/eval.scala` @ `a4988192` (`Cp.CEILING = 1000`, `MULTIPLIER = -0.00368208`) |
-| Lichess move accuracy, game accuracy, mate handling | [Verify] | **Corrected.** Move accuracy = `103.1668100711649·e^(−0.04354415386753951·Δ) − 3.166924740191411 + 1`, clamped 0–100 (100 if Win% did not drop). Game accuracy = mean of (volatility-weighted mean, harmonic mean); window = clamp((n−1)/10, 2, 8); weights = population std-dev of Win% in the window, clamped 0.5–12; harmonic mean floors each value at 1. **Mate = Win% of ±1000 cp ≈ 97.53 / 2.47, not 100 / 0** (spec §8.3 says 100/0; spec also says "if it differs, match lila"). Game accuracy uses `forceAsCp` (mate → ±Int.MaxValue, then ceiled to ±1000). The initial position is scored cp +15 (`legacyInitial`) | `lila` `modules/analyse/src/main/AccuracyPercent.scala`, `modules/tree/src/main/eval.scala` @ `898ad2cd`; `scalalib` `Maths.scala` @ `31fc151b`. Python port `server/phase0/lila_accuracy.py` passes all 18 upstream cases from `AccuracyPercentTest.scala` (`server/tests/test_lila_accuracy.py`) |
-| Stockfish 18 release and UCI options (`searchmoves`, MultiPV) | [Verify] | **Confirmed**, with a note: Stockfish 18 = tag `sf_18`, released 2026-01-31. `go nodes N searchmoves a b c d` with MultiPV 4 returns exactly those 4 moves as 4 PVs, ranked, from one search. **Stockfish 19 was released 2026-09-05** (tag `sf_19`); see edit E3 | `official-stockfish/Stockfish` tags; [Stockfish 18 blog](https://stockfishchess.org/blog/2026/stockfish-18/); [Stockfish 19 blog](https://stockfishchess.org/blog/2026/stockfish-19/); experiment `uci_check.sh` |
-| Stockfish determinism with Threads 1 and cleared hash | (B4) | **Confirmed**: two runs (`ucinewgame`, Threads 1, Hash 256, `go nodes 1000000`, MultiPV 4) gave identical scores, PVs and node counts. The node limit overshoots slightly (1,000,064 searched) and repeats identically | experiment |
-| Maia-3 sizes 3M/5M/23M/79M; UCI code; Elo conditioning | Verified (repo); Python API and conditioning [Verify] | **Confirmed with corrections.** Sizes confirmed in `maia3/model_registry.py` (5M = 5,230,084 params; 23M = 22,936,580, counted by instantiating the models). **There is no documented Python API**; the package exposes a UCI engine (`maia3-uci`). Analysis must import `maia3.models.MAIA3Model` and `maia3.dataset` directly. **Conditioning** = two integers, `SelfElo` and `OppoElo`, linearly interpolated between two learned embeddings over 0–5000 (continuous, not bucketed). **Full distribution:** the model emits logits over 4,352 moves; masking to legal moves + softmax gives the full legal distribution (needed for F). The UCI wrapper exposes only top-k (MultiPV ≤ 20), so F must use the Python path. **Input:** 8-position history (piece planes only; **castling rights and en passant are not encoded**), board mirrored for Black. The UCI default **ignores move history** unless `--use-uci-history` is passed; analysis must feed real history. `include_time_info` is false for the released presets (clocks are not used). Weight download is via Hugging Face with **no pinned revision** in the registry | `CSSLab/maia3` @ `1e13597c` (`uci.py`, `models.py`, `dataset.py`, `model_registry.py`) |
-| Maia-3 license (AGPL-3.0 as stated by ports) | [Verify] | **Code: Confirmed AGPL-3.0** (`LICENSE`). **Weights: Unavailable — BLOCKED** (`huggingface.co`) | `CSSLab/maia3/LICENSE` |
-| Lichess puzzle CSV fields | Verified | **Confirmed** and extended: `PuzzleId,FEN,Moves,Rating,RatingDeviation,Popularity,NbPlays,Themes,GameUrl,OpeningTags,DailyDate`. FEN is the position **before the opponent's move**; the puzzle starts after applying the first move. Popularity is −100…100 | `lichess-org/database` `web/index.html.tpl` @ `76ffe830` (the source of database.lichess.org) |
-| Lichess puzzle license | [Verify] | **Confirmed CC0** ("Database exports are released under the Creative Commons CC0 license") | same file; lichess-org/api spec: "Our collection of puzzles is in the public domain" |
-| Lichess puzzle ratings are Glicko-2 from solve attempts | Verified | **Confirmed** ("each attempt to solve is considered as a Glicko2 rated game between the player and the puzzle") | same file |
-| Lichess opening explorer API availability, authentication, rate limits | [Verify] | **Corrected.** Host is now **`explorer.lichess.org`** (not `.ovh`). The `/lichess` endpoint declares **`security: OAuth2`** → a Lichess account and personal API token are needed. Rate limit: "Only make one request at a time"; on 429 wait one minute. Rating groups are 0, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2500. Live call **BLOCKED** | `lichess-org/api` `doc/specs/tags/openingexplorer/lichess.yaml`, `lichess-api.yaml` @ `c1644a78` |
-| Syzygy local file sizes, or Lichess tablebase API terms | [Verify] | **API: Confirmed** host `tablebase.lichess.org`, `security: []` (no auth), same one-request-at-a-time rule. **Local 5-piece size: Unavailable — BLOCKED** (download hosts blocked; widely cited as ≈ 939 MiB for 3-4-5 WDL+DTZ, unconfirmed) | `lichess-org/api` `doc/specs/tags/tablebase/standard.yaml` |
-| `python-chess` exposes a SEE function | [Verify] | **Corrected: no.** python-chess 1.11.2 (latest on PyPI) has no SEE / static-exchange function → implement and unit-test our own (Phase 2) | `dir(chess.Board)`; PyPI |
-| `python-chess` legal-en-passant FEN option | [Verify] | **Confirmed**: `Board.fen(en_passant="legal")` is the default and omits an ep square whose capture is illegal (tested with a pinned capturer). **Caveat:** `chess.polyglot.zobrist_hash(board)` hashes the *pseudo-legal* ep square, so the hash differs from the normalized key. Compute the Zobrist from `chess.Board(fen_norm)` | experiment in python-chess 1.11.2 |
-| iOS home-screen web apps support Web Push | [Verify] | **Pending Sam's devices** — test page ready (§8) | — |
+| Lichess move accuracy, game accuracy, mate handling | [Verify] | **Corrected.** Move accuracy = `103.1668100711649·e^(−0.04354415386753951·Δ) − 3.166924740191411 + 1`, clamped 0–100 (100 if Win% did not drop). Game accuracy = mean of (volatility-weighted mean, harmonic mean); window = clamp((n−1)/10, 2, 8); weights = population std-dev of Win% in the window, clamped 0.5–12; harmonic mean floors each value at 1. **Mate = Win% of ±1000 cp ≈ 97.53 / 2.47, not 100 / 0.** Game accuracy uses `forceAsCp`. The initial position is scored cp +15 (`legacyInitial`) | `lila` `AccuracyPercent.scala`, `eval.scala` @ `898ad2cd`; `scalalib` `Maths.scala` @ `31fc151b`. Port `server/phase0/lila_accuracy.py` passes all 18 upstream cases; golden fixtures from 3 real games in `server/tests/fixtures/accuracy_golden.json` |
+| Stockfish 18 release and UCI options (`searchmoves`, MultiPV) | [Verify] | **Confirmed.** Tag `sf_18`, released 2026-01-31. `go nodes N searchmoves a b c d` with MultiPV 4 returns exactly those moves as ranked PVs from one search. **Stockfish 19 was released 2026-09-05**; see edit E3 | Stockfish tags and blog; experiment |
+| Stockfish determinism with Threads 1 and cleared hash | (B4) | **Confirmed**: identical scores, PVs and node counts on repeat. The session-2 rebuild produced a binary with the **same SHA-256** as session 1 (`6bc75c1b…`) | experiment |
+| Maia-3 sizes; UCI code; Elo conditioning | Verified (repo); Python API and conditioning [Verify] | **Confirmed with corrections.** 5M = 5,230,084 params; 23M = 22,936,580. **No documented Python API**: import `maia3.models.MAIA3Model` and `maia3.dataset` directly. Conditioning = `SelfElo`, `OppoElo`, continuous 0–5000. Full legal distribution via logits (4,352 moves) + legal mask + softmax; the UCI wrapper gives only top-k. Input: 8-position history, **no castling or en passant encoded**; the UCI default ignores history unless `--use-uci-history`. Clocks unused in released presets | `CSSLab/maia3` @ `1e13597c` |
+| Maia-3 license | [Verify] | **Code: Confirmed AGPL-3.0.** **Weights: Confirmed by reference.** The model cards carry no license tag. They say "License: CC BY 4.0 (paper); see repo for code/weights license", and the repo is AGPL-3.0, so treat the weights as AGPL-3.0. HF revisions pinned (§4). **Weight files: BLOCKED** (CDN host `us.aws.cdn.hf.co`) | `huggingface.co/api/models/UofTCSSLab/Maia3-23M`, model card README @ `51a0145a` |
+| Lichess puzzle CSV fields | Verified | **Confirmed** on the real file: `PuzzleId,FEN,Moves,Rating,RatingDeviation,Popularity,NbPlays,Themes,GameUrl,OpeningTags,DailyDate`. FEN is the position **before the opponent's move** | download 2026-10-29 (§4) |
+| Lichess puzzle license | [Verify] | **Confirmed CC0** | `lichess-org/database` `web/index.html.tpl` @ `76ffe830` |
+| Lichess puzzle ratings are Glicko-2 from solve attempts | Verified | **Confirmed** | same |
+| Lichess opening explorer API availability, authentication, rate limits | [Verify] | **Corrected.** Host is **`explorer.lichess.org`**. Live test: **HTTP 401 without a token for both `/lichess` and `/masters`**, so a Lichess account and personal API token are needed for every explorer call. Rate limit (spec): one request at a time; on 429 wait one minute. Rating groups 0/1000/1200/1400/1600/1800/2000/2200/2500 | live test 2026-10-29; `lichess-org/api` specs @ `c1644a78` |
+| Syzygy local file sizes, or Lichess tablebase API terms | [Verify] | **API: Confirmed**: no auth; **50 serial lookups, all HTTP 200, median 0.39 s, p95 0.48 s, max 0.72 s** (3–5 pieces, random legal positions; from this container through its proxy). **Local file size: BLOCKED** (file hosts blocked); not needed while the API works | live test 2026-10-29 |
+| `python-chess` exposes a SEE function | [Verify] | **Corrected: no** (1.11.2). Implement and unit-test our own (Phase 2) | `dir(chess.Board)`; PyPI |
+| `python-chess` legal-en-passant FEN option | [Verify] | **Confirmed**: `Board.fen(en_passant="legal")` is the default. **Caveat:** `chess.polyglot.zobrist_hash` hashes the pseudo-legal ep square; compute it from `chess.Board(fen_norm)` | experiment |
+| iOS home-screen web apps support Web Push | [Verify] | **Pending your devices** (§8) | — |
 | Multi-threaded WASM needs cross-origin isolation | Verified | Unchanged | — |
-| `ts-fsrs` implements FSRS v6 | Verified | Unchanged; latest is 6.0.0 (npm) | npm registry |
-| Cloudflare Pages free-tier terms | [Verify] (§29) | **Confirmed (secondary + official snippets)**: 500 builds/month, 1 concurrent build, 20-min build timeout, 20,000 files per site, 25 MiB per file, static requests free and unlimited; Pages Functions count against Workers Free (100,000 requests/day). `*.pages.dev` subdomain with HTTPS. `developers.cloudflare.com` itself was blocked for direct fetch | [Pages limits](https://developers.cloudflare.com/pages/platform/limits); [Jan 2026 changelog](https://developers.cloudflare.com/changelog/post/2026-01-23-pages-file-limit-increase/index.md) |
-| Oracle Always Free Arm limits | [Verify] (§29) | **Corrected: halved in 2026** to **2 OCPU / 12 GB** (1,500 OCPU-h and 9,000 GB-h per month), reported effective 2026-06-15 with no announcement; 200 GB block storage unchanged. `docs.oracle.com` was blocked for direct confirmation | [InfoQ, Jul 2026](https://www.infoq.com/news/2026/07/oracle-cloud-free-tier-limits/); [Linuxiac](https://linuxiac.com/oracle-quietly-cuts-free-tier-ampere-a1-resources-in-half/); [Oracle Always Free page](https://docs.oracle.com/en-us/iaas/Content/FreeTier/resourceref.htm) |
-| Arm builds of Stockfish and Maia | [Verify] (§29) | **Stockfish 18: Confirmed** — cross-compiled `ARCH=armv8-dotprod` (Ampere Altra supports dotprod); under qemu the `bench 16 1 8` signature is **182,602 nodes, identical to x86** (functionally correct). **Arm speed: Unavailable** (needs real Arm hardware). **Maia: Confirmed installable** — PyTorch 2.15.0 publishes `manylinux_2_28_aarch64` wheels (cp312: 484 MB); Maia3 is pure Python on top | experiment; PyPI |
+| `ts-fsrs` implements FSRS v6 | Verified | Unchanged; latest 6.0.0 | npm |
+| Cloudflare Pages free-tier terms | [Verify] (§29) | **Confirmed**: 500 builds/month, 20,000 files and 25 MiB per file, static requests free and unlimited; `*.pages.dev` with HTTPS | Cloudflare Pages limits page and Jan 2026 changelog |
+| Oracle Always Free Arm limits | [Verify] (§29) | **Corrected, now from the primary source:** "the first **1,500 OCPU hours and 9,000 GB hours per month** … equivalent to **2 OCPUs and 12 GB of memory**" (was 4 / 24). **200 GB** block volume storage. **Idle reclamation:** an instance may be reclaimed if, over 7 days, 95th-percentile CPU < 20 % **and** network < 20 % **and** (A1 only) memory < 20 % | `docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm`, fetched 2026-10-29 |
+| Arm builds of Stockfish and Maia | [Verify] (§29) | **Confirmed** (session 1): Stockfish 18 `armv8-dotprod` gives the same bench signature as x86 under qemu; PyTorch publishes aarch64 wheels. **Arm speed: Unavailable** (needs a real Arm VM) | session 1 experiment; PyPI |
 
 ## 3. Benchmarks vs go thresholds
 
+All on Sam's real games: the **20 most recent rated rapid games** (10+0, mean 68.0 plies) and the **10 most recent
+blitz games** (mean 62.1 plies). Stockfish 18 (pinned build), Threads 1, Hash 256 MB, 4 parallel workers
+(one engine per core). Detectors are not built yet and are excluded.
+
 | Check (spec §27) | Go threshold | Result | Pass? |
 | --- | --- | --- | --- |
-| Engine pipeline (all passes + detectors) | ≤ 60 s per average game | **BLOCKED** on your games. Per-search cost measured (below). Detectors don't exist yet and are excluded | — |
-| Engine accuracy vs 50M reference (500 positions) | Class agreement ≥ 90% after boundary pass | **BLOCKED** on your games. Script ready: `server/phase0/accuracy_bench.py` | — |
-| Maia3-23M throughput | ≤ 30 s per game (analysis scope), else 5M | **Timing only** (random weights, same architecture): 3.0 s for a 33-ply game, 1 thread, x86. Real-game number BLOCKED on your games | likely pass (x86) |
-| Server Maia move latency (sparring) | ≤ 1 s p95 | 23M: **p95 58.6 ms** (1 thread), 42.9 ms (2 threads); 5M: p95 29.8 ms. x86, random weights | **pass (x86)** |
-| Full-history backfill | ≤ 72 h | **BLOCKED** (needs your game count) | — |
-| Hosting cost | $0 on the free stack | See §6 | — |
-| PWA | Installs; 50 MB IndexedDB writable on oldest device | Test page ready; passes in headless Chromium (50 MB written in 1.1 s, read back intact). **Needs your iPad Pro** | — |
-| Opening reference | Explorer API usable, or fallback ≤ 10 GB and 24 h | Explorer needs OAuth2 (Lichess account). Fallback sizing BLOCKED | — |
-| Tablebase | Syzygy 5-piece local, or API works | API needs no auth (spec); live call BLOCKED | — |
+| Engine pipeline, spec budgets (1M / 5M / 20M) | ≤ 60 s per average game | **Rapid: 107.7 s/game** throughput on 4 cores (single core: 344.8 s/game, 5.07 s/ply). **Blitz: 98.1 s/game** (single core 355.5 s) | **FAIL** |
+| — variant A: first + played at 300k | same | 78.8 s/game on 4 cores (single core 250.7 s) | FAIL |
+| — variant **Lite**: first + played 300k, deep 2M, boundary 5M | same | **31.1 s/game** on 4 cores (single core 106.6 s, 1.57 s/ply). **Projection** for 2 equal x86 cores: ≈ 53 s | **PASS on 4 cores** (see accuracy) |
+| Engine accuracy vs 50M reference (500 positions) | Class agreement ≥ 90 % after the boundary pass | See §3.2 | see §3.2 |
+| Maia3-23M throughput (analysis scope) | ≤ 30 s per game, else 5M | **5.8 s/game** (1 thread), 3.2 s (2 threads); 5M: 2.0 s. 245 forward passes per game. Random weights, same architecture: inference cost does not depend on weight values | **PASS** |
+| Server Maia move latency (sparring) | ≤ 1 s p95 | 23M **p95 43.8 ms** (1 thread); 5M p95 25.0 ms | **PASS** |
+| Full-history backfill | ≤ 72 h | 1,022 analyzable games (822 rapid, 171 blitz, 29 bullet), 69,090 plies. Spec budgets: 97.3 core-hours → **24.3 h on 4 cores**, 48.7 h on 2 x86 cores (**projection**). Lite: 30.1 core-hours → 7.5 h on 4 cores, 15 h on 2 | **PASS** (≥ 2 x86-equivalent cores) |
+| Hosting cost | $0 on the free stack, or Sam decides to pay | See §6 | your decision |
+| PWA | Installs; 50 MB IndexedDB writable on the oldest device | Headless Chromium passes. Needs your iPad Pro | pending you |
+| Opening reference | Explorer API usable, **or** fallback ≤ 10 GB and 24 h | Explorer needs a token (401 without one). Fallback measured: see §3.3 | **PASS (fallback)**, or explorer with a token |
+| Tablebase | 5-piece local, or the API works | API works: median 0.39 s; about 1 tablebase position per game (21 of 1,359 plies in the rapid sample) | **PASS (API)** |
 
-### 3.1 Stockfish per-search cost (x86, 1 thread, Hash 256 MB, mean of 4 middlegame/endgame positions)
+### 3.1 Where the engine time goes (rapid sample, spec budgets)
 
-| Pass | Search | Stockfish 18 | Stockfish 19 |
-| --- | --- | --- | --- |
-| First | 1M nodes, MultiPV 3 | 1.74 s | 1.53 s |
-| Deep | 5M nodes, MultiPV 4 (searchmoves) | 6.57 s | 7.19 s |
-| Boundary | 20M nodes, MultiPV 4 | 26.9 s | 28.8 s |
-| Threat probe | 200k nodes | 0.33 s | 0.32 s |
+| Pass | Share of time | Notes |
+| --- | --- | --- |
+| First (1M, MultiPV 3) | 25.6 % | every position |
+| Played-move (1M) | 8.6 % | 34.5 % of moves are outside the first-pass top 3 |
+| Deep (5M) | 19.3 % | 191 of 1,359 moves |
+| Boundary (20M) | **44.0 %** | **57 % of deep-pass moves** land within ±2 Win% of a boundary and get rechecked |
+| Threat probe (200k) | 2.4 % | |
 
-Implication (to be confirmed with real games): an 80-ply game costs ≈ 80 × 1.7 s ≈ 140 s for the first pass alone
-on one core, before deep and boundary passes. On a 33-ply test game the full pipeline took 235 s on one core,
-of which 136 s was boundary rechecks. **At the spec's node budgets the ≤ 60 s/game threshold can only be met as
-throughput across ≥ 4 cores, and probably not on a 2-OCPU free Arm VM.** The fallback options are in §7.
+The boundary pass is the main cost. The ±2 margin around three class boundaries plus the unique-solution gap
+covers most of the Win% range where flagged moves live, so most deep moves get a 20M recheck.
+
+### 3.2 Engine accuracy vs the 50M reference
+
+ACCURACY_PLACEHOLDER
+
+### 3.3 Opening-reference fallback (§16.2), measured on the 2026-09 Lichess dump
+
+- Dump `lichess_db_standard_rated_2026-09.pgn.zst`: **29.2 GB**, **89.6 M games**.
+- Scanned the first 2 GiB (6,575,309 games, single core): decompression + header filter at **52,447 games/s**.
+  **32.7 %** of games are blitz or rapid with both players rated 1400–2000.
+- Replaying the first 20 plies and counting (position, move) with W/D/L: **784 games/s per core**.
+  100,000 games → 1.11 M entries, of which 1,677 have ≥ 50 games.
+- **Projection** for one full month: scan ≈ 29 min; ≈ 29 M matching games → tree build ≈ 10.4 core-hours
+  (2.6 h on 4 cores); download 29.2 GB ≈ 40 min at 100 Mbit/s. Storage after dropping entries with < 5 games:
+  well under 10 GB. Raw dictionaries in Python do not scale to a whole month in RAM; Phase 6 should build into
+  SQLite or sorted on-disk runs. **Fits 24 h and 10 GB.** A 3–5 M-game sample (1–2 core-hours) is enough for
+  the "≥ 50 games" theory bar at common nodes.
 
 ## 4. Pinned versions and checksums
 
 | Item | Pin | SHA-256 |
 | --- | --- | --- |
 | Stockfish 18 source | tag `sf_18`, commit `cb3d4ee9b47d0c5aae855b12379378ea1439675c` (2026-01-31) | — |
-| NNUE big `nn-c288c895ea92.nnue` (108,919,594 B) | from `official-stockfish/networks` | `c288c895ea924429ea9092e3f36b2b3c1f00f2a3a4c759ff7e57e79e3b43e4a7` |
+| NNUE big `nn-c288c895ea92.nnue` (108,919,594 B) | `official-stockfish/networks` | `c288c895ea924429ea9092e3f36b2b3c1f00f2a3a4c759ff7e57e79e3b43e4a7` |
 | NNUE small `nn-37f18f62d772.nnue` (3,519,630 B) | same | `37f18f62d772f3107e1d6aaca3898c130c3c86f2ab63e6555fbbca20635a899d` |
-| Stockfish 18 binary, x86-64-avx512, gcc 13.3, PGO | built here (build-specific, not portable) | `6bc75c1b2b689aec0f3b61b787e3cce139631894e9f57d6f5f2a319a2392cc4a` |
-| Stockfish 18 binary, armv8-dotprod, aarch64-linux-gnu-g++ 13 | built here | `f57874eface2d30ae8d0b029a0c27fdfcb1c27bb8f2716014504587bc14ab0ba` |
+| Stockfish 18 binary, x86-64-avx512, gcc 13.3, PGO | built here, reproduced in session 2 | `6bc75c1b2b689aec0f3b61b787e3cce139631894e9f57d6f5f2a319a2392cc4a` |
+| Stockfish 18 binary, armv8-dotprod, aarch64-linux-gnu-g++ 13 | built here (session 1) | `f57874eface2d30ae8d0b029a0c27fdfcb1c27bb8f2716014504587bc14ab0ba` |
 | (comparison) Stockfish 19 | tag `sf_19`, commit `edb0d9db6731067ec50ce619ff372b463bc4dd5d`; net `nn-1a298aa575a0.nnue` | net `1a298aa575a085434d29027978dc36867fe9c5bcea9376654b7a8eba1e52dfc2` |
-| Maia-3 code | `CSSLab/maia3` commit `1e13597c42d4858b7cfd7cfdae01e297263364b2` (2026-05-25), package 0.1.0 | — |
-| Maia3-23M / 5M weights | `UofTCSSLab/Maia3-23M`, `UofTCSSLab/Maia3-5M` | **BLOCKED** (`huggingface.co`) |
-| Lichess puzzle CSV | `lichess_db_puzzle.csv.zst` | **BLOCKED** (`database.lichess.org`) |
+| Maia-3 code | `CSSLab/maia3` commit `1e13597c42d4858b7cfd7cfdae01e297263364b2`, package 0.1.0 | — |
+| Maia3-23M weights `maia3-23m.pt` (91,799,307 B) | HF `UofTCSSLab/Maia3-23M` revision **`51a0145a8178046f7de23119160b136672deeb2b`** | `bce6cd1af5f0399ac7eed33fabb7a6a2ef6193662c2740f262bf93af7bfb3569` (from HF LFS metadata; file download BLOCKED) |
+| Maia3-5M weights `maia3-5m.pt` (20,968,049 B) | HF `UofTCSSLab/Maia3-5M` revision **`b6559de2398d7140b985f28fd2c19fb5e47ddabe`** | `ba14208b2992d85502f5fb501934abf6aaaeb355e9f3fdf90e326911f562524f` (same) |
+| Lichess puzzle CSV `lichess_db_puzzle.csv.zst` (307,234,795 B, Last-Modified 2026-10-02) | 6,157,341 puzzles; 2,739,910 with Popularity ≥ 80 and NbPlays ≥ 500 | `76335bfa7d7c4a7f93c1366d81549e53951ebb79dd43d34904cab8f22d962f8d` |
+| 500-puzzle pack `server/phase0/out/puzzle_pack.csv` | `puzzle_pack.py`, seed 7 | `6b8bdf80e69667fbdaaecc6597fae9f17a530fa8da4358eddfb1283e333e9438` |
+| Golden fixture `server/tests/fixtures/accuracy_golden.json` | `accuracy_golden.py`, 3 games | `e50eb333a6d6a4283e399b63b9d604b312f1719f87a14259ad2dc4c375a9fb91` |
 | python-chess | 1.11.2 | (PyPI wheel) |
-| PyTorch | 2.15.0 (CPU use) | (PyPI wheel) |
+| PyTorch | 2.15.0 (PyPI x86 build is `+cu132`; CPU use only) | (PyPI wheel) |
 
-The network filenames are the first 12 hex digits of their SHA-256, and both downloads matched.
+**Puzzle pack:** 500 puzzles, rated 1000–2000 (`glicko.placement_range`), Popularity ≥ 80, NbPlays ≥ 500, equal
+shares over 12 themes that match the §9.1 detectors (hangingPiece, fork, pin, skewer, discoveredAttack,
+backRankMate, mate, capturingDefender, trappedPiece, promotion, intermezzo, defensiveMove). Your own motif
+frequencies need the Phase 2 detectors; the shares are re-weighted then.
 
 ## 5. Game counts by time class and primary time class
 
-**BLOCKED** (`api.chess.com`). Needed: `/pub/player/turners1110/games/archives`, then each month serially.
-Recommendation pending; the spec's default (rapid primary, blitz analyzed separately) stands until counted.
+Account `turners1110` (player_id 425089135), joined 2025-01-30. 22 monthly archives, **1,115 games**.
+Current ratings: rapid 1026 (best 1062), blitz 640 (best 862), bullet 438.
+
+| Time class (standard chess) | All time, rated | All time, unrated | Last 90 days, rated |
+| --- | --- | --- | --- |
+| Rapid | **823** | 55 | 13 |
+| Blitz | 171 | 1 | **161** |
+| Bullet | 29 | 3 | 2 |
+| Daily | 1 | 10 | 0 (2 unrated) |
+| Variants (chess960, odds) | 16 | 6 | — |
+
+By month: rapid every month from Feb 2025 to Jul 2026 (up to 98 a month), then **blitz from Aug 2026**
+(19 → 61 → 81 games) with almost no rapid.
+
+**Recommendation:** rapid has 4.8× more history, so it gives the stronger diagnosis today. But if blitz is now
+what you play, the coach should measure improvement where you play. Choose (D-A in §10): keep **rapid primary**
+(spec default), or switch to **blitz primary** with rapid as history. Either way both are analyzed (§7.3, §14).
 
 ## 6. Hosting
 
-- **Frontend: Cloudflare Pages (free).** Fits easily: the PWA is static, far below 20,000 files and 25 MiB per
-  file, with unmetered static bandwidth and a free `*.pages.dev` HTTPS subdomain. Needs a free Cloudflare
-  account (your action). Recommended.
-- **Backend: Oracle Always Free Arm** is now **2 OCPU / 12 GB** (halved in 2026). Stockfish 18 and Maia-3 both
-  run on aarch64. Memory is fine (Postgres + 23M Maia + 2 engines at 256 MB hash ≈ 3–4 GB). **CPU is the
-  problem**: 2 cores, each slower than this Xeon core for Stockfish (Arm speed not measured; needs a VM). Known
-  risks: idle-instance reclamation, "out of capacity" in popular regions, terms that changed without notice.
-- **Verdict so far:** the free VM meets every threshold except, probably, the engine pipeline at the spec's
-  budgets. The final call waits for the real-game benchmark.
+- **Frontend: Cloudflare Pages (free).** Recommended. Needs a free Cloudflare account (your action).
+- **Backend: Oracle Always Free Arm = 2 OCPU / 12 GB** (confirmed on docs.oracle.com).
+  - **Maia, Postgres, API: fit easily.** Maia 23M needs 5.8 s per game; memory ≈ 3–4 GB in total.
+  - **Engine: does not fit at the spec budgets.** 345 core-seconds per rapid game means ≈ 172 s/game on 2 x86
+    cores (**projection**), and Ampere cores are slower per core than this Xeon for Stockfish (not measured).
+    With the **Lite** budgets: ≈ 53 s/game on 2 x86 cores (**projection**), so marginal on 2 Arm cores.
+  - **Ongoing load is tiny:** you play about 2–3 rated games a day (176 in the last 90 days, peak 81 a month).
+    At spec budgets that is ≈ 15 core-minutes a day. The 60 s gate matters for import latency and the one-off backfill,
+    not for daily use.
+  - **Idle reclamation risk:** reclaimed only if CPU (p95), network **and** memory all stay under 20 % for 7 days.
+    Keeping Maia and Postgres resident (> 2.4 GB of 12 GB) keeps the memory condition false.
+- **Backfill on the free VM:** 1,022 games ≈ 49 h at spec budgets on 2 x86-equivalent cores (**projection**);
+  within 72 h only if an Ampere core is at least ≈ 0.68× this Xeon core. With Lite: ≈ 15 h.
 
-| Option | Cost | Notes |
+| Option | Cost | Engine result |
 | --- | --- | --- |
-| Oracle Always Free A1 (2 OCPU, 12 GB) | $0 | Needs an Oracle account and card verification (your action). Pipeline throughput likely short at spec budgets |
-| Oracle A1 beyond free (pay-as-you-go) | ≈ $0.01/OCPU-h + $0.0015/GB-h (list price; verify) | e.g. +2 OCPU ≈ $15/month |
-| Hetzner CAX21 (4 Arm vCPU, 8 GB) / CAX31 (8 vCPU, 16 GB) | ≈ €8–10 / €16–21 per month after 2026 price rises; ordering reportedly paused at times in Oct 2026 | Verify on hetzner.com |
-| Workers on a home computer pushing results to the free VM | $0 | Spec §29 fallback; analysis runs whenever the computer is on |
-| Lower engine budgets on the free VM | $0 | Trades accuracy for speed; decide after the accuracy benchmark |
+| Oracle Always Free A1 (2 OCPU, 12 GB) + Lite budgets | $0 | Meets the gate as **projection** only, if accuracy holds (§3.2). Needs one benchmark run on a real A1 VM |
+| Oracle Always Free + spec budgets, gate read as daily throughput (E14) | $0 | Daily load fine; first import of 200 games ≈ 10 h; backfill ≈ 2–3 days |
+| Oracle A1 beyond free (pay-as-you-go) | ≈ $0.01/OCPU-h + $0.0015/GB-h (list; verify) | e.g. +2 OCPU ≈ $15/month |
+| Hetzner CAX21 (4 Arm vCPU, 8 GB) / CAX31 (8 vCPU, 16 GB) | ≈ €8–10 / €16–21 per month (verify) | 4–8 cores: spec budgets at ≈ 45–90 s/game if an Ampere core matched this Xeon (**projection**; not measured) |
+| Workers on a home computer pushing to the free VM | $0 | Spec §29 fallback; analysis whenever the computer is on |
 
-## 7. Fallback decisions for missed thresholds (draft)
+## 7. Fallback decisions for missed thresholds
 
-| Threshold | If missed | Fallback |
+| Threshold | Missed? | Decision |
 | --- | --- | --- |
-| Pipeline ≤ 60 s/game | Likely on 2 OCPU | (1) Treat the gate as throughput (wall-clock ÷ games with all workers); (2) cut `engine.first_nodes` (e.g. 1M → 300k) if the accuracy benchmark still shows ≥ 90% agreement; (3) skip the boundary pass for opponent moves; (4) home-computer workers |
-| Accuracy ≥ 90% | — | Raise deep/boundary budgets only for Sam's moves |
-| Maia 23M ≤ 30 s/game | Unlikely | `maia.server_model = "5M"` |
-| Explorer API | Needs a Lichess account | Either you create a Lichess account and token, or use the local fallback reference |
+| Pipeline ≤ 60 s/game | **Yes** at spec budgets (107.7 s on 4 cores) | FALLBACK_PIPELINE_PLACEHOLDER |
+| Accuracy ≥ 90 % | ACC_MISSED_PLACEHOLDER | ACC_DECISION_PLACEHOLDER |
+| Maia 23M ≤ 30 s/game | No | Keep `maia.server_model = "23M"` (re-check with real weights; timing is weight-independent) |
+| Explorer API | Needs a Lichess account | Use the local fallback reference (§3.3) unless you create a Lichess account and token (D-C) |
+| Tablebase | No | Use the Lichess tablebase API, serial, cached; Syzygy local files optional later |
 
 ## 8. Device checks (iPhone + 5-year-old iPad Pro)
 
 Test page: `web/device-test/` (index.html, sw.js, manifest, icons). No third-party code. It checks home-screen
 install (standalone mode), persistent-storage request, a **50 MB IndexedDB write + read-back with
 verification**, storage estimate, notification permission, a local notification, and a real Web Push
-subscription (VAPID).
+subscription (VAPID). It passes in headless Chromium (50 MB written in 1.1 s, read back intact).
 
-**Exact steps:** in §9 of the summary message / below once hosted (the page must be served over HTTPS).
+**Steps for you:** host `web/device-test/` over HTTPS (Cloudflare Pages: create a project, upload the folder;
+or GitHub Pages if the repo is public). On each device: open it in Safari → Share → Add to Home Screen → open
+from the home screen → press each button and screenshot the results. For the push test, a VAPID key pair is
+needed: I generate one and put only the public key in `index.html` (the private key stays out of git).
 
 ## 9. Proposed spec edits (do not apply without Sam's approval)
 
 | # | Section | Proposed edit |
 | --- | --- | --- |
-| E1 | §6 row "User-Agent", Appendix B1 | Replace "Claude Code already has a working chess.com connection" with "Use the public Published-Data API (§7.1); no connector is required" |
-| E2 | §27 / Appendix D | State explicitly whether Phase 0 may run before Phase P (it did); move "Findings feed Phase 0" to "Findings feed Phase 1 tuning" |
-| E3 | §5, §8, §29, §6 | Decide Stockfish 18 vs 19. Stockfish 19 (2026-09-05, single smaller net, +44 Elo vs 18) is current. Proposed: keep 18 for Phase 1 (pinned, benchmarked) and evaluate 19 as a version bump with re-derivation (§25 "Version change") |
+| E1 | §6 row "User-Agent", Appendix B1 | Replace "Claude Code already has a working chess.com connection" with "Use the public Published-Data API (§7.1); no connector is required. A User-Agent is required (no UA → 403)" |
+| E2 | §27 / Appendix D | State whether Phase 0 may run before Phase P (it did); "Findings feed Phase 1 tuning" |
+| E3 | §5, §8, §29, §6 | Stockfish 18 vs 19. Proposed: keep 18 for Phase 1 (pinned, benchmarked); evaluate 19 as a version bump with re-derivation (§25) |
 | E4 | §8.3 Win% | "cp clamped to ±1000 first (Lichess `Cp.CEILING`)" instead of ±1500 |
-| E5 | §8.3 Mate scores | "A mate for the mover scores as +1000 cp (Win% ≈ 97.53); being mated as −1000 cp (≈ 2.47), matching lila." Note: with this, a mate-in-1 missed for a "+9 cp" move loses only ≈ 47 Win% points, and Win% never reaches 100/0, so the §8.4 suppression rule (Win% > 95 / < 5) behaves differently: above +800 cp is already > 95 |
-| E6 | §8.3 Accuracy | Add the exact formulas and the +15 cp initial-position convention from §2 of this report, citing `lila@898ad2cd` |
-| E7 | §8.6 | "Compute the Zobrist hash from the normalized position (`chess.Board(fen_norm)`), because python-chess's Polyglot hash includes pseudo-legal en passant squares" |
-| E8 | §9.1 SEE | Replace [Verify] with "python-chess has no SEE; implement `see(board, move)` with unit tests (Phase 2)" |
-| E9 | §11.1 Maia | "There is no Maia-3 Python API: import `MAIA3Model` and `maia3.dataset` directly; feed the real 8-ply history; pin the Hugging Face revision (the registry does not). Maia-3 does not encode castling rights or en passant, so identical piece placements with different rights get the same distribution" |
-| E10 | §11.2 / §11.3 | Conditioning inputs are `SelfElo` and `OppoElo` (continuous, 0–5000). State which opponent rating to use for F and unlock (proposal: the opponent's actual chess.com rating mapped by the same anchor offset) |
-| E11 | §16.2 | Explorer host `explorer.lichess.org`; **OAuth2 token required** (Lichess account); rating groups 0/1000/1200/1400/1600/1800/2000/2200/2500, so "anchor + 200" must be rounded to a group |
-| E12 | §29 Hosting | Oracle Always Free Arm is 2 OCPU / 12 GB since mid-2026; size the worker pool (`engine.workers = 2`) accordingly |
-| E13 | §29 Stack | `chessground` → `@lichess-org/chessground` (the unscoped package is deprecated) |
-| E14 | §27 Phase 0 table | Define "per average game" for the pipeline gate as throughput: wall-clock time for N games with all workers ÷ N, on the production host |
+| E5 | §8.3 Mate scores | "A mate for the mover scores as +1000 cp (Win% ≈ 97.53); being mated as −1000 cp (≈ 2.47), matching lila." With this, Win% never reaches 100/0, and the §8.4 suppression rule (> 95 / < 5) already applies above ≈ +800 cp |
+| E6 | §8.3 Accuracy | Add the exact formulas and the +15 cp initial-position convention from §2, citing `lila@898ad2cd` |
+| E7 | §8.6 | "Compute the Zobrist hash from the normalized position (`chess.Board(fen_norm)`)" |
+| E8 | §9.1 SEE | "python-chess has no SEE; implement `see(board, move)` with unit tests (Phase 2)" |
+| E9 | §11.1 Maia | "No Maia-3 Python API: import `MAIA3Model` and `maia3.dataset`; feed the real 8-ply history; pin the HF revision (§4). Maia-3 does not encode castling rights or en passant" |
+| E10 | §11.2 / §11.3 | Conditioning inputs are `SelfElo` and `OppoElo` (continuous). Use the opponent's chess.com rating mapped by the same anchor offset |
+| E11 | §16.2 | Explorer host `explorer.lichess.org`; **a token is required for every endpoint, including `/masters`** (401 without); rating groups 0/1000/…/2500, so "anchor + 200" must round to a group |
+| E12 | §29 Hosting | Oracle Always Free Arm is 2 OCPU / 12 GB; add the idle-reclamation rule; size `engine.workers = 2` there |
+| E13 | §29 Stack | `chessground` → `@lichess-org/chessground` |
+| E14 | §27 Phase 0 table | Define "per average game" as throughput: wall-clock for N games with all workers ÷ N, on the production host |
 | E15 | §16.2 / §20 | Lichess puzzle FEN is the position *before* the opponent's move; exercises start after applying `Moves[0]` |
+| E16 | §7.2 | "ETags are weak; `Last-Modified` is the response time and must not be used for caching" |
+| E17 | §8.1 / §30 | ENGINE_EDIT_PLACEHOLDER |
 
 ## 10. GO / NO-GO
 
-**Verdict: NO-GO for Phase 1 — for now.** This is "not yet measured", not "infeasible": nothing measured so far
-fails a gate. Phase 1 cannot start because rule 1 of `CLAUDE.md` forbids code that depends on unverified facts,
-and Phase 1 depends on three of them (chess.com UA, finished-games-only, immutable archives). Its engine
-budgets also depend on the pipeline and accuracy benchmarks.
-
-| Gate (§27) | State |
-| --- | --- |
-| Engine pipeline ≤ 60 s/game | Unmeasured on real games. Per-search costs suggest it passes only as throughput on ≥ 4 cores (§3.1) |
-| Accuracy ≥ 90% vs 50M | Unmeasured (needs Sam's games) |
-| Maia 23M ≤ 30 s/game, ≤ 1 s p95 | Latency passes on x86 with random weights; real weights blocked |
-| Backfill ≤ 72 h | Unmeasured (needs game count) |
-| Hosting $0 | Frontend passes (Cloudflare Pages). Backend at risk on 2 OCPU; Sam's decision |
-| PWA | Passes in headless Chromium; needs Sam's iPhone and iPad Pro |
-| Opening reference | Needs a Lichess account and token, or the fallback sizing (blocked) |
-| Tablebase | API needs no auth per spec; live test blocked |
-
-**What turns this into GO:**
-
-1. **Network (Sam):** in the cloud environment's settings (environment menu in the session title bar → Edit →
-   Network access), add `api.chess.com`, `huggingface.co`, `cdn-lfs.huggingface.co`, `cas-bridge.xethub.hf.co`,
-   `database.lichess.org`, `explorer.lichess.org`, `tablebase.lichess.org`, `lichess.org`, `docs.oracle.com`
-   to Allowed domains (keep "Allow package managers" ticked), or choose a broader access level. Then start a
-   **new** session and rerun `docs/phase0-handoff.md` from §0. Steps:
-   https://code.claude.com/docs/en/cloud-environments#network-access
-   - Alternative if the network can't be widened: export Sam's games from chess.com (Archive → Download) and
-     commit them as `server/phase0/out/games.pgn`, and put the Maia3 checkpoints somewhere reachable. That
-     unblocks B5, B6 and the golden fixtures, but not B1/B2's [Verify] facts.
-2. **Device tests (Sam):** `web/device-test/` on the iPhone and the iPad Pro (§8).
-3. **Decisions (Sam):** hosting (§6), Stockfish 18 vs 19 (E3), Lichess account for the explorer (E11),
-   and the spec edits in §9.
-
-GO is declared only when every gate above has a measured result or an approved fallback (§7).
+VERDICT_PLACEHOLDER
