@@ -1,6 +1,6 @@
 # Chess Coach — Phase 0 report
 
-Date: 2026-10-29 · Spec: `docs/chess-coach-spec-v2.1.md` · Scope: §27 Phase 0 and Appendix B only.
+Date: 2026-10-29 · Spec: `docs/chess-coach-spec-v2.2.md` · Scope: §27 Phase 0 and Appendix B only.
 Machine for all measurements unless stated: cloud container, Intel Xeon @ 2.10 GHz (AVX-512, BMI2),
 4 vCPU, 15 GB RAM, Linux x86-64. Raw outputs: `server/phase0/out/` (git-ignored; regenerate with the scripts).
 
@@ -208,7 +208,7 @@ or GitHub Pages if the repo is public). On each device: open it in Safari → Sh
 from the home screen → press each button and screenshot the results. For the push test, a VAPID key pair is
 needed: I generate one and put only the public key in `index.html` (the private key stays out of git).
 
-## 9. Proposed spec edits (do not apply without Sam's approval)
+## 9. Spec edits (approved by Sam on 2026-10-30 and applied in spec v2.2)
 
 | # | Section | Proposed edit |
 | --- | --- | --- |
@@ -249,9 +249,9 @@ needed: I generate one and put only the public key in `index.html` (the private 
 The conditions are your decisions:
 
 - **D-A Primary time class: answered 2026-10-30.** Sam: "5 min or 10 min games with equal long-term focus". This conflicts with the spec (§0 "Rapid is the primary benchmark", §12.3 "Rapid drives prescriptions", §11.2); see edit E18.
-- **D-B Hosting:** free Oracle 2 OCPU (I'd benchmark it first in Phase 1), a ≈ €8–10/month 4-core VM, or home-computer workers.
+- **D-B Hosting: partly answered.** Frontend: Vercel Hobby (free; Sam, 2026-10-30) or Cloudflare Pages. Vercel cannot run the engine backend (4 active CPU-hours a month, 300 s per call; backfill alone needs ≈ 30 CPU-hours). **Still open:** the engine host (free Oracle 2 OCPU, a ≈ €8–10/month 4-core VM, or a home computer).
 - **D-C Opening explorer: partly answered.** A Lichess account `turners1110` exists (created 2026-10-30, 0 games). Still needed: a personal API token (no scopes) stored as a server secret, never in git or chat.
-- **D-D Approve the spec edits** in §9, especially E17 (engine budgets) and E3 (stay on Stockfish 18).
+- **D-D Spec edits: approved and applied** (spec v2.2, 2026-10-30), with Sam's goal (1500), training time (≈ 2 h/week, 5-minute sessions), his own hypotheses (§12.9) and his wish to learn new openings (§16.7).
 - **Device test** on the iPad Pro: either the device-test page or the Phase P prototype, which measures the
   same things in use.
 

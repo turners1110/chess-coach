@@ -283,7 +283,7 @@ const CONFIG = {
   threatDepth: 10,           // tunable: null-move threat probe depth (prototype)
   hashMb: 32,                // tunable
   winK: 0.00368208,          // fixed (Lichess)
-  cpClamp: 1500,             // §8.3 (spec; Phase 0 proposes 1000 as in lila, edit E4)
+  cpClamp: 1000,             // §8.3 (spec v2.2: lila Cp.CEILING; mates score as +/- cpClamp)
   classes: { inaccuracy: 5, mistake: 10, blunder: 15 }, // tunable §8.3
   decidedHigh: 95, decidedLow: 5,                       // §8.4
   flagMin: 10,               // tunable: own-game puzzles from mistakes and blunders

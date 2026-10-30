@@ -1,13 +1,14 @@
 # Chess Coach — notes for Claude Code
 
 Personal chess coach for one player (chess.com `turners1110`, "Sam"). The source of truth is
-**`docs/chess-coach-spec-v2.1.md`**. If anything here or in a chat message conflicts with the spec,
+**`docs/chess-coach-spec-v2.2.md`**. If anything here or in a chat message conflicts with the spec,
 the spec wins; tell Sam about the conflict. Phase 0 findings and proposed spec edits are in
 `docs/phase0-report.md`. Do not edit the spec yourself; propose edits there.
 
 ## Current state
 
-- **Phase 0: complete — conditional GO** (`docs/phase0-report.md` §10). Open: Sam's decisions D-A…D-D and the device test.
+- **Phase 0: complete — conditional GO** (`docs/phase0-report.md` §10). Spec v2.2 applies Sam's approved edits.
+  Still open: the engine host (Vercel is frontend only), the Lichess API token, the iPad device test, and Sam's go for Phase 1.
 - **Phase P prototype: published** (claude.ai artifact, source in `web/prototype/`). Sam is testing it; read its
   `sessions` collection (ArtifactData) for ladder findings.
 - Do **not** start Phase 1 until Sam gives the go-ahead after reading `docs/phase0-report.md`.
@@ -50,8 +51,8 @@ iPhone/iPad PWA: session runner, board, review, sparring client, offline cache, 
 | `shared/` | JSON Schema contracts → generated TypeScript types and Pydantic models |
 | `docker-compose.yml` | Caddy, api, workers, Postgres (Phase 1) |
 
-Hosting target (§29, pending Phase 0): free static host for the PWA (Cloudflare Pages `*.pages.dev`),
-free Arm VM for the backend. See the hosting section of the Phase 0 report for the current recommendation.
+Hosting (§29): free static host for the PWA (Vercel Hobby or Cloudflare Pages); the engine backend needs real CPU
+(free Oracle 2-OCPU Arm VM, paid VPS or home computer: Sam decides). See the hosting section of the Phase 0 report for the current recommendation.
 
 ## Phase plan (§27)
 

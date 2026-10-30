@@ -1,9 +1,9 @@
-# Chess Coach — Product & Technical Spec v2.1
+# Chess Coach — Product & Technical Spec v2.2
 
-Oct 29, 2026 · Owner: Sam · Status: **Final specification for Claude Code**
-History: v1 (Claude) → ChatGPT review → v2 (Claude) → ChatGPT second review and Sam's product decisions → **v2.1 (this document)**
+Oct 30, 2026 · Owner: Sam · Status: **Final specification for Claude Code**
+History: v1 (Claude) → ChatGPT review → v2 (Claude) → ChatGPT second review and Sam's product decisions → v2.1 → **v2.2 (this document): Phase 0 results (edits E1–E18 in `docs/phase0-report.md`) and Sam's decisions of Oct 30, approved by Sam**
 
-Chess Coach is a personal chess coach for one player. It analyzes his chess.com games, identifies the recurring weaknesses that cost him the most, teaches him to recognize and prevent them through guided practice and targeted human-like sparring, and measures whether those mistakes become less frequent in real games. The north star is sustained rating improvement.
+Chess Coach is a personal chess coach for one player. It analyzes his chess.com games (blitz and rapid, with equal weight), identifies the recurring weaknesses that cost him the most, teaches him to recognize and prevent them through guided practice and targeted human-like sparring, and measures whether those mistakes become less frequent in real games. The north star is sustained rating improvement.
 
 ### Instructions for Claude Code
 
@@ -27,20 +27,24 @@ Chess Coach is a personal chess coach for one player. It analyzes his chess.com 
 
 ## 0. Remaining decisions for Sam
 
-All decisions are resolved. Sam answered on Oct 29, 2026.
+All decisions are resolved. Sam answered on Oct 29 and Oct 30, 2026.
 
 | # | Decision | Answer |
 | --- | --- | --- |
-| D1 | Repertoire source | **No PGN files.** Build the starting repertoire from the lines in Sam's own games, plus recommended fixes he approves (§16) |
-| D2 | Hosting and domain | **Free hosting, no domain** (§29). Start with an artifact prototype hosted on claude.ai (Phase P, §27) |
+| D1 | Repertoire source | **No PGN files.** Build the starting repertoire from the lines in Sam's own games, plus recommended fixes he approves (§16). **Oct 30:** Sam also wants to **learn a few new openings, as White and as Black**; the app recommends a small repertoire for him to choose from (§16.7) |
+| D2 | Hosting and domain | **Free hosting, no domain** (§29). Start with an artifact prototype hosted on claude.ai (Phase P, §27). Frontend on a free static host such as Vercel Hobby or Cloudflare Pages. The engine backend host is decided before Phase 1 (§29) |
 | D3 | LLM spending cap | **$15/month hard cap, warning at $10.** Above the cap, template explanations only |
 | D4 | Test devices | **Latest iPhone and a 5-year-old iPad Pro.** The iPad Pro is the oldest supported device and sets the performance targets |
+| D5 | Time classes | **Blitz (5 min) and rapid (10 min) with equal long-term focus** (Oct 30). Both drive diagnosis and prescription (§12.3, §15.1) |
+| D6 | Goal | **1500** (Oct 30), in blitz and rapid. Shown as a long-term target, never as a forecast |
+| D7 | Training time | **5–10 minutes on some days, 30+ minutes on others; about 2 hours a week** (Oct 30). Sessions must work in 5 minutes (§22.1) |
+| D8 | Sam's own view | **"Maybe blunders; they happen less when I take my time." "I think I'm weak on openings."** (Oct 30). Treated as hypotheses the diagnosis tests and reports on (§12.9), never as findings |
 
 **Already decided by Sam:**
 
-- Rapid (10 min) is the primary benchmark, confirmed against game history in Phase 0. Blitz is analyzed separately.
-- Ratings: rapid about 1000–1100, blitz about 700. Do not treat the blitz gap as weaker understanding; investigate it (§14).
-- Sessions are flexible: 10, 15, 30, or 45–60 minutes, plus sparring.
+- Blitz (5 min) and rapid (10 min) count equally (D5). Phase 0 game history: 822 rated rapid and 171 rated blitz games, almost all blitz since August 2026.
+- Ratings (Oct 2026): rapid about 1000–1100, blitz about 650–850. Do not treat the blitz gap as weaker understanding; investigate it (§14).
+- Sessions are flexible: 5, 10, 15, 30, or 45–60 minutes, plus sparring.
 - Sparring is a core feature, server-based first.
 - The repertoire stays under Sam's control. Unanswered deviations stay unresolved.
 - Guided correction comes before any solution is shown.
@@ -94,7 +98,7 @@ All decisions are resolved. Sam answered on Oct 29, 2026.
 - Opening recall on spaced-repetition cards stays at 85% or higher.
 - Sam rates the app useful enough to keep using.
 
-**Long term:** the smoothed rapid rating rises. The ladder target is the smoothed peak + 50, re-raised each time it is hit *(tunable)*. Eight weeks of rating movement alone is not proof that training works.
+**Long term:** the smoothed blitz and rapid ratings rise toward Sam's target of 1500 (D6). The ladder target is the smoothed peak + 50, re-raised each time it is hit *(tunable)*. Eight weeks of rating movement alone is not proof that training works.
 
 **Metric trust**
 
@@ -183,21 +187,21 @@ chess.com API ─► Sync ─► Stockfish 18 ─► Classifier ◄─ Tablebase
 | Fact | Status |
 | --- | --- |
 | chess.com Published-Data API is read-only JSON with monthly archives; serial access is unlimited; parallel requests may get 429 | **Verified** ([chess.com](https://chess.com/news/view/published-data-api)) |
-| The archive API returns only finished games | **[Verify]** |
-| chess.com requires a descriptive User-Agent | **[Verify]** (unofficial SDK). Claude Code already has a working chess.com connection; confirm the behavior |
-| Past monthly archives never change | **[Verify]**; resync is supported regardless |
+| The archive API returns only finished games | **Confirmed (observational)** in Phase 0: no unfinished game among 1,115. Keep a `Result != "*"` guard |
+| chess.com requires a User-Agent | **Confirmed** in Phase 0: no User-Agent → 403; some library defaults → 403. Use the public API (§7.1) with the descriptive UA from `coach.toml`; no connector is required |
+| Past monthly archives never change | **Confirmed for the test window** (same ETag and body; `If-None-Match` → 304). Resync stays supported |
 | Lichess Win% = 50 + 50·(2/(1+e^(−0.00368208·cp)) − 1) | **Verified** ([Lichess](https://www.lichess.org/page/accuracy)) |
-| Lichess move accuracy and game accuracy method, and mate handling | **[Verify]** against `lila` source |
-| Stockfish 18 release and UCI options (`searchmoves`, MultiPV) | **[Verify]** from official Stockfish sources |
-| Maia-3 sizes 3M/5M/23M/79M; UCI inference code; Elo conditioning | **Verified** repo exists ([CSSLab/maia3](https://github.com/CSSLab/maia3/wiki)); Python API and conditioning inputs **[Verify]** |
-| Maia-3 license (AGPL-3.0 as stated by ports) | **[Verify]** |
-| Lichess puzzle CSV fields include Rating, RatingDeviation, Popularity, NbPlays, Themes, OpeningTags | **Verified** ([database.lichess.org](https://database.lichess.org/)); license **[Verify]** |
+| Lichess move accuracy and game accuracy method, and mate handling | **Confirmed from `lila@898ad2cd`** (§8.3); ported and tested in Phase 0 |
+| Stockfish 18 release and UCI options (`searchmoves`, MultiPV) | **Confirmed** (tag `sf_18`); determinism with Threads 1 confirmed. Stockfish 19 exists (2026-09-05); the app stays on 18 until a version change is decided (§25) |
+| Maia-3 sizes 3M/5M/23M/79M; UCI inference code; Elo conditioning | **Verified** repo exists ([CSSLab/maia3](https://github.com/CSSLab/maia3/wiki)). Phase 0: no documented Python API (import the model directly); conditioning is `SelfElo`/`OppoElo` (§11.1) |
+| Maia-3 license | **Confirmed:** code AGPL-3.0; weights AGPL-3.0 by reference (the model card defers to the repo) |
+| Lichess puzzle CSV fields include Rating, RatingDeviation, Popularity, NbPlays, Themes, OpeningTags | **Verified** ([database.lichess.org](https://database.lichess.org/)); license **Confirmed CC0** |
 | Lichess puzzle ratings are Glicko-2 ratings from solve attempts | **Verified** (same page describes attempts as Glicko-2 games) |
-| Lichess opening explorer API availability, authentication and rate limits | **[Verify]**; fallback in §16.2 |
-| Syzygy tablebase local file sizes, or Lichess tablebase API terms | **[Verify]** |
-| `python-chess` exposes a SEE function | **[Verify]**; if absent, implement and test one |
-| `python-chess` legal-en-passant FEN option | **[Verify]** |
-| iOS home-screen web apps support Web Push | **[Verify]** on Sam's devices |
+| Lichess opening explorer API availability, authentication and rate limits | **Confirmed:** `explorer.lichess.org`, a token is required on every endpoint (401 without), one request at a time; fallback in §16.2 |
+| Syzygy tablebase local file sizes, or Lichess tablebase API terms | **API confirmed**: no auth, median 0.39 s per lookup. Local file size not measured (not needed) |
+| `python-chess` exposes a SEE function | **No** (1.11.2): implement and test one (§9.1) |
+| `python-chess` legal-en-passant FEN option | **Confirmed** (`fen(en_passant="legal")`); hash caveat in §8.6 |
+| iOS home-screen web apps support Web Push | **[Verify]** on Sam's devices (still open after Phase 0) |
 | Multi-threaded WASM needs cross-origin isolation | **Verified** ([lichess-org/stockfish.wasm](https://github.com/lichess-org/stockfish.wasm)) |
 | `ts-fsrs` implements FSRS v6 | **Verified** ([ts-fsrs](https://open-spaced-repetition.github.io/ts-fsrs)) |
 
@@ -217,8 +221,8 @@ Base URL: `https://api.chess.com/pub`.
 ### 7.2 Client rules
 
 - Make requests serially.
-- Send a User-Agent with the app name and a contact.
-- Use ETag caching.
+- Send a User-Agent with the app name and a contact (requests without one get 403).
+- Use ETag caching. ETags are weak (`W/"…"`); `Last-Modified` is the response time and must not be used for caching.
 - Poll the current month every 30 min *(tunable)*.
 - Retry 429 and 5xx responses with exponential backoff: 1 s, then doubling to a maximum of 60 s, for at most 6 tries. After that, mark the archive `failed` and retry next cycle.
 - Provide a manual **Resync month** action.
@@ -255,14 +259,16 @@ Corrupt PGNs get `parse_status = failed` and never block a batch.
 
 ## 8. Engine analysis
 
-### 8.1 Passes *(budgets set after the Phase 0 benchmark)*
+### 8.1 Passes *(budgets set by the Phase 0 benchmark)*
 
 | Pass | Search | Scope |
 | --- | --- | --- |
-| First | `go nodes 1,000,000`, MultiPV 3, Threads 1, Hash 256 MB, `ucinewgame` per game | Every position |
-| Played-move | `go nodes 1,000,000 searchmoves <played>` from the same root, same settings | Moves outside the first-pass top 3 |
-| Deep | **One** search: `go nodes 5,000,000 MultiPV k searchmoves <top-3 moves> <played>` | Every Sam move with first-pass win_loss ≥ 5; every opponent move with win_loss ≥ 10 |
-| Boundary | `go nodes 20,000,000`, same form as Deep | Deep-pass moves within ±2 Win% points of a class boundary or of the unique-solution gap |
+| First | `go nodes 300,000`, MultiPV 3, Threads 1, Hash 256 MB, `ucinewgame` per game | Every position |
+| Played-move | `go nodes 300,000 searchmoves <played>` from the same root, same settings | Moves outside the first-pass top 3 |
+| Deep | **One** search: `go nodes 2,000,000 MultiPV k searchmoves <top-3 moves> <played>` | Every Sam move with first-pass win_loss ≥ 5; every opponent move with win_loss ≥ 10 |
+| Boundary | `go nodes 5,000,000`, same form as Deep | Deep-pass moves within ±2 Win% points of a class boundary or of the unique-solution gap |
+
+**Phase 0 result:** these budgets gave 93.2 % class agreement with a 50M-node reference on 500 of Sam's moves (the original 1M/5M/20M budgets: 94.3 %) at 31 s per game on 4 cores (original: 108 s).
 
 The first and played-move passes are **separate searches**. Their difference carries search noise and is treated as provisional.
 
@@ -276,13 +282,13 @@ The deep pass places the played move and the top candidates inside a **single** 
 
 ### 8.3 Scores and classes
 
-**Win%** uses the Lichess formula, with cp clamped to ±1500 first.
+**Win%** uses the Lichess formula, with cp clamped to ±1000 first (Lichess `Cp.CEILING`).
 
-**Mate scores:** a mate for the mover gives Win% 100; being mated gives 0. **[Verify]** against `lila`; if it differs, match `lila`.
+**Mate scores** (as in `lila`): a mate for the mover scores as +1000 cp (Win% ≈ 97.53); being mated as −1000 cp (≈ 2.47). Win% never reaches 100 or 0, and the §8.4 rule (> 95 / < 5) already applies from about ±800 cp.
 
 **Tablebase:** in positions with ≤ 5 pieces, tablebase win/draw/loss replaces the engine score: Win% is 100, 50 or 0, and DTZ is used for tie-breaks.
 
-**Accuracy:** port move accuracy and game accuracy from `lila`, and cite the source in code.
+**Accuracy:** port move accuracy and game accuracy from `lila` (`modules/analyse/src/main/AccuracyPercent.scala` @ `898ad2cd`) and cite it in code. Move accuracy = 103.1668100711649·e^(−0.04354415386753951·Δ) − 3.166924740191411 + 1, clamped 0–100 (100 when Win% did not drop). Game accuracy = mean of a volatility-weighted mean and a harmonic mean; window = clamp((n−1)/10, 2, 8); weights = population standard deviation of Win% in the window, clamped 0.5–12; the harmonic mean floors each value at 1. The position before move 1 counts as +15 cp. Mates use `forceAsCp`.
 
 **Classes** *(tunable; Coach's own labels, not claimed to match Lichess)*:
 
@@ -312,7 +318,7 @@ Results are reproducible only with the same binary, settings, hash state and mac
 ### 8.6 Canonical position identity
 
 - **Key:** piece placement, side to move, castling rights, and the en passant square only when an en passant capture is actually legal. Halfmove and fullmove counters are excluded.
-- **Storage:** the normalized string (`fen_norm`) plus a 64-bit Zobrist/Polyglot hash for indexing. The string decides equality, so hash collisions cannot merge positions.
+- **Storage:** the normalized string (`fen_norm`) plus a 64-bit Zobrist/Polyglot hash for indexing, computed from the normalized position (`chess.Board(fen_norm)`), because python-chess's Polyglot hash includes pseudo-legal en passant squares. The string decides equality, so hash collisions cannot merge positions.
 - **Transpositions:** any two move orders that reach the same key share the same node in repertoire and position tables.
 - **Repetition:** handled at game level (ply history), never in the key. A repertoire node is the same node no matter how often it repeats.
 
@@ -361,7 +367,7 @@ Only *validated* facts may be used as a mistake cause, in explanations, in weakn
 - The motif's key move must be on that line at or before the consequence ply.
 - The detector must name the pieces involved.
 
-**SEE:** a static exchange evaluation routine is required **[Verify]** that `python-chess` provides one. If not, implement it and unit-test it.
+**SEE:** a static exchange evaluation routine is required. `python-chess` has none (Phase 0), so implement `see(board, move)` and unit-test it (Phase 2).
 
 **Positional and phase detectors** produce descriptive tags only:
 
@@ -433,6 +439,8 @@ Motif, piece, phase, endgame type, structure type, color, time class.
 - **Analysis:** Maia scores Sam's moves and flagged opponent moves.
 - **Sparring:** Maia supplies opponent moves (§19).
 - **Device:** on-device Maia arrives only in Phase 8.
+- **Integration (Phase 0):** there is no documented Maia-3 Python API; import `maia3.models.MAIA3Model` and `maia3.dataset` directly. Feed the real 8-ply history (the UCI wrapper ignores it by default). Pin the Hugging Face weight revision (23M `51a0145a`, 5M `b6559de2`). Maia-3 does not encode castling rights or en passant, so identical piece placements with different rights get the same distribution.
+- **Conditioning:** two continuous inputs, `SelfElo` and `OppoElo` (0–5000). For F and unlock ratings, `OppoElo` is the opponent's actual chess.com rating mapped by the same anchor offset as Sam's.
 
 ### 11.2 Rating anchor A (per time class)
 
@@ -455,7 +463,7 @@ Maia was trained on Lichess ratings. Compare three models on a time-based held-o
 - A changes by at most 50 per week.
 - A never falls below (b) − 100.
 
-**Blitz:** fit A separately for blitz. A blitz A far above Sam's blitz rating is evidence for the time-control gap analysis (§14). It is never used to lower rapid training difficulty.
+**Per time class:** fit A separately for blitz and rapid; each time class trains at its own anchor. A blitz A far above Sam's blitz rating is evidence for the time-control gap analysis (§14). One time class's anchor never lowers the other's training difficulty.
 
 ### 11.3 Derived scores (experimental)
 
@@ -515,7 +523,7 @@ RawCost(w)       = Σ win_loss        / N_games   (Win% points lost per game; wh
 TrainableCost(w) = Σ win_loss × F    / N_games   (input to Training Priority only)
 ```
 
-**Window:** per time class, the most recent 100 games of that class, excluding games older than 180 days *(tunable)*. With fewer than 30 games, show "Not enough games yet". Rapid drives prescriptions; blitz has its own report and feeds the time-control gap analysis.
+**Window:** per time class, the most recent 100 games of that class, excluding games older than 180 days *(tunable)*. With fewer than 30 games, show "Not enough games yet". Blitz and rapid each have their own report and weakness ranking, and both drive prescriptions (§15.1, D5).
 
 ### 12.4 Cognitive-need labels (experimental, evidence-gated)
 
@@ -585,6 +593,18 @@ It also includes new habit findings and the time-control gap summary.
 
 **No Elo forecasts.**
 
+### 12.9 Sam's own hypotheses (D8)
+
+The diagnosis tests what Sam believes about his play and reports the result plainly, with n and intervals:
+
+| Sam's belief | Test |
+| --- | --- |
+| "Blunders cost me the most" | Share of RawCost from blunders (win_loss ≥ 15) versus mistakes and inaccuracies, per time class |
+| "I blunder less when I take my time" | Blunder rate by time-spent bucket relative to his median move time, per time class and phase; `fast_move` blunder rate versus the rest |
+| "I'm weak in the openings" | Share of RawCost in the opening phase; Win% at ply 15 against the reference at his band; opening error rate |
+
+A belief the data does not support is reported as "not supported by your games so far", never as wrong.
+
 ## 13. Measurement of real improvement
 
 Per weakness, the app tracks four things:
@@ -598,7 +618,7 @@ These live on the Progress screen. Trained and untrained weaknesses are shown si
 
 ## 14. Time-control gap analysis (rapid vs blitz)
 
-The question is why blitz (about 700) is far below rapid (about 1000–1100). Each hypothesis is tested with a measurable comparison, and the report states which comparisons show differences and how large, with intervals.
+The question is why blitz (about 650–850) is far below rapid (about 1000–1100). Neither time class is the reference: both count equally (D5). Each hypothesis is tested with a measurable comparison, and the report states which comparisons show differences and how large, with intervals.
 
 | Hypothesis | Comparison (blitz vs rapid) |
 | --- | --- |
@@ -638,6 +658,8 @@ Recurrence(w)   = min(1, occurrences_in_window / 8)
 | Positional | Sparring in structures | 0.3 |
 | Unclassified | — | 0 |
 
+**Two time classes (D5):** Training Priority is computed per time class and the rankings are merged with equal weight *(tunable: `prescription.time_class_weights`)*. A weakness present in both counts in both.
+
 The app records every training exposure and the later real-game outcomes. Statistically grounded responsiveness learning is deferred to Phase 9 (§28).
 
 ### 15.2 Difficulty mix
@@ -674,8 +696,8 @@ These shares apply within each skill block *(hypothesis)*.
 
 ### 16.2 Theory reference
 
-1. **Primary:** the Lichess opening explorer for move frequencies and scores by rating band, if its API is usable **[Verify]**. Results are cached.
-2. **Fallback:** a local reference built from a sample of the Lichess open database, players rated 1400–2000. Size and processing are **[Verify]** in Phase 0.
+1. **Primary:** the Lichess opening explorer (`explorer.lichess.org`) for move frequencies and scores by rating band. It requires a personal API token on every endpoint (Sam's Lichess account; stored as a server secret). One request at a time; on 429 wait one minute. Results are cached. Rating groups are 0/1000/1200/1400/1600/1800/2000/2200/2500, so "anchor + 200" rounds to the nearest group.
+2. **Fallback:** a local reference built from a sample of the Lichess open database, players rated 1400–2000, blitz and rapid. Phase 0 measured 52,000 games/s for the header filter and 780 games/s per core for the tree; a 3–5 M-game sample takes 1–2 core-hours and well under 10 GB.
 3. **"Known theory" at a position:** the position has ≥ 50 games in the reference at bands ≥ Sam's anchor + 200 *(tunable)*.
 4. **"Left theory":** the first position Sam reaches that does not meet that bar.
 
@@ -724,6 +746,15 @@ Cards quiz ideas as well as moves, for example: "What pawn break does Black aim 
 | Sam left his repertoire | Prompt once: "Forgot, or deliberate?" **Unanswered → stays `unresolved`** in an inbox, re-shown on the next Home visit, never auto-marked. Forgot → the card gets top priority. Deliberate → offer to add it as an alternative, or ignore it |
 | The opponent left the repertoire (gap) | Create a proposal (§16.4) in the inbox |
 | A repertoire move was a Mistake or worse | Flagged in review like any move, with a repertoire-fix proposal |
+
+### 16.7 Choosing new openings (D1, Oct 30)
+
+Sam wants to learn a few openings as White and as Black. The app proposes a small repertoire: one system as White, one defence against 1.e4 and one against 1.d4.
+
+- **Candidates:** openings Sam already reaches in his games, plus mainstream alternatives at his band.
+- **Ranking:** the four §16.4 factors, plus **theory load** (number of positions Sam must know to the starting depth) and his own results in that opening per time class.
+- **Evidence shown per candidate:** Sam's games and score in it, reference score at his band and one band above, the typical structures, and the theory load.
+- **Sam chooses.** Nothing enters the repertoire until he accepts it; the chosen opening starts at the starting depth (§16.6) and grows with mastery.
 
 ## 17. Training exercises and guided correction
 
@@ -992,6 +1023,7 @@ On-device sparring (Phase 8). Sparring performance ratings (Phase 9, experimenta
 
 - About 500 Lichess puzzles relevant to the active weaknesses, refreshed when online.
 - Filtered to Popularity ≥ 80 and NbPlays ≥ 500.
+- The Lichess FEN is the position *before* the opponent's move; an exercise starts after applying `Moves[0]`.
 - Completed puzzles and upcoming reviews are stored separately.
 
 ### 20.2 Puzzle rating (Glicko-2)
@@ -1037,6 +1069,7 @@ With low RD, an expected success of 55–75% corresponds to puzzles about 190 to
 
 | Mode | Length | Typical content |
 | --- | --- | --- |
+| Micro | 5 min | Due reviews only, then one Think First card (D7) |
 | Quick | 10 min | Due reviews, then the top weakness |
 | Standard | 15 min | Openings ≥ 25%, guided exercises, transfer test |
 | Extended | 30 min | Standard plus calculation drill and plan-note study |
@@ -1192,7 +1225,7 @@ Bottom tabs: Home, Train, Spar, Games, More (Weaknesses, Repertoire, Progress, S
 | Weaknesses | Top 3 plus all; raw cost, rates with n and intervals, need labels with evidence, habit findings, time-control gap report |
 | Repertoire | DAG browser, plan notes, card stats, branch results, inbox, PGN import |
 | Progress (basic, MVP) | Ratings by time class (smoothed), sessions per week, first-attempt and transfer success by motif, weakness rates over time. Experimental metrics in a labeled section |
-| Settings | Username, primary time class, default session mode, LLM budget, resync, data export, theme |
+| Settings | Username, time-class weights, default session mode, LLM budget, resync, data export, theme |
 
 ### 26.3 Accessibility
 
@@ -1205,7 +1238,7 @@ Bottom tabs: Home, Train, Spar, Games, More (Weaknesses, Repertoire, Progress, S
 
 Coach is designed for **post-game study and independent training**. It provides no assistance during active rated games.
 
-- Analysis covers only games the chess.com archive returns as finished **[Verify]**.
+- Analysis covers only games the chess.com archive returns as finished (confirmed in Phase 0; keep a `Result != "*"` guard).
 - The board opens only from imported finished games, repertoire nodes, exercises and sparring.
 - No arbitrary FEN or PGN input in v2.1.
 - A short notice in Settings and on first run states that using Coach during a rated game breaks chess.com's fair-play rules.
@@ -1218,10 +1251,12 @@ Each phase lists scope, dependencies, deliverables, objective exit gates, subjec
 
 ### Phase P — Artifact prototype (test first, free)
 
+*Order note (v2.2):* Phase 0 may run before or alongside Phase P; in practice Phase 0 ran first (Oct 29) and the prototype followed (Oct 30). Phase P findings feed Phase 1 and 2 tuning.
+
 - **Why:** test the core coaching loop on Sam's own games before any server exists. Hosting is free (claude.ai artifact).
 - **Form:** one self-contained HTML artifact. Scripts only from approved CDNs (cdnjs, jsdelivr, unpkg).
 - **Scope:**
-    - **Import.** Fetch Sam's most recent 20–30 rapid games directly from the chess.com API. **[Verify] first:** the artifact sandbox may block external fetches. If it does, fall back to PGN export: chess.com lets Sam download his games as PGN, which he pastes or uploads into the artifact.
+    - **Import.** Fetch Sam's most recent 20–30 rapid games directly from the chess.com API. The artifact sandbox blocks external fetches (confirmed Oct 30: the page's CSP allows only its own files and approved script CDNs), so use the fallback: a bundled snapshot of his recent games plus PGN export: chess.com lets Sam download his games as PGN, which he pastes or uploads into the artifact.
     - **Analysis.** Run single-threaded Stockfish WASM in a Web Worker at a low budget (depth 12–14 *(tunable)*). Compute Win%, classes, the largest swing, and the basic error rules that need no Maia (§10: hung material, missed recapture, missed mate, simple tactics via a shallow detector subset).
     - **Training.** Own-game puzzles with the full feedback ladder (§17.2–17.5) and Think First threat checks.
     - **Reporting.** A simple weakness summary: raw cost and counts.
@@ -1231,7 +1266,7 @@ Each phase lists scope, dependencies, deliverables, objective exit gates, subjec
     - Works on the latest iPhone and on the iPad Pro.
     - 20 games analyzed in ≤ 10 min on the iPad Pro.
     - Sam completes 5 ladder sessions and judges whether the loop is useful.
-- **Findings feed Phase 0:** ladder tuning, detector false positives, and whether the session flow works.
+- **Findings feed Phases 1–2:** ladder tuning, detector false positives, and whether the session flow works.
 
 ### Phase 0 — Feasibility and verification (2–3 days)
 
@@ -1243,12 +1278,12 @@ Each phase lists scope, dependencies, deliverables, objective exit gates, subjec
     - A `LICENSES.md` draft.
     - A completed fact register.
     - A fallback decision for every missed threshold.
-    - Game counts by time class (via the existing chess.com connection) to confirm rapid as primary.
+    - Game counts by time class (via the public chess.com API).
 - **Go thresholds** *(set before testing)*:
 
 | Check | Go |
 | --- | --- |
-| Engine pipeline (all passes + detectors) | ≤ 60 s per average game |
+| Engine pipeline (all passes + detectors) | ≤ 60 s per average game, measured as throughput: wall-clock time for N games with all workers ÷ N, on the production host |
 | Engine accuracy vs 50M-node reference (500 positions) | Class agreement ≥ 90% after the boundary pass |
 | Maia3-23M throughput | ≤ 30 s per game for analysis scope; else use 5M |
 | Server Maia move latency (sparring) | ≤ 1 s p95 |
@@ -1434,7 +1469,7 @@ Lichess tags are used only to find candidates.
 
 ### Stack
 
-**Frontend:** React, TypeScript, Vite, `vite-plugin-pwa`, `chessground`, `chess.js`, `ts-fsrs`, Dexie. From Phase 8 only: `onnxruntime-web` and Stockfish lite WASM.
+**Frontend:** React, TypeScript, Vite, `vite-plugin-pwa`, `@lichess-org/chessground` (the unscoped `chessground` package is deprecated), `chess.js`, `ts-fsrs`, Dexie. From Phase 8 only: `onnxruntime-web` and Stockfish lite WASM.
 
 **Backend:**
 
@@ -1455,14 +1490,14 @@ Lichess tags are used only to find candidates.
 | Stage | Hosting | Address |
 | --- | --- | --- |
 | Phase P | claude.ai artifact | Artifact link |
-| Phases 1+ (frontend) | Free static host for the PWA, such as Cloudflare Pages **[Verify] free-tier terms** | Free `*.pages.dev` subdomain, HTTPS included |
-| Phases 1+ (backend) | A free-tier cloud VM, such as Oracle Cloud Always Free Arm instances **[Verify] current limits and Arm builds of Stockfish and Maia** | Same subdomain via an API route, or the VM's provider hostname |
+| Phases 1+ (frontend) | Free static host for the PWA: Vercel Hobby (personal, non-commercial use) or Cloudflare Pages. Both confirmed to fit | Free `*.vercel.app` or `*.pages.dev` subdomain, HTTPS included |
+| Phases 1+ (backend) | A host with real CPU for the engine workers. Options (Sam decides): Oracle Cloud Always Free Arm (**2 OCPU / 12 GB** since 2026; Arm builds of Stockfish and Maia confirmed; speed must be benchmarked on a real VM), a small paid VPS, or workers on a home computer. Serverless free tiers (for example Vercel Hobby: 4 active CPU-hours a month, 300 s per call) cannot run the engine pipeline | Same subdomain via an API route, or the VM's provider hostname |
 
 **Backend VM layout:** Docker Compose with Caddy, api, workers and Postgres. Encrypted nightly backups to free object storage, kept 30 days.
 
 **If no free VM fits Phase 0 thresholds:** Phase 0 reports the gap. Options are a paid VPS (Sam decides), or running workers on a home computer that pushes results to the server.
 
-**Free-tier risks:** idle reclamation, capacity limits, terms changes. Backups and infrastructure-as-code keep a move to another host to under 1 hour of work.
+**Free-tier risks:** idle reclamation (Oracle reclaims an Always Free instance when, over 7 days, 95th-percentile CPU, network and memory all stay under 20 %), capacity limits, terms changes. Backups and infrastructure-as-code keep a move to another host to under 1 hour of work.
 
 ### Licenses
 
@@ -1488,7 +1523,7 @@ Lichess tags are used only to find candidates.
 | --- | --- | --- |
 | `sync.poll_minutes` | 30 | tunable |
 | `import.initial_games_per_class` | 100 | tunable |
-| `engine.first_nodes` / `deep_nodes` / `boundary_nodes` | 1M / 5M / 20M | set after Phase 0 |
+| `engine.first_nodes` / `deep_nodes` / `boundary_nodes` | 300k / 2M / 5M | phase0 |
 | `engine.boundary_margin` | 2 Win% pts | tunable |
 | `classes.inaccuracy` / `mistake` / `blunder` | 5 / 10 / 15 | tunable |
 | `labels.unique_gap` / `acceptable` | 10 / 5 | tunable |
@@ -1517,7 +1552,10 @@ Lichess tags are used only to find candidates.
 | `fsrs.retention` | 0.90 | tunable |
 | `repertoire.start_depth` / `extend_by` / `extend_reach` | 6–8 / 2 / 30% | hypothesis |
 | `theory.min_games` / `band_offset` | 50 / +200 | tunable |
-| `session.modes_min` | 10 / 15 / 30 / 45–60 | Sam |
+| `session.modes_min` | 5 / 10 / 15 / 30 / 45–60 | Sam |
+| `prescription.time_class_weights` | blitz 0.5 / rapid 0.5 | Sam (D5) |
+| `goal.target_rating` | 1500 | Sam (D6) |
+| `training.minutes_per_week` | 120 | Sam (D7) |
 | `session.opening_min` / `max` / `max_weakness` | 0.25 / 0.50 / 0.60 | hypothesis |
 | `steer.min_p` / `max_win_gap` / `beta` / `realism_drop_max` | 0.05 / 5 / 1.5 / 25% | hypothesis |
 | `rating.half_life_days` / `sustain_days` / `ladder_step` | 14 / 14 / 50 | tunable |
@@ -1546,6 +1584,17 @@ Lichess tags are used only to find candidates.
 
 # Appendices
 
+## A0. Change log v2.1 → v2.2 (Oct 30, 2026)
+
+Applied with Sam's approval: Phase 0 edits E1–E18 (`docs/phase0-report.md` §9) and Sam's Oct 30 answers (D5–D8, D1 extension).
+
+- Facts: §6 register resolved; User-Agent and ETag rules (§7.2); Win% clamp ±1000 and lila mate handling (§8.3); exact accuracy formulas (§8.3); Zobrist from the normalized position (§8.6); own SEE (§9.1); Maia integration and conditioning (§11.1); explorer token and rating groups (§16.2); puzzle FEN convention (§20.1); scoped chessground and Oracle limits (§29).
+- Engine budgets 300k / 2M / 5M from the Phase 0 benchmark (§8.1, §30); the pipeline gate is throughput (§27).
+- Blitz and rapid with equal focus (D5): per-class anchors and rankings, merged prescriptions (§11.2, §12.3, §14, §15.1).
+- Goal 1500 (D6); 5-minute Micro sessions (D7, §22.1); Sam's hypotheses tested by the diagnosis (D8, §12.9); choosing new openings (§16.7).
+- Hosting: Vercel Hobby or Cloudflare Pages for the frontend; the engine backend needs a host with real CPU (§29).
+- Phase P may follow Phase 0 (§27).
+
 ## A. Change log from v2
 
 1. **Sparring is now core.** Basic server-based, human-like sparring from curated starts moves to Phase 4. Steered and test opponents follow in Phase 7, and on-device inference in Phase 8. Three opponent types are defined, with realism rules.
@@ -1573,7 +1622,7 @@ Lichess tags are used only to find candidates.
 - **Sparring phase:** basic sparring is placed at Phase 4, not earlier, because it needs server Maia and the curated starts depend on diagnosis (Phase 3). An earlier sparring opponent would be untargeted, which Sam explicitly does not want.
 - **Cognitive-need labels:** Sam asked to distinguish knowledge, pattern, calculation and habit "when evidence supports it". The spec implements this, but the available evidence supports these labels only for a subset of errors. Many will be `undetermined`, which is the honest outcome.
 
-## B. Remaining Phase 0 verification tasks
+## B. Phase 0 verification tasks (completed Oct 29–30, 2026; results in `docs/phase0-report.md`)
 
 1. Use Claude Code's chess.com connection to get game counts by time class (last 90 days and all time) and confirm rapid as primary.
 2. Confirm User-Agent behavior, whether archives return only finished games, and whether past archives change (re-fetch 3 old months and compare ETags).

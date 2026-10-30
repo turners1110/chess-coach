@@ -4,7 +4,7 @@
 
 [player]
 chesscom_username = "turners1110"
-primary_time_class = "rapid"   # sam; confirmed against game history in Phase 0 (docs/phase0-report.md)
+time_class_weights = { blitz = 0.5, rapid = 0.5 }  # sam (D5, Oct 30): equal long-term focus
 timezone = "America/New_York"
 
 [sync]                          # §7.2
@@ -21,10 +21,10 @@ min_plies = 6                   # tunable
 analyze_time_classes = ["bullet", "blitz", "rapid"]
 
 [engine]                        # §8.1 — budgets set after Phase 0
-first_nodes = 1_000_000         # phase0
-played_nodes = 1_000_000        # phase0 (same as first pass)
-deep_nodes = 5_000_000          # phase0
-boundary_nodes = 20_000_000     # phase0
+first_nodes = 300_000           # phase0 (E17: 93.2 % agreement, 31 s/game on 4 cores)
+played_nodes = 300_000          # phase0 (same as first pass)
+deep_nodes = 2_000_000          # phase0
+boundary_nodes = 5_000_000      # phase0
 reference_nodes = 50_000_000    # Phase 0 accuracy reference
 first_multipv = 3
 deep_top_k = 3                  # top-3 moves + played move in one searchmoves search
@@ -33,7 +33,7 @@ hash_mb = 256
 deep_min_win_loss_me = 5        # Sam moves with first-pass win_loss >= this get a deep pass
 deep_min_win_loss_opp = 10      # opponent moves with first-pass win_loss >= this get a deep pass
 boundary_margin = 2             # tunable, Win% points
-cp_clamp = 1500                 # §8.3
+cp_clamp = 1000                 # §8.3 (v2.2, lila Cp.CEILING); mate scores as +/- cp_clamp
 workers = 4                     # phase0: parallel games per host (one engine per core)
 
 [winpct]                        # §8.3 (Verified, Lichess)
@@ -299,7 +299,7 @@ share = 0.25
 after_mastered = 5
 
 [session]                       # §22, Sam / hypothesis
-modes_min = [10, 15, 30, 45, 60]
+modes_min = [5, 10, 15, 30, 45, 60]   # sam (D7: 5-minute Micro mode added Oct 30)
 opening_min = 0.25
 opening_max = 0.50
 max_weakness = 0.60
@@ -373,3 +373,12 @@ max_line_moves = 3              # §17.1
 budget_stage1 = 2               # hypothesis §17.2 (Phase P treats every card as "challenge")
 budget_other = 1                # hypothesis §17.2
 budget_fail_streak = 2          # hypothesis §17.2
+
+[goal]                          # §0 D6
+target_rating = 1500            # sam: blitz and rapid; a target, never a forecast
+
+[training]                      # §0 D7
+minutes_per_week = 120          # sam: "a couple hours a week"; 5-10 min some days, 30+ others
+
+[prescription]                  # §15.1, D5
+time_class_weights = { blitz = 0.5, rapid = 0.5 }   # sam (tunable)
