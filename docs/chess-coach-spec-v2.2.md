@@ -284,7 +284,7 @@ The deep pass places the played move and the top candidates inside a **single** 
 
 **Win%** uses the Lichess formula, with cp clamped to ±1000 first (Lichess `Cp.CEILING`).
 
-**Mate scores** (as in `lila`): a mate for the mover scores as +1000 cp (Win% ≈ 97.53); being mated as −1000 cp (≈ 2.47). Win% never reaches 100 or 0, and the §8.4 rule (> 95 / < 5) already applies from about ±800 cp.
+**Mate scores** (as in `lila`): a mate for the mover scores as +1000 cp (Win% ≈ 97.54); being mated as −1000 cp (≈ 2.46). Win% never reaches 100 or 0, and the §8.4 rule (> 95 / < 5) already applies from about ±800 cp.
 
 **Tablebase:** in positions with ≤ 5 pieces, tablebase win/draw/loss replaces the engine score: Win% is 100, 50 or 0, and DTZ is used for tie-breaks.
 

@@ -1,4 +1,4 @@
-# Chess Coach configuration — every tunable number lives here (spec v2.1 §30, instruction 3).
+# Chess Coach configuration — every tunable number lives here (spec v2.2 §30, instruction 3).
 # Labels: tunable | hypothesis | fixed | sam (Sam's decision) | phase0 (set after the Phase 0 benchmark).
 # Code must read these values; it must never hard-code them.
 
@@ -337,6 +337,7 @@ warn_usd = 10
 [jobs]                          # §25
 lease_minutes = 10
 max_attempts = 3
+retry_backoff_s = 30            # tunable: wait attempts × this before a retry
 
 [privacy]                       # §29
 access_log_days = 30
