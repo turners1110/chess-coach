@@ -88,17 +88,18 @@ def _result(side: dict) -> str:
     return "win" if r == "win" else "draw" if r in DRAWS else "loss"
 
 
-def import_game(conn, player: dict, g: dict) -> str:
-    """Returns 'new', 'exists', 'skipped' or 'failed'. Variants and unrated games are skipped (§7.4)."""
+def import_game(conn, player: dict, g: dict, source: str = "chesscom") -> str:
+    """Returns 'new', 'exists', 'skipped' or 'failed'. Variants and unrated games are skipped (§7.4).
+    source="reference": a goal-level game between two other players, stored from White's side (§12.10)."""
     if g.get("rules") != "chess" or not g.get("rated"):
         return "skipped"
     url = g["url"]
     if conn.execute("SELECT 1 FROM games WHERE chesscom_url = %s", (url,)).fetchone():
         return "exists"
     me = player["chesscom_username"].lower()
-    color = "w" if g["white"]["username"].lower() == me else "b"
+    color = "w" if source == "reference" or g["white"]["username"].lower() == me else "b"
     mine, opp = (g["white"], g["black"]) if color == "w" else (g["black"], g["white"])
-    base = {"player_id": player["id"], "chesscom_url": url, "time_class": g["time_class"], "time_control": g["time_control"],
+    base = {"player_id": player["id"], "source": source, "chesscom_url": url, "time_class": g["time_class"], "time_control": g["time_control"],
             "rated": True, "played_at": dt.datetime.fromtimestamp(g["end_time"], dt.timezone.utc), "color": color,
             "my_rating": mine.get("rating"), "opp_rating": opp.get("rating"), "opponent": opp.get("username"),
             "result": _result(mine), "pgn": g.get("pgn", "")}
@@ -115,16 +116,16 @@ def import_game(conn, player: dict, g: dict) -> str:
         base.update(termination=h.get("Termination"), eco=h.get("ECO"),
                     opening=(h.get("ECOUrl") or "").rstrip("/").split("/")[-1].replace("-", " ") or None, n_plies=len(moves))
     except Exception as e:  # noqa: BLE001 - corrupt PGNs are stored with the error and never block a batch
-        conn.execute("INSERT INTO games (player_id, chesscom_url, time_class, time_control, rated, played_at, color, my_rating, opp_rating, "
-                     "opponent, result, pgn, parse_status, parse_error, analysis_status) VALUES (%(player_id)s, %(chesscom_url)s, %(time_class)s, "
+        conn.execute("INSERT INTO games (player_id, source, chesscom_url, time_class, time_control, rated, played_at, color, my_rating, opp_rating, "
+                     "opponent, result, pgn, parse_status, parse_error, analysis_status) VALUES (%(player_id)s, %(source)s, %(chesscom_url)s, %(time_class)s, "
                      "%(time_control)s, %(rated)s, %(played_at)s, %(color)s, %(my_rating)s, %(opp_rating)s, %(opponent)s, %(result)s, %(pgn)s, "
                      "'failed', %(err)s, 'skipped')", {**base, "err": str(e)[:500]})
         return "failed"
     imp = cfg()["import"]
     analyze = g["time_class"] in imp["analyze_time_classes"] and len(moves) >= imp["min_plies"]
     gid = conn.execute(
-        "INSERT INTO games (player_id, chesscom_url, time_class, time_control, rated, played_at, color, my_rating, opp_rating, opponent, "
-        "result, termination, eco, opening, pgn, n_plies, analysis_status) VALUES (%(player_id)s, %(chesscom_url)s, %(time_class)s, "
+        "INSERT INTO games (player_id, source, chesscom_url, time_class, time_control, rated, played_at, color, my_rating, opp_rating, opponent, "
+        "result, termination, eco, opening, pgn, n_plies, analysis_status) VALUES (%(player_id)s, %(source)s, %(chesscom_url)s, %(time_class)s, "
         "%(time_control)s, %(rated)s, %(played_at)s, %(color)s, %(my_rating)s, %(opp_rating)s, %(opponent)s, %(result)s, %(termination)s, "
         "%(eco)s, %(opening)s, %(pgn)s, %(n_plies)s, %(status)s) RETURNING id",
         {**base, "status": "pending" if analyze else "skipped"}).fetchone()["id"]
@@ -159,7 +160,7 @@ def enqueue_analysis(conn, player_id: int) -> int:
     ver = analysis_version()
     rows = conn.execute(
         "SELECT id, played_at, row_number() OVER (PARTITION BY time_class ORDER BY played_at DESC) AS rn "
-        "FROM games WHERE player_id = %s AND analysis_status = 'pending'", (player_id,)).fetchall()
+        "FROM games WHERE player_id = %s AND source = 'chesscom' AND analysis_status = 'pending'", (player_id,)).fetchall()
     made = 0
     for r in rows:
         made += jobs.enqueue(conn, "analyze", f"analyze:{r['id']}:{ver}", {"game_id": r["id"]},

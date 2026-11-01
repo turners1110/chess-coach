@@ -41,6 +41,12 @@ k = 0.00368208
 
 [tablebase]                     # §8.3
 max_pieces = 5
+api_url = "https://tablebase.lichess.org/standard"   # fixed: Lichess tablebase API (no auth, one request at a time)
+timeout_s = 15                  # tunable
+
+[phase]                         # §9.1 game phase; Phase 1 proxy until the Phase 2 phase detector, hypothesis
+opening_max_ply = 20            # plies 0..19 count as opening
+endgame_non_pawn_max = 14       # endgame when total non-pawn, non-king material (both sides, pawn units) <= this
 
 [suppression]                   # §8.4
 decided_high = 95
@@ -170,6 +176,7 @@ full_attempts = 60
 motif_mult = 1.2
 review_top_n = 2
 review_opp_n = 2
+unpunished_min_loss = 5         # tunable: Sam's reply to an opponent mistake counts as not punishing it when it loses >= this
 
 [window]                        # §12.3, tunable
 games = 100
@@ -383,3 +390,17 @@ minutes_per_week = 120          # sam: "a couple hours a week"; 5-10 min some da
 
 [prescription]                  # §15.1, D5
 time_class_weights = { blitz = 0.5, rapid = 0.5 }   # sam (tunable)
+
+[report_card]                   # §12.10 (Sam, Oct 31): grades on key parameters, your level vs the goal
+grade_cuts = [1.0, 0.667, 0.333, 0.0]   # tunable: progress from your level (0) to the goal level (1) for A, B, C, D; below 0 is F
+min_level_gap_rel = 0.05        # tunable: no grade when the goal level and your level differ by less than this share
+conversion_win_min = 80         # tunable: a game counts as "winning" once your Win% reached this
+resilience_win_max = 20         # tunable: a game counts as "losing" once your Win% fell to this
+win_at_ply = 14                 # tunable: opening result measured at the position before ply 14 (after move 7)
+
+[reference]                     # §12.10 goal-level reference games (chess.com, both players near the goal rating)
+games_per_class = 100           # tunable
+band = 50                       # tunable: both players within goal ± band
+max_requests = 300              # tunable: crawl budget per build (serial requests)
+time_classes = ["blitz", "rapid"]
+time_controls = { blitz = "300", rapid = "600" }   # sam: 5 min and 10 min games (D5)
