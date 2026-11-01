@@ -39,6 +39,8 @@ Status: **Confirmed** = read from the project's LICENSE file or registry metadat
 | `lila` accuracy algorithm (ported, not copied verbatim) | `898ad2cd` | AGPL-3.0 | Confirmed | A port of AGPL code is a derivative; compatible with our AGPL default. Cite the source in code |
 | Glicko-2 reference vectors from `glicko2` (npm, mmai/glicko2js) | 1.2.2 | MIT | Confirmed | Test data only |
 
+| Docker base images: `gcc:13-bookworm` (build only), `node:22-slim` (build only), `python:3.12-slim`, `postgres:16` | as tagged | GPL toolchain (build only), MIT (Node), PSF-2.0 (Python), PostgreSQL License | Confirmed (Docker Hub official images) | Only the Python and Postgres images run; nothing from the build stages ships except the compiled Stockfish and the built app |
+
 ## Ships to the browser (distribution)
 
 | Component | Version | License | Status | Notes |

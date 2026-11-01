@@ -7,7 +7,7 @@ import logging
 import multiprocessing as mp
 import time
 
-from coach import analysis, db, importer, jobs, tablebase
+from coach import analysis, db, importer, jobs, reference, tablebase
 from coach.chesscom import Client
 from coach.config import cfg
 
@@ -53,9 +53,17 @@ def analysis_loop(idle_s: float = 10) -> None:
 
 
 def sync_once(resync: list[str] | None = None) -> dict:
+    client = Client()
     with db.connect() as conn:
-        s = importer.sync(conn, Client(), resync=resync)
+        s = importer.sync(conn, client, resync=resync)
         conn.commit()
+        # The report card's goal-level reference set (§12.10): built once, topped up if short
+        r = cfg()["reference"]
+        have = conn.execute("SELECT time_class, count(*) AS n FROM games WHERE source = 'reference' GROUP BY 1").fetchall()
+        counts = {x["time_class"]: x["n"] for x in have}
+        if any(counts.get(tc, 0) < r["games_per_class"] for tc in r["time_classes"]):
+            s["reference"] = reference.build(conn, client)
+            conn.commit()
     log.info("sync: %s", s)
     return s
 

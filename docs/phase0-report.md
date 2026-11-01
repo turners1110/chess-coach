@@ -230,6 +230,7 @@ needed: I generate one and put only the public key in `index.html` (the private 
 | E16 | §7.2 | "ETags are weak; `Last-Modified` is the response time and must not be used for caching" |
 | E17 | §8.1 / §30 | Set `engine.first_nodes` / `played_nodes` = 300k, `deep_nodes` = 2M, `boundary_nodes` = 5M (Phase 0 measured: 93.2 % agreement, 31.1 s/game on 4 cores). Not yet changed in `coach.toml`: waiting for your approval |
 | E18 | §0, §11.2, §12.3, §14, §15, §26.2 | **Two equal time classes** (Sam, 2026-10-30): blitz (5 min) and rapid (10 min) both drive diagnosis and prescription. Each keeps its own window, anchor A and weakness ranking; prescriptions merge both rankings by cost weighted 50/50 *(tunable)*. The §14 gap analysis stays as a comparison and no longer treats rapid as the reference. Settings: "primary time class" becomes "time-class weights" |
+| E19 | §12.10, §27 Phase 1 | **Report card** (Sam, 2026-10-31): graded parameters per time class, your level (opponents) vs the goal level (1500 reference games). Applied in spec v2.2 |
 
 ## 10. GO / NO-GO
 
@@ -249,7 +250,7 @@ needed: I generate one and put only the public key in `index.html` (the private 
 The conditions are your decisions:
 
 - **D-A Primary time class: answered 2026-10-30.** Sam: "5 min or 10 min games with equal long-term focus". This conflicts with the spec (§0 "Rapid is the primary benchmark", §12.3 "Rapid drives prescriptions", §11.2); see edit E18.
-- **D-B Hosting: partly answered.** Frontend: Vercel Hobby (free; Sam, 2026-10-30) or Cloudflare Pages. Vercel cannot run the engine backend (4 active CPU-hours a month, 300 s per call; backfill alone needs ≈ 30 CPU-hours). **Still open:** the engine host (free Oracle 2 OCPU, a ≈ €8–10/month 4-core VM, or a home computer).
+- **D-B Hosting: answered 2026-10-31.** The backend (engine, database, API) runs on Sam's home computer; the app can be served from it or from Vercel.
 - **D-C Opening explorer: partly answered.** A Lichess account `turners1110` exists (created 2026-10-30, 0 games). Still needed: a personal API token (no scopes) stored as a server secret, never in git or chat.
 - **D-D Spec edits: approved and applied** (spec v2.2, 2026-10-30), with Sam's goal (1500), training time (≈ 2 h/week, 5-minute sessions), his own hypotheses (§12.9) and his wish to learn new openings (§16.7).
 - **Device test** on the iPad Pro: either the device-test page or the Phase P prototype, which measures the

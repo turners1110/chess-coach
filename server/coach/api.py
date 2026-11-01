@@ -64,9 +64,9 @@ def login(body: Login):
     if len(_failed) >= a["max_failed_logins"]:
         raise HTTPException(429, "Too many attempts. Try again in a few minutes.")
     stored = os.environ.get("COACH_PASSWORD_HASH", "")
+    if not stored:
+        raise HTTPException(503, "No password is set on the server yet (see docs/setup-home-computer.md, step 3).")
     try:
-        if not stored:
-            raise VerificationError("no password configured")
         _ph.verify(stored, body.password)
     except VerificationError:
         _failed.append(now)

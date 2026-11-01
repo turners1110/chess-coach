@@ -15,20 +15,18 @@ services:
       retries: 20
 
   api:
-    build: ./server
+    build: { context: ., dockerfile: server/Dockerfile }
     restart: unless-stopped
     depends_on: { db: { condition: service_healthy } }
     environment: &env
       DATABASE_URL: postgresql://coach:${POSTGRES_PASSWORD}@db/coach
-      COACH_PASSWORD_HASH: ${COACH_PASSWORD_HASH:?run: docker compose run --rm api python -m coach.passwd}
+      COACH_PASSWORD_HASH: ${COACH_PASSWORD_HASH:-}
       COACH_ALLOWED_ORIGINS: ${COACH_ALLOWED_ORIGINS:-}
-      COACH_WEB_DIST: /web
-    volumes: [./web/app/dist:/web:ro]
     ports: ["${COACH_PORT:-8000}:8000"]
     command: sh -c "python -c 'from coach import db; db.migrate()' && uvicorn coach.api:app --host 0.0.0.0 --port 8000"
 
   worker:
-    build: ./server
+    build: { context: ., dockerfile: server/Dockerfile }
     restart: unless-stopped
     depends_on: { db: { condition: service_healthy } }
     environment: *env

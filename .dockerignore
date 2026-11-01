@@ -1,0 +1,6 @@
+**/node_modules
+**/dist
+web/prototype
+server/phase0/out
+.git
+.env

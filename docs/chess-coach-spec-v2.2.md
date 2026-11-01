@@ -605,6 +605,17 @@ The diagnosis tests what Sam believes about his play and reports the result plai
 
 A belief the data does not support is reported as "not supported by your games so far", never as wrong.
 
+### 12.10 Report card (Sam's request, Oct 31)
+
+A diagnostic that grades Sam on key parameters, per time class (blitz and rapid separately).
+
+- **Parameters** (all from engine-scored moves, game results and clocks): accuracy, blunders per game, mistakes per game, position after the opening (Win% after move 7), opening losses, middlegame and endgame losses per move, converting winning positions (Win% ≥ 80), saving losing positions (Win% ≤ 20), moves in time trouble, games lost on time, blunder rate on fast moves relative to other moves.
+- **Three numbers per parameter:** Sam's value over the §12.3 window, with a game-level bootstrap interval; **his level**, measured on his opponents' moves in the same games (players rated like him); and the **goal level**, measured on reference games between chess.com players rated within ±50 of the goal (D6) at Sam's time controls *(tunable: `reference.*`)*.
+- **Grade** = progress from his level (0) to the goal level (1): A ≥ 1, B ≥ 0.67, C ≥ 0.33, D ≥ 0, F < 0 (worse than his own level) *(tunable: `report_card.grade_cuts`)*. No grade when the two levels hardly differ on a parameter.
+- Parameters furthest below the goal, and every F, are candidate weaknesses for §12 and §15. The card states measured values only; it never forecasts a rating.
+- The reference set is built by a serial crawl of the chess.com Published-Data API (§7.2 rules) and analyzed with the same pipeline. Opponents' moves get a deep pass only at win_loss ≥ 10 (§8.1), so their class counts are slightly less precise than Sam's.
+- Phases 2–3 add motif rows (missed tactics, hung pieces, ignored threats) once the detectors are validated.
+
 ## 13. Measurement of real improvement
 
 Per weakness, the app tracks four things:
@@ -1298,14 +1309,14 @@ Each phase lists scope, dependencies, deliverables, objective exit gates, subjec
 ### Phase 1 — Import, analysis, game review
 
 - **Depends on:** Phase 0.
-- **Scope:** §7, §8 (except Maia), tablebase, GRI, PWA shell, login.
+- **Scope:** §7, §8 (except Maia), tablebase, GRI, PWA shell, login, report card v1 (§12.10) with the goal-level reference set.
 - **Deliverables:** recent-first import plus backfill; engine passes with uncertainty fields; game review with the largest-swing rule.
 - **Exit (objective):**
     - Import fixtures pass.
     - Formula golden fixtures pass (Win% exact; game accuracy within 0.5 of `lila`).
     - Canonical-key tests pass (transpositions, legal en passant only, counters ignored).
     - Determinism test passes.
-- **User-visible:** game list and review on the phone.
+- **User-visible:** game list and review on the phone; the report card.
 
 ### Phase 2 — Guided training loop
 
@@ -1592,7 +1603,8 @@ Applied with Sam's approval: Phase 0 edits E1–E18 (`docs/phase0-report.md` §9
 - Engine budgets 300k / 2M / 5M from the Phase 0 benchmark (§8.1, §30); the pipeline gate is throughput (§27).
 - Blitz and rapid with equal focus (D5): per-class anchors and rankings, merged prescriptions (§11.2, §12.3, §14, §15.1).
 - Goal 1500 (D6); 5-minute Micro sessions (D7, §22.1); Sam's hypotheses tested by the diagnosis (D8, §12.9); choosing new openings (§16.7).
-- Hosting: Vercel Hobby or Cloudflare Pages for the frontend; the engine backend needs a host with real CPU (§29).
+- Hosting: Vercel Hobby or Cloudflare Pages for the frontend; the engine backend needs a host with real CPU (§29). Sam chose **his home computer** for the backend (Oct 31).
+- Report card (§12.10) added at Sam's request (Oct 31) and scheduled in Phase 1.
 - Phase P may follow Phase 0 (§27).
 
 ## A. Change log from v2

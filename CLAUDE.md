@@ -7,11 +7,12 @@ the spec wins; tell Sam about the conflict. Phase 0 findings and proposed spec e
 
 ## Current state
 
-- **Phase 0: complete — conditional GO** (`docs/phase0-report.md` §10). Spec v2.2 applies Sam's approved edits.
-  Still open: the engine host (Vercel is frontend only), the Lichess API token, the iPad device test, and Sam's go for Phase 1.
-- **Phase P prototype: published** (claude.ai artifact, source in `web/prototype/`). Sam is testing it; read its
-  `sessions` collection (ArtifactData) for ladder findings.
-- Do **not** start Phase 1 until Sam gives the go-ahead after reading `docs/phase0-report.md`.
+- **Phase 0: complete** (`docs/phase0-report.md`). Spec v2.2 applies Sam's approved edits (E1–E19).
+- **Phase P prototype: published** (claude.ai artifact, source `web/prototype/`); its `sessions` collection holds ladder findings.
+- **Phase 1: built (2026-10-31), awaiting Sam's install and phone check.** Backend runs on Sam's home computer
+  (`docs/setup-home-computer.md`, Docker Compose). Exit gates pass in tests: import fixtures, Win% and accuracy
+  golden fixtures, canonical keys, determinism. Report card v1 (§12.10) with a 1500-level reference set is included.
+- Do **not** start Phase 2 until Sam confirms Phase 1 works on his iPhone.
 
 ## Rules that always apply
 
@@ -43,16 +44,16 @@ iPhone/iPad PWA: session runner, board, review, sparring client, offline cache, 
 
 | Dir | Contents |
 | --- | --- |
-| `web/` | React + TypeScript + Vite PWA (`vite-plugin-pwa`, `chessground`, `chess.js`, `ts-fsrs`, Dexie). `web/device-test/` is the Phase 0 device check page |
+| `web/app/` | React + TypeScript + Vite PWA (`vite-plugin-pwa`, `@lichess-org/chessground`, `chess.js`; later `ts-fsrs`, Dexie). `web/device-test/` is the Phase 0 device check page; `web/prototype/` the Phase P artifact |
 | `server/` | Python 3.12, FastAPI, `python-chess`, native Stockfish, `maia3` (pinned commit), Postgres 16 job queue, APScheduler |
 | `server/config/coach.toml` | All tunables (§30) |
 | `server/phase0/` | Phase 0 spikes and benchmarks (not product code) |
 | `server/tests/` | Tests and golden fixtures |
-| `shared/` | JSON Schema contracts → generated TypeScript types and Pydantic models |
-| `docker-compose.yml` | Caddy, api, workers, Postgres (Phase 1) |
+| `shared/` | JSON Schema contracts → generated TypeScript types and Pydantic models (not generated yet: Phase 1 types are hand-written in `web/app/src/types.ts`) |
+| `docker-compose.yml` | Postgres, api (also serves the app), worker, on Sam's home computer |
 
-Hosting (§29): free static host for the PWA (Vercel Hobby or Cloudflare Pages); the engine backend needs real CPU
-(free Oracle 2-OCPU Arm VM, paid VPS or home computer: Sam decides). See the hosting section of the Phase 0 report for the current recommendation.
+Hosting (§29): Sam's home computer runs everything (Docker Compose; phone access via Tailscale HTTPS or home Wi-Fi).
+The app can alternatively be served from Vercel Hobby with `COACH_ALLOWED_ORIGINS` set; the engine cannot run on Vercel.
 
 ## Phase plan (§27)
 
@@ -82,8 +83,27 @@ Hosting (§29): free static host for the PWA (Vercel Hobby or Cloudflare Pages);
 ## Commands
 
 ```bash
-# Phase 0 tests
-cd server && python -m pytest -q tests
-# Pipeline benchmark (needs a Stockfish 18 binary and a PGN of Sam's games)
-STOCKFISH=/path/to/stockfish python server/phase0/pipeline_bench.py --pgn games.pgn --me turners1110 --out out.jsonl
+# Tests (Postgres 16 at postgresql://coach:coach@localhost/coach_test; engine tests need STOCKFISH)
+cd server && STOCKFISH=/path/to/stockfish python -m pytest -q tests
+# Local API (serves web/app/dist when COACH_WEB_DIST is set) and worker
+DATABASE_URL=postgresql://coach:coach@localhost/coach COACH_PASSWORD_HASH='…' uvicorn coach.api:app --port 8000
+STOCKFISH=/path/to/stockfish python -m coach.worker --workers 2
+# Phone app
+cd web/app && npm ci && npm run build      # npm run dev proxies /api to :8000
+# Home computer (everything)
+docker compose up -d --build               # see docs/setup-home-computer.md
 ```
+
+## Code map (Phase 1)
+
+| Module | Job |
+| --- | --- |
+| `coach/config.py` | Loads `coach.toml` |
+| `coach/winpct.py`, `coach/accuracy.py`, `coach/positions.py` | Win%, lila accuracy, canonical keys |
+| `coach/chesscom.py`, `coach/importer.py` | Serial chess.com client; archives → games → plies; analysis jobs |
+| `coach/jobs.py`, `coach/worker.py` | Postgres job queue; worker processes and the one-thread sync scheduler |
+| `coach/analysis.py`, `coach/tablebase.py` | §8 passes with `engine_evals` cache, tablebase, labels, GRI |
+| `coach/review.py` | §12.1 review moments |
+| `coach/reportcard.py`, `coach/reference.py` | §12.10 report card and the goal-level reference crawl |
+| `coach/api.py`, `coach/passwd.py` | FastAPI app (login, games, review, report card, sync) |
+| `coach/migrations/` | SQL migrations, applied in order by `coach.db.migrate()` |
