@@ -404,3 +404,8 @@ band = 50                       # tunable: both players within goal ± band
 max_requests = 300              # tunable: crawl budget per build (serial requests)
 time_classes = ["blitz", "rapid"]
 time_controls = { blitz = "300", rapid = "600" }   # sam: 5 min and 10 min games (D5)
+
+[auth]                          # §29 privacy: single-user login, argon2id hash in COACH_PASSWORD_HASH
+session_days = 30               # tunable
+max_failed_logins = 5           # tunable: per window, then HTTP 429
+failed_login_window_min = 15    # tunable

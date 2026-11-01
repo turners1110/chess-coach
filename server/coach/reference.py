@@ -64,6 +64,6 @@ def build(conn, client: Client) -> dict:
     ver = analysis_version()
     queued = 0
     for row in conn.execute("SELECT id, played_at FROM games WHERE source = 'reference' AND analysis_status = 'pending'").fetchall():
-        queued += jobs.enqueue(conn, "analyze", f"analyze:{row['id']}:{ver}", {"game_id": row["id"]}, priority=5,
+        queued += jobs.enqueue(conn, "analyze", f"analyze:{row['id']}:{ver}", {"game_id": row["id"]}, priority=10,
                                sort_key=row["played_at"].timestamp(), versions={"analysis": ver})
     return {"requests": requests, "players_visited": len(visited), "games": have, "jobs_enqueued": queued}

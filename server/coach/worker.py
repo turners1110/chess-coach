@@ -60,6 +60,22 @@ def sync_once(resync: list[str] | None = None) -> dict:
     return s
 
 
+def run_sync_jobs() -> None:
+    """Runs syncs queued by the API (manual sync, resync month)."""
+    while True:
+        with db.connect() as conn:
+            job = jobs.claim(conn, ["sync"])
+            conn.commit()
+            if not job:
+                return
+            try:
+                sync_once(job["payload"].get("resync") or None)
+                jobs.complete(conn, job["id"])
+            except Exception as e:  # noqa: BLE001
+                jobs.fail(conn, job, e)
+            conn.commit()
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Chess Coach worker")
     ap.add_argument("--workers", type=int, default=None, help="analysis processes (default engine.workers)")
@@ -75,9 +91,14 @@ def main() -> None:
         for p in procs:
             p.join()
         return
+    import datetime
+
+    from apscheduler.executors.pool import ThreadPoolExecutor
     from apscheduler.schedulers.blocking import BlockingScheduler
-    sched = BlockingScheduler()
-    sched.add_job(sync_once, "interval", minutes=cfg()["sync"]["poll_minutes"], next_run_time=__import__("datetime").datetime.now())
+    # One thread: scheduled polls and queued manual syncs never overlap, so chess.com requests stay serial (§7.2)
+    sched = BlockingScheduler(executors={"default": ThreadPoolExecutor(1)}, job_defaults={"coalesce": True, "max_instances": 1})
+    sched.add_job(sync_once, "interval", minutes=cfg()["sync"]["poll_minutes"], next_run_time=datetime.datetime.now())
+    sched.add_job(run_sync_jobs, "interval", seconds=30)
     sched.start()
 
 

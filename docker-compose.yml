@@ -1,3 +1,38 @@
-# Phase 1 placeholder (spec §29): Caddy, api, workers and Postgres 16 on the backend VM.
-# Services are defined in Phase 1; nothing runs yet.
-services: {}
+# Chess Coach on the home computer (spec §29, Sam's choice Oct 31): Postgres, API (also serves the PWA) and
+# the analysis worker. Start: `docker compose up -d --build`. Settings come from .env (see .env.example).
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: coach
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: coach
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U coach"]
+      interval: 5s
+      retries: 20
+
+  api:
+    build: ./server
+    restart: unless-stopped
+    depends_on: { db: { condition: service_healthy } }
+    environment: &env
+      DATABASE_URL: postgresql://coach:${POSTGRES_PASSWORD}@db/coach
+      COACH_PASSWORD_HASH: ${COACH_PASSWORD_HASH:?run: docker compose run --rm api python -m coach.passwd}
+      COACH_ALLOWED_ORIGINS: ${COACH_ALLOWED_ORIGINS:-}
+      COACH_WEB_DIST: /web
+    volumes: [./web/app/dist:/web:ro]
+    ports: ["${COACH_PORT:-8000}:8000"]
+    command: sh -c "python -c 'from coach import db; db.migrate()' && uvicorn coach.api:app --host 0.0.0.0 --port 8000"
+
+  worker:
+    build: ./server
+    restart: unless-stopped
+    depends_on: { db: { condition: service_healthy } }
+    environment: *env
+    command: python -m coach.worker --workers ${COACH_WORKERS:-2}
+
+volumes:
+  pgdata:
