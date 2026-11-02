@@ -102,3 +102,14 @@ The address is private to your Tailscale devices; nothing is exposed to the inte
 - **Stop:** `docker compose down` (your data stays). **Logs:** `docker compose logs -f worker`.
 - **Backup:** `docker compose exec db pg_dump -U coach coach > coach-backup.sql`.
 - **Re-download one month from chess.com:** in the app, or `curl -X POST "http://localhost:8000/api/sync?resync=202510" -H "Authorization: Bearer …"`.
+
+## Troubleshooting
+
+- **"Rosetta installation failed" (Apple Silicon Mac, Docker Desktop).** Chess Coach does not need Rosetta:
+  all its images run natively on Apple Silicon. Either install Rosetta in Terminal with
+  `softwareupdate --install-rosetta --agree-to-license`, or open Docker Desktop → Settings → General, untick
+  "Use Rosetta for x86_64/amd64 emulation on Apple Silicon", then Apply & restart. Check with
+  `docker run --rm hello-world`.
+- **`docker: command not found` or "Cannot connect to the Docker daemon".** Docker Desktop is not running:
+  open it and wait until it says it is running.
+- **Port 8000 already in use.** Set `COACH_PORT=8001` in `.env` and use that port instead.
