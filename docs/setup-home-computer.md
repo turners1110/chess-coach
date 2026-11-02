@@ -3,6 +3,25 @@
 Everything (database, engine analysis, the app) runs on your computer in Docker. Your phone opens the app
 from it. This is the Phase 1 setup; the spec's hosting section (§29) explains the alternatives.
 
+## Easiest: let Claude Code do it
+
+Open Cursor, open a new empty folder, start Claude Code in its terminal panel, and paste:
+
+> Set up Chess Coach on this computer. Clone https://github.com/turners1110/chess-coach (branch
+> `claude/pensive-bohr-1sc29y`) into this folder, then follow `docs/setup-home-computer.md` step by step.
+> Check that Docker is installed and running first and tell me if it is not. Create `.env` with a random
+> `POSTGRES_PASSWORD` and `COACH_WORKERS` set to my CPU core count minus one. Stop and tell me when I need to
+> create my app password (step 3) so I can type it myself, then put the hash it prints into `.env`. Start
+> everything, wait until http://localhost:8000/api/health answers, and show me the worker log for the first sync.
+
+Claude Code asks before running each command (you can allow them one by one). The three things only you can do:
+
+- **Install Docker Desktop** and open it once (it needs your admin password).
+- **Type your app password** when the password tool asks (step 3); never paste it into the chat.
+- **Create a Tailscale account**, if you want the app away from home (step 6).
+
+The manual steps follow, in case you prefer to do it yourself.
+
 ## What you need
 
 - A Mac, Windows PC or Linux computer that is on when you want new games analyzed. Analysis pauses
@@ -15,7 +34,12 @@ from it. This is the Phase 1 setup; the spec's hosting section (§29) explains t
 
 ## 1. Get the code
 
-Download the repository (GitHub → Code → Download ZIP, or `git clone`) and open a terminal in its folder.
+```bash
+git clone -b claude/pensive-bohr-1sc29y https://github.com/turners1110/chess-coach.git
+cd chess-coach
+```
+
+(The Phase 1 code is on this branch until it is merged into `main`.)
 
 ## 2. Settings file
 
